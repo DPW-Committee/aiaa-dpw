@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postprocessing</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+  <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding-top: 0px; /* Adjust this to match your typical header height */
+    }
+
+    header {
+        background: #003366;
+        color: white;
+        padding: 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    h1 {
+        text-align: center;
+        color: #1f497d;
+        padding-top: 0px;
+    }
+    
+    h2, h3 {
+        text-align: left;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    h2 {
+        font-size: 14pt;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        justify-content: left;
+        background: #1F497D;
+        padding: 10px 0;
+    }
+
+    table {
+        width: 100%;
+        max-width: 600px;
+        border-collapse: collapse;
+        border: 2px solid black;
+    }
+
+    td {
+        vertical-align: middle;
+        font-family: helvetica, arial, sans-serif;
+        border: 2px solid black;
+    }
+
+    nav a {
+        color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background: #0059b3;
+    }
+
+    .dropdown {
+        position: relative;
+        padding: 5px;
+        text-align: left;
+    }
+
+      .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%; /* Add extra space below the parent */
+          left: 5px; /* Align with the parent */
+          padding: 0; /* Optional: Reset padding */
+          margin: 0; /* Optional: Reset margin */
+          background: #0059b3;
+      }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        background: #0073e6;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* Responsive Design */
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            display: none; /* Hide menu by default */
+        }
+
+        nav.active {
+            display: flex; /* Show menu when active */
+        }
+
+        nav a {
+            text-align: left;
+            padding: 15px 0;
+            border-bottom: 1px solid #0059b3;
+        }
+
+        .hamburger {
+            display: block; /* Show hamburger on mobile */
+        }
+    }
+</style>
+</head>
+
+<body>
+<header>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="#github">GitHub</a>
+        <a href="#convergence">Convergence</a>
+        <a href="#fandm">F&M</a>
+        <a href="#surface">Surface Cuts</a>
+        <a href="#spectra">Spectra</a>
+        <a href="#timeseries">Time Series</a>
+        <a href="#contours">Contour Plots</a>
+        <a href="#gridmetrics">Grid Metrics</a>
+        <a href="#spanload">Spanload</a>
+        <a href="#profiles">Profiles</a>
+    </nav>
+</header>
+
+
+<h1>Data Submittal Forms and Postprocessing Information</h1>
+
+
+
+<h2>Overview</h2>
+<p>
+DPW-8/AePW-4 is collecting data in a Tecplot-readable ASCII format using the
+templates below. Please complete as much of each form as possible, including the
+auxiliary data at the top of each form identifying the dataset. Please complete
+as much of each form as possible, including the auxiliary data at the top of
+each form identifying the dataset. Forms are provided for a variety of data
+sets. Coordinate with your Working Group leaders regarding which files must be
+submitted for that group's test cases.
+<ul style="font-family: helvetica,arial,sans-serif;">
+  <li>Vehicle integrated forces and moments</li>
+  <li>Surface pressure (macro provided below)</li>
+  <li>Standard views and contour plots (macro provided below)</li>
+  <li>Spanwise load distribution (more to come later)</li>
+  <li>Boundary layer profiles (more to come later)</li>
+  </li>
+</ul>
+
+
+
+<section id="github" style="scroll-margin-top: 45px"></section>
+<p>Data will be submitted to the DPW/AePW github site.
+<a href="Forms/DPW8-AePW4-github.pdf">Process overview</a>,
+<a href="Forms/GitHubSubmissionSlides.pdf">Submission Tutorial</a>, and
+<a href="https://github.com/Drag-Prediction-Workshop">GitHub Submission Repository</a>
+</p>
+
+<p>Tecplot has graciously agreed that all participants who do not have access 
+to Tecplot may request a free extended evaluation license of Tecplot 360 for use
+in the AIAA DPW and AePW. If you are interested, please email
+<a href="mailto:dpwaiaa@gmail.com">dpwaiaa@gmail.com</a>.
+</p>
+
+<p>
+Contact <a href="mailto:dpwaiaa@gmail.com">dpwaiaa@gmail.com</a> prior to
+submitting any data. The Organizing Committee will assign you a participant ID.
+You will then use that in the files that you submit data directly to your working
+group leaders.
+</p>
+
+<p>Some data are optional (see inside the data files). Use -999 for any optional
+data that you are not submitting.</p>
+
+<p>References to the appropriate experimental data sets are below.</p>
+
+
+<hr>
+<section id="convergence" style="scroll-margin-top: 45px"></section>
+<h2>Convergence</h2>
+<p>
+Solution convergence data template <a href="Forms/DPW8-AePW4_Convergence_v5.dat">
+version 5 (October 16, 2024)</a>.
+</p>
+<br>
+
+
+<hr>
+<section id="fandm" style="scroll-margin-top: 45px"></section>
+<h2>Integrated Forces and Moments</h2>
+<p>
+F&M data template <a href="Forms/DPW8-AePW4_ForceMoment_v5.dat">version 5 (October 16, 2024)</a>
+and the <a href="Forms/DPW8-AePW4_UnsteadyForceMoment_v5.dat">unsteady template</a>.
+</p>
+<br>
+
+
+
+<hr>
+<section id="surface" style="scroll-margin-top: 45px"></section>
+<h2>Surface Cuts</h2>
+<p>
+Surface cut template <a href="Forms/DPW8-AePW4_SectionalCuts_v5.dat">
+version 5 (October 16, 2024)</a> and the <a href="Forms/DPW8-AePW4_UnsteadySectionalCuts_v5.dat">
+unsteady template</a>.
+<br>
+A <a href="Macros/sectionalCutter-v2.mcr">Tecplot macro version 2 (October 16, 2024)</a>
+has been developed. Please contact us if the script does not work correctly.
+</p>
+<br>
+
+
+
+<hr>
+<section id="spectra" style="scroll-margin-top: 45px"></section>
+<h2>Power Spectra</h2>
+<p>
+Power spectra data template <a href="Forms/DPW8-AePW4_UnsteadySpectra_v6.dat">
+version 6 (February 10, 2025)</a>.<br>
+Data should be calculated using the provided
+<a href="Macros/compute_psd_10212024.py">python reduction script (October 21)</a>
+and <a href="Macros/README-compute_psd_02102025.pdf">README</a>.
+</p>
+<br>
+
+
+
+<hr>
+<section id="timeseries" style="scroll-margin-top: 45px"></section>
+<h2>Time Series of a Single Point</h2>
+<p>
+Single point time series <a href="Forms/DPW8-AePW4_UnsteadyProbe_v5.dat">
+version 5 (October 16, 2024)</a>.<br>
+</p>
+<br>
+
+
+
+<hr>
+<section id="contours" style="scroll-margin-top: 45px"></section>
+<h2>Contour Plots</h2>
+<p>
+A <a href="Macros/airfoilImages-v2.mcr">Tecplot macro version 2 (October 16, 2024)</a>
+has been developed. See some <a href="Macros/examplePlots.pdf">example images.</a>
+If you are submitting data on a three dimensional grid, please submit data with
+the streamlines option turned on, if possible.
+</p>
+<br>
+
+
+
+<hr>
+<section id="gridmetrics" style="scroll-margin-top: 45px"></section>
+<h2>Custom Grid Metrics</h2>
+<p>
+Custom grid metrics template <a href="Forms/DPW8-AePW4_CustomGridMetrics_v5.dat">
+version 5 (October 15, 2024)</a>.
+</p>
+<br>
+
+
+
+<hr>
+<section id="spanload" style="scroll-margin-top: 45px"></section>
+<h2>Spanwise Load Distribution</h2>
+</p>
+More info to come
+</p>
+<br>
+
+
+<hr>
+<section id="profiles" style="scroll-margin-top: 45px"></section>
+<h2>Boundary Layer Profiles</h2>
+<p>
+More info to come
+</p>
+<br>
+
+
+
+<hr>
+<b>NASA Official Responsible for Content</b>
+<br>
+<a href="mailto:brent.w.pomeroy@nasa.gov">Brent W. Pomeroy</a>
+<h2></h2>
+
+<b>Last Updated</b> <br>
+October 21, 2024
+</body>
+</html>

@@ -1,0 +1,110 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 SPECTRAL CONTENT SUBMITTAL FORM (Version 6 - February 10, 2025)
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+# 
+#       NOMENCLATURE:
+#               FREQ:   Frequency (Hz)
+#                PSD:   Pressure power spectral content
+#			<p(Pa^2)> for ONERA OAT15A and <Cp[1/Hz]> for JAXA CRMWB/CRMWBNP
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       JAXA CRMWB   (Common Research Model Wing/Body)
+#                       JAXA CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#   DATA LOCATIONS: 	ONERA OAT15A:	  	provide spectral content at x/c=0.45 (Kulite 7)
+# 			JAXA CRMWB/CRMWBNP: 	x/c=0.3040 (section E, eta=0.5) and x/c=0.7903 (section E, eta=0.5).
+# 					 	x/c=0.3097 (section F, eta=0.6) and x/c=0.7677 (section F, eta=0.6).
+#				  		Refer to https://cfdws.chofu.jaxa.jp/apc/dpw/upc.html
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "XXX.YY"
+# Column       1       2
+VARIABLES =   "FREQ"  "PSD"
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "Participant ID"
+DATASETAUXDATA SubmissionDate  = "Date of Submission"
+DATASETAUXDATA Name            = "Name of Participant"
+DATASETAUXDATA Email           = "Email Address of Participant"
+DATASETAUXDATA Institution     = "Name of your company/organization"
+DATASETAUXDATA SolverName      = "Solver name used and version number"
+DATASETAUXDATA BasicAlgorithm  = "RANS, URANS, DES, DDES, WMLES, etc."
+DATASETAUXDATA TurbulenceModel = "SA, SA-RC, SA-la, SST, SST-2003, Wilcox1998k-w, EARSMko2005, etc."
+DATASETAUXDATA GridId          = "Multiblock, Overset, Hex, Hybrid, Prism, Custom, etc."
+DATASETAUXDATA Notes           = "Any thing else you would like to add"
+
+
+ZONE T="XXX.YY - ALPHA ZZZ - x/c = ???"
+AUXDATA GridLevel       = "1, 2, 3, 4, 5, or 6"
+AUXDATA Mach            = "?.????"
+AUXDATA Re              = "??"
+AUXDATA Alpha           = "?.????"
+AUXDATA x/c     	= "Streamwise data location"
+AUXDATA Section         = "Spanwise section (omit if one-cell wide calculations)"
+AUXDATA Dt              = "Time step per iteration (optional)"
+AUXDATA CtuStart        = "Convective Time Unit at Which Averaging Started"
+AUXDATA CtuAvg          = "Number of Convective Time Units in Time-Averaging Phase"
+AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+            ???.????  ???.????
+
+
+ZONE T="XXX.YY - ALPHA ZZZ - x/c = ???"
+AUXDATA GridLevel       = "1, 2, 3, 4, 5, or 6"
+AUXDATA Mach            = "?.????"
+AUXDATA Re              = "??"
+AUXDATA Alpha           = "?.????"
+AUXDATA x/c     	= "Streamwise data location"
+AUXDATA Section         = "Spanwise section (omit if one-cell wide calculations)"
+AUXDATA Dt              = "Time step per iteration (optional)"
+AUXDATA CtuStart        = "Convective Time Unit at Which Averaging Started"
+AUXDATA CtuAvg          = "Number of Convective Time Units in Time-Averaging Phase"
+AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+            ???.????  ???.????
+
+
+ZONE T="XXX.YY - ALPHA ZZZ - x/c = ???"
+AUXDATA GridLevel       = "1, 2, 3, 4, 5, or 6"
+AUXDATA Mach            = "?.????"
+AUXDATA Re              = "??"
+AUXDATA Alpha           = "?.????"
+AUXDATA x/c     	= "Streamwise data location"
+AUXDATA Section         = "Spanwise section (omit if one-cell wide calculations)"
+AUXDATA Dt              = "Time step per iteration (optional)"
+AUXDATA CtuStart        = "Convective Time Unit at Which Averaging Started"
+AUXDATA CtuAvg          = "Number of Convective Time Units in Time-Averaging Phase"
+AUXDATA GridFileName    = "File name(s) of the grid(s) you used"
+            ???.????  ???.????

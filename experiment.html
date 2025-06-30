@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experimental References</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+  <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding-top: 0px; /* Adjust this to match your typical header height */
+    }
+
+    header {
+        background: #003366;
+        color: white;
+        padding: 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    h1 {
+        text-align: center;
+        color: #1f497d;
+        padding-top: 0px;
+    }
+    
+    h2, h3 {
+        text-align: left;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    h2 {
+        font-size: 14pt;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        justify-content: left;
+        background: #1F497D;
+        padding: 10px 0;
+    }
+
+    table {
+        width: 100%;
+        max-width: 600px;
+        border-collapse: collapse;
+        border: 2px solid black;
+    }
+
+    td {
+        vertical-align: middle;
+        font-family: helvetica, arial, sans-serif;
+        border: 2px solid black;
+    }
+
+    nav a {
+        color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background: #0059b3;
+    }
+
+    .dropdown {
+        position: relative;
+        padding: 5px;
+        text-align: left;
+    }
+
+      .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%; /* Add extra space below the parent */
+          left: 5px; /* Align with the parent */
+          padding: 0; /* Optional: Reset padding */
+          margin: 0; /* Optional: Reset margin */
+          background: #0059b3;
+      }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        background: #0073e6;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* Responsive Design */
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            display: none; /* Hide menu by default */
+        }
+
+        nav.active {
+            display: flex; /* Show menu when active */
+        }
+
+        nav a {
+            text-align: left;
+            padding: 15px 0;
+            border-bottom: 1px solid #0059b3;
+        }
+
+        .hamburger {
+            display: block; /* Show hamburger on mobile */
+        }
+    }
+</style>
+</head>
+
+<body>
+<section id="home"></section>
+<header>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="#crm">CRM</a>
+        <a href="#oneraoat15a">ONERA OAT15A</a>
+    </nav>
+</header>
+<!-- <section id="overview" style="scroll-margin-top: 45px"></section> -->
+
+<h1>Experimental References</h1>
+Experimental data sets are available and much has been published by
+many organizations.
+</p>
+<br>
+
+
+
+<hr>
+<section id="crm" style="scroll-margin-top: 45px"></section>
+<h2>Common Research Model (CRM)</h2>
+<p>
+Data for the Common Research Model from the National Transonic Faciilty (NTF)
+and European Transonic Wind Tunnel (ETW) can be found in a
+<a href="https://commonresearchmodel.larc.nasa.gov/experiment-results-search/">
+data set search engine.</a> An <a href="ref/nasa-crm-test-overview.pdf">
+overview of these tests</a> was presented at AVIATION 2023.
+<br><br>
+JAXA data can be downloaded from the <a href="https://cfdws.chofu.jaxa.jp/apc/dpw">
+JAXA site</a>.
+Geometry is available on the <a href="geometry.html">
+geometry page</a>.
+</p>
+<br>
+
+
+
+<hr>
+<section id="oneraoat15a" style="scroll-margin-top: 45px"></section>
+<h2>ONERA OAT15A Airfoil</h2>
+The <a href="ref/onera-oat15a.zip">experimental data, airfoil coordinates, and
+IGES geometry</a> as well as the 
+<a href="ref/jacquin-et-al-experimental-study-of-shock-oscillation.pdf"> supporting
+paper</a> is Jaquin, et al. "Experimental Study of Shock Oscillation over a Transonic 
+Supercritical Profiles." AIAA Journal, Vol. 47, No. 9, 2009. Pages 1985-1994.
+<p>
+Note that the reference paper for personal use only, may not be reposted or 
+redistributed, copyright by and reprinted by permission of the American 
+Institute of Aeronautics and Astronautics, Inc. By downloading of the file, 
+you affirm that you will abide by these conditions.
+</p>
+<p>
+Use of the ONERA OAT15A transonic airfoil geometry and/or experimental data
+is subject to the following conditions
+<ul>
+  <li>The geometry remains the intellectual property of ONERA</li>
+  <li>The geometry shall be referred to as the "ONERA OAT15A"</li>
+  <li>ONERA will be acknowledged each time the geometry is shared with a partner</li>
+  <li>When shared by a user, the above conditions will be included</li>
+</ul>
+</p>
+<br>
+
+
+
+<hr>
+<b>NASA Official Responsible for Content</b>
+<br>
+<a href="mailto:brent.w.pomeroy@nasa.gov">Brent W. Pomeroy</a>
+<h2></h2>
+
+<b>Last Updated</b> <br>
+January 27, 2025
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+  <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding-top: 0px; /* Adjust this to match your typical header height */
+    }
+
+    header {
+        background: #003366;
+        color: white;
+        padding: 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    h1 {
+        text-align: center;
+        color: #1f497d;
+        padding-top: 0px;
+    }
+    
+    h2, h3 {
+        text-align: left;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    h2 {
+        font-size: 14pt;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        justify-content: left;
+        background: #1F497D;
+        padding: 10px 0;
+    }
+
+    table {
+        width: 100%;
+        max-width: 600px;
+        border-collapse: collapse;
+        border: 2px solid black;
+    }
+
+    td {
+        vertical-align: middle;
+        font-family: helvetica, arial, sans-serif;
+        border: 2px solid black;
+    }
+
+    nav a {
+        color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background: #0059b3;
+    }
+
+    .dropdown {
+        position: relative;
+        padding: 5px;
+        text-align: left;
+    }
+
+      .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%; /* Add extra space below the parent */
+          left: 5px; /* Align with the parent */
+          padding: 0; /* Optional: Reset padding */
+          margin: 0; /* Optional: Reset margin */
+          background: #0059b3;
+      }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        background: #0073e6;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* Responsive Design */
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            display: none; /* Hide menu by default */
+        }
+
+        nav.active {
+            display: flex; /* Show menu when active */
+        }
+
+        nav a {
+            text-align: left;
+            padding: 15px 0;
+            border-bottom: 1px solid #0059b3;
+        }
+
+        .hamburger {
+            display: block; /* Show hamburger on mobile */
+        }
+    }
+</style>
+</head>
+
+<body>
+<section id="home"></section>
+<header>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="#crm">CRM</a>
+        <a href="#oat">ONERA OAT15A</a>
+        <a href="ntf.html">NTF Test Section</a>
+    </nav>
+</header>
+
+<h1>Geometry</h1>
+Refer to the test case details for your working group for specific geometry files
+to be used.
+</p>
+
+
+<hr>
+<section id="crm" style="scroll-margin-top: 45px"></section>
+<h2>Common Research Model (CRM)</h2>
+<p>
+A large portion of Common Research Model used for the DPW-8/AePW-4 geometry is
+the same as was utilized in DPW-7. The link to these geometry files is as follows.
+<br>
+<a style="font-family: helvetica,arial,sans-serif;"
+ href="../Workshop7/DPW7-geom.html">DPW-7 Geometry Website</a>
+<br>
+JAXA has geometry regarding the JAXA CRM model (80% scale of the NASA CRM). See
+here <a href="https://cfdws.chofu.jaxa.jp/apc/dpw/geometry.html">JAXA geometry</a>
+</p>
+<br>
+
+
+
+<hr>
+<section id="oat" style="scroll-margin-top: 45px"></section>
+<h2>ONERA OAT15A Airfoil</h2>
+<p>
+The ONERA OAT15A airfoil is being used for Test Case 1: Solver Validation. Use of
+the ONERA OAT15A airfoil is subject to the following conditions
+<ul>
+  <li>The geometry remains the intellectual property of ONERA</li>
+  <li>The geometry shall be referred to as the "ONERA OAT15A"</li>
+  <li>ONERA will be acknowledged each time the geometry is shared with a partner</li>
+  <li>When shared by a user, the above conditions will be included</li>
+</ul>
+The geometry, discrete coordinates, and an iges file, are available
+<a style="font-family: helvetica,arial,sans-serif;"
+ href="Geometry/ONERA-OAT15A-090524.zip">for download</a>. Participants are
+strongly encouraged to use the provided iges file (ONERA-OAT15A_230mmChord_780mmSpan_upZ_2024_09_05.igs)
+as great care has been taken to develop a carefully-crafted geometry with good
+curvature behavior.
+</p>
+<br>
+
+
+
+
+
+<hr>
+<b>NASA Official Responsible for Content</b>
+<br>
+<a href="mailto:brent.w.pomeroy@nasa.gov">Brent W. Pomeroy</a>
+<h2></h2>
+
+<b>Last Updated</b> <br>
+September 6, 2024
+</body>
+</html>

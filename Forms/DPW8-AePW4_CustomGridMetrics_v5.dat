@@ -1,0 +1,96 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# DPW-8/AePW-4 GRID METRICS SUBMITTAL FORM (Version 5 - October 16, 2024)
+#
+# Provide this file if custom grids have been generated
+#
+#
+#
+# Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
+#                     (Three-Digit Participant ID).(Two-Digit Submission ID)
+#                     XXX THREE-DIGIT PARTICIPANT ID: assigned by your working group leaders
+#                     YY   TWO-DIGIT  SUBMISSION ID:  (self assigned) label a solver/grid/computational approach
+#                     EXAMPLE: 007.02
+#
+#
+#       NOMENCLATURE:
+#         GRID_LEVEL:   Level of grid refinement (1-6)
+#              ZONES:   Number of grid zones
+#        FIELD_NODES:   Number of field nodes
+#        FIELD_CELLS:   Number of field cells
+#     BOUNDARY_NODES:   Number of boundary nodes
+#     BOUNDARY_FACES:   Number of boundary faces
+#   BL_1ST_CELL_SIZE:   Size of 1st boundary layer cell
+# BL_MAX-GROWTH_RATE:   Maximum growth rate in boundary layer cells
+#           BL_CELLS:   Number of boundary layer cells
+#
+#      OPTIONAL DATA:   Enter -999 for any optional data you are not submitting
+#                   
+#        DEFINITIONS:   CTU --> Convective Time Unit  (Uinf/Cref is 1.00 CTU)
+#
+#   REFERENCE VALUES: ONERA OAT15A (ONE CELL WIDE)
+#                       Planform ref area, A         =  Cref * span (span is grid dependent)
+#                       Mean aerodynamic chord, Cref =    230.00 mm
+#                       x moment center              =     57.50 mm
+#                       y moment center              =      0.00 mm
+#                       z moment center              =      0.00 mm
+#
+#
+#   REFERENCE VALUES: Common Research Model
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#   CONFIGURATION:      ONERA OAT15A
+#                       CRMWB   (Common Research Model Wing/Body)
+#                       CRMWBNP (Common Research Model Wing/Body/Nacelle/Pylon)
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "XXX.YY"
+# Column     1            2       3             4             5                6                7                  8                    9
+VARIABLES = "GRID_LEVEL" "ZONES" "FIELD_NODES" "FIELD_CELLS" "BOUNDARY_NODES" "BOUNDARY_FACES" "BL_1ST_CELL_SIZE" "BL_MAX-GROWTH_RATE" "BL_CELLS"
+
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA ParticipantID   = "Participant ID"
+DATASETAUXDATA SubmissionDate  = "Date of Submission"
+DATASETAUXDATA Name            = "Name of Participant"
+DATASETAUXDATA Email           = "Email Address of Participant"
+DATASETAUXDATA Institution     = "Name of your company/organization"
+DATASETAUXDATA GeneratorName   = "Grid generator name and version number"
+DATASETAUXDATA BasicAlgorithm  = "RANS, URANS, DES, DDES, WMLES, etc."
+DATASETAUXDATA CustomGridDescr = "Description Of Custom Grid"
+DATASETAUXDATA GridId          = "Multiblock, Overset, Hex, Hybrid, Prism, Custom, etc."
+DATASETAUXDATA Notes           = "Any thing else you would like to add"
+#GRID                  | Miscellaneous Notes
+#----------------------|---------------------------------------------------------------------------------------------
+DATASETAUXDATA L1Notes = ""
+DATASETAUXDATA L2Notes = ""
+DATASETAUXDATA L3Notes = ""
+DATASETAUXDATA L4Notes = ""
+DATASETAUXDATA L5Notes = ""
+DATASETAUXDATA L6Notes = ""
+
+
+ZONE T="XXX.YY"
+AUXDATA Misc            = "Any thing else you would like to add"
+ 1  -999      100000      100000  -999  -999  -999  -999  -999
+ 2  -999     1000000     1000000  -999  -999  -999  -999  -999
+ 3  -999    10000000    10000000  -999  -999  -999  -999  -999
+ 4  -999   100000000   100000000  -999  -999  -999  -999  -999
+ 5  -999  1000000000  1000000000  -999  -999  -999  -999  -999
+ 6  -999 10000000000 10000000000  -999  -999  -999  -999  -999
