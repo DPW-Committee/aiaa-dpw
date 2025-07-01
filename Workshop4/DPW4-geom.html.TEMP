@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.79C-SGI [en] (X11; I; IRIX64 6.5 IP30) [Netscape]">
+  <title>4th AIAA CFD Drag Prediction Workshop</title>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2 style="font-family: helvetica,arial,sans-serif;">DPW 4 Geometries</h2>
+<hr style="font-family: helvetica,arial,sans-serif;">
+<br style="font-family: helvetica,arial,sans-serif;">
+<span style="font-family: helvetica,arial,sans-serif;">
+Reference for Common Research Model geometry:&nbsp; </span><a
+ style="font-family: helvetica,arial,sans-serif;"
+ href="../Workshop4/AIAA-2008-6919-Vassberg.pdf">AIAA
+2008-6919.pdf</a><span style="font-family: helvetica,arial,sans-serif;">,&nbsp;
+5 MB</span><br style="font-family: helvetica,arial,sans-serif;">
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+<hr></h3>
+<h3 style="font-family: helvetica,arial,sans-serif;">CAD Models of
+Common Research Model <br>
+</h3>
+<span style="font-family: helvetica,arial,sans-serif;">Reference
+Area, S = 594,720.0 in2</span><br
+ style="font-family: helvetica,arial,sans-serif;">
+<span style="font-family: helvetica,arial,sans-serif;">Reference
+Chord, c = 275.80 in</span><br
+ style="font-family: helvetica,arial,sans-serif;">
+<span style="font-family: helvetica,arial,sans-serif;">Reference Span, b
+= 2,313.50 in</span><br
+ style="font-family: helvetica,arial,sans-serif;">
+<span style="font-family: helvetica,arial,sans-serif;">Moment Reference 
+(X,Y,Z) = (1,325.90, 468.75, 177.95) in </span><br
+ style="font-family: helvetica,arial,sans-serif;">
+
+</p>
+<span style="font-family: helvetica,arial,sans-serif;">IGES Files 
+(October 31, 2008):</span><br
+ style="font-family: helvetica,arial,sans-serif;">
+
+<br style="font-family: helvetica,arial,sans-serif;">
+<span style="font-family: helvetica,arial,sans-serif;">
+Wing-Body-No Tail:&nbsp; </span>
+ DPW4-wb-no-tail_v02.igs.gz
+
+<p span style="font-family: helvetica,arial,sans-serif;">
+Wing-Body-Tail 0 degree incidence:&nbsp; </span>
+ DPW4-wb-0-tail_v02.igs.gz
+</p>
+
+<p span style="font-family: helvetica,arial,sans-serif;">
+Wing-Body-Tail 2 degree up incidence:&nbsp; </span>
+ DPW4-wb-2up-tail_v02.igs.gz
+</p>
+
+<p span style="font-family: helvetica,arial,sans-serif;">
+Wing-Body-Tail 2 degree down incidence:&nbsp; </span>
+ DPW4-wb-2dn-tail_v02.igs.gz
+</p>
+
+<blockquote style="font-family: helvetica,arial,sans-serif;">Notes on IGES geometry files:
+<ul style="font-family: helvetica,arial,sans-serif;">
+<li>These files have been compressed with gzip.
+<li>CADFIX: The current release of CADFIX does not show the center section 
+of the fuselage above the wing.
+<li>Gridtool: By default, Gridtool only turns on trimmed surfaces. 
+The center section of the fuselage above the wing is not trimmed 
+and does not show by default.
+To show this section, go to the surface panel, select all (instead of single), 
+select "off" and select "wireframe".
+</ul>
+</blockquote>
+
+<a name="Moment">
+
+<hr></h3>
+<div style="font-family: helvetica,arial,sans-serif;" class="Center"><b>NASA
+Official Responsible for Content</b></div>
+<p style="font-family: helvetica,arial,sans-serif;"><br>
+<a href="mailto:n.t.frink@larc.nasa.gov">Dr. Neal T. Frink</a>
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+<p style="font-family: helvetica,arial,sans-serif;" class="Center"><b>Last
+Updated</b>
+<br>
+October 31, 2008<br>
+&nbsp;
+</p>
+<p><a style="font-family: helvetica,arial,sans-serif;"
+ href="http://lms.larc.nasa.gov/lms_feedback.html">Feedback on
+Langley
+Products and Services</a><span
+ style="font-family: helvetica,arial,sans-serif;">
+</span><br>
+</p>
+<hr>
+<hr>
+</body>
+</html>

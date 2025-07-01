@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="949.43">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Arial; color: #0007ff}
+    p.p4 {margin: 0.0px 0.0px 6.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Tahoma}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Arial}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Arial; color: #004faf}
+    span.s1 {text-decoration: underline}
+  </style>
+</head>
+<body>
+<p class="p1"><b>From: </b>"Zickuhr, Tom" &lt;tzickuhr@cessna.textron.com&gt;</p>
+<p class="p1"><b>Date: </b>May 15, 2009 5:39:26 PM EDT</p>
+<p class="p1"><b>To: </b>DPW &lt;DPW@cessna.textron.com&gt;</p>
+<p class="p1"><b>Subject: RE: DPW-IV Data Submittal Forms</b></p>
+<p class="p2"><br></p>
+<p class="p3">We would like to let you know that in the TRIMMED DRAG POLAR section you do not need to include the CD_PR and CD_SF data (these were not included in the spreadsheet calculation).  These data are not needed immediately and can be calculated later if desired.</p>
+<p class="p3"> </p>
+<p class="p3">It has also been pointed out that there is a bug in the spreadsheet.  A new version will be sent out Monday.</p>
+<p class="p3"> </p>
+<p class="p3">Regards,</p>
+<p class="p3">DPW Organizing Committee</p>
+<p class="p2"><br></p>
+<p class="p1"> </p>
+<p class="p4"><br></p>
+<p class="p5"><b>From:</b> DPW<span class="Apple-converted-space"> </span></p>
+<p class="p5"><b>Sent:</b> Tuesday, May 12, 2009 1:39 PM</p>
+<p class="p5"><b>To:</b> DPW</p>
+<p class="p5"><b>Subject:</b> DPW-IV Data Submittal Forms</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p6">Hello DPW-IV Participants,</p>
+<p class="p1"> </p>
+<p class="p6">The data submittal forms are finally ready.  Thank you for your patience.  Version 3 is the final release if you happened to download the forms before this announcement.</p>
+<p class="p1"> </p>
+<p class="p7"><span class="s1"><a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop4/forms/DPW-IV.CRM.DataForm_v3.txt">http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop4/forms/DPW-IV.CRM.DataForm_v3.txt</a></span></p>
+<p class="p7"><span class="s1"><a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop4/forms/DPW-IV.CRM.Case1.CpDataForm_v3.txt">http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop4/forms/DPW-IV.CRM.Case1.CpDataForm_v3.txt</a></span></p>
+<p class="p1"> </p>
+<p class="p1"> </p>
+<p class="p6">We have also included a spreadsheet to calculate the trimmed drag.</p>
+<p class="p1"> </p>
+<p class="p7"><span class="s1"><a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop4/forms/Trimmed_Drag_Polar_v3.xls">http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop4/forms/Trimmed_Drag_Polar_v3.xls</a></span></p>
+<p class="p1"> </p>
+<p class="p1"> </p>
+<p class="p6">We will start working on the summary plots for the workshop so we can determine a more precise date for the final data submittal.</p>
+<p class="p1"> </p>
+<p class="p6">Please let us know if you have any questions.  Thank you for your participation in the 4th AIAA Drag Prediction Workshop.  This is a wonderful opportunity for a blind test of the NASA CRM model, and your participation is greatly appreciated.</p>
+<p class="p1"> </p>
+<p class="p1"> </p>
+<p class="p6">Regards,</p>
+<p class="p6">DPW Organizing Committee</p>
+</body>
+</html>
