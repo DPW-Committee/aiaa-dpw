@@ -1,0 +1,216 @@
+Date: 31-07-2003
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Okko Joost Boelens
+              Email: boelens@nlr.nl
+              Phone: +31 20 5113697
+            Address: Fluid Dynamics Division
+            Address: Theoretical Aerodynamics and Aero-elasticity Department
+            Address: Anthony Fokkerweg 2
+            Address: 1059 CM Amsterdam
+            Address: P.O. Box 90502
+            Address: 1006 BM Amsterdam
+            Address: The Netherlands
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: ENSOLV (part of NLR's flow simulation system ENFLOW)
+    Basic Algorithm: cell-centred, finite-volume method, using multi-block structured 
+                     grids, central differences, and artifical diffusion. equations  
+                     are solved by a multi-grid scheme, using a Runge-Kutta scheme as  
+                     relaxation operator, accelerated by local time stepping and implicit 
+                     residual averaging
+   Turbulence Model: two-equation k-omega model of Wilcox with modification to obtain   
+                     free-stream independency
+           Residual: all residuals drop in the rms-norm approximately 2 orders
+      Miscellaneous: all simulation were run in steady mode, the min and max values are determined
+                     over the last 150 iterations (except for CM_TOT where only the last 10 iterations
+                     could be used), the value itself is that of the last iteration
+
+
+GRID INFORMATION
+--------------------
+Grid-Generator Name: ICEM CFD
+          Grid Type: multi-block structured
+
+
+COARSE GRID SIZE          WB        WBNP
+-----------------------------------------
+              Zones:      21        274
+        Field Nodes:      N/A       N/A
+        Field Cells:      3.3 M     4.5 M
+     Boundary Nodes:      N/A       N/A
+     Boundary Faces:      N/A       N/A
+   BL 1st-Cell Size:      N/A       N/A
+ BL Max-Growth Rate:      N/A       N/A
+           BL Cells:      N/A       N/A
+      Miscellaneous: for the WBNP grid a version of the ICEM CFD grids was used where the blocks were not joined together
+
+
+MEDIUM GRID SIZE          WB        WBNP
+-----------------------------------------
+              Zones:      27        347
+        Field Nodes:      N/A       N/A
+        Field Cells:  	  5.5 M     8.3 M
+     Boundary Nodes:      N/A       N/A
+     Boundary Faces:      N/A       N/A
+   BL 1st-Cell Size:      N/A       N/A
+ BL Max-Growth Rate:      N/A       N/A
+           BL Cells:      N/A       N/A
+      Miscellaneous: for the WBNP grid a version of the ICEM CFD grids was used where the blocks were not joined together
+
+
+FINE GRID SIZE            WB        WBNP
+-----------------------------------------
+              Zones:      32        347
+        Field Nodes:      N/A       N/A
+        Field Cells:      10.0 M    13.5 M
+     Boundary Nodes:      N/A       N/A
+     Boundary Faces:      N/A       N/A
+   BL 1st-Cell Size:      N/A       N/A
+ BL Max-Growth Rate:      N/A       N/A
+           BL Cells:      N/A       N/A
+      Miscellaneous: for the WBNP grid a version of the ICEM CFD grids was used where the blocks were not joined together
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: NLR's NEC SX-5/8B parallel vector supercomputer
+       # Processors: 1-6
+   Operating System: SUPER-UX sx5 11.1 E SX-5/8B
+           Compiler: FORTRAN90/SX Version 2.45 for SX-5
+       Run Time CPU: 	WING/BODY	 3300000.0	 0.35 hours for 1500 iterations on level 1
+							 1.87 hours for 1500 iterations on level 2 (1 multi-grid level)
+							 5.08 hours for 1000 iterations on level 3 (1 multi-grid level)
+							 6.19 hours for 1250 iterations on level 3 (constant cl, 1 multi-grid level)
+							-----
+							13.49 hours
+
+					 5500000.0	 0.59 hours for 1500 iterations on level 1
+							 3.12 hours for 1500 iterations on level 2 (1 multi-grid level)
+							 8.57 hours for 1000 iterations on level 3 (1 multi-grid level)
+							10.62 hours for 1250 iterations on level 3 (constant cl, 1 multi-grid level)
+							-----
+							22.90 hours
+
+					10000000.0	 0.72 hours for 1500 iterations on level 1
+							 2.67 hours for 1500 iterations on level 2 (no multi-grid)
+							 6.50 hours for  750 iterations on level 3 (no multi-grid)
+							 8.65 hours for 1000 iterations on level 3 (constant cl, no multi-grid)
+							-----
+							18.54 hours
+
+			WING/BODY/NACELLE/PYLON	
+					 4500000.0	 4.71 hours for 1500 iterations on level 1
+							10.32 hours for 1000 iterations on level 2 (no multi-grid)
+							12.88 hours for 1250 iterations on level 2 (constant cl, no multi-grid)
+							-----
+							27.79 hours
+
+					 8300000.0	 2.69 hours for 1500 iterations on level 1
+							 6.84 hours for 1500 iterations on level 2 (no multi-grid)
+							16.58 hours for 1000 iterations on level 3 (no multi-grid)
+							21.00 hours for 1250 iterations on level 3 (constant cl, no multi-grid)
+							-----
+							47.11 hours
+
+					13700000.0	 3.30 hours for 1500 iterations on level 1
+							 9.28 hours for 1500 iterations on level 2 (no multi-grid)
+							23.90 hours for 1000 iterations on level 3 (no multi-grid)
+							29.88 hours for 1250 iterations on level 3 (constant cl, no multi-grid)
+							-----
+							66.36 hours
+Run Time Wall-Clock: The number of processors used was such that a complete simulation could be carried out within one night (approx. 12 hours)
+Memory Requirements: 	wing/body		 3300000.0	2.5 GByte 
+						 5500000.0	4.1 GByte 
+						10000000.0	7.5 GByte 
+			wing/body/nacelle/pylon	 4500000.0	3.3 GByte 
+						 8300000.0	5.4 GByte 
+						13700000.0	8.4 GByte 
+      Miscellaneous:
+
+
+
+CASE 1 SINGLE-POINT GRID CONVERGENCE STUDY (REQUIRED)
+---------------------------------------
+
+WING/BODY
+
+ GRID_SIZE      MACH     ALPHA        CL_TOT (min, max)               CD_TOT (min, max)               CD_PR      CD_SF       CM_TOT (min, max)                  RESID_DROP
+ 3300000.0      0.75     0.164368     0.500193 (0.500132, 0.500351)   0.030919 (0.030889, 0.030924)   0.016963   0.013956    -0.145297 (-0.145464, -0.145297)   N/A
+ 5500000.0      0.75     0.232315     0.499926 (0.499915, 0.500036)   0.029744 (0.029732, 0.029770)   0.016192   0.013552    -0.144774 (-0.144774, -0.144664)   N/A
+10000000.0	0.75	 0.172221     0.500061 (0.500003, 0.500063)   0.029178 (0.029148, 0.029267)   0.015827   0.013351    -0.149374 (-0.149374, -0.149316)   N/A
+
+WING/BODY/NACELLE/PYLON
+
+ GRID_SIZE      MACH     ALPHA        CL_TOT (min, max)         CD_TOT (min, max)             CD_PR      CD_SF       CM_TOT (min, max)    RESID_DROP
+ 4500000.0	0.75	 0.622715     0.499828 (0.499664, 0.499828)	0.035532 (0.035122, 0.035548)   0.019095   0.016437    -0.152884 (-0.152884, -0.152775)   N/A
+ 8300000.0	0.75	 0.580036     0.499774 (0.499534, 0.499774)	0.035101 (0.034997, 0.035153)   0.018837   0.016263    -0.156575 (-0.156575, -0.156563)   N/A
+13700000.0	0.75	 0.544638     0.499648 (0.499645, 0.499815)	0.034264 (0.034142, 0.034264)   0.018058   0.016205    -0.156850 (-0.158846, -0.156850)   N/A
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY - FINE GRID
+
+    FS_BUB    BL_BUB   WL_BUB   FS_EYE_W  BL_EYE_W  WL_EYE_W  FS_EYE_B  BL_EYE_B  WL_EYE_B
+    N/A       N/A      N/A      N/A       N/A       N/A	      N/A       N/A	  N/A
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY/NACELLE/PYLON - FINE GRID
+
+    FS_BUB    BL_BUB   WL_BUB   FS_EYE_W  BL_EYE_W  WL_EYE_W  FS_EYE_B  BL_EYE_B  WL_EYE_B
+    N/A       N/A      N/A      N/A       N/A       N/A	      N/A       N/A	  N/A
+
+
+CASE 2 DRAG POLAR - MEDIUM GRID (REQUIRED)
+---------------------------------
+
+WING/BODY
+
+      MACH      ALPHA    CL_TOT (min, max)               CD_TOT (min, max)               CD_PR      CD_SF      CD-CL2/PA   CM_TOT (min, max)
+      0.75      -3.0     0.126791 (0.125331, 0.126791)   0.019789 (0.019742, 0.019789)   0.006701   0.013088   0.019250    -0.161884 (-0.161973, -0.161884)
+      0.75      -2.0     0.245100 (0.243927, 0.245100)   0.021298 (0.021250, 0.021315)   0.008201   0.013097   0.019285    -0.159147 (-0.159147, -0.159050)
+      0.75      -1.5     0.303779 (0.302435, 0.303779)   0.022499 (0.022404, 0.022499)   0.009414   0.013085   0.019407    -0.157583 (-0.157699, -0.157583)
+      0.75      -1.0     0.362462 (0.361148, 0.362462)   0.023929 (0.023860, 0.023947)   0.010865   0.013065   0.019527    -0.155433 (-0.155433, -0.155408)
+      0.75       0.0     0.479002 (0.477693, 0.479002)   0.027782 (0.027674, 0.027787)   0.014785   0.012998   0.020094    -0.149693 (-0.149800, -0.149693)
+      0.75       1.0     0.596090 (0.595237, 0.596090)   0.033552 (0.033461, 0.033552)   0.020655   0.012897   0.021646    -0.139885 (-0.139946, -0.139885)
+      0.75       1.5     0.659092 (0.658432, 0.659092)   0.038103 (0.038021, 0.038110)   0.025290   0.012814   0.023548    -0.136626 (-0.136637, -0.136626)
+
+WING/BODY/NACELLE/PYLON
+
+      MACH      ALPHA    CL_TOT (min, max)               CD_TOT (min, max)               CD_PR      CD_SF      CD-CL2/PA   CM_TOT (min, max)
+      0.75      -3.0     0.086275 (0.086267, 0.086275)   0.029912 (0.029652, 0.029912)   0.014270   0.015643   0.029663    -0.177942 (-0.177942, -0.177923)
+      0.75      -2.0     0.204479 (0.204267, 0.204489)   0.027477 (0.027452, 0.027537)   0.011799   0.015679   0.026076    -0.183832 (-0.183832, -0.183738)
+      0.75      -1.5     0.264005 (0.263832, 0.264033)   0.027857 (0.027857, 0.027931)   0.012167   0.015690   0.025522    -0.180310 (-0.180310, -0.180228)
+      0.75      -1.0     0.325441 (0.325352, 0.325470)   0.028693 (0.028693, 0.028787)   0.013002   0.015691   0.025144    -0.176749 (-0.176749, -0.176683)
+      0.75       0.0     0.449057 (0.448640, 0.449089)   0.031926 (0.031926, 0.032078)   0.016263   0.015664   0.025169    -0.168437 (-0.168437, -0.168374)
+      0.75       1.0     0.570037 (0.569200, 0.570042)   0.037084 (0.037066, 0.037187)   0.021556   0.015527   0.026196    -0.154780 (-0.154780, -0.154705)
+      0.75       1.5     0.633659 (0.632574, 0.633659)   0.041099 (0.041027, 0.041180)   0.025667   0.015432   0.027645    -0.148282 (-0.148282, -0.148215)
+
+
+
+
+UPPER SURFACE TRANSITION LOCATIONS (% CHORD)
+     XROOT     XKINK    XE.844      XTIP
+        5.       15.       15.        5.
+
+LOWER SURFACE TRANSITION LOCATION (% CHORD)
+       XLO
+       25.
+
+
+
+CASE 3 TRIPPED VS. FULLY TURBULENT DRAG (OPTIONAL)
+--------------------------------
+
+WING/BODY
+
+      MACH     ALPHA        CL_TOT (min, max)                   CD_TOT (min, max)               CD_PR      CD_SF       CM_TOT (min, max)                  TYPE
+      0.75     0.081519     0.499842 (0.499800, 0.499977)       0.028757 (0.028720, 0.028772)   0.015723   0.013034    -0.152450 (-0.152450, -0.152412)   TRIPPED
+      0.75     0.232315     0.499926 (0.499915, 0.500036)       0.029744 (0.029732, 0.029770)   0.016192   0.013552    -0.144774 (-0.144774, -0.144664)   FULLY TURBULENT
+
+WING/BODY/NACELLE/PYLON
+
+      MACH     ALPHA        CL_TOT (min, max)                   CD_TOT (min, max)               CD_PR      CD_SF       CM_TOT (min, max)                  TYPE
+      0.75     0.475635     0.499748 (0.499564, 0.499748)       0.034147 (0.034073, 0.034194)   0.018431   0.015716    -0.166394 (-0.166394, -0.166390)	TRIPPED
+      0.75     0.580036     0.499774 (0.499534, 0.499774)	0.035101 (0.034997, 0.035153)   0.018837   0.016263    -0.156575 (-0.156575, -0.156563)   FULLY TURBULENT

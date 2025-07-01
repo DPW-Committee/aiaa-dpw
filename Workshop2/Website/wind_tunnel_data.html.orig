@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+    <META NAME="Generator" CONTENT="Cosmo Create 1.0.3">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <TITLE>2nd AIAA CFD Drag Prediction Workshop </TITLE>
+</HEAD>
+<BODY>
+<CENTER><H1 ALIGN="CENTER">
+2nd AIAA CFD Drag Prediction Workshop</H1>
+</CENTER><CENTER><H2 ALIGN="CENTER">
+DLR-F6 Wind Tunnel Data</H2>
+</CENTER><HR>
+<P>
+<BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/summary_WTdata.txt"><B>Information 
+about the Wind Tunnel Test and Model</B></A> <BR>
+ <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/correction_log.txt"><B>Correction 
+Log (Updated 2/14/03)</B></A> </P>
+<P>
+<A HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/f6_cfml1_s2_onera.jpg">Wind Tunnel Model Photo</A></P>
+<HR>
+<P>
+<BR>
+<B>Forces</B> </P>
+<P>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_forces_WB_375">Alpha 
+Sweep at M = 0.75&nbsp; --&nbsp; Wing/Body</A> <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_forces_WBPN_175">Alpha 
+Sweep at M = 0.75&nbsp; --&nbsp; Wing/Body/Nacelle/Pylon</A> <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_forces_WB_CL50">Mach 
+Sweep at CL = 0.50 --&nbsp; Wing/Body</A> <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_forces_WBPN_CL50">Mach 
+Sweep at CL = 0.50 --&nbsp; Wing/Body/Nacelle/Pylon</A> </P>
+<P>
+The following internal nacelle drag was measured using the ONERA S4B 
+test bench.<BR>
+The reference surface area is 0.1454 square meters, the same as the 
+wind tunnel model. Internal<BR>
+area is defined as starting at the bell-mouth connection and ends at 
+the trailing edge. The bell-mouth<BR>
+was part of the calibration fixture, and was not included on the wind 
+tunnel model. (See <A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/gondel.gif">sketch</A>
+ )</P>
+<P>
+</P>
+<TABLE BORDER="1">
+    <TR>
+        <TH ALIGN="CENTER">Mach</TH>
+        <TH ALIGN="CENTER">Internal drag coefficient<BR>
+             for a single nacelle</TH>
+    </TR>
+    <TR>
+        <TD ALIGN="CENTER">0.60</TD>
+        <TD ALIGN="CENTER">0.00065</TD>
+    </TR>
+    <TR>
+        <TD ALIGN="CENTER">0.70</TD>
+        <TD ALIGN="CENTER">0.00062</TD>
+    </TR>
+    <TR>
+        <TD ALIGN="CENTER">0.72</TD>
+        <TD ALIGN="CENTER">0.00060</TD>
+    </TR>
+    <TR>
+        <TD ALIGN="CENTER">0.74</TD>
+        <TD ALIGN="CENTER">0.00058</TD>
+    </TR>
+    <TR>
+        <TD ALIGN="CENTER">0.75</TD>
+        <TD ALIGN="CENTER">0.00058</TD>
+    </TR>
+    <TR>
+        <TD ALIGN="CENTER">0.76</TD>
+        <TD ALIGN="CENTER">0.00058</TD>
+    </TR>
+    <TR>
+        <TD ALIGN="CENTER">0.77</TD>
+        <TD ALIGN="CENTER">0.00058</TD>
+    </TR>
+</TABLE>
+<P>
+</P>
+<HR>
+<P>
+<BR>
+<B>Wing Pressures at M = 0.75</B> </P>
+<P>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_pressure_WB_270">DPW_pressure_WB_270: 
+Alpha = -0.304&nbsp;&nbsp; CL = 0.4012&nbsp;&nbsp; Wing/Body</A> <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_pressure_WB_273">DPW_pressure_WB_273: 
+Alpha =&nbsp;&nbsp; 0.490&nbsp;&nbsp; CL = 0.4984&nbsp;&nbsp; Wing/Body</A>
+ <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_pressure_WB_275">DPW_pressure_WB_275: 
+Alpha =&nbsp;&nbsp; 1.230&nbsp;&nbsp; CL = 0.5979&nbsp;&nbsp; Wing/Body</A>
+ <BR>
+ <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_pressure_WBPN_184">DPW_pressure_WBPN_184: 
+Alpha =&nbsp;&nbsp; 0.190&nbsp;&nbsp; CL = 0.4008&nbsp;&nbsp;
+ Wing/Body/Nacelle/Pylon</A> <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_pressure_WBPN_183">DPW_pressure_WBPN_183: 
+Alpha =&nbsp;&nbsp; 1.003&nbsp;&nbsp; CL = 0.4981&nbsp;&nbsp;
+ Wing/Body/Nacelle/Pylon</A> <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DPW_pressure_WBPN_182">DPW_pressure_WBPN_182: 
+Alpha =&nbsp;&nbsp; 1.738&nbsp;&nbsp; CL = 0.5985&nbsp;&nbsp;
+ Wing/Body/Nacelle/Pylon</A> <BR>
+&nbsp; <BR>
+<A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/f6_nacelle_press_tabpositions.jpg">Location 
+of Pressure Taps on Nacelle/Pylon</A> <BR>
+ </P>
+<P>
+</P>
+<HR>
+<P>
+<BR>
+All files are in TECPLOT format. </P>
+<P>
+For those not familiar with this format, the first line (TITLE) 
+describes the file contents. <BR>
+The second line (VARIABLES) contains variable names for each column of 
+data.&nbsp; Data sets are separated by <BR>
+a line containing the word &quot;ZONE&quot; <BR>
+&nbsp; </P>
+<P>
+</P>
+<HR>
+</BODY>
+</HTML>

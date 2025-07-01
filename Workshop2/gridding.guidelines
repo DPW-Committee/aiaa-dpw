@@ -1,0 +1,17 @@
+Gridding Guidelines:  (Initial Numbers)
+* Build 3 grid systems for each configuration (WB & WBNP).
+  . Want to size the intermediate mesh to be sufficient for industry drag prediction.
+  . Total grid size to grow ~3X between levels.
+    - For the structured meshes, this growth is ~1.5X in each direction.
+  . WB:    Coarse ~1.3M nodes, Intermediate ~4.0M nodes, Fine ~12.0M nodes.
+  . WBNP:  Coarse ~2.0M nodes, Intermediate ~6.0M nodes, Fine ~18.0M nodes.
+* Farfield located at ~100 CREFs for all grid levels.
+* Growth rate of cell sizes should be < 1.25.
+* For the Intermediate Baseline Grids:
+  . Chordwise spacing at wing and nacelle LE and TE to be ~0.1% local chord.
+  . Wing TE base defined with 8 cells.
+  . Wing Spanwise spacing at root ~1.0% semispan.
+  . Wing spanwise spacing at tip  ~0.1% semispan.
+  . Spacing normal to all viscous walls Y+ = ~1.0.
+  . Cell size near fuselage nose and after-body ~2.0% CREF.
+* For the Coarse and Fine Baseline Grids, the above values should be scaled accordingly.

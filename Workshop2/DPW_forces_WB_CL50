@@ -1,0 +1,17 @@
+TITLE= "F6 tests in ONERA S2MA W.T. August 1990 - Total forces mesured by a balance - Correction from wall influence - Interpolation versus Mach and CL - Configuration F6 clean - CL 0.50 "
+VARIABLES= "Lot", "Rotation", "Nb point", "Mach", "Stag. Pressure", "Stag. temperature", "Static Pressure", "Dynamic Pressure", "Reynolds", "Incidence", "CAc axial force", "CNc vertical force", "CMAc pitching moment (model axis)", "CDc drag", "CLc lift", 
+"CMAAc pitching moment (aero axis)"
+ZONE T="lot  360", I=   1, F=POINT
+  360 1832   29  0.602  192562.  305.13  150791.   38191.  2.99   0.94   0.0198   0.5004  -0.1091   0.0279   0.5000  -0.1091
+ZONE T="lot  370", I=   1, F=POINT
+  370 1832   30  0.700  174968.  304.06  126140.   43265.  3.01   0.73   0.0225   0.5003  -0.1142   0.0288   0.5000  -0.1142
+ZONE T="lot  372", I=   1, F=POINT
+  372 1832   30  0.720  172741.  305.76  122297.   44388.  3.00   0.64   0.0234   0.5003  -0.1167   0.0290   0.5000  -0.1167
+ZONE T="lot  374", I=   1, F=POINT
+  374 1832   31  0.740  170509.  305.51  118514.   45430.  3.02   0.56   0.0244   0.5003  -0.1195   0.0293   0.5000  -0.1195
+ZONE T="lot  375", I=   1, F=POINT
+  375 1832   32  0.750  169437.  304.94  116671.   45938.  3.03   0.52   0.0250   0.5002  -0.1211   0.0295   0.5000  -0.1211
+ZONE T="lot  376", I=   1, F=POINT
+  376 1832   32  0.760  167565.  304.93  114287.   46213.  3.02   0.47   0.0257   0.5002  -0.1225   0.0298   0.5000  -0.1225
+ZONE T="lot  377", I=   1, F=POINT
+  377 1832   32  0.770  166702.  304.93  112619.   46739.  3.02   0.41   0.0264   0.5002  -0.1252   0.0300   0.5000  -0.1252

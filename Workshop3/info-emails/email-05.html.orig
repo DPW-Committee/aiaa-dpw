@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>DPW-3</title>
+</head>
+<body>
+From: DPW <<mailto:DPW@cessna.textron.com>DPW@cessna.textron.com>
+<br>Date: March 9, 2006 10:17:59 AM EST
+<br>Subject: DPW Updates
+
+<p>The overset_Boeing grids have been updated to correct the initial layer spacing (y+).
+ 
+<p>DPW-W2 grids have been added to Unst_node_based_larc.
+<p>The multiblock_icem_cfd W1 and W2 grids are being re-worked.  W'll let you know when they have been posted.
+<hr> 
+<P>Please be sure to check the moment reference center for the grids you are using.  Some geometries were moved when the grids were generated.  See :
+<br> <a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop3/Cases.html">http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop3/Cases.html</a> for the DLR-F6 geometry 
+<br><a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop3/DPW3-geom.html#Moment">http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop3/DPW3-geom.html#Moment</a> for the W1 and W2 geometries.
+ 
+<hr>
+ 
+DPW 3 Committee
+ 
+
+<br>
+<hr>
+<hr>
+<b>NASA Official Responsible for Content</b> <br>
+<a href="mailto:n.t.frink@larc.nasa.gov">Dr. Neal T. Frink</a> <br>
+&nbsp; <br>
+&nbsp; </p>
+<p class="Center"><b>Last Updated</b> <br>
+March 9, 2006<br>
+&nbsp; </p>
+<p><a href="http://lms.larc.nasa.gov/lms_feedback.html">Feedback on
+Langley Products and Services</a> </p>
+<br>
+<br>
+</body>
+</html>

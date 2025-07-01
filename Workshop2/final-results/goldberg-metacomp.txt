@@ -1,0 +1,158 @@
+Date: 7/23/03 
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Uriel Goldberg 
+              Email: ucg@metacomptech.com 
+              Phone: (818)735-4883
+            Address: Metacomp Technologies, Inc.   
+            Address: 28632B Roadside Drive # 255 
+            Address: Agoura Hills  
+            Address: CA 91301-3309
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: CFD++ Software Suite 
+    Basic Algorithm: finite volume unstructured mixed-element cell-based  
+   Turbulence Model: wall-distance-free realizable k-e 
+           Residual: based on L1 norm of mass RHS
+ 
+                               coarse    medium    fine
+               ----------------------------------------
+               WB   initial     5.2E5     4.7E5   4.7E5
+               ----------------------------------------
+	       WB     final     6.7E1     2.8E1   3.0E1
+               ========================================
+               WBPN initial     5.6E5     4.5E5   8.0E5
+               ----------------------------------------
+               WBPN   final     1.3E1     2.4E1   8.0E1
+
+      Miscellaneous: Inflow turbulence levels: T'=0.002 (AGARD-AR-303), L_t=0.6 mm.
+                     Flow was allowed to transition naturally over wing and fuselage.
+
+
+GRID INFORMATION
+--------------------
+Grid-Generator Name: ICEM CFD 
+          Grid Type: hexahedral  
+
+
+COARSE GRID SIZE          WB        WBNP
+-----------------------------------------
+              Zones:       1          1
+        Field Nodes:     5.6 M      4.9 M
+        Field Cells:     5.5 M      4.8 M
+     Boundary Nodes:            
+     Boundary Faces:    221472     195072
+   BL 1st-Cell Size: 1.5-2.0E-6m 1.5-2.0E-6m
+ BL Max-Growth Rate:    1.28        1.28 
+           BL Cells:     ~20         ~20
+      Miscellaneous: solve-to-wall, y+ < 1  
+
+
+MEDIUM GRID SIZE          WB        WBNP
+-----------------------------------------
+              Zones:       1          1
+        Field Nodes:    7.5 M      8.7 M
+        Field Cells:    7.4 M      8.5 M
+     Boundary Nodes:  
+     Boundary Faces:   268480     280416
+   BL 1st-Cell Size: 1.5-2.0E-6m 1.5-2.0E-6m 
+ BL Max-Growth Rate:    1.28        1.28
+           BL Cells:     ~20         ~20
+      Miscellaneous: solve-to-wall, y+ < 1
+
+
+FINE GRID SIZE            WB        WBNP
+-----------------------------------------
+              Zones:       1          1
+        Field Nodes:    9.8 M      13.0 M
+        Field Cells:    9.6 M      12.8 M
+     Boundary Nodes:  
+     Boundary Faces:   322976      350816
+   BL 1st-Cell Size: 1.5-2.0E-6m 1.5-2.0E-6m 
+ BL Max-Growth Rate:    1.28        1.28
+           BL Cells:     ~20         ~20
+      Miscellaneous: solve-to-wall, y+ < 1  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: PIV Xeon 2.4  GHz  
+       # Processors: 12 
+   Operating System: Linux RedHat 7.4 
+           Compiler: gcc 
+       Run Time CPU: 144-160 Hrs. 
+Run Time Wall-Clock: 12-13 Hrs. (6-8 Hrs.) 
+Memory Requirements: ~18 GB 
+      Miscellaneous: Times for WBPN medium grid. Times in parenthesis are for restarts. 
+                     Forces converged in ~400 time steps.
+
+
+CASE 1 SINGLE-POINT GRID CONVERGENCE STUDY (REQUIRED)
+---------------------------------------
+
+WING/BODY
+
+ GRID_SIZE      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+ 05527488.      0.75     0.144     0.500   0.02915   0.01561   0.01354   -0.1388
+ 07375552.      0.75     0.144     0.500   0.02933   0.01578   0.01355   -0.1385
+ 09606144.      0.75     0.144     0.500   0.02902   0.01548   0.01354   -0.1394
+
+
+WING/BODY/NACELLE/PYLON
+
+ GRID_SIZE      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+ 04787392.      0.75     0.716     0.499   0.03476   0.01815   0.01661   -0.1350
+ 08512064.      0.75     0.632     0.500   0.03422   0.01787   0.01636   -0.1401
+ 12833088.      0.75     0.632     0.499   0.03364   0.01737   0.01627   -0.1407
+
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY - FINE GRID
+
+    FS_BUB    BL_BUB   WL_BUB   FS_EYE_W  BL_EYE_W  WL_EYE_W  FS_EYE_B  BL_EYE_B  WL_EYE_B
+    162.12    100.62   013.53     234.05    084.04    -07.28    239.39    071.32    004.68
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY/NACELLE/PYLON - FINE GRID
+
+    FS_BUB    BL_BUB   WL_BUB   FS_EYE_W  BL_EYE_W  WL_EYE_W  FS_EYE_B  BL_EYE_B  WL_EYE_B
+    159.41    105.24   017.05     233.43    084.59    -06.97    238.61    071.25    004.55
+
+
+CASE 2 DRAG POLAR - MEDIUM GRID (REQUIRED)
+---------------------------------
+
+WING/BODY
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF CD-CL2/PA    CM_TOT
+      0.75      -3.0     0.131   0.02038   0.00666   0.01372   0.01980   -0.1527
+      0.75      -2.0     0.249   0.02197   0.00825   0.01371   0.01988   -0.1486
+      0.75      -1.5     0.307   0.02320   0.00948   0.01371   0.02002   -0.1465
+      0.75      -1.0     0.365   0.02457   0.01090   0.01367   0.02009   -0.1444
+      0.75       0.0     0.483   0.02848   0.01490   0.01358   0.02062   -0.1396
+      0.75       1.0     0.603   0.03435   0.02098   0.01337   0.02207   -0.1322
+      0.75       1.5     0.663   0.03957   0.02636   0.01321   0.02476   -0.1297
+      0.75       2.0     0.722   0.04478   0.03174   0.01304   0.02720   -0.1271
+
+
+WING/BODY/NACELLE/PYLON
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF CD-CL2/PA    CM_TOT
+      0.75      -3.0     0.093   0.02838   0.01175   0.01663   0.02809   -0.1733
+      0.75      -2.0     0.197   0.02780   0.01117   0.01663   0.02649   -0.1650
+      0.75      -1.5     0.253   0.02814   0.01153   0.01661   0.02598   -0.1602
+      0.75      -1.0     0.309   0.02883   0.01225   0.01658   0.02560   -0.1555
+      0.75       0.0     0.425   0.03131   0.01484   0.01647   0.02522   -0.1474
+      0.75       1.0     0.544   0.03592   0.01963   0.01629   0.02594   -0.1359
+      0.75       1.5     0.605   0.04013   0.02401   0.01612   0.02778   -0.1297
+      0.75       2.0     0.666   0.04433   0.02838   0.01595   0.02935   -0.1234    
+
+UPPER SURFACE TRANSITION LOCATIONS (% CHORD)
+     XROOT     XKINK    XE.844      XTIP
+       00.       00.       00.       00.
+
+LOWER SURFACE TRANSITION LOCATION (% CHORD)
+       XLO
+       00.

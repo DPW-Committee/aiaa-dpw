@@ -1,0 +1,170 @@
+Date:   1 Aug, 2003
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name:  Kazuomi YAMAMOTO, Ryoji TAKAKI, Ryozo ITO, Kentaro TANAKA
+              Email:  kazuomi@nal.go.jp
+              Phone:  +81-422-40-3465
+            Address:  CFD Techology Center
+            Address:  National Aerospace Laboratory of Japan
+            Address:  7-44-1, Jindaiji-higashi, Chofu,
+            Address:  Tokyo 182-8522
+            Address:  JAPAN
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name:  UPACS v1.4
+    Basic Algorithm:  Upwind, finite volume, Multi-Block structured
+   Turbulence Model:  Spalart-Allmaras model
+           Residual:  L2 norm of mass conservation eqn.
+      Miscellaneous:  Roe's flux difference, MPI, Matrix-Free Gauss-Seidel
+
+
+GRID INFORMATION
+--------------------
+Grid-Generator Name:  Gridgen
+          Grid Type:  Point matched structured, multiblock
+
+
+COARSE GRID SIZE          WB        WBNP
+-----------------------------------------
+              Zones:      129         221      
+        Field Nodes:  1183144     1866074
+        Field Cells:   992868     1570342
+     Boundary Nodes:    21867       33448
+     Boundary Faces:    19018       29306
+   BL 1st-Cell Size:  1.76e-3     1.76e-3 [mm]
+ BL Max-Growth Rate:     1.44        1.44
+           BL Cells:  
+      Miscellaneous:  Used in case #1 only.
+                      Coarsened by taking every 2points of the medium grid. 
+
+
+MEDIUM GRID SIZE          WB        WBNP
+-----------------------------------------
+              Zones:      127         219
+        Field Nodes:  8684521    13715017
+        Field Cells:  7942944    12562736
+     Boundary Nodes:    81669      125371
+     Boundary Faces:    76072      117224
+   BL 1st-Cell Size:     8e-4        8e-4 [mm]
+ BL Max-Growth Rate:      1.2         1.2
+           BL Cells:  
+      Miscellaneous:  Used in case #1 only.
+                      Max-cell size at the wing-body corner : 0.50 [mm]
+                      Max-cell size at the wing-pylon corner : 0.25 [mm]
+                      Max-cell size at the nacelle-pylon corner : 0.35 [mm]
+
+
+FINE GRID SIZE            WB        WBNP
+-----------------------------------------
+              Zones:      130         223
+        Field Nodes:  9026246    14736445
+        Field Cells:  8271248    13535072
+     Boundary Nodes:   101787      151300
+     Boundary Faces:    95384      142200
+   BL 1st-Cell Size:     8e-4        8e-4 [mm]
+ BL Max-Growth Rate:      1.2         1.2
+           BL Cells:  
+      Miscellaneous:  Used in all cases.
+                      Max cell size at the wing-body corner : 8e-4 [mm]
+                      Max cell size at the wing-pylon corner : 0.08 [mm]
+                      Max cell size at the nacelle-pylon corner : 0.08 [mm]
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform:  Fujitsu PrimePower HPC2500, SPARC64V(1.3GHz) x 1792 
+       # Processors:  25(coarse grid) - 99(fine grid)
+   Operating System:  SunOS 5.8
+           Compiler:  Fujitsu MPI Fortran
+       Run Time CPU:  
+Run Time Wall-Clock:  16 - 32 hours typical/ case for 14M (fine) grid with 99 cpu
+Memory Requirements:  50 Gbyte for the fine grid
+      Miscellaneous:  
+
+
+
+CASE 1 SINGLE-POINT GRID CONVERGENSE STUDY (REQUIRED)
+---------------------------------------
+
+WING/BODY
+
+ GRID_SIZE      MACH     ALPHA   CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT   RESID_DROP
+   992868.      0.75     0.192    0.500   0.03040   0.01750   0.01290   -0.1362    6657.
+  7942944.      0.75     0.280    0.500   0.02933   0.01635   0.01298   -0.1350    8372.
+  8271248.      0.75     0.272    0.500   0.02932   0.01634   0.01298   -0.1354    8303.
+
+WING/BODY/NACELLE/PYLON
+
+ GRID_SIZE      MACH     ALPHA   CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT   RESID_DROP
+  1570342.      0.75     0.843    0.500   0.03581   0.02056   0.01525   -0.1284    6374.
+ 12562736.      0.75     0.967    0.500   0.03485   0.01954   0.01531   -0.1237   10690.
+ 13535072.      0.75     0.921    0.500   0.03468   0.01935   0.01534   -0.1242   13025.
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY - FINE GRID
+
+    FS_BUB    BL_BUB   WL_BUB   FS_EYE_W  BL_EYE_W  WL_EYE_W  FS_EYE_B  BL_EYE_B  WL_EYE_B
+     88.03   -114.74    18.03     229.40    -87.85     -5.05    235.34    -72.09      7.61
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY/NACELLE/PYLON - FINE GRID
+
+    FS_BUB    BL_BUB   WL_BUB   FS_EYE_W  BL_EYE_W  WL_EYE_W  FS_EYE_B  BL_EYE_B  WL_EYE_B
+     92.00   -118.25    21.18     228.40    -89.73     -4.40    234.78    -72.28      8.38
+
+
+CASE 2 DRAG POLAR - "FINE" GRID (REQUIRED)
+---------------------------------
+
+WING/BODY
+
+      MACH     ALPHA   CL_TOT    CD_TOT     CD_PR     CD_SF CD-CL2/PA    CM_TOT 
+      0.75      -3.0    0.133   0.01916   0.00662   0.01254   0.01857   -0.1552 
+      0.75      -2.0    0.250   0.02085   0.00831   0.01254   0.01873   -0.1508 
+      0.75      -1.5    0.309   0.02211   0.00958   0.01252   0.01889   -0.1487 
+      0.75      -1.0    0.366   0.02363   0.01114   0.01249   0.01910   -0.1466 
+      0.75       0.0    0.482   0.02760   0.01520   0.01239   0.01976   -0.1422 
+      0.75       1.0    0.599   0.03352   0.02130   0.01222   0.02142   -0.1356 
+      0.75       1.5    0.656   0.03795   0.02590   0.01205   0.02345   -0.1320 
+
+WING/BODY/NACELLE/PYLON
+
+      MACH     ALPHA   CL_TOT    CD_TOT     CD_PR     CD_SF CD-CL2/PA    CM_TOT 
+      0.75      -3.0    0.093   0.02916   0.01435   0.01481   0.02886   -0.1606 
+      0.75      -2.0    0.205   0.02841   0.01356   0.01485   0.02699   -0.1531 
+      0.75      -1.5    0.259   0.02853   0.01369   0.01484   0.02627   -0.1495 
+      0.75      -1.0    0.307   0.02871   0.01390   0.01481   0.02552   -0.1464 
+      0.75       0.0    0.412   0.03080   0.01608   0.01472   0.02509   -0.1379 
+      0.75       1.0    0.523   0.03512   0.02056   0.01456   0.02588   -0.1285 
+      0.75       1.5    0.586   0.03852   0.02405   0.01447   0.02695   -0.1253 
+
+
+
+
+UPPER SURFACE TRANSITION LOCATIONS (% CHORD)
+     XROOT     XKINK    XE.844      XTIP
+        5.       15.       15.        5.
+
+LOWER SURFACE TRANSITION LOCATION (% CHORD)
+       XLO
+       25.
+
+
+
+CASE 3 TRIPPED VS. FULLY TURBULENT DRAG (OPTIONAL)
+--------------------------------
+
+WING/BODY
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT   TYPE
+      0.75     0.161     0.500   0.02831   0.01599   0.01231   -0.1411   TRIPPED
+      0.75     0.272     0.500   0.02932   0.01634   0.01298   -0.1354   FULLY TURBULENT
+
+WING/BODY/NACELLE/PYLON
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT   TYPE
+      0.75     0.808     0.499   0.03405   0.01962   0.01443   -0.1305   TRIPPED
+      0.75     0.921     0.500   0.03468   0.01935   0.01534   -0.1242   FULLY TURBULENT
+

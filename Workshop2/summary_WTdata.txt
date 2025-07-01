@@ -1,0 +1,30 @@
+-internal drag of nacelle Cd +- 0.00005
+
+-corrections for alpha,Machnumber,static and dynamic pressure,
+ Reynoldsnumber, aerodynamic coefficients (CAC,CYAC,CNC,CLAC,CMAC,
+ CNAC,CXC,CYC,CZC,CLAAC,CMAAC,CNAAC)
+
+-accuracy: Ma 0.75 +- 0.015, Re 3e6 +- 0.015, T 305K +- 1K
+           at the above conditions
+           CA,CX  +-0.0001
+           CZ(alpha) +-0.01 deg
+
+-transitionstrips (depth: 2mm) on wing, fuselage nose and nacelle front
+
+  lower wing root, kink and tip: x/c =  25%, height 50 mue m, grain no 240
+  upper wing root: x/c = 5%, kink x/c = 15%, eta = 0.844 x/c = 15%, 
+                  tip x/c 5%, height 63 mue m, grain no 220
+
+  fuse nose at x = 15 mm, height 76 mue m, grain no 180
+
+  nacelle (from inlet plane) inside at 15 mm, height 102 mue m, grain no 120
+                             outside at 12 mm, height 220 mue m, grain no 63
+
+-pressure taps wing at etas: 0.15, 0.238, 0.331, 0.377, 0.409, 0.512, 0.636, 0.844
+
+-pressure taps on nacelle cfm 56 at 60, 180 and 300 deg (0 deg at wing attachment point)
+
+-mutual Machnumbers for clean geometry and geometry with long naclles position 1:
+ 0.72 / 0.74 / 0.75 / 0.76 / 0.77
+
+-Z-sting mount in wind tunnel

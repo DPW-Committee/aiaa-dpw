@@ -1,0 +1,175 @@
+
+Date:  29th July 2003
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name:  AMANT
+              Email:  Stéphane
+              Phone:  00 33 5 61 58 65 19
+            Address:  Aerodynamic Design and Data Department
+            Address:  Airbus France
+            Address:  M0131/3
+            Address:  316, route de Bayonne
+            Address:  31060 Toulouse cedex 03
+            Address:  FRANCE
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name:  elsA
+    Basic Algorithm:  cell centered finite volume solver, Jameson type scheme
+   Turbulence Model:  k-w Wilcox
+      Miscellaneous:  C++
+
+
+GRID INFORMATION
+--------------------
+Grid-Generator Name:  Hexa
+          Grid Type:  multiblock structured grids
+
+
+COARSE GRID SIZE          WB        WBNP
+-----------------------------------------
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  Coarse ICEM grids
+
+
+MEDIUM GRID SIZE          WB        WBNP
+-----------------------------------------
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  Medium ICEM grids
+
+
+FINE GRID SIZE            WB        WBNP
+-----------------------------------------
+              Zones:  
+        Field Nodes:
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous: Fine ICEM grids 
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform:  Fujitsu VPPF700 (24 processors)
+       # Processors:  3 to 11 depending on the grid size
+   Operating System:  UXP/V
+           Compiler:  
+       Run Time CPU:  
+Run Time Wall-Clock:  
+Memory Requirements:  4,1 Gb for the WB coarse grid
+                      14.4 Gb for the WBPN fine grid 
+      Miscellaneous:  distributed memory, 1792Mbytes for each processor,
+			    L2 norm of mass conservation equation (log10 scale)
+
+
+CASE 1 SINGLE-POINT GRID CONVERGENCE STUDY (REQUIRED)
+---------------------------------------
+
+WING/BODY
+
+ GRID_SIZE      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT    RESID_DROP
+    coarse      0.75     0.100    0.5006   0.02938   0.01559   0.01379   -0.1444      2.7/-0.6
+    medium      0.75     0.085    0.5002   0.02959   0.01542   0.01416   -0.1448      2.7/-0.8
+      fine      0.75     0.075    0.5004   0.02972   0.01539   0.01434   -0.1456      2.3/-1.3
+
+WING/BODY/NACELLE/PYLON
+
+ GRID_SIZE      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT    RESID_DROP
+    coarse      0.75     0.640    0.5006   0.03415   0.01766   0.01649   -0.1418      2.4/-0.2
+    medium      0.75     0.590    0.5005   0.03417   0.01737   0.01679   -0.1448      2.4/-0.3
+      fine      0.75     0.575    0.4993   0.03406   0.01703   0.01703   -0.1469      2.7/-0.7
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY - FINE GRID
+
+    FS_BUB    BL_BUB   WL_BUB   FS_EYE_W  BL_EYE_W  WL_EYE_W  FS_EYE_B  BL_EYE_B  WL_EYE_B
+    145.14    -92.12     8.41     233.33    -81.81     -7.42    236.69    -70.40      1.72
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY/NACELLE/PYLON - FINE GRID
+
+    FS_BUB    BL_BUB   WL_BUB   FS_EYE_W  BL_EYE_W  WL_EYE_W  FS_EYE_B  BL_EYE_B  WL_EYE_B
+    138.42    -94.07    10.35     234.12    -82.32     -7.60    236.58   -70.43       1.80
+
+
+CASE 2 DRAG POLAR - MEDIUM GRID (REQUIRED)
+---------------------------------
+
+WING/BODY
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF CD-CL2/PA    CM_TOT
+      0.75      -3.0     ?.???   ?.?????   ?.?????   ?.?????   0.00570    ?.????
+      0.75      -2.0     ?.???   ?.?????   ?.?????   ?.?????   ?.?????    ?.????
+      0.75      -1.5    0.3210   0.02277   0.00917   0.01360   0.01929   -0.1590
+      0.75      -1.0    0.3802   0.02430   0.01071   0.01359   0.01942   -0.1566
+      0.75       0.0    0.5018   0.02851   0.01501   0.01350   0.02002   -0.1512
+      0.75       1.0    0.6234   0.03475   0.02135   0.01340   0.02164   -0.1399
+      0.75       1.5     ?.???   ?.?????   ?.?????   ?.?????   ?.?????    ?.????
+
+WING/BODY/NACELLE/PYLON
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF CD-CL2/PA    CM_TOT
+      0.75      -3.0     ?.???   ?.?????   ?.?????   ?.?????   ?.?????    ?.????
+      0.75      -2.0     ?.???   ?.?????   ?.?????   ?.?????   ?.?????    ?.????
+      0.75      -1.5     ?.???   ?.?????   ?.?????   ?.?????   ?.?????    ?.????
+      0.75      -1.0    0.3437   0.02995   0.01410   0.01586   0.02597   -0.1625
+      0.75       0.0    0.4407   0.03107   0.01513   0.01593   0.02452   -0.1593
+      0.75       1.0    0.5617   0.03607   0.02020   0.01587   0.02543   -0.1425
+      0.75       1.5    0.6254   0.03998   0.02419   0.01578   0.02679   -0.1338
+
+
+UPPER SURFACE TRANSITION LOCATIONS (% CHORD)
+     XROOT     XKINK    XE.844      XTIP
+	5.       15.       15.        5.
+
+LOWER SURFACE TRANSITION LOCATION (% CHORD)
+       XLO
+       25.
+
++ NACELLE TRANSITION TRIPS
+
+
+CASE 3 TRIPPED VS. FULLY TURBULENT DRAG (OPTIONAL)
+--------------------------------
+
+WING/BODY
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT   TYPE
+      0.75    -0.015    0.5003   0.02845   0.01495   0.01350   -0.1514   TRIPPED
+      0.75     0.085    0.5002   0.02959   0.01542   0.01416   -0.1448   FULLY TURBULENT
+
+WING/BODY/NACELLE/PYLON
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT   TYPE
+      0.75     0.500    0.4997   0.03325   0.01734   0.01591   -0.1509   TRIPPED
+      0.75     0.590    0.5005   0.03417   0.01737   0.01679   -0.1448   FULLY TURBULENT
+
+
+CASE 3 TRIPPED VS. FULLY TURBULENT DRAG (OPTIONAL)
+--------------------------------
+Home-made grid : 8 691 392 cells
+
+WING/BODY
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT   TYPE
+      0.75    -0.130    0.4996   0.02816   0.01508   0.01308   -0.1567   TRIPPED
+      0.75    -0.020    0.5005   0.02938   0.01560   0.01378   -0.1499   FULLY TURBULENT
+

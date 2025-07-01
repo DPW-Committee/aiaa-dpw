@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+    <META NAME="Generator" CONTENT="Cosmo Create 1.0.3">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <TITLE>2nd AIAA CFD Drag Prediction Workshop </TITLE>
+</HEAD>
+<BODY>
+<CENTER><H1 ALIGN="CENTER">
+2nd AIAA CFD Drag Prediction Workshop</H1>
+</CENTER><CENTER><H2 ALIGN="CENTER">
+DLR-F6 Geometry</H2>
+</CENTER><HR>
+<P>
+<BR>
+<B>Geometry Update</B> (Version 2) </P>
+<P>
+There were inconsistencies found in the fuselage curvature on the first 
+geometry that have been resolved.&nbsp; The fuselage forward and aft 
+closures and the pylon have been cleaned up. </P>
+<P>
+</P>
+<HR>
+<P>
+<BR>
+<B>CATIA Model:</B>&nbsp; <A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/F6-FEM_v2.model.gz">F6-FEM_v2.model.gz</A>
+ </P>
+<P>
+</P>
+<HR>
+<P>
+<BR>
+The zipped igesfiles for the F6 and a farfield box.&nbsp; The 
+igesfilecontains both the geometry with nacelle and without. To 
+&quot;produce&quot; the igesfile for the clean configuration move the 
+pylon- and nacelle panels and the lower inner wing panels (50,59,60) to 
+invisible. Then move the &quot;clean&quot; inner wing panels 68 and 69 
+from invisible to visible.&nbsp; The reference data is the same as for 
+the F4 as the wing planform and position and the fuselage have not 
+changed. </P>
+<P>
+<B>IGES Model:</B>&nbsp; <A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/f6_nac+clean_dpwII_v2.iges.gz">f6_nac+clean_dpwII_v2.iges.gz</A>&nbsp;&nbsp;&nbsp;
+ <A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/f6_farfield.iges.gz">f6_farfield.iges.gz</A>
+ </P>
+<P>
+</P>
+<HR>
+<P>
+<BR>
+<B>STEP Model:</B> <A
+ HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/DLR_F6_V2_STEP1.stp.gz">DLR_F6_V2_STEP1.stp.gz</A></P>
+<HR>
+<P>
+Mean Aerodynamic Chord:&nbsp;&nbsp;&nbsp;&nbsp; 141.2 mm <BR>
+Moment reference point (from fuselage nose):&nbsp;&nbsp;&nbsp;&nbsp;
+ 504.9 mm <BR>
+Projected half span (v-form 4.787 deg):&nbsp;&nbsp;&nbsp; 585.647 mm <BR>
+Half model reference area:&nbsp;&nbsp;&nbsp; 72700.0 mm^2 </P>
+<P>
+Reynolds No.: 3e6 <BR>
+Temperature: 305 K <BR>
+</P>
+<P CLASS="Center">
+<B>NASA Official Responsible for Content</B><BR>
+<A HREF="mailto:n.t.frink@larc.nasa.gov">Dr. Neal T. Frink</A></P>
+<P>
+<BR>
+</P>
+<P CLASS="Center">
+<B>Last Updated</B><BR>
+February 7, 2003</P>
+<P>
+<BR>
+<A HREF="http://lms.larc.nasa.gov/lms_feedback.html"> Feedback on 
+Langley Products and Services</A> <BR>
+</P>
+<HR>
+<HR>
+</BODY>
+</HTML>

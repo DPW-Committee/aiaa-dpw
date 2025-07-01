@@ -1,0 +1,205 @@
+
+Date: 05/23/03
+
+PARTICIPANT INFORMATION
+-----------------------
+Name: Hong Luo
+Email: hong.luo@saic.com
+Phone: (703) 676-5957
+Address: 1710 SAIC Dr., MS 2-6-9
+Address: Address: Address: Address: Address:
+
+SOLVER INFORMATION
+--------------------
+Method Name: FEFLO
+Basic Algorithm: Matrix-free implicit unstructured tetrahedral grid method
+Turbulence Model: Spart-Allmaras one-equation model
+Miscellaneous:
+
+GRID INFORMATION
+--------------------
+Grid-Generator Name: Grid Type: unstructured tetrahedral grid
+
+
+COARSE GRID SIZE WB WBNP
+-----------------------------------------
+Zones: Field Nodes: 1121301 1827470
+Field Cells: 6558758 10715204
+Boundary Nodes: 38879 58803
+Boundary Faces: 77754 117606
+BL 1st-Cell Size: BL Max-Growth Rate: BL Cells: Miscellaneous: coarse grid by LARC
+
+
+MEDIUM GRID SIZE WB WBNP
+-----------------------------------------
+Zones: Field Nodes: 1779420 2419388
+Field Cells: 10504337 14304595
+Boundary Nodes: 57009 70580
+Boundary Faces: 114014 141160
+BL 1st-Cell Size: BL Max-Growth Rate: BL Cells: Miscellaneous: coarse grid by Swansea
+
+
+FINE GRID SIZE WB WBNP
+-----------------------------------------
+Zones: Field Nodes: 2390716 3682535
+Field Cells: 13977040 21564720
+Boundary Nodes: 93663 134802
+Boundary Faces: 187322 269604
+BL 1st-Cell Size: BL Max-Growth Rate: BL Cells: Miscellaneous: coarse mesh by DLR
+
+
+SOLUTION INFORMATION
+--------------------
+Computer Platform: IBM SP4 # Processors: 8 Operating System: IBM AIX
+Compiler: IBM xlf
+Run Time CPU: Run Time Wall-Clock: Memory Requirements: Miscellaneous:
+
+
+CASE 1 SINGLE-POINT GRID CONVERGENCE STUDY (REQUIRED)
+---------------------------------------
+
+WING/BODY
+
+GRID_SIZE MACH ALPHA CL_TOT CD_TOT CD_PR CD_SF CM_TOT
+1121301 0.75 0.376 0.499 0.03165 0.01873 0.01292 -0.1244
+1779420 0.75 0.280 0.500 0.03038 0.01775 0.01263 -0.1281
+2390716 0.75 0.275 0.499 0.03034 0.01803 0.01231 -0.1332
+
+WING/BODY/NACELLE/PYLON
+
+GRID_SIZE MACH ALPHA CL_TOT CD_TOT CD_PR CD_SF CM_TOT
+1827470 0.75 0.950 0.497 0.03719 0.02161 0.01558 -0.1205
+2419388 0.75 0.843 0.498 0.03658 0.02062 0.01596 -0.1216
+3682535 0.75 0.800 0.501 0.03631 0.02081 0.01550 -0.1242
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY - FINE GRID
+
+FS_BUB BL_BUB WL_BUB FS_EYE_W BL_EYE_W WL_EYE_W FS_EYE_B BL_EYE_B WL_EYE_B
+495.30 101.73 20.19 580.23 86.61 -6.61 585.00 71.05 3.79
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY/NACELLE/PYLON - FINE GRID
+
+FS_BUB BL_BUB WL_BUB FS_EYE_W BL_EYE_W WL_EYE_W FS_EYE_B BL_EYE_B WL_EYE_B
+523.41 84.54 2.92 583.21 77.60 -9.25 587.93 67.16 -6.38
+
+
+CASE 2 DRAG POLAR - MEDIUM GRID (REQUIRED)
+---------------------------------
+
+WING/BODY
+
+MACH ALPHA CL_TOT CD_TOT CD_PR CD_SF CD-CL2/PA CM_TOT
+0.75 -3.0 0.128 0.02170 0.00891 0.01279 0.02115 -0.1483
+0.75 -2.0 0.242 0.02299 0.01022 0.01278 0.02103 -0.1423
+0.75 -1.5 0.298 0.02408 0.01131 0.01278 0.02110 -0.1394
+0.75 -1.0 0.354 0.02543 0.01269 0.01274 0.02123 -0.1364
+0.75 0.0 0.469 0.02916 0.01643 0.01273 0.02179 -0.1305
+0.75 1.0 0.585 0.03458 0.02212 0.01246 0.02311 -0.1222
+0.75 1.5 0.645 0.03887 0.02655 0.01232 0.02493 -0.1184
+
+WING/BODY/NACELLE/PYLON
+
+MACH ALPHA CL_TOT CD_TOT CD_PR CD_SF CD-CL2/PA CM_TOT
+0.75 -3.0 0.088 0.03303 0.01742 0.01561 0.03277 -0.1495
+0.75 -2.0 0.172 0.03128 0.01558 0.01570 0.03029 -0.1428
+0.75 -1.5 0.230 0.03078 0.01512 0.01566 0.02900 -0.1352
+0.75 -1.0 0.285 0.03080 0.01518 0.01562 0.02808 -0.1340
+0.75 0.0 0.394 0.03268 0.01707 0.01561 0.02748 -0.1274
+0.75 1.0 0.520 0.03767 0.02154 0.01612 0.02861 -0.1206
+0.75 1.5 0.580 0.04110 0.02507 0.01602 0.02983 -0.1134
+
+
+UPPER SURFACE TRANSITION LOCATIONS (% CHORD)
+XROOT XKINK XE.844 XTIP
+Fully turbulent
+
+LOWER SURFACE TRANSITION LOCATION (% CHORD)
+XLO
+Fully turbulent
+
+
+
+CASE 3 TRIPPED VS. FULLY TURBULENT DRAG (OPTIONAL)
+--------------------------------
+
+WING/BODY
+
+MACH ALPHA CL_TOT CD_TOT CD_PR CD_SF CM_TOT TYPE
+0.75 ?.??? 0.50? ?.????? ?.????? ?.????? ?.???? TRIPPED
+0.75 ?.??? 0.50? ?.????? ?.????? ?.????? ?.???? FULLY TURBULENT
+
+WING/BODY/NACELLE/PYLON
+
+MACH ALPHA CL_TOT CD_TOT CD_PR CD_SF CM_TOT TYPE
+0.75 ?.??? 0.50? ?.????? ?.????? ?.????? ?.???? TRIPPED
+0.75 ?.??? 0.50? ?.????? ?.????? ?.????? ?.???? FULLY TURBULENT
+
+
+CASE 4 DRAG RISE (OPTIONAL)
+-------------------------------------------
+
+WING/BODY
+
+MACH ALPHA CL_TOT CD_TOT CD_PR CD_SF CM_TOT
+0.50 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.60 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.70 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.72 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.74 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.75 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.76 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.77 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+
+WING/BODY/NACELLE/PYLON
+
+MACH ALPHA CL_TOT CD_TOT CD_PR CD_SF CM_TOT
+0.50 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.60 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.70 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.72 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.74 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.75 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.76 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+0.77 ?.??? 0.50? ?.????? ?.????? ?.????? ?.????
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+
+* MACH (F10.2) Mach Number.
+* ALPHA (F10.3) Angle of Attack in Degrees.
+
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CD-CL2/PA (F10.5) CD_TOT - (CL_TOT*CL_TOT)/(PI*AR)
+* CM_TOT (F10.4) Total Moment Coefficient.
+
+* D_CL_TOT (F10.3) Increment in CL_TOT due to nacelle
+* D_CD_TOT (F10.5) Increment in CD_TOT due to nacelle
+* D_CD_PR (F10.5) Increment in CD_PR due to nacelle
+* D_CD_SF (F10.5) Increment in CD_SF due to nacelle
+* D_CM_TOT (F10.4) Increment in CM_TOT due to nacelle
+
+* XROOT (F10.0) Upper surface boundary layer transition location at the wing root in % chord
+* XKINK (F10.0) Upper surface boundary layer transition location at the wing planform break in % chord
+* XE.844 (F10.0) Upper surface boundary layer transition location at 84.4% span in % chord
+* XTIP (F10.0) Upper surface boundary layer transition location at the wing tip in % chord
+* XLO (F10.0) Lower surface boundary layer transition location in % chord
+
+* GRID_SIZE (F10.0) Number of grid nodes or cells
+
+* FS_BUB (F10.2) Fuselage station at the leading edge of the wing root separation bubble (mm) (measured on the wing)
+* BL_BUB (F10.2) Buttock line at the outboard edge of the wing root separation bubble (mm) (measured on the wing)
+* WL_BUB (F10.2) Water line at the top edge of the wing root separation bubble (mm) (measured on the fuselage)
+
+* FS_EYE_W (F10.2) Fuselage station at the center of the wing root separation bubble (mm) (measured on the wing)
+* BL_EYE_W (F10.2) Buttock line at the center of the wing root separation bubble (mm) (measured on the wing)
+* WL_EYE_W (F10.2) Water line at the center of the wing root separation bubble (mm) (measured on the wing)
+
+* FS_EYE_B (F10.2) Fuselage station at the center of the wing root separation bubble (mm) (measured on the fuselage)
+* BL_EYE_B (F10.2) Buttock line at the center of the wing root separation bubble (mm) (measured on the fuselage)
+* WL_EYE_B (F10.2) Water line at the center of the wing root separation bubble (mm) (measured on the fuselage)

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+    <META NAME="Generator" CONTENT="Cosmo Create 1.0.3">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <TITLE>2nd AIAA CFD Drag Prediction Workshop </TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<H1>
+NEWS</H1>
+<HR>
+<P>
+<BR>
+&nbsp; 8 May 2003</P>
+<P>
+Flow visualization pictures of the upper and lower wing surfaces are 
+available under <A HREF="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop2/wind_tunnel_data.html">Wind Tunnel Data</A></P>
+<P>
+</P>
+<P>
+11 April 2003</P>
+<P>
+Early results indicate areas of separation on the model that are having 
+significant effects on the solution. The wing-body junction and the 
+side of the pylon seem to be the two areas with the largest impact. 
+Some of the results are showing better matches of Cp or drag (not 
+necessarily together) depending on whether alpha or CL is specified or 
+depending on which differencing scheme is used. </P>
+<P>
+This looks like it will be a good area to address in your 
+presentations, and to make some attempt to quantify a part of this, we 
+would also like you to report on the size of the wing-body separation 
+bubble. For the constant CL runs (Case #1, all grids), we would like 
+you to report the forward and spanwise extent of the separation in 
+terms of the Fuselage Station and Butt Line in millimeters. This will 
+be added to the data submittal form. </P>
+<P>
+We would also like to clarify the moment reference location so that we can 
+have consistent data submitted to the workshop. </P>
+<P>
+Xref = 157.9 mm (504.9 mm aft of the nose) </P>
+<P>
+Yref = 0 mm </P>
+<P>
+Zref = -33.92 mm </P>
+<P>
+X=fuselage station&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y=buttock 
+line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Z= water line</P>
+<P>
+The Data Submittal date is May 16, but we should be able to make accomodations 
+for late submittals. Please let us know if you will need to submit late.</P>
+<P>
+</P>
+<P>
+28 Feb 2003<BR>
+23 abstracts accepted for presentation at the workshop. <BR>
+</P>
+<P>
+</P>
+<P>
+14 Feb 2003<BR>
+A summary presentation of the European <A
+ HREF="http://cfd.me.umist.ac.uk/flomania">FLOMANIA</A> project is 
+planned for the drag prediction workshop. <BR>
+&nbsp; <BR>
+&nbsp; <BR>
+&nbsp; <BR>
+&nbsp; <BR>
+&nbsp; <BR>
+&nbsp; <BR>
+&nbsp; </P>
+<P>
+</P>
+<HR>
+<P>
+<div CLASS="Center"><B>NASA Official Responsible for Content</B></div> </P>
+<P>
+<BR>
+<A HREF="mailto:n.t.frink@larc.nasa.gov">Dr. Neal T. Frink</A> <BR>
+&nbsp; <BR>
+&nbsp; </P>
+<P CLASS="Center">
+<B>Last Updated</B> <BR>
+May 8, 2003 <BR>
+&nbsp; </P>
+<P>
+<A HREF="http://lms.larc.nasa.gov/lms_feedback.html">Feedback on 
+Langley Products and Services</A> <BR>
+&nbsp; </P>
+</BODY>
+</HTML>

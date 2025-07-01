@@ -1,0 +1,203 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+
+<html>
+
+<head>
+
+    
+
+  <meta http-equiv="Content-Type"
+
+ content="text/html; charset=iso-8859-1">
+
+
+
+  <meta name="description"
+
+ content="Applied Aerodynamics Drag Prediction Workshop Gridding Guidelines">
+
+    
+
+  <meta name="keywords" content="drag prediction workshop, gridding guidelines, AIAA">
+
+    
+
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+</head>
+
+
+
+<STYLE type="text/css">
+
+OL.withroman { list-style-type: lower-roman }
+
+OL.withalpha { list-style-type: lower-alpha }
+
+</STYLE>
+
+
+
+<body text="#000000" bgcolor="#ffffff" link="#292a96" vlink="#551a8b"
+
+ alink="#ff0000">
+
+ &nbsp; 
+
+
+
+<center>
+
+<h2> 3rd AIAA CFD Drag Prediction Workshop Gridding Guidelines </h2>
+
+</center>
+
+
+
+<ol>
+
+<li> Grid Convergence Cases
+
+
+
+<ol class="withalpha">
+
+<li> DLR F6 FX2B  Wing-Body with wing-body fairing - Required 3 grid levels
+
+<li> DLR F6 Wing-Body Configuration - Optional (recommended 3 grid levels)
+
+<li> DPW-W1 Baseline Wing Alone - Required 4 grid levels
+
+<li> DPW-W2 Wing Alone - Required 4 grid levels
+
+</ol>
+
+
+
+<li> Grid Guidelines
+
+
+
+<ol class="withalpha">
+
+<li> Spacing normal to all viscous walls 
+
+
+
+<ol class="withroman">
+
+<li>	dy = 0.00060 mm (Y+ <  1.0) on the coarsest mesh
+
+<li>	dy = 0.00040 mm (Y+ < 2/3) on the intermediate mesh
+
+<li>	dy = 0.00027 mm (Y+ < 4/9) on the fine mesh
+
+<li>	dy = 0.00018 mm (Y+ < 8/27) on the extra-fine mesh (DPW-
+
+W1 and DWP-W2 Wing Alone)
+
+</ol>
+
+<li>	Recommended practice: generate grids with 2 cell layers of 
+
+constant spacing normal to viscous walls
+
+<li>	Total grid size to grow ~3X between each grid level for grid 
+
+convergence cases
+
+<li>	For structured meshes, this growth is ~1.5X in each coordinate 
+
+direction (Required for Wing Alone cases; Recommended for DLR 
+
+F6 and DLR F6 FX2B cases)
+
+<li>	Grid convergence cases must maintain the same grid family 
+
+between grid levels, i.e. maintain the same stretching factors, same 
+
+topology, etc.
+
+<li>	Growth rate of cell sizes should be < 1.25.
+
+<li>	Farfield located at ~100 CREFs for all grid levels.
+
+<li>	For the Intermediate Baseline Grids:
+
+
+
+<ol class="withroman">
+
+<li>	Chordwise spacing at wing leading edge (LE) and trailing 
+
+edge (TE) to be ~0.1% local chord.
+
+<li>	Wing Spanwise spacing at root ~0.1% semispan.
+
+<li>	Wing Spanwise spacing at tip  ~0.1% semispan.
+
+<li>	Cell size near fuselage nose and after-body ~2.0% CREF.
+
+</ol>
+
+
+
+<li>	For the Coarse and Fine Baseline Grids, the above values should 
+
+be scaled accordingly.
+
+<li>	Wing Trailing Edge Base 
+
+
+
+<ol class="withroman">
+
+<li>	Minimum of 8 cells across TE base for the coarsest mesh
+
+<li>	Minimum of 12 cells across TE base for the medium mesh
+
+<li>	Minimum of 16 cells across TE base for the fine mesh
+
+<li>	Minimum of 24 cells across TE base for the extra-fine mesh
+
+</ol>
+
+
+
+<li>	Size the intermediate mesh to be sufficient for industry drag 
+
+prediction.
+
+<li>	Be multi-grid friendly
+
+<li>	DLR F6 FX2B:    Coarse ~2.7M nodes, Intermediate ~8.0M nodes, 
+
+Fine ~24.0M nodes for structured grids. For unstructured grids 
+
+designed for vertex based solvers, the spacings refer to inter-nodal 
+
+spacings and the resulting grid sizes are expected to be similar to 
+
+the structured grid sizes above. For unstructured grids for cell-
+
+centered solvers, the spacings refer to spacings between cell 
+
+centers (or surface face centers), which corresponds approximately 
+
+to a factor of 2 reduction in the overall number of surface points 
+
+compared to the nodal solver case, for a triangular surface grid (this 
+
+is based on triangle centroid separation distance of 2/3h). For 
+
+tetrahedral cell-centered-solver meshes, the total number of grid 
+
+points will be approximately 1/3 of the numbers listed above.
+
+
+
+</ol>
+
+</body>
+</html>

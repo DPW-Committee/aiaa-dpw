@@ -1,0 +1,248 @@
+																					
+Date:	"August 29, 2003 (Revised)"																						
+PARTICIPANT INFORMATION															
+-----------------------														
+Name:	        Edward N. Tinoco														
+Email:	        edward.n.tinoco@boeing.com												
+Phone:	        425-234-1147														
+Address:	Boeing Commercial Airplanes												
+Address:	Mail Code 67-LK														
+Address:	P.O. Box 3707														
+Address:	Seattle, WA 98124														
+Address:	USA																												
+
+SOLVER INFORMATION														
+--------------------													
+Method Name:		CFL3D/Zeus														
+Basic Algorithm:	Thin layer, Finite Volume, upwind biased and central difference, multi-grid acceleration	
+Turbulence Model:	Spalart-Almaras													
+Miscellaneous:		Zeus is the driver for Surface Grid Generation, Volume Grid Generation, Navier-Stokes Analysis, and Post-processing"																															
+GRID INFORMATION																
+--------------------															
+Grid-Generator Name:	BCA-Advancing Front											
+Grid Type:		Structured Block, Point-to-Point Matched																			
+
+COARSE GRID SIZE	WB			WBNP													
+--------------------															
+Zones:	      	        11
+Field Nodes:		2.2M														
+Field Cells:		2.02M														
+Boundary Nodes:		13716														
+Boundary Faces:																
+BL 1st-Cell Size:	y+~1.25													
+BL Max-Growth Rate: 	1.4 - 1.55													
+BL Cells:		18														
+Miscellaneous:	  	Blunt trailing edge block																				
+
+MEDIUM GRID SIZE	WB			WBNP											
+--------------------															
+Zones:			13			44											
+Field Nodes:		4.13M			5.97M										
+Field Cells:		3.88M			5.82M										
+Boundary Nodes:		25940														
+Boundary Faces:																
+BL 1st-Cell Size:	y+~1.0			y+~1.0										
+BL Max-Growth Rate: 	1.17 - 1.24		1.17 -1.24										
+BL Cells:		36			36											
+Miscellaneous:		Blunt trailing edge block										
+
+			
+FINE GRID SIZE		WB			WBNP
+--------------------			
+Zones:			29		
+Field Nodes:		8895409		
+Field Cells:		8.26M		
+Boundary Nodes:		49580		
+Boundary Faces:			
+BL 1st-Cell Size:		y+~1.0		
+BL Max-Growth Rate: 	1.17 - 1.24		
+BL Cells:		36		
+Miscellaneous:		Blunt trailing edge block	
+
+
+SOLUTION INFORMATION			
+--------------------			
+Computer Platform:	SGI Origin 3800	
+# Processors:		7-23 processors in parallel										
+Operating System:	IRIX 6.5													
+Compiler:		FORTRAN and C															
+Run Time CPU:			
+Run Time Wall-Clock:			
+Memory Requirements:			
+Miscellaneous:			
+
+
+
+CASE 1 - SINGLE POINT GRID CONVERGENCE STUDY (REQUIRED)							
+---------------------------------------							
+
+WING/BODY							
+
+GRID_SIZE MACH	ALPHA	CL_TOT	CD_TOT	CD_PR	CD_SF	CM_TOT
+2100000	0.750	-0.011	0.49989	0.02847	0.01514	0.01333	-0.16333
+3896149	0.750	-0.046	0.49991	0.02847	0.01516	0.01332	-0.16859
+8895409	0.750	-0.026	0.50000	0.02848	0.01531	0.01318	-0.16006
+
+WING/BODY/NACELLE/PYLON							
+
+GRID_SIZE MACH	ALPHA	CL_TOT	CD_TOT	CD_PR	CD_SF	CM_TOT
+
+6091402	  0.75	0.49	0.50078	0.03347	0.01813	0.01534	-0.14413
+													
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY - FINE GRID				 
+FS_BUB	BL_BUB	WL_BUB	FS_EYE_W	BL_EYE_W	WL_EYE_W	FS_EYE_B	BL_EYE_B	WL_EYE_B 
+227.2	75.2	-3.3	232.5		70.8		-9.0		230.0		76.1		-6.0												
+
+SEPARATION BUBBLE GEOMETRY - WING/BODY/NACELLE/PYLON - FINE GRID	 
+
+FS_BUB	BL_BUB	WL_BUB	FS_EYE_W	BL_EYE_W	WL_EYE_W	FS_EYE_B	BL_EYE_B	WL_EYE_B
+											
+
+CASE 2 - POLAR - MEDIUM GRID (REQUIRED)						
+---------------------------------						
+WING/BODY							
+
+MACH	ALPHA	CL_TOT	CD_TOT	CD_PR	CD_SF	CD-CL2/PA CM_TOT
+0.75	-0.906	0.39993	0.02496	0.01155	0.01340	0.01960	-0.16205
+0.75	-0.046	0.49991	0.02847	0.01516	0.01332	0.02010	-0.15650
+0.75	0.490	0.56315	0.03133	0.01811	0.01322	0.02070	-0.15229
+0.75	1.000	0.62326	0.03479	0.02171	0.01308	0.02177	-0.14741
+0.75	1.500	0.68107	0.03937	0.02646	0.01290	0.02383	-0.14251
+
+
+
+WING/BODY/NACELLE/PYLON							
+
+MACH	ALPHA	CL_TOT	CD_TOT	CD_PR	CD_SF	CD-CL2/PA CM_TOT
+0.75	-3.000	?.???	?.?????	?.?????	?.?????	?.?????	?.????
+0.75	-2.000	?.???	?.?????	?.?????	?.?????	?.?????	?.????
+0.75	-1.500	?.???	?.?????	?.?????	?.?????	?.?????	?.????
+0.75	-1.000	?.???	?.?????	?.?????	?.?????	?.?????	?.????
+0.75	0.000	?.???	?.?????	?.?????	?.?????	?.?????	?.????
+0.75	1.000	?.???	?.?????	?.?????	?.?????	?.?????	?.????
+0.75	1.500	?.???	?.?????	?.?????	?.?????	?.?????	?.????
+
+
+UPPER SURFACE TRANSITION LOCATIONS (% CHORD)							
+XROOT	XKINK	XE.844	XTIP				
+0.	0.	0.	0.
+
+LOWER SURFACE TRANSITION LOCATION (% CHORD)							
+XLO							
+0.							
+
+
+
+
+--------------------------------								
+CASE 3 - TRIPPED VS. FULLY TURBULENT DRAG (OPTIONAL)								
+WING/BODY							
+
+MACH	ALPHA	CL_TOT	CD_TOT	CD_PR	CD_SF	CM_TOT	TYPE	
+0.75	?.?????	?.?????	?.?????	?.?????	?.?????	?.????	TRIPPED	
+0.75	?.?????	?.?????	?.?????	?.?????	?.?????	?.????	FULLY TURBULENT	
+
+WING/BODY/NACELLE/PYLON								
+
+MACH	ALPHA	CL_TOT	CD_TOT	CD_PR	CD_SF	CM_TOT	TYPE	
+0.75	?.???	0.50?	?.?????	?.?????	?.?????	?.????	TRIPPED	
+0.75	?.???	0.50?	?.?????	?.?????	?.?????	?.????	FULLY	TURBULENT
+
+
+CASE 4 - DRAG RISE (OPTIONAL)						
+-------------------------------------------						
+
+WING/BODY						
+
+MACH	ALPHA	CL_TOT	CD_TOT	CD_PR	CD_SF	CM_TOT
+0.60	0.467	0.50000	0.02791	0.01406	0.01385	-0.13625
+0.70	0.159	0.50001	0.02815	0.01462	0.01352	-0.14935
+0.75	-0.046	0.49991	0.02847	0.01516	0.01332	-0.15850
+0.76	-0.095	0.49991	0.02859	0.01532	0.01327	-0.16091
+0.77	-0.136	0.49993	0.02884	0.01564	0.01320	-0.16317
+
+
+
+
+WING/BODY/NACELLE/PYLON						
+
+MACH	ALPHA	CL_TOT	CD_TOT	CD_PR	CD_SF	CM_TOT
+0.50	?.???	0.50?	?.?????	?.?????	?.?????	?.????
+0.60	?.???	0.50?	?.?????	?.?????	?.?????	?.????
+0.70	?.???	0.50?	?.?????	?.?????	?.?????	?.????
+0.72	?.???	0.50?	?.?????	?.?????	?.?????	?.????
+0.74	?.???	0.50?	?.?????	?.?????	?.?????	?.????
+0.75	?.???	0.50?	?.?????	?.?????	?.?????	?.????
+0.76	?.???	0.50?	?.?????	?.?????	?.?????	?.????
+0.77	?.???	0.50?	?.?????	?.?????	?.?????	?.????
+
+
+NOTES:						
+------						
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+
+* MACH     (F10.2) Mach Number.
+* ALPHA    (F10.3) Angle of Attack in Degrees.
+
+* CL_TOT   (F10.3) Total Lift Coefficient.
+* CD_TOT   (F10.5) Total Drag Coefficient.
+* CD_PR    (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF    (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CD-CL2/PA (F10.5) CD_TOT - (CL_TOT*CL_TOT)/(PI*AR)
+* CM_TOT   (F10.4) Total Moment Coefficient.
+
+* D_CL_TOT (F10.3) Increment in CL_TOT due to nacelle
+* D_CD_TOT (F10.5) Increment in CD_TOT due to nacelle
+* D_CD_PR  (F10.5) Increment in CD_PR due to nacelle
+* D_CD_SF  (F10.5) Increment in CD_SF due to nacelle										
+* D_CM_TOT (F10.4) Increment in CM_TOT due to nacelle										
+
+* XROOT    (F10.0) Upper surface boundary layer transition location at the wing root in % chord										
+* XKINK    (F10.0) Upper surface boundary layer transition location at the wing planform break in % chord										
+* XE.844   (F10.0) Upper surface boundary layer transition location at 84.4% span in % chord										
+* XTIP     (F10.0) Upper surface boundary layer transition location at the wing tip in % chord										
+* XLO      (F10.0) Lower surface boundary layer transition location in % chord										
+
+* GRID_SIZE (F10.0) Number of grid nodes or cells										
+
+* FS_BUB   (F10.2) Fuselage station at the leading edge of the wing root separation bubble (mm)  (measured on the wing)										
+* BL_BUB   (F10.2) Buttock line at the outboard edge of the wing root separation bubble (mm)  (measured on the wing)										
+* WL_BUB   (F10.2) Water line at the top edge of the wing root separation bubble (mm)  (measured on the fuselage)										
+
+* FS_EYE_W (F10.2) Fuselage station at the center of the wing root separation bubble (mm) (measured on the wing)										
+* BL_EYE_W (F10.2) Buttock line at the center of the wing root separation bubble (mm) (measured on the wing)
+* WL_EYE_W (F10.2) Water line at the center of the wing root separation bubble (mm)  (measured on the wing)
+
+* FS_EYE_B (F10.2) Fuselage station at the center of the wing root separation bubble (mm) (measured on the fuselage)
+* BL_EYE_B (F10.2) Buttock line at the center of the wing root separation bubble (mm) (measured on the fuselage)
+* WL_EYE_B (F10.2) Water line at the center of the wing root separation bubble (mm)  (measured on the fuselage)
+
+
+Additional Comments
+Grid convergence study for Wing-Body configuration only.  Runs were made for both CL=0.50 and angle-of-attack=0.49 degrees. An extra-fine grid was also computed for angle-of-attack=0.49 degrees.  
+
+FINE GRID SIZE		WB			WBNP
+--------------------			
+Zones:			29		
+Field Nodes:		13.2M		
+Field Cells:				
+Boundary Nodes:				
+Boundary Faces:			
+BL 1st-Cell Size:	y+~0.8		
+BL Max-Growth Rate: 	1.17 - 1.24		
+BL Cells:		36		
+Miscellaneous:		Blunt trailing edge with embedded grid block	
+
+GRID_SIZE MACH	ALPHA	CL_TOT	CD_TOT	CD_PR	CD_SF	CM_TOT
+2100000	0.750	0.490	0.55881	0.03110	0.01787	0.01323	-0.1472
+3896149	0.750	0.490	0.56315	0.03133	0.01811	0.01322	-0.1523
+8895409	0.750	0.490	0.56033	0.03120	0.01811	0.01308	-0.1441
+13223309 0.750	0.490	0.56662	0.03142	0.01834	0.01308	-0.1494
+
+Grid Convergence Study not carried out for Wing/Body/Nacelle/Pylon because of the difficulty in avoiding excessive flow separation on the inboard side of the pylon at CL~0.5.  However, for conditions not plagued with excessive flow separation we would expect our solutions to exhibit minimal drag variation with grid size similar to what is seen for the wing/body configuration.
+
+Drag polar studies were carried out for both configurations using the Menter k-w SST turbulence model and are reported in a separate results entry.
+
+
