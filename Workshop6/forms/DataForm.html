@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR" ><title>6th AIAA CFD Drag Prediction Workshop</title>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+</head>
+
+<body bgcolor="#ffffff">
+<h2>
+DPW-6 Data Submittal Forms and Postprocessing Information</h2>
+<hr>
+<br>
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+Data Submissions, Errata, and Clarifications
+<br></h3>
+
+DPW6 is collecting data using a Tecplot-readable format and template data forms are provided below.
+Please complete as much of each form as possible, including the auxiliary data at the top of each
+form identifying the dataset.
+Forms are provided for solver metrics, force/moment data,
+side-of-body separation data, trailing edge separation data, and sectional cut data.
+A Tecplot macro is also provided that will automatically extract data on the surface at the
+required cut locations (see below for more details of cut locations).
+<p>
+Please email Tecplot-readable Data Submittal Forms to DPW6 at
+<a href="mailto:aiaadpw@gmail.com"> aiaadpw@gmail.com </a>
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+Tecplot Macro Scripts
+<br></h3>
+
+Tecplot Macro Scripts are provided for extracting wing section and nacelle pressure cuts:
+<ul>
+   <li><a href="DPW-VI.SectionalCutter_v1.mcr">DPW-VI.SectionalCutter_v1.mcr</a> - wing section pressure cuts
+   <li><a href="nacellecutsC.mcr">nacellecutsC.mcr</a> - nacelle pressure cuts
+</ul>
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+CASE 1 - Verification Study:
+<br></h3>
+
+<ul>
+   <li><a href="DPW-VI.DataForm_Case1_ForceMoment_Turbulence_v4.dat">DPW-VI.DataForm_Case1_ForceMoment_Turbulence_v4.dat</a> - 
+         forces and moments
+   <li><a href="DPW-VI.DataForm_Case1_Pressure_Turbulence_v4.dat">DPW-VI.DataForm_Case1_Pressure_Turbulence_v4.dat</a> -
+         pressure data
+   <li><a href="DPW-VI.DataForm_Case1_SkinFriction_Turbulence_v4.dat">DPW-VI.DataForm_Case1_SkinFriction_Turbulence_v4.dat</a> -
+         skin friction data
+</ul>
+
+Please update the TurbulenceModel variable in the template using the common turbulence model nomenclature
+from the TBWG web site.
+Please update the GridID  variable in the templates from "CommonMB", "CommonOverset", etc. 
+using the grid nomenclature from the TBWG web site.
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+Cases 2-6 - CRM Configuration Studies:
+<br></h3>
+
+For Cases 2-6, please submit a single set of forms for a common solution family
+based on the same solver, turbulence model, grid type, etc.   
+A separate set of forms should be submitted for each solver, turbulence model, grid type, etc.  
+Case 4 results can be included in the forms that also apply to the most similar grid type.  
+Otherwise Case 4 results can be given in a separate set of forms. 
+<p>
+Please update the GridID variable in the templates from "CommonMB", "CommonOverset", etc. using the
+nomenclature from the DPW6 provided grids website ftp://cmb24.larc.nasa.gov/outgoing/DPW6
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+CASE 2 - CRM Nacelle-Pylon Drag Increment / Grid Convergence Study:
+<br></h3>
+
+Note: Case 2A refers to the Wing-Body configuration; Case 2B refers to the Wing-Body-Nacelle-Pylon configuration.
+
+<ul>
+   <li><a href="DPW-VI.DataForm_Case2_GridMetrics_v4.dat">DPW-VI.DataForm_Case2_GridMetrics_v4.dat</a> -
+                grid metrics for grid convergence studies
+   <li><a href="DPW-VI.DataForm_ForceMoment_v4.dat">DPW-VI.DataForm_ForceMoment_v4.dat</a> -
+                forces and moments (total, pressure skin friction, wing, fuselage) and massflow for Cases 2-6
+   <li><a href="DPW-VI.DataForm_Sectional_lift_and_moment_v5.dat">DPW-VI.DataForm_Sectional_lift_and_moment_v5.dat</a> -
+                sectional lift and moment for Cases 2-6
+   <li><a href="DPW-VI.DataForm_SectionalCuts_v4.dat">DPW-VI.DataForm_SectionalCuts_v4.dat</a> -
+                sectional pressure and skin friction coefficients for Cases 2-6
+   <li><a href="DPW-VI.DataForm_SOBSeparation_v4.dat">DPW-VI.DataForm_SOBSeparation_v4.dat</a> -
+                side-of-body separation location for Cases 2-6
+   <li><a href="DPW-VI.DataForm_TESeparation_v4.dat">DPW-VI.DataForm_TESeparation_v4.dat</a> -
+                trailing edge separation location for Cases 2-6
+   <li><a href="DPW-VI.DataForm_Case2B_Nacelle Cuts_v4.dat">DPW-VI.DataForm_Case2B_Nacelle Cuts_v4.dat</a> -
+                nacelle pressure coefficient cuts for Wing-Body-Nacelle-Pylon Case 2B
+</ul>
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+CASE 3 - CRM WB Static Aero-Elastic Effect:
+<br></h3>
+
+Please append Case 3 data to above files with Case 2 data:
+
+<ul>
+   <li>DPW-VI.DataForm_ForceMoment_v4.dat
+   <li>DPW-VI.DataForm_Sectional_lift_and_moment_v5.dat
+   <li>DPW-VI.DataForm_SectionalCuts_v4.dat
+   <li>DPW-VI.DataForm_SOBSeparation_v4.dat
+   <li>DPW-VI.DataForm_TESeparation_v4.dat
+</ul>
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+CASE 4 - CRM WB Grid Adaptation [Optional]:
+<br></h3>
+
+Only data for one flow condition is asked for, however, the forms can accept results for additional angles of attack.  
+Please append Case 4 data to above files with Case 2 data:
+
+<ul>
+   <li>DPW-VI.DataForm_ForceMoment_v4.dat
+   <li>DPW-VI.DataForm_Sectional_lift_and_moment_v5.dat
+   <li>DPW-VI.DataForm_SectionalCuts_v4.dat
+   <li>DPW-VI.DataForm_SOBSeparation_v4.dat
+   <li>DPW-VI.DataForm_TESeparation_v4.dat
+</ul>
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+CASE 5 - CRM WB Coupled Aero-Structural Simulation [Optional]:
+<br></h3>
+
+DPW-VI.DataForm_Case5_BendingTwist_v4.dat
+
+Only data for one flow condition was requestec, however, the forms can accept results for additional angles of attack.  
+Please append Case 5 data to above files with Case 2 data:
+
+<ul>
+   <li>DPW-VI.DataForm_ForceMoment_v4.dat
+   <li>DPW-VI.DataForm_Sectional_lift_and_moment_v5.dat
+   <li>DPW-VI.DataForm_SectionalCuts_v4.dat
+   <li>DPW-VI.DataForm_SOBSeparation_v4.dat
+   <li>DPW-VI.DataForm_TESeparation_v4.dat
+</ul>
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+CASE 6 - CRM WB User Generated Grids [Optional]:
+<br></h3>
+
+Case 6 has not been formally requested, but is a placeholder for solutions based on user generated grids.  
+Please provide some grid name identifier on line 
+AUXDATA GridId   = "????."
+Please append Case 5 data from user generated grids to above files with Case 2 data:
+
+<ul>
+   <li>DPW-VI.DataForm_ForceMoment_v4.dat
+   <li>DPW-VI.DataForm_Sectional_lift_and_moment_v5.dat
+   <li>DPW-VI.DataForm_SectionalCuts_v4.dat
+   <li>DPW-VI.DataForm_SOBSeparation_v4.dat
+   <li>DPW-VI.DataForm_TESeparation_v4.dat
+</ul>
+
+
+&nbsp;
+<h3 style="font-family: helvetica,arial,sans-serif;">
+Wing Sections and Nacelle Pressure Cut Locations
+<br></h3>
+
+<img alt="Image of CRM wing section pressure cuts" src="crm-wing-plan_v3.png" style="width: 1000px;">
+<p>
+<img alt="Image of CRM nacelle section pressure cuts" src="Final DWGS 8-09_ 8.png" style="width: 1000px;">
+<hr><br>
+
+
+&nbsp;
+<br>
+&nbsp;
+<p class="Center"><b>NASA Official Responsible for Content</b>
+<br>
+<a href="mailto:joseph.h.morrison@nasa.gov">Joseph H. Morrison</a>
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+<p class="Center"><b>Last Updated</b>
+<br>
+14 May 2016
+<br>
+&nbsp;
+</p>
+</body></html>

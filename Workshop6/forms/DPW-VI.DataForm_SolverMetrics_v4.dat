@@ -1,0 +1,55 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#   DPW-VI SOLVER METRICS SUBMITTAL FORM (Version 4 - 22 April 2016)
+#
+#       Due 14 MAY 2016
+#
+#                XXX:	First-author participant's last name + specific identifier if submitting
+#                       multiple grid types, soln methods, turb models, etc.
+#                       EXAMPLES:  JonesG-CommonMB-SST-1
+#                                  JonesG-CommonOverset-SA-1
+#                                  JonesG-CommonOverset-SA-2
+#                                  JonesG-CommonHex-kw-1
+#                                  JonesG-CommonHybrid-ke-1
+#                                  JonesG-CommonPrism-SST-1
+#                                  JonesG-Custom-SA-1
+#                                  etc.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "XXX"
+
+PARTICIPANT INFO
+---------------------------------------------------
+                     Name:
+          Submission Date:
+                    Email:  
+                    Phone: 
+                  Address: 
+                  Address: 
+                  Address: 
+                  Address: 
+                  Address: 
+                  Address: 
+
+SOLVER INFORMATION
+---------------------------------------------------
+              Solver Name:
+                   Method:
+          Basic Algorithm:
+       Node/Cell Centered:
+     Upwind/Cell Centered:
+                  Limiter:
+Spatial Order of Accuracy:
+         Turbulence Model:
+
+SOLUTION INFORMATION (For Level 3 "Medium" Grid)
+---------------------------------------------------
+        Computer Platform: 
+             # Processors: 
+         Operating System: 
+                 Compiler: 
+             Run Time CPU: 
+      Run Time Wall-Clock: 
+      Memory Requirements: 
+            Miscellaneous: 

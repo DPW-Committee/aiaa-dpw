@@ -1,0 +1,96 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#   DPW-VI SKIN FRICTION - TURBULENCE MODEL VERIFICATION DATA SUBMITTAL FORM (Version 4 - 22 April 2016)
+#
+#       Due 14 MAY 2016
+#
+#	2D NACA 0012 Airfoil Validation for Turbulence Model Numerical Analysis
+#
+#                XXX:	First-author participant's last name + specific identifier if submitting
+#                       multiple grid types, soln methods, turb models, etc.
+#                       EXAMPLES:  JonesG-CommonMB-SST-1
+#                                  JonesG-CommonOverset-SA-1
+#                                  JonesG-CommonOverset-SA-2
+#                                  JonesG-CommonHex-kw-1
+#                                  JonesG-CommonHybrid-ke-1
+#                                  JonesG-CommonPrism-SST-1
+#                                  JonesG-Custom-SA-1
+#                                  etc.
+#
+#       NOMENCLATURE:
+# 					x/c = normalized x (streamwise) location on airfoil
+# 					z/c = normalized z (vertical) location on airfoil
+# 					Cf  = coefficient of skin friction on airfoil surface
+# 					N identifies the grid used, where N = number of unknowns (e.g., 2-D grid size)
+#
+#   REFERENCE VALUES:
+# 					alpha=10, M=0.15, Re_c=6 million, T_ref=540R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted.
+#                     2. at least 3 grid levels of the same family must be included
+#                     3. give at least 7 significant digits for force & moment quantities
+#                     4. give exact number for N
+#                     5. Fill fields with value of -999 for data that are not available.
+#					  6. Only include one grid type, soln method, turb model, etc per form
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "XXX"
+VARIABLES = "x/c" "z/c" "Cf"
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA Name            = "Name of Participant"
+DATASETAUXDATA SubmissionDate  = "Date of Submission"
+DATASETAUXDATA SolverName      = "?"
+DATASETAUXDATA BasicAlgorithm  = "?"
+DATASETAUXDATA TurbulenceModel = "SA, SA-RC, SA-la, SST, SST-2003, Wilcox1998k-w, EARSMko2005, etc."
+DATASETAUXDATA Miscellaneous   = "???"
+DATASETAUXDATA GridId          = "CommonStructured, CommonQuad, CommonTriangle, Custom, etc."
+
+#-------------------------------------------------------------------------------
+#CASE 1: 2D NACA 0012 Airfoil Validation for Turbulence Model Numerical Analysis
+#-------------------------------------------------------------------------------
+ZONE T="XXX - Case1: SKIN FRICTION - TURBULENCE MODEL? - N of finest grid (fill in 'N')"
+AUXDATA CFDCASE         = "CASE1"
+AUXDATA ID	            = "id - to be specified by the committee upon receipt"
+AUXDATA Name            = "Name of Participant"
+AUXDATA SolverName      = "?"
+AUXDATA TurbulenceModel = "SA, SA-RC, SA-la, SST, SST-2003, Wilcox1998k-w, EARSMko2005, etc."
+AUXDATA GridId          = "CommonMB, CommonOverset, CommonHex, CommonHybrid, CommonPrism, Custom, etc."
+AUXDATA GridLevel       = "1, 2, 3, etc"
+
+ 			???.????  ???.????  ???.????  
+ 			???.????  ???.????  ???.????  
+ 			???.????  ???.????  ???.????  
+			etc.
+
+ZONE T="XXX - Case1: SKIN FRICTION - TURBULENCE MODEL? - N of 2nd finest grid (fill in 'N')"
+AUXDATA CFDCASE         = "CASE1"
+AUXDATA ID	            = "id - to be specified by the committee upon receipt"
+AUXDATA Name            = "Name of Participant"
+AUXDATA SolverName      = "?"
+AUXDATA TurbulenceModel = "SA, SA-RC, SA-la, SST, SST-2003, Wilcox1998k-w, EARSMko2005, etc."
+AUXDATA GridId          = "CommonMB, CommonOverset, CommonHex, CommonHybrid, CommonPrism, Custom, etc."
+AUXDATA GridLevel       = "1, 2, 3, etc"
+
+ 			???.????  ???.????  ???.????  
+ 			???.????  ???.????  ???.????  
+ 			???.????  ???.????  ???.????  
+			etc.
+
+ZONE T="XXX - Case1: SKIN FRICTION - TURBULENCE MODEL? - N of 3rd finest grid (fill in 'N')"
+AUXDATA CFDCASE         = "CASE1"
+AUXDATA ID	            = "id - to be specified by the committee upon receipt"
+AUXDATA Name            = "Name of Participant"
+AUXDATA SolverName      = "?"
+AUXDATA TurbulenceModel = "SA, SA-RC, SA-la, SST, SST-2003, Wilcox1998k-w, EARSMko2005, etc."
+AUXDATA GridId          = "CommonMB, CommonOverset, CommonHex, CommonHybrid, CommonPrism, Custom, etc."
+AUXDATA GridLevel       = "1, 2, 3, etc"
+
+ 			???.????  ???.????  ???.????  
+ 			???.????  ???.????  ???.????  
+ 			???.????  ???.????  ???.????  
+			etc.
+
