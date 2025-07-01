@@ -1,0 +1,130 @@
+Date:  April, 2001
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name:  Robert Narducci
+              Email:  robert.p.narducci@boeing.com
+              Phone:  (610) 591-4793
+            Address:  The Boeing Company - Rotorcraft Division
+            Address:  P.O. Box 16858, MS P32-74
+            Address:  Philadelphia, PA 19142-0858
+            Address:  
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name:  CFL3Dv6
+    Basic Algorithm:  Structured, Multiblock, Upwind Scheme
+   Turbulence Model:  Menter's k-W
+      Miscellaneous:  3 Level Multigrid
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block:  X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type:  
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform:  8 Node Origin 2000
+       # Processors:  3
+   Operating System:  IRIX64 6.5
+           Compiler:  SGI f90
+       Run Time CPU:  N/A
+Run Time Wall-Clock:  
+Memory Requirements:  632.7 Mbytes double precision
+      Miscellaneous:  
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.241     0.499   0.02787	   0.01572	   0.01215	   -0.1577
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.169   0.01953   0.00731   0.01230    -0.1687
+      0.75      -2.0     0.290   0.02145   0.00917   0.01228    -0.1653
+      0.75      -1.0     0.409   0.02457   0.01234   0.01223    -0.1624
+      0.75       0.0     0.529   0.02920   0.01709   0.01211    -0.1563
+      0.75       1.0     0.651   0.03698   0.02513   0.01187    -0.1475
+      0.75       2.0     0.735   0.04896   0.03747   0.01150    -0.1241
+      0.75       3.0     0.741   0.06372   0.05273   0.01099    -0.0812
+
+
+CASE 3 DRAG RISE DATA (OPTIONAL)
+--------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.241     0.499   0.02787   0.01572   0.01215    -0.1577
+      0.80    -0.245     0.500   0.03163   0.01987   0.01176    -0.1606
+      0.85     1.344     0.500   0.05861   0.04771   0.01089    -0.1146
+      0.90     2.894     0.499   0.09773   0.08725   0.01048    -0.0668
+      0.95     2.748     0.500   0.13235   0.12120   0.01116    -0.1185
+
+
+CASE 4 ADDITIONAL DRAG RISE DATA (OPTIONAL)
+-------------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     ?.???     0.400   ?.?????   ?.?????   ?.?????    ?.????
+      0.60     ?.???     0.400   ?.?????   ?.?????   ?.?????    ?.????
+      0.70     ?.???     0.400   ?.?????   ?.?????   ?.?????    ?.????
+      0.75     ?.???     0.400   ?.?????   ?.?????   ?.?????    ?.????
+      0.76     ?.???     0.400   ?.?????   ?.?????   ?.?????    ?.????
+      0.77     ?.???     0.400   ?.?????   ?.?????   ?.?????    ?.????
+      0.78     ?.???     0.400   ?.?????   ?.?????   ?.?????    ?.????
+      0.80     ?.???     0.400   ?.?????   ?.?????   ?.?????    ?.????
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     ?.???     0.600   ?.?????   ?.?????   ?.?????    ?.????
+      0.60     ?.???     0.600   ?.?????   ?.?????   ?.?????    ?.????
+      0.70     ?.???     0.600   ?.?????   ?.?????   ?.?????    ?.????
+      0.75     ?.???     0.600   ?.?????   ?.?????   ?.?????    ?.????
+      0.76     ?.???     0.600   ?.?????   ?.?????   ?.?????    ?.????
+      0.77     ?.???     0.600   ?.?????   ?.?????   ?.?????    ?.????
+      0.78     ?.???     0.600   ?.?????   ?.?????   ?.?????    ?.????
+      0.80     ?.???     0.600   ?.?????   ?.?????   ?.?????    ?.????
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+

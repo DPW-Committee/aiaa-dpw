@@ -1,0 +1,86 @@
+Date: 5/5/01 
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Uriel Goldberg & Vedat Akdag 
+              Email: ucg@metacomptech.com 
+              Phone: (805)371-8755 
+            Address: Metacomp Technologies, Inc. 
+            Address: 650 Hampshire Rd., #200 
+            Address: Westlake Village, CA 91361-2510 
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: CFD++ RANS Solver 
+    Basic Algorithm: Finite Volume 
+   Turbulence Model: Realizable k-e 
+      Miscellaneous: multidimensional interpolation 
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block:  
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use: X
+      Miscellaneous: used Case 2 grid refined for solve-to-wall, 3517440 cells 
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name: ICEM CFD 
+          Grid Type: Unstructured hex. 
+              Zones: 1 
+        Field Nodes: 3309583 
+        Field Cells: 3248512 
+     Boundary Nodes:  
+     Boundary Faces:  121496 
+   BL 1st-Cell Size: 0.0001 meter 
+ BL Max-Growth Rate: 1.21 - 1.30 
+           BL Cells: 10 
+      Miscellaneous: Law-of-the-Wall mesh, Y+ = 25 
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SGI Origin 2000 R12000 300 MHz (comparable to 650 P3)  
+       # Processors: 16 
+   Operating System: IRIX 6.5 
+           Compiler: cc 
+       Run Time CPU: 320 Hrs. (128 Hrs.)
+Run Time Wall-Clock:  20 Hrs. (  8 Hrs.)
+Memory Requirements: 8.1 GB 
+      Miscellaneous: times in parentheses are for restart runs 
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.335     0.501   0.03200   0.01740   0.01460   -0.1690
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.183   0.02400   0.00916   0.01490   -0.1750
+      0.75      -2.0     0.304   0.02600   0.01120   0.01480   -0.1740
+      0.75      -1.0     0.423   0.02940   0.01460   0.01470   -0.1710
+      0.75       0.0     0.544   0.03430   0.01970   0.01460   -0.1660
+      0.75       1.0     0.663   0.04230   0.02790   0.01430   -0.1570
+      0.75       2.0     0.757   0.05470   0.04070   0.01400   -0.1400
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+ *******************************************************
+ ****                                               ****
+ *                     ICEM IGES                       *
+ *                      3.4.03                         *
+ *                                                     *
+ *          IGES TO ICEM ASCII PART TRANSLATOR         *
+ *             COPYRIGHT ICEM TECHNOLOGIES             *
+ *      1984, 1985, 1986, 1987, 1988, 1989, 1990,      *
+ *      1991, 1992, 1993, 1994, 1995, 1996, 1997,      *
+ *      1998, 1999, 2000                               *
+ ****                                               ****
+ *******************************************************
+ *******************************************************
+  PART NAME: 
+  CATIA                                                                 
+  TRANSLATION DATE: 2002/07/19       TIME: 17:09:55
+ *******************************************************
+  *** DIRECTIVE WARNING: NO DIRECTIVE FILE
+     
+ IGES MESSAGE  278
+ ANSI DRAFTING STANDARD REQUESTED/ DEFINED                               
+     
+ IGES FATAL ERROR  404
+ ERROR AT ACCESSING OR READING LICENSE FILE                              
+ START CARD NUMBER     1
+     
+ IGES FATAL ERROR  286
+ PROCESSOR TERMINATED; NO ENTITIES PROCESSED                             

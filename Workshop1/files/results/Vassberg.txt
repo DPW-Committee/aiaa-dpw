@@ -1,0 +1,153 @@
+Date:  06 May, 2001
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name:  John C. Vassberg
+              Email:  john.c.vassberg@boeing.com
+              Phone:  562.593-9604
+            Address:  The Boeing Company
+            Address:  Phantom Works
+            Address:  Aerodynamics
+            Address:  Mail Code:  C078-0421
+            Address:  2401 E. Wardlow Road
+            Address:  Long Beach, CA 90807-5309
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name:  OVERFLOW_1.8M
+    Basic Algorithm:  Over-Set Grid
+   Turbulence Model:  Spalart-Allmaras
+      Miscellaneous:  Parallel Processing under MPI
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block:  
+            Overset:  X
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type:  
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform:  Hewlett-Packard C3610
+       # Processors:  6
+   Operating System:  HP-UX 10.20
+           Compiler:  mpif90 +O3 +U77 +Odataprefetch +Ovectorize -Wl,+FPZOD
+       Run Time CPU:  240,000 sec / 3000 iter  =  80.00 sec/iter
+Run Time Wall-Clock:   46,977 sec / 3000 iter  =  15.66 sec/iter
+Memory Requirements:  1.8 GB = 480 Bytes / Grid Point
+      Miscellaneous:  150_C/150_I/3000_F Iterations, -DD_PRECISION -DMPI
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+       .75     -.257    .50000    .02958    .01575    .01383   -.16308
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+       .75    -3.000    .16628    .02125    .00725    .01400   -.17181
+       .75    -2.000    .28749    .02315    .00917    .01398   -.16989
+       .75    -1.000    .40864    .02633    .01241    .01392   -.16683
+       .75      .000    .53174    .03095    .01718    .01377   -.16125
+       .75      .500    .59596    .03434    .02069    .01365   -.15793
+       .75     1.000    .66373    .03904    .02557    .01347   -.15566
+       .75     1.500    .72021    .04489    .03163    .01327   -.15062
+       .75     2.000    .76821    .05189    .03884    .01305   -.14267
+
+
+CASE 3 DRAG RISE DATA (OPTIONAL)
+--------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+       .50      .496    .50000    .02911    .01422    .01489   -.13411
+       .60      .258    .50000    .02899    .01446    .01453   -.14290
+       .70     -.042    .50000    .02927    .01517    .01409   -.15424
+       .75     -.257    .50000    .02958    .01575    .01383   -.16308
+       .76     -.309    .50000    .02970    .01594    .01376   -.16542
+       .77     -.358    .50000    .02990    .01620    .01369   -.16794
+       .78     -.410    .50000    .03020    .01657    .01361   -.17092
+       .79     -.457    .50000    .03080    .01727    .01353   -.17465
+       .80     -.434    .50000    .03241    .01901    .01339   -.17565
+       .82      .074    .50000    .04021    .02725    .01296   -.15795
+
+
+CASE 4 ADDITIONAL DRAG RISE DATA (OPTIONAL)
+-------------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+       .50     -.528    .40000    .02577    .01084    .01494   -.14174
+       .60     -.716    .40000    .02562    .01103    .01459   -.14945
+       .70     -.934    .40000    .02577    .01159    .01418   -.15981
+       .75    -1.071    .40000    .02607    .01214    .01392   -.16705
+       .76    -1.102    .40000    .02617    .01230    .01387   -.16892
+       .77    -1.133    .40000    .02633    .01253    .01380   -.17095
+       .78    -1.158    .40000    .02665    .01293    .01372   -.17310
+       .79    -1.165    .40000    .02720    .01357    .01363   -.17479
+       .80    -1.163    .40000    .02791    .01437    .01353   -.17612
+       .82     -.987    .40000    .03127    .01804    .01325   -.17189
+
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+       .50     1.529    .60000    .03326    .01845    .01481   -.12584
+       .60     1.245    .60000    .03327    .01884    .01442   -.13524
+       .70      .866    .60000    .03416    .02025    .01390   -.14630
+       .75      .530    .60000    .03461    .02097    .01364   -.15779
+       .76      .455    .60000    .03477    .02119    .01357   -.16097
+       .77      .386    .60000    .03514    .02163    .01350   -.16516
+       .78      .325    .60000    .03622    .02283    .01340   -.16931
+       .79      .372    .60000    .03869    .02544    .01325   -.16906
+       .80      .629    .60000    .04348    .03045    .01303   -.15941
+       .82     1.439    .60000    .05681    .04430    .01250   -.13099
+
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+       .50    -1.567    .30000    .02322    .00824    .01498   -.14939
+       .60    -1.688    .30000    .02306    .00842    .01464   -.15551
+       .70    -1.822    .30000    .02316    .00893    .01423   -.16387
+       .75    -1.897    .30000    .02343    .00945    .01397   -.16957
+       .76    -1.912    .30000    .02350    .00959    .01392   -.17100
+       .77    -1.927    .30000    .02362    .00977    .01385   -.17250
+       .78    -1.940    .30000    .02381    .01002    .01379   -.17424
+       .79    -1.944    .30000    .02416    .01046    .01370   -.17583
+       .80    -1.927    .30000    .02477    .01116    .01360   -.17697
+       .82    -1.784    .30000    .02705    .01371    .01336   -.17428
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.

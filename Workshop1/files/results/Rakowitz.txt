@@ -1,0 +1,627 @@
+Date: 7.5.2001
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Mark Rakowitz, Bernhard Eisfeld, Hans Bleecke, Jens Fassbender
+              Email: mark.rakowitz.@dlr.de
+              Phone: +49 (531) 295-2415
+            Address: Institute of Design Aerodynamics 
+            Address: Lilienthalplatz 7
+            Address: D-38108 Braunschweig
+            Address: Germany
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: FLOWer
+    Basic Algorithm: 2nd order, central discretization + artificial dissipation
+   Turbulence Model: LEA k-omega 
+      Miscellaneous: Cell-centered, multigrid, turbulence equations implicit 
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name: MegaCads
+          Grid Type: Body-fitted structured C-O-H topology 
+              Zones: 7
+        Field Nodes: 3689127
+        Field Cells: 3507200 
+     Boundary Nodes: 57806
+     Boundary Faces: 56320
+   BL 1st-Cell Size: 0.0204 mm 
+ BL Max-Growth Rate: 1.4
+           BL Cells: 20 
+      Miscellaneous: 32 cells in BL-block, about 20 cells in BL
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SX5
+       # Processors: 1
+   Operating System: SUPER-UX 10.1 revision 1 
+           Compiler: sxf90 revision 205 crosscompiler
+       Run Time CPU: case1: 38651s case2: 28200s 
+Run Time Wall-Clock: case1: 39312s case2: 29600s 
+Memory Requirements: 3.14 GB 
+      Miscellaneous: Time for case2 averaged
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.180     0.500   0.02760   0.01795   0.00965    0.1546
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.123   0.02400   0.01020   0.01380    0.1492
+      0.75      -2.0     0.238   0.02514   0.01138   0.01376    0.1463
+      0.75      -1.0     0.352   0.02768   0.01399   0.01369    0.1423
+      0.75       0.0     0.466   0.03191   0.01832   0.01359    0.1362
+      0.75       1.0     0.589   0.03933   0.02590   0.01343    0.1308
+      0.75       2.0     0.702   0.05151   0.03837   0.01314    0.1229
+
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+Date: 7.5.2001
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Mark Rakowitz, Bernhard Eisfeld, Hans Bleecke, Jens Fassbender
+              Email: mark.rakowitz.@dlr.de
+              Phone: +49 (531) 295-2415
+            Address: Institute of Design Aerodynamics 
+            Address: Lilienthalplatz 7
+            Address: D-38108 Braunschweig
+            Address: Germany
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: FLOWer
+    Basic Algorithm: 2nd order, central discretization + artificial dissipation
+   Turbulence Model: LEA k-omega 
+      Miscellaneous: Cell-centered, multigrid, turbulence equations implicit 
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name: MegaCads
+          Grid Type: Body-fitted structured C-O-H topology 
+              Zones: 7
+        Field Nodes: 3689127
+        Field Cells: 3507200 
+     Boundary Nodes: 57806
+     Boundary Faces: 56320
+   BL 1st-Cell Size: 0.001 mm 
+ BL Max-Growth Rate: 1.4
+           BL Cells: 20 
+      Miscellaneous: 32 cells in BL-block, about 20 cells in BL
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SX5
+       # Processors: 1
+   Operating System: SUPER-UX 10.1 revision 1 
+           Compiler: sxf90 revision 205 crosscompiler
+       Run Time CPU: case1: 38651s case2: 28200s 
+Run Time Wall-Clock: case1: 39312s case2: 29600s 
+Memory Requirements: 3.14 GB 
+      Miscellaneous: Time for case2 averaged
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.180     0.500   0.02760   0.01795   0.00965   -0.1546
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.123   0.02400   0.01020   0.01380   -0.1492
+      0.75      -2.0     0.238   0.02514   0.01138   0.01376   -0.1463
+      0.75      -1.0     0.352   0.02768   0.01399   0.01369   -0.1423
+      0.75       0.0     0.466   0.03191   0.01832   0.01359   -0.1362
+      0.75       1.0     0.589   0.03933   0.02590   0.01343   -0.1308
+      0.75       2.0     0.702   0.05151   0.03837   0.01314   -0.1229
+
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+
+Date: 7.5.2001
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Mark Rakowitz, Bernhard Eisfeld, Hans Bleecke, Jens Fassbender
+              Email: mark.rakowitz.@dlr.de
+              Phone: +49 (531) 295-2415
+            Address: Institute of Design Aerodynamics 
+            Address: Lilienthalplatz 7
+            Address: D-38108 Braunschweig
+            Address: Germany
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: FLOWer
+    Basic Algorithm: 2nd order, central discretization + artificial dissipation
+   Turbulence Model: Wilcox k-omega 
+      Miscellaneous: Cell-centered, multigrid, turbulence equations implicit 
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name: MegaCads
+          Grid Type: Body-fitted structured C-O-H topology 
+              Zones: 7
+        Field Nodes: 3689127
+        Field Cells: 3507200 
+     Boundary Nodes: 57806
+     Boundary Faces: 56320
+   BL 1st-Cell Size: 0.0204 mm 
+ BL Max-Growth Rate: 1.4
+           BL Cells: 20 
+      Miscellaneous: 32 cells in BL-block, about 20 cells in BL
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SX5
+       # Processors: 1
+   Operating System: SUPER-UX 10.1 revision 1 
+           Compiler: sxf90 revision 205 crosscompiler
+       Run Time CPU: case1: 33999s case2: 21200s case3: 30300s case4: 30300s
+Run Time Wall-Clock: case1: 34794s case2: 21400s case3: 33000s case4: 33000s
+Memory Requirements: 3.09 GB 
+      Miscellaneous: Times for cases2-4 averaged
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.296     0.500   0.02762   0.01778   0.00985    0.1602
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.154   0.02429   0.01010   0.01419    0.1597
+      0.75      -2.0     0.271   0.02572   0.01157   0.01415    0.1568
+      0.75      -1.0     0.386   0.02857   0.01449   0.01408    0.1528
+      0.75       0.0     0.502   0.03317   0.01921   0.01396    0.1464
+      0.75       1.0     0.622   0.04094   0.02718   0.01376    0.1388
+      0.75       2.0     0.734   0.05350   0.04003   0.01347    0.1308
+
+
+CASE 3 DRAG RISE DATA (OPTIONAL)
+--------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     0.769     0.500   0.03171   0.01661   0.01510    0.1181
+      0.60     0.537     0.500   0.03168   0.01701   0.01467    0.1262
+      0.70     0.226     0.500   0.03237   0.01817   0.01420    0.1373
+      0.75    -0.019     0.500   0.03306   0.01910   0.01396    0.1465
+      0.76    -0.084     0.500   0.03321   0.01930   0.01391    0.1492
+      0.77    -0.158     0.500   0.03340   0.01954   0.01386    0.1526
+      0.78    -0.240     0.500   0.03374   0.01995   0.01380    0.1571
+      0.80    -0.296     0.500   0.03648   0.02289   0.01359    0.1643
+
+
+CASE 4 ADDITIONAL DRAG RISE DATA (OPTIONAL)
+-------------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50    -0.314     0.400   0.02809   0.01290   0.01519    0.1269
+      0.60    -0.487     0.400   0.02804   0.01328   0.01476    0.1341
+      0.70    -0.720     0.400   0.02846   0.01414   0.01431    0.1444
+      0.75    -0.882     0.400   0.02901   0.01494   0.01407    0.1521
+      0.76    -0.923     0.400   0.02916   0.01515   0.01402    0.1542
+      0.77    -0.969     0.400   0.02935   0.01539   0.01396    0.1567
+      0.78    -1.013     0.400   0.02967   0.01578   0.01390    0.1595
+      0.80    -1.079     0.400   0.03097   0.01723   0.01374    0.1655
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     1.868     0.600   0.03638   0.02140   0.01498    0.1081
+      0.60     1.581     0.600   0.03651   0.02198   0.01452    0.1167
+      0.70     1.206     0.600   0.03837   0.02433   0.01404    0.1267
+      0.75     0.820     0.600   0.03919   0.02539   0.01380    0.1400
+      0.76     0.720     0.600   0.03948   0.02573   0.01375    0.1447
+      0.77     0.620     0.600   0.04002   0.02633   0.01369    0.1503
+      0.78     0.552     0.600   0.04123   0.02762   0.01361    0.1553
+      0.80     0.768     0.600   0.04806   0.03478   0.01328    0.1513
+
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+Date: 7.5.2001
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Mark Rakowitz, Bernhard Eisfeld, Hans Bleecke, Jens Fassbender
+              Email: mark.rakowitz.@dlr.de
+              Phone: +49 (531) 295-2415
+            Address: Institute of Design Aerodynamics 
+            Address: Lilienthalplatz 7
+            Address: D-38108 Braunschweig
+            Address: Germany
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: FLOWer
+    Basic Algorithm: 2nd order, central discretization + artificial dissipation
+   Turbulence Model: Wilcox k-omega 
+      Miscellaneous: Cell-centered, multigrid, turbulence equations implicit 
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name: MegaCads
+          Grid Type: Body-fitted structured C-O-H topology 
+              Zones: 7
+        Field Nodes: 3689127
+        Field Cells: 3507200 
+     Boundary Nodes: 57806
+     Boundary Faces: 56320
+   BL 1st-Cell Size: 0.001 mm 
+ BL Max-Growth Rate: 1.4
+           BL Cells: 20 
+      Miscellaneous: 32 cells in BL-block, about 20 cells in BL
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SX5
+       # Processors: 1
+   Operating System: SUPER-UX 10.1 revision 1 
+           Compiler: sxf90 revision 205 crosscompiler
+       Run Time CPU: case1: 33999s case2: 21200s case3: 30300s case4: 30300s
+Run Time Wall-Clock: case1: 34794s case2: 21400s case3: 33000s case4: 33000s
+Memory Requirements: 3.09 GB 
+      Miscellaneous: Times for cases2-4 averaged
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.296     0.500   0.02762   0.01778   0.00985   -0.1602
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.154   0.02429   0.01010   0.01419   -0.1597
+      0.75      -2.0     0.271   0.02572   0.01157   0.01415   -0.1568
+      0.75      -1.0     0.386   0.02857   0.01449   0.01408   -0.1528
+      0.75       0.0     0.502   0.03317   0.01921   0.01396   -0.1464
+      0.75       1.0     0.622   0.04094   0.02718   0.01376   -0.1388
+      0.75       2.0     0.734   0.05350   0.04003   0.01347   -0.1308
+
+
+CASE 3 DRAG RISE DATA (OPTIONAL)
+--------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     0.769     0.500   0.03171   0.01661   0.01510   -0.1181
+      0.60     0.537     0.500   0.03168   0.01701   0.01467   -0.1262
+      0.70     0.226     0.500   0.03237   0.01817   0.01420   -0.1373
+      0.75    -0.019     0.500   0.03306   0.01910   0.01396   -0.1465
+      0.76    -0.084     0.500   0.03321   0.01930   0.01391   -0.1492
+      0.77    -0.158     0.500   0.03340   0.01954   0.01386   -0.1526
+      0.78    -0.240     0.500   0.03374   0.01995   0.01380   -0.1571
+      0.80    -0.296     0.500   0.03648   0.02289   0.01359   -0.1643
+
+
+CASE 4 ADDITIONAL DRAG RISE DATA (OPTIONAL)
+-------------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50    -0.314     0.400   0.02809   0.01290   0.01519   -0.1269
+      0.60    -0.487     0.400   0.02804   0.01328   0.01476   -0.1341
+      0.70    -0.720     0.400   0.02846   0.01414   0.01431   -0.1444
+      0.75    -0.882     0.400   0.02901   0.01494   0.01407   -0.1521
+      0.76    -0.923     0.400   0.02916   0.01515   0.01402   -0.1542
+      0.77    -0.969     0.400   0.02935   0.01539   0.01396   -0.1567
+      0.78    -1.013     0.400   0.02967   0.01578   0.01390   -0.1595
+      0.80    -1.079     0.400   0.03097   0.01723   0.01374   -0.1655
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     1.868     0.600   0.03638   0.02140   0.01498   -0.1081
+      0.60     1.581     0.600   0.03651   0.02198   0.01452   -0.1167
+      0.70     1.206     0.600   0.03837   0.02433   0.01404   -0.1267
+      0.75     0.820     0.600   0.03919   0.02539   0.01380   -0.1400
+      0.76     0.720     0.600   0.03948   0.02573   0.01375   -0.1447
+      0.77     0.620     0.600   0.04002   0.02633   0.01369   -0.1503
+      0.78     0.552     0.600   0.04123   0.02762   0.01361   -0.1553
+      0.80     0.768     0.600   0.04806   0.03478   0.01328   -0.1513
+
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+
+Date: 7.5.2001
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Mark Rakowitz, Bernhard Eisfeld, Hans Bleecke, Jens Fassbender
+              Email: mark.rakowitz.@dlr.de
+              Phone: +49 (531) 295-2415
+            Address: Institute of Design Aerodynamics 
+            Address: Lilienthalplatz 7
+            Address: D-38108 Braunschweig
+            Address: Germany
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: FLOWer
+    Basic Algorithm: 2nd order, central discretization + artificial dissipation
+   Turbulence Model: Wilcox k-omega 
+      Miscellaneous: Cell-centered, singlegrid, turbulence equations implicit 
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name: MegaCads
+          Grid Type: Body-fitted structured C-O-H topology 
+              Zones: 7
+        Field Nodes: 5223598
+        Field Cells: 4993650 
+     Boundary Nodes: 72951
+     Boundary Faces: 71280
+   BL 1st-Cell Size: 0.0181 mm 
+ BL Max-Growth Rate: 1.4
+           BL Cells: 23 
+      Miscellaneous: 36 cells in BL-block, about 20 cells in BL
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SX5
+       # Processors: 1
+   Operating System: SUPER-UX 10.1 revision 1 
+           Compiler: sxf90 revision 205 crosscompiler
+       Run Time CPU: case2: 167000s 
+Run Time Wall-Clock: case2: 170000s 
+Memory Requirements: 3.84 GB 
+      Miscellaneous: Time for cases2 averaged
+
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.161   0.02258   0.00892   0.01366    0.1642
+      0.75      -2.0     0.278   0.02415   0.01053   0.01362    0.1613
+      0.75      -1.0     0.395   0.02711   0.01356   0.01355    0.1577
+      0.75       0.0     0.514   0.03178   0.01836   0.01343    0.1518
+      0.75       1.0     0.637   0.03980   0.02657   0.01323    0.1453
+      0.75       2.0     0.750   0.05280   0.03986   0.01294    0.1370
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+Date: 7.5.2001
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Mark Rakowitz, Bernhard Eisfeld, Hans Bleecke, Jens Fassbender
+              Email: mark.rakowitz.@dlr.de
+              Phone: +49 (531) 295-2415
+            Address: Institute of Design Aerodynamics 
+            Address: Lilienthalplatz 7
+            Address: D-38108 Braunschweig
+            Address: Germany
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: FLOWer
+    Basic Algorithm: 2nd order, central discretization + artificial dissipation
+   Turbulence Model: Wilcox k-omega 
+      Miscellaneous: Cell-centered, singlegrid, turbulence equations implicit 
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name: MegaCads
+          Grid Type: Body-fitted structured C-O-H topology 
+              Zones: 7
+        Field Nodes: 5223598
+        Field Cells: 4993650 
+     Boundary Nodes: 72951
+     Boundary Faces: 71280
+   BL 1st-Cell Size: 0.00088 mm 
+ BL Max-Growth Rate: 1.4
+           BL Cells: 23 
+      Miscellaneous: 36 cells in BL-block, about 20 cells in BL
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SX5
+       # Processors: 1
+   Operating System: SUPER-UX 10.1 revision 1 
+           Compiler: sxf90 revision 205 crosscompiler
+       Run Time CPU: case2: 167000s 
+Run Time Wall-Clock: case2: 170000s 
+Memory Requirements: 3.84 GB 
+      Miscellaneous: Time for cases2 averaged
+
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.161   0.02258   0.00892   0.01366   -0.1642
+      0.75      -2.0     0.278   0.02415   0.01053   0.01362   -0.1613
+      0.75      -1.0     0.395   0.02711   0.01356   0.01355   -0.1577
+      0.75       0.0     0.514   0.03178   0.01836   0.01343   -0.1518
+      0.75       1.0     0.637   0.03980   0.02657   0.01323   -0.1453
+      0.75       2.0     0.750   0.05280   0.03986   0.01294   -0.1370
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+

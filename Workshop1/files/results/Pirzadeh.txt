@@ -1,0 +1,128 @@
+Date:  4-30-01
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Shahyar Z. Pirzadeh 
+              Email: s.pirzadeh@larc.nasa.gov
+              Phone: (757) 864-2245 
+            Address: Mail Stop 499 
+                     NASA Langley Research Center 
+                     Hampton, VA 23681 
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: Unstructured grid solver USM3Dns. 
+    Basic Algorithm: Tetrahedral cell-centered finite volume. 
+   Turbulence Model: Spalart-Allmaras one-equation model. 
+      Miscellaneous: Roe's flux difference splitting, wall function, parallel. 
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block:  
+            Overset:  
+  Unstructured node:  
+  Unstructured cell: X ("wall-function" version of this grid) 
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name: VGRIDns 
+          Grid Type: Tetrahedral unstructured 
+              Zones: 1 
+        Field Nodes: 414347 
+        Field Cells: 2390089 
+     Boundary Nodes: 25175 
+     Boundary Faces: 50346 
+   BL 1st-Cell Size: d_1=0.0549 mm (Y+ ~50, wall-function) 
+ BL Max-Growth Rate: (VGRID: r1 = 0.3677, r2 = 0.07, see Eq. below) 
+           BL Cells: 1281854 
+      Miscellaneous: BL growth rate for ith layer: d_(i+1)=d_1[1+r1(1+r2)^i]^i 
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SGI Origin 2000 
+       # Processors: 240 (used 48) 
+   Operating System: IRIX64 6.5 
+           Compiler: FORTRAN 77 
+       Run Time CPU: 0.1250E-03 sec's./cell/cycle 
+Run Time Wall-Clock: 0.1476E-03 sec's./cell/cycle 
+Memory Requirements: 178 words/cell 
+      Miscellaneous: on average 2000 cycles/solution (Maximum 6000 cycles/soln) 
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.300     0.500   0.02771   0.01591   0.01180   -0.1581
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.171   0.01998   0.00795   0.01203   -0.1647
+      0.75      -2.0     0.293   0.02189   0.00981   0.01208   -0.1637
+      0.75      -1.0     0.415   0.02492   0.01292   0.01201   -0.1614
+      0.75       0.0     0.539   0.02929   0.01755   0.01173   -0.1571
+      0.75       1.0     0.662   0.03709   0.02568   0.01141   -0.1480
+      0.75       2.0     0.736   0.04949   0.03855   0.01095   -0.1222
+
+
+CASE 3 DRAG RISE DATA (OPTIONAL)
+--------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     0.417     0.500   0.02686   0.01439   0.01247   -0.1315
+      0.60     0.196     0.500   0.02692   0.01467   0.01225   -0.1397
+      0.70    -0.110     0.500   0.02725   0.01528   0.01197   -0.1511
+      0.75    -0.300     0.500   0.02771   0.01591   0.01180   -0.1581
+      0.76    -0.367     0.500   0.02776   0.01599   0.01177   -0.1610
+      0.77    -0.409     0.500   0.02798   0.01625   0.01173   -0.1629
+      0.78    -0.456     0.500   0.02824   0.01655   0.01169   -0.1654
+      0.80    -0.403     0.500   0.03092   0.01944   0.01148   -0.1654
+
+
+CASE 4 ADDITIONAL DRAG RISE DATA (OPTIONAL)
+-------------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50    -0.616     0.400   0.02352   0.01104   0.01248   -0.1389
+      0.60    -0.791     0.400   0.02358   0.01127   0.01231   -0.1465
+      0.70    -0.999     0.400   0.02394   0.01186   0.01208   -0.1561
+      0.75    -1.133     0.400   0.02432   0.01239   0.01193   -0.1626
+      0.76    -1.161     0.400   0.02444   0.01255   0.01188   -0.1640
+      0.77    -1.187     0.400   0.02461   0.01276   0.01184   -0.1658
+      0.78    -1.204     0.400   0.02496   0.01317   0.01179   -0.1674
+      0.80    -1.183     0.400   0.02621   0.01457   0.01165   -0.1687
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     1.473     0.600   0.03091   0.01860   0.01231   -0.1239
+      0.60     1.166     0.600   0.03093   0.01884   0.01209   -0.1333
+      0.70     0.778     0.600   0.03184   0.02011   0.01173   -0.1443
+      0.75     0.479     0.600   0.03245   0.02085   0.01160   -0.1532
+      0.76     0.421     0.600   0.03275   0.02119   0.01156   -0.1556
+      0.77     0.337     0.600   0.03314   0.02161   0.01152   -0.1594
+      0.78     0.344     0.600   0.03466   0.02324   0.01143   -0.1596
+      0.80     0.908     0.600   0.04504   0.03397   0.01107   -0.1384
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.

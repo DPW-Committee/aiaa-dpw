@@ -1,0 +1,88 @@
+Date:  05th July 2001
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name:  Stéphane AMANT
+              Email:  stephane.amant@airbus.aeromatra.com
+              Phone:  (33).5.61.18.65.19
+            Address:  Département Aérodynamique - M0142/3
+			    AIRBUS FRANCE
+			    316, route de Bayonne
+			    31060 TOULOUSE - FRANCE
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name:  NSMB
+    Basic Algorithm:  Resolution of the RANS equations, using a cell-centered finite volume formulation
+   Turbulence Model:  Spalart-Allmaras
+      Miscellaneous:  Multigrid, Jameson's central scheme (+damping of the normal artificial dissipation fluxes),
+			    scalar LU-SGS method (implicit)
+
+
+
+CASE 1 PROVIDED GRID USED
+-------------------------
+        Multi-block:  X
+
+CASE 1 "BUILT-IN-HOUSE" GRID USED
+---------------------------------
+        Multi-block:  X
+
+
+
+CASE 1 WITH "BUILT-IN-HOUSE" GRID
+---------------------------------
+Grid-Generator Name:  ICEMCFD HEXA
+          Grid Type:  C topology
+        Field Nodes:  5 323 741
+        Field Cells:  4 976 128
+
+
+
+SOLUTION INFORMATION (PROVIDED GRID)
+------------------------------------
+  Computer Platform:  CRAY SV1
+       # Processors:  4
+   Operating System:  UNICOS
+           Compiler:  f90
+       Run Time CPU:  irrelevant (shared memory)
+Run Time Wall-Clock:  irrelevant (shared memory)
+Memory Requirements:  350 MWords
+
+SOLUTION INFORMATION ("BUILT-IN-HOUSE" GRID)
+--------------------------------------------
+  Computer Platform:  CRAY SV1
+       # Processors:  4
+   Operating System:  UNICOS
+           Compiler:  f90
+       Run Time CPU:  irrelevant (shared memory)
+Run Time Wall-Clock:  irrelevant (shared memory)
+Memory Requirements:  496 MWords
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+      MACH     ALPHA     CL_TOT  CD_TOT    CD_PR     CD_SF     CM_TOT
+      0.75     0.750     0.500   0.04656   0.02173   0.02483   -0.0982
+
+CASE 1 DATA ON "BUILT-IN-HOUSE" GRID
+------------------------------------
+      MACH     ALPHA     CL_TOT  CD_TOT    CD_PR     CD_SF     CM_TOT
+      0.75    -0.120	 0.501   0.03061   0.01649   0.01411   -0.1553
+
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.

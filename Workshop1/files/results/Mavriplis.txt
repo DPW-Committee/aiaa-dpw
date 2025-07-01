@@ -1,0 +1,237 @@
+Date: 5/07/01  
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name:    Dimitri Mavriplis
+              Email:    dimitri@icase.edu
+              Phone:    757-864-2213
+            Address:    ICASE MS 132C
+            Address:    NASA Langley Research Center
+            Address:    Hampton, VA 23681
+            Address:  
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name:   NSU3D
+    Basic Algorithm:   Unstructured Multigrid Finite Volume
+   Turbulence Model:   Spalart-Allmaras
+      Miscellaneous:  
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block:  
+            Overset:  
+  Unstructured node:  X
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type:  
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform:   Linux Cluster (500Mhz Pentium III)
+       # Processors:   32
+   Operating System:   Red Hat Linux 5.2
+           Compiler:   Portland Group F77
+       Run Time CPU:   25 seconds/MG Cycle (500 cycles)
+Run Time Wall-Clock:   3.5 hours
+Memory Requirements:   3.2 Gbytes
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform:   Origin 2000
+       # Processors:   64 (400Mhz R12000)
+   Operating System:   IRIX
+           Compiler:   SGI F77
+       Run Time CPU:   6 seconds/MG cycle (500 cycles)
+Run Time Wall-Clock:   50 minutes
+Memory Requirements:   3.6  Gbytes
+      Miscellaneous: 
+
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -.2405    0.5004    0.02921    0.01684   0.01237  -0.1549
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.1620   0.02108    0.00854   0.01255   -0.1632
+      0.75      -2.0     0.2845   0.02288    0.01036   0.01252   -0.1618 
+      0.75      -1.0     0.4067   0.02594    0.01347   0.01246   -0.1588 
+      0.75       0.0     0.5307   0.03051    0.01817   0.01233   -0.1532 
+      0.75       1.0     0.6545   0.03831    0.02627   0.01204   -0.1437
+      0.75       2.0     0.7373   0.05133    0.03975   0.01158   -0.1213 
+
+
+CASE 3 DRAG RISE DATA (OPTIONAL)
+--------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     0.522     0.500   0.02839     0.01535   0.01304  -0.1241   
+      0.60     0.280     0.500   0.02834     0.01550   0.01284  -0.1342  
+      0.70    -0.033     0.500   0.02874     0.01618   0.01256  -0.1466  
+      0.75    -0.244     0.500   0.02920     0.01682   0.01237  -0.1549  
+      0.76    -0.296     0.500   0.02932     0.01699   0.01233  -0.1571  
+      0.77    -0.353     0.500   0.02947     0.01719   0.01229  -0.1596  
+      0.78    -0.415     0.500   0.02972     0.01748   0.01224  -0.1629  
+      0.80    -0.404     0.500   0.03262     0.02060   0.01202  -0.1662  
+
+
+CASE 4 ADDITIONAL DRAG RISE DATA (OPTIONAL)
+-------------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     -0.518    0.400   0.02506   0.01196     0.01310   -0.1323  
+      0.60     -0.698    0.400   0.02501   0.01211     0.01290   -0.1412  
+      0.70     -0.918    0.400   0.02532   0.01268     0.01264   -0.1520  
+      0.75     -1.055    0.400   0.02577   0.01330     0.01247   -0.1591  
+      0.76     -1.086    0.400   0.02586   0.01343     0.01243   -0.1608  
+      0.77     -1.121    0.400   0.02602   0.01364     0.01238   -0.1628  
+      0.78     -1.152    0.400   0.02635   0.01402     0.01232   -0.1651  
+      0.80     -1.176    0.400   0.02763   0.01545     0.01218   -0.1691  
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.50     1.571     0.600   0.03260   0.01964     0.01297   -0.1150
+      0.60     1.266     0.600   0.03260   0.01986     0.01274   -0.1260
+      0.70     0.870     0.600   0.03364   0.02125     0.01239   -0.1383  
+      0.75     0.548     0.600   0.03422   0.02203     0.01220   -0.1487 
+      0.76     0.470     0.600   0.03447   0.02232     0.01215   -0.1519  
+      0.77     0.395     0.600   0.03491   0.02282     0.01209   -0.1556  
+      0.78     0.377     0.600   0.03643   0.02445     0.01199   -0.1573  
+      0.80     0.653     0.600   0.04490   0.03323     0.01166   -0.1497  
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+Date: 5/07/01  
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name:    Dimitri Mavriplis
+              Email:    dimitri@icase.edu
+              Phone:    757-864-2213
+            Address:    ICASE MS 132C
+            Address:    NASA Langley Research Center
+            Address:    Hampton, VA 23681
+            Address:  
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name:   NSU3D
+    Basic Algorithm:   Unstructured Multigrid Finite Volume
+   Turbulence Model:   Spalart-Allmaras
+      Miscellaneous:  
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block:  
+            Overset:  
+  Unstructured node:     
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type: Unstructured node  
+              Zones:  
+        Field Nodes:  13,182,480  
+        Field Cells:  77,494,416
+     Boundary Nodes:  193,356
+     Boundary Faces:  386,696
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  Subdivision by 8 of baseline workshop "Unstructured node" grid
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform:   Origin 2000
+       # Processors:   128 (400Mhz R12000)
+   Operating System:   IRIX
+           Compiler:   SGI F77
+       Run Time CPU:   30 seconds / MG cycle for 500 cycles
+Run Time Wall-Clock:   4 hours    
+Memory Requirements:   27 Gbytes   
+      Miscellaneous: 
+
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -.367     0.5003    0.02815    0.01537   0.01278  -0.1657
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.1795   0.02026    0.00731   0.01296  -0.1742  
+      0.75      -2.0     0.3015   0.02225    0.00932   0.01293  -0.1725      
+      0.75      -1.0     0.4226   0.02542    0.01257   0.01286  -0.1691      
+      0.75       0.0     0.5459   0.03011    0.01740   0.01271  -0.1630      
+      0.75       1.0     0.6746   0.03830    0.02587   0.01243  -0.1560
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.

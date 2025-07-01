@@ -1,0 +1,168 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Kelly R. Laflin">
+   <meta name="GENERATOR" content="Mozilla/4.61C-SGI [en] (X11; I; IRIX64 6.5 IP30) [Netscape]">
+   <title>TITLE HERE</title>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+</head>
+<body>
+
+<h1>
+Kelly Laflin</h1>
+
+<h4>
+
+<hr WIDTH="100%"></h4>
+
+<h3>
+slide 1 - Title</h3>
+This talk examines the difference in predicted Lift, Drag and Pitching
+Moment resulting from the use of two common turbulence models on two different
+grids of varying refinement, using CFL3D.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 2 - Outline</h3>
+The numerical approach used will be discussed first.
+<p>This will be followed by force and moment results obtained using both
+turbulence models on the Workshop supplied grid.
+<p>Next a solution reconstruction analysis procedure will be described
+that pinpoints regions of the grid that could benefit from grid refinement.
+<p>The supplied grid is refined in accordance with the results of the solution
+reconstruction procedure, and force and moment results of the refined grid
+are compared to the supplied grid results.
+<p>Only results for the Workshop Case 2 (Drag Polar at M=0.75 and Re =
+3 million) will be discussed.
+<br>&nbsp;
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 3 - Numerical Approach</h3>
+Self-explanatory.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 4 - Supplied Grid Force &amp; Moment Results</h3>
+Spalart-Almaras turbulence model results are in blue.
+<br>Menter's SST turbulence model results are in red.
+<p>The CL-alpha curves for both turb. models are nearly identical, over
+predicting lift. This trend was consistent with many of the results of
+the workshop participants.
+<p>The drag polar is plotted using the idealized profile drag (drag - idealized
+induced drag) in order to expand the drag scale. Spalart-Almaras results
+are about 14 drag counts above the mean of the experimental data (at CL
+= 0.5). Menter's SST model is about 4 drag counts below the mean and skirts
+the lower edge of the scatter in the experimental data.
+<p>Both CL squared vs CD slopes of the computed data are high w.r.t. the
+experimental data.
+<p>Both turbulence models predict similar pitching moment variations with
+CL. The over prediction of the pitch-down moment is consistent with many
+of the results of the workshop participants.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 5 - Solution Reconstruction Analysis</h3>
+A grid can be thought of in terms of data compression, similar to a JPEG
+image of a photograph. A grid stores discrete information that is used
+to "reconstruct' the solution implicitly during cell-flux evaluations,
+the implementation of boundary conditions, and discrete-difference representations
+of derivatives. An insufficiently refined grid cannot store the discrete
+solution at a level of detail needed to accurately 'reconstruct' the solution,
+and errors are introduced into the solution procedure, as well as, the
+surface integrations performed to obtain force and moment values.
+<p>To assess the solution-dependent grid resolution associated with a cell
+i, compare the computed cell-averaged value of cell i to the reconstructed
+cell-averaged value of cell i, and call this sigma. The computed cell-averaged
+value is known. The reconstructed cell-averaged value must be approximated
+from known information; namely, from the computed cell-averaged values
+of the cells surrounding cell i. The approximation of sigma works out to
+be no more than a discrete Laplacian of the solution for cell i. Actually,
+sigma is a vector norm of the discrete Laplacians of each of the primitive
+flow variables.
+<p>Sigma is not an estimate of solution error. It is an indicator of how
+well the grid is locally refining the solution. Higher values of sigma
+indicate lower solution-dependent grid resolution. Lower values of sigma
+indicate higher solution-dependent grid resolution.
+<p>This analysis can be easily applied as a post-processing step to any
+solution obtained on any grid type using any solver.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 6 - Sigma 2D Plot of the Supplied Grid Solution</h3>
+Sigma was computed for each cell of the supplied grid using converged solutions.
+The maximum and average values of sigma associated with each of the 49
+blocks of the multiblock structured grid were found and plotted. This allowed
+regions in the grid having poor solution-dependent grid resolution to be
+easily identified. The windshield and regions about the wing are shown
+to have the poorest resolution.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 7 - Sigma 3D Plot of the Supplied Grid Solution</h3>
+Cells having values of sigma 0.04 and above are displayed in red, indicating
+the regions that could benefit from grid refinement.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 8 - Comparison of Supplied and Refined Grids</h3>
+The results of the solution reconstruction analysis of the supplied grid
+and solutions (slides 6 &amp; 7), were used to perform targeted grid refinement
+of the supplied multiblock structured grid. The resulting refined grid
+uses the same blocking topology as the supplied grid, with changes in grid
+dimensions and grid spacings as outlined on slide 8.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 9 - Sigma 3D Plot of the Refined Grid Solution</h3>
+The solution reconstruction analysis was reperformed on the refined grid
+and its associated converged solutions.
+<p>Compared to the supplied grid analysis (slide 7), the refined grid solution
+is better resolved. However, it appears that the solution could further
+benefit from additional grid refinement in the chordwise direction in the
+region over the upper surface of the wing, and possibly from better refinement
+of the wing tip vortex.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 10 - Sigma 2D Plot of the Refined Grid Solution</h3>
+Comparing the maximum and average values of sigma for both the supplied
+and refined grids in each of the 49 blocks of the structured grid, it can
+be seen that the targeted grid refinement was successful at improving the
+overall quality of the grid. The average value of sigma was reduced in
+all blocks, except those in the far-field region (blocks 1-9), which had
+low values of sigma and were not targeted for grid refinement.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 11 - Refined Grid Force &amp; Moment Results</h3>
+Spalart-Almaras results are in blue.
+<br>Menter's SST results are in red.
+<br>Supplied grid results are displayed using open symbols and dashed lines.
+<br>Refined grid results are displayed using filled symbols and solid lines.
+<p>Grid refinement had little effect on the Spalart-Almaras predicted lift.
+However, the grid refinement caused Menter's SST predicted lift to decrease
+towards the experimental data.
+<p>Grid refinement had a significant impact on the Spalart-Almaras predicted
+drag, producing about a 14 drag count reduction (at CL=0.5) towards the
+mean of the experimental data. Grid refinement had a lesser impact on Menter's
+predicted drag, increasing drag by about 1.5 counts at CL=0.5.
+<p>The effect of the refined grid was to reduce the scatter between the
+drag predicted by the two turbulence models from about 18 to 3 counts.
+<p>Both turbulence model's refined grid CL2 vs CD curves are in better
+agreement with experimental data.
+<p>Menter's refined grid solution shows a marked improvement in predicted
+pitching moment. The Spalart-Almaras predicted pitching moment changed
+very little using the refined grid.
+<p>Changes in the Spalart-Almaras drag are largely due to changes in the
+skin-friction drag.
+<p>
+<hr WIDTH="100%">
+<h3>
+slide 2 - Conclusions</h3>
+THE SOLUTION IS IN THE GRID!!!
+</body>
+</html>

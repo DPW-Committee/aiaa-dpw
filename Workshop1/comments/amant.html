@@ -1,0 +1,76 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61C-SGI [en] (X11; I; IRIX64 6.5 IP30) [Netscape]">
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+</head>
+<body>
+
+<h1>
+St&eacute;phane Amant</h1>
+
+<h2>
+Technical comments on the results (to go with the slides)</h2>
+Slide 2) : RANS solver, Spalart-Allmaras model, central scheme, implicit
+LU-SGS method for the time marching, multigrid.
+<p>Slide 4) : the colormaps are exactly the same ! On the Airbus France
+grid, you can notice the separation at the trailing edge of the root of
+the wing, which is a feature that many other participants have also captured.
+<p>Slide 6) : there is an obvious correlation between the zones where the
+skin friction is overpredicted and the regions where the grid is inclined
+!
+<p>Slide 7) : this is a front view of the leading edge of the wing at mid
+span, for both pictures. The lack of orthogonality of the DPW provided
+grid is clearly demonstrated.
+<p>Slide 9) : the various physical components of drag are represented here.
+They are computed and spatially distributed thanks to a dedicated post-processing
+program.
+<p>Slide 10) : the advantages brought by the far-field method are obvious.
+It is more accurate (removal of the spurious drag contribution) and it
+provides a very useful drag breakdown for the designers and the aerodynamic
+database models (performance and handling qualities) as well.
+<br>The relative importance of each component is associated to the low
+Reynolds number and the low transonic Mach number : small value of wave
+drag, huge values of viscous drag.
+<br>Estimating to 10 drag counts the effect of the forced transition, compared
+to a fully turbulent calculation, and assuming that the Spalart-Allmaras
+model naturally triggers the transition at the leading edge of the wing
+(which is indeed the case, a posteriori), you can notice that the far-field
+approach yields results very close to those of the experiment (around 298-10=288
+d.c.)
+<br>&nbsp;
+<h2>
+My other feelings on the AIAA CFD Drag Prediction Workshop</h2>
+The structured grid provided by the committe was obviously inadapted to
+the topic. Calculating and analysing the drag force requires high quality
+grids, especially with the Navier-Stokes modelization, which was not the
+case with the proposed mesh. If the purpose was to highlight the sensitivity
+of each code to the mesh quality, then I think it was irrelevant in the
+framework of a DRAG Workshop. Either you test the robustness of a code,
+or you test its accuracy (with a given parameter : here, the drag), but
+you can't conciliate both at the same time, in my opinion. I mean that,
+as well in an industrial context as in a research context, significant
+efforts are undertaken to build appropriate grids when it deals with the
+prediction of drag. This should be the basic priority for a Drag Worshop.
+<br>If I remember well, among those who have used the the structured multiblock
+grid, 4 participants out of 10 have not been able to provide satisfactory
+results : this is the proof that a Workshop focused on the prediction of
+drag MUST propose an adequate mesh, for the relevance and the validity
+of its own conclusions.
+<p>This was the negative aspect of my analysis. For the remainder, this
+Drag Workshop was a great initiative since it has allowed worldwide searchers
+and engineers to talk to each other, and to suggest various interpretations
+on everybody's problems. Moreover, each participant seemed to have been
+as honest as possible, without cheating or advertising too much on the
+results. This state of mind was definitely one of the keys of the success
+of the Workshop.
+<br>In addition, such a meeting is a very efficient mean of building oneself
+an overview of the state of the art in CFD, nowadays, either in industry
+or in the research centers.
+<p>I regret I can't provide the committee with my own grid, for obvious
+reasons of confidentiality.
+</body>
+</html>

@@ -1,0 +1,605 @@
+# ICEM CFD Project Settings
+# Saved by ts25980 on sgi036 on Fri Jul 19 17:10:49 CDT 2002
+
+array set file_name {
+    catia_dir .
+    parts_dir parts
+    domain_loaded 0
+    cart_file_loaded 0
+    cart_file {}
+    archive {}
+    med_replay {}
+    topology_dir .
+    ugparts_dir .
+    tetin {}
+    family_boco {}
+    iges_dir .
+    solver_params_loaded 0
+    project_lock {}
+    domain {}
+    domains_dir .
+    settings_loaded 0
+    settings project.prj
+    blocking {}
+    hexa_replay {}
+    transfer_dir .
+    mesh_dir .
+    family_topo {}
+    gemsparts_dir .
+    family_boco_loaded 0
+    tetin_loaded 0
+    project_dir .
+    solver_params {}
+    topo_mulcad_out {}
+}
+array set bandwidth {
+    type profile
+    iters 1
+}
+set boco_solver {}
+set bubble_delay 1000
+array set change_family {
+    edge_list {}
+    subface_list {}
+    vertex_list {}
+    domain_list {}
+}
+array set coarsen {
+    max_size {}
+    aspect 0.2
+    all 1
+    tolerance 0.1
+}
+set fam_listsize 6
+set fam_sorttype name
+set fam_update_mode always
+array set ddn_options {
+    pf Ascii
+    um Metric
+    mif_license hexa
+    ds ANSI-82
+}
+array set diag_option {
+    num 50
+    min {}
+    do_histo 1
+    max {}
+    hgt {}
+    adj 0
+    which determinant
+}
+array set file_save {
+    include_maps 1
+    sel_types 0
+    resnames {}
+    sel_fams 0
+    only_subset 0
+    surfs_near_vols 1
+}
+array set frontal_values {
+    curve_file {}
+    x 0
+    y 0
+    z 1
+    tol 0.01
+}
+array set geo_create {
+    density,stretch,vector {}
+    curve,isocurve,par 0.5
+    curve,isocurve,sel 0
+    curve,isocurve,fam crvs
+    loop,screen,name {}
+    surface,points,npts 4
+    surface,points,pt1 {0 0 0}
+    point,extract,angle 20
+    surface,points,pt2 {0 0 0}
+    surface,points,pt3 {0 0 0}
+    loop,screen,fam {}
+    surface,points,pt4 {0 0 0}
+    curve,isocurve,name isocurve
+    curve,points,pt1 {0 0 0}
+    surface,points,name {}
+    surface,points,pt5 {0 0 0}
+    curve,points,pt2 {0 0 0}
+    curve,points,how 2pts
+    curve,extract,bound 2
+    surface,points,pt6 {0 0 0}
+    density,stretch 0
+    curve,extract,minedge 0
+    curve,segment,minedge 1
+    surface,points,pt7 {0 0 0}
+    surface,segment,plane_n {0 0 1}
+    surface,segment,keep 0
+    surface,points,fam {}
+    surface,points,pt8 {0 0 0}
+    surface,segment,how angle
+    loop,screen,allsep 0
+    curve,points,name {}
+    surface,segment,angle 20
+    surface,segment,plane_p {0 0 0}
+    density,stretch,factor 1.0
+    surface,segment,curves {}
+    association 0
+    curve,segment,keep 0
+    curve,segment,plane_n {0 0 1}
+    curve,points,fam {}
+    curve,segment,how angle
+    curve,extract,angle 20
+    curve,segment,plane_p {0 0 0}
+    curve,segment,angle 20
+    surface,segment,mintri 1
+}
+array set geo_move {
+    scale 1
+    rotaxis {1 0 0}
+    rotaxis_other {1 0 0}
+    about origin
+    what move
+    entities {}
+    do_mirror 0
+    mirrornorm {1 0 0}
+    do_translate 1
+    do_rotate 0
+    do_scale 0
+    numcopies 1
+    mirror 0
+    about_point {0 0 0}
+    translate {0 0 0}
+    rotate 0
+}
+array set geo_modify {
+    move_pt2 {0 0 0}
+    move_vec {1 0 0}
+    move_norm {1 0 0}
+    move_pt1 {0 0 0}
+}
+array set hardcopy {
+    outfile screen
+    invert 0
+    scale 1
+    format ppm
+    ps_title --default--
+    jpeg_quality 75
+    send_to_printer 0
+    mpegfile image.mpg
+    ps_color color
+    ps_label --default--
+    landscape 0
+    generate_new 0
+    ps_type {}
+    ps_frame 1
+    ps_direct 1
+    mpegpat image*.ppm
+}
+array set hexa_values {
+    replay_file {}
+    blocking_file {}
+}
+array set iges_trans {
+    tetin_name {}
+    data_red 0
+    dir_file_user {}
+    file {}
+    trans_dos 0
+    listing_file iges_list
+    icempt 0
+    listing 0
+    dir_file_exp 0
+    dir_file default
+    ddn_name {}
+}
+array set import {
+    plot3d_multi 1
+    plot3d_planes 0
+    outfile {}
+    plot3d_form 1
+    plot3d_iblank 0
+    plot3d_prec 0
+    infile {}
+    dir import
+}
+set load_max_dim 3
+set load_tetin_triangle_tolerance 0
+set loaded_domains {}
+set med_float_precision 0
+set med_fast_dynamics 1
+set med_index_base 0
+array set movemesh {
+    upto .1
+    smoothhexa 0
+    onlynode 1
+    origin {0 0 0}
+    method simple
+    niter 5
+    maxiter 3
+    metric quality
+    max_ratio .25
+    tranptinactive 1
+    axis {1 0 0}
+    tranptactive 0
+    sfit 0
+    smoothpyra 0
+    theta 0.
+    hexsmooth 0
+    vecttran {0 0 0}
+    trans {0 0 0}
+    nmoves 1
+    maxsoliter 30
+    refine 0
+    smoothmodsactive 0
+    axptactive 0
+    smooth 1
+    swap 0
+    coarsen 0
+    ignorepp 0
+    smoothprism 1
+    swapactive 0
+    eigentol .1
+    vectaxis {0 0 0}
+}
+set geom_fast_dynamics 1
+set mesh_min_moving_element_aspect 0.1
+set tdv_quadratic_accuracy 9
+set merge_point_tol 0
+array set options {
+    remote_path {}
+    expert 1
+    use_dlremote 0
+    max_mesh_map_size 1024
+    remote_user {}
+    show_tris 1
+    max_cad_map_size 512
+    remote_acn {}
+    remote_sh csh
+    show_factor 1
+    n_processors 1
+    boundary_mode all
+    remote_host {}
+    clean_up_tmp_files 1
+    home_after_load 1
+    flood_select_angle 0
+    edit_wait 0
+    save_to_new 0
+    project_active 0
+    select_mode all
+    max_binary_tetin 0
+    redtext_color red
+    xhidden_full 1
+    mouse_color orange
+    diag_which all
+}
+array set quad {
+    complete_edges 0
+    select 0
+    geo_tol 0
+    element 1
+    proj 0
+    ele_tol 0
+    how geo
+    improvement 1
+    debug 0
+    offset 0
+    iters 20
+    dev 0
+    violate 0
+    conver 0.025
+}
+array set refine {
+    do_project 1
+    use_all 0
+    use_tol 0
+    steps 1
+    deviation 0
+}
+array set remesh {
+    complete_edges 0
+    merge_ends 0
+    all_dim 0
+    element 3
+    proj 0
+    max_steps 100
+    ele_tol 0
+    how 0
+    debug 0
+    dev 0
+    iters 20
+    make_consistent 0
+    surf 0
+    conver 0.025
+    merge_tol 0.1
+}
+array set reorient {
+    diry 0
+    dirz 0
+    how dir
+    vol_in 1
+    dirx 0
+}
+array set struct_reorient {
+    flip1 0
+    new2 2
+    stop_num 0
+    flip2 0
+    new0 0
+    how sel
+    domains {}
+    flip0 0
+    new1 1
+}
+array set select_defaults {
+    family {}
+    type {}
+}
+array set smooth {
+    post_which HEXA_8
+    max_val 0.3
+    laplace 0
+    prism_warp_weight 0.5
+    not_just_worst 0
+    sfit 0
+    criterion Quality
+    iters 5
+    refine 0
+    use_post 0
+    violate_tol 0.1
+    ignore_pp 0
+    collapse 1
+    violate 0
+    violate_rel 0.1
+    sel_what all
+}
+array set solution {
+    solver {}
+}
+array set struct_move {
+    symfams {}
+    scale 1
+    rotaxis {1 0 0}
+    about origin
+    do_flipijk 0
+    rotaxis_other {1 0 0}
+    what move
+    do_mirror 0
+    mirrornorm {1 0 0}
+    do_translate 1
+    do_rotate 0
+    flipijk 0
+    do_scale 0
+    numcopies 1
+    mirror 0
+    about_point {0 0 0}
+    translate {0 0 0}
+    rotate 0
+}
+array set struct_move_node {
+    on_geom 1
+    zv 0
+    doy 1
+    doz 1
+    set_pos 1
+    xv 0
+    yv 0
+    dox 1
+}
+array set unstruct_move_node {
+    zv 0
+    doy 1
+    doz 1
+    set_pos 1
+    xv 0
+    yv 0
+    dox 1
+}
+set use_xwindows 0
+array set swap_edges {
+    num_iter 4
+    min_aspect 0.2
+}
+array set tdv_mouse_bindings {
+    select 1
+    scale 3
+    trans 2
+    rot 1
+    cancel 3
+    done 2
+    scale_dir 1
+}
+set part_selected {}
+set tetin_try_binary 0
+array set tetra_values {
+    auto_orphan 0
+    smoother_aspect 0.4
+    coarsen_aspect 0.1
+    cutter_savefams {}
+    fix_nonman 1
+    uncut_domain uncut_domain.1
+    cutter_saveall 1
+    smoother_iters 5
+    load_after 1
+    cutter_which volume
+    cut_domain cut_domain.1
+    run_cutter 1
+    run_tetra 1
+    run_smoother 1
+    run_coarsen 0
+}
+array set tri2quad {
+    conver 0.25
+    improvement 1
+    warp 20
+    skew 160
+    which all
+    iters 6
+    quadrization 1
+}
+set undo_max_memory 0
+set undo_save_whole_mesh 1
+array set unstruct_create {
+    do_make_consistent 1
+    family {}
+    type {}
+}
+array set unstruct_diag {
+    num 50
+    min {}
+    use_sel 0
+    do_histo 1
+    max {}
+    hgt {}
+    which Quality
+}
+array set unstruct_extrude {
+    fun_diry {}
+    side_fam {}
+    fun_dirz {}
+    rmerge 1
+    sp_fixed 1
+    rpoint {0 0 0}
+    numl 1
+    del_orig 0
+    rangle 10.0
+    rdir {1 0 0}
+    save_verts 0
+    fix_space 1
+    fun_space {}
+    vol_fam {}
+    fix_dir {1 0 0}
+    dir_fixed 1
+    top_fam {}
+    fun_dirx {}
+}
+array set unstruct_merge {
+    how inter
+    tol 0
+}
+array set unstruct_move {
+    scale 1
+    rotaxis {1 0 0}
+    about origin
+    rotaxis_other {1 0 0}
+    what move
+    select_elements 0
+    do_mirror 0
+    mirrornorm {1 0 0}
+    do_translate 1
+    do_rotate 0
+    do_scale 0
+    numcopies 1
+    mirror 0
+    about_point {0 0 0}
+    translate {0 0 0}
+    rotate 0
+}
+array set yplus {
+    maptosurf 1
+    result_reader {}
+    use_node 1
+    execscript 0
+    distance 1.
+    result_on node
+    iter 20
+    ypsurfs {}
+    vertoff 0
+    script_file {}
+    result_be {}
+    result_fe 0
+    corr_threshold .90
+    use_corr 0
+    fileismap 1
+    ave_method aveneigh
+    relax .5
+    value 5.
+    conv .001
+    result_file {}
+    use_distance 0
+    result_var {}
+}
+array set linear_to_quadratic {
+    max_dev_nproj 30.0
+    check_proj 0
+    refine 0
+    midface 0
+    max_dev_half 0.1666666
+    max_leap 3.5
+    max_dev_chord 0.35
+    iters 10
+    project 1
+}
+set auto_raise_forms 1
+set med_save_emergency_mesh 0
+set med_save_emergency_tetin 1
+set crease_project -1
+set gsys_display_list_max_size 100
+array set geo_cad {
+    complete_edges 1
+    close_gaps 0
+    rebuild_topo 0
+    filter_points 1
+    select_with_curves 1
+    filter_curves 1
+    advanced 0
+    delete_degenerate 0
+    toler .01
+    angle 30
+    add_nodes 0
+    int_surf 0
+    new_family -inherited
+    toler_max .1
+    yellow 1
+    multiple 0
+    select_internal 0
+    partial 0
+    save_old 0
+    merge_tol 0.1
+    all_fams 1
+}
+array set midsurface {
+    precision 0
+    partial 0
+    save_old 0
+    max_dist 0
+    family midsurfaces
+    ask 2
+}
+array set custom_metric {
+    angle,quad,max 135
+    distortion,quad,max 1
+    warpage,quad,max 10
+    aspect,active 1
+    aspect,quad,id 1
+    aspect,quad,max 1
+    angle,tri,id 60
+    distortion,tri,id -1
+    aspect,tri,min .2
+    warpage,tri,id -1
+    angle,name Angle
+    distortion,name Distortion
+    aspect,tri,id 1
+    warpage,name {Max warp}
+    aspect,tri,max 1
+    aspect,name {Aspect ratio}
+    angle,quad,id 90
+    distortion,quad,id 1
+    warpage,quad,id 0
+    skew,quad,min 0
+    angle,tri,min 20
+    skew,quad,id 0
+    skew,active 1
+    distortion,tri,min -1
+    warpage,tri,min -1
+    skew,quad,max 45
+    angle,tri,max 120
+    distortion,tri,max -1
+    warpage,tri,max -1
+    skew,tri,min 0
+    angle,quad,min 45
+    skew,tri,id 0
+    distortion,quad,min .7
+    warpage,quad,min 0
+    angle,active 1
+    skew,tri,max 45
+    skew,name Skew
+    distortion,active 1
+    warpage,active 1
+    aspect,quad,min .2
+}

@@ -1,0 +1,211 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="Applied Aerodynamics Drag Prediction Workshop">
+   <meta name="keywords" content="drag prediction workshop, AIAA">
+   <meta name="GENERATOR" content="Mozilla/4.7C-SGI [en] (X11; I; IRIX64 6.5 IP30) [Netscape]">
+   <title>Applied Aerodynamics Drag Prediction Workshop</title>
+<!--put title of page here-->
+<!--put some keywords describing this page here-->
+<!-- put title of page here-->
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#292A96" vlink="#551A8B" alink="#FF0000">
+&nbsp;
+<center>
+<p><img SRC="aiaa4.gif" ALT="" BORDER=0 height=65 width=499></center>
+
+<hr>
+<center>
+<h1>
+<font size=+4>Proceedings</font></h1></center>
+
+<center>
+<h2>
+of the</h2></center>
+
+<center>
+<h1>
+1st AIAA CFD Drag Prediction Workshop</h1></center>
+
+<center>
+<h2>
+Sponsored by the Applied Aerodynamics TC</h2></center>
+
+<center>
+<h2>
+A 2-Day Workshop Preceding the 19th APA Conference<br>
+9-10 June 2001, Anaheim, CA</h2></center>
+
+<h2>
+Objectives</h2>
+
+<ul>
+<li>
+To assess the state-of-the-art computational methods as practical aerodynamic
+tools for aircraft force and moment prediction.</li>
+
+<li>
+To provide an impartial forum for evaluating the effectiveness of existing
+computer codes and modeling techniques using Navier-Stokes solvers.</li>
+
+<li>
+To identify areas needing additional research and development.</li>
+</ul>
+
+<h2>
+Focus</h2>
+
+<ul>
+<li>
+The focus of this workshop will be on drag prediction accuracy. The DLR-F4
+test cases have been chosen that address a subsonic wing/body transport
+configuration flying at subsonic through transonic speeds. The prediction
+of drag polar and drag rise will be particularly emphasized.</li>
+
+<li>
+A statistical framework will be used to assess the comparisons within the
+computational results and with the test results.</li>
+</ul>
+
+<p><br>
+<hr>
+<br>&nbsp;
+<h2>
+Program and Presentations</h2>
+<a href="Final_Schedule_and_Results.html">Final_Schedule_and_Results.html</a>
+<h2>
+Participant List and Test Case Results</h2>
+<a href="files/participant_list.html">participant_list.html</a>
+<h2>
+Test Cases</h2>
+Definition of test conditions for required and optional test cases:
+<p><b>Test conditions: </b><a href="files/cases.pdf">cases.pdf</a>, 5KB
+<h2>
+A description of how the geometry was put together:</h2>
+<a href="files/geometry.html">Geometry</a>
+<br>&nbsp;
+<h2>
+DLR-F4 Data Reference:</h2>
+<b>AGARD-AR-303, Aug. 1994: </b><a href="files/agard-ar-303.pdf">agard-ar-303.pdf</a>,
+742KB
+<br>&nbsp;
+<br>&nbsp;
+<p><b>Data files: </b><a href="agard_data/bwma60.txt">bwma60.txt</a> (18KB),
+<a href="agard_data/bwma75.txt">bwma75.txt</a>
+(17KB),&nbsp; <a href="agard_data/bwma80.txt">bwma80.txt</a> (17KB), <a href="agard_data/cpdra.txt">cpdra.txt</a>
+(48KB), <a href="agard_data/cpnlr.txt">cpnlr.txt</a> (48KB),&nbsp; <a href="agard_data/cpone.txt">cpone.txt</a>
+(52KB).&nbsp; See Tables 1-3 in AGARD-AR-303 for a description of the data
+files.
+<p>Do not consider the data in this report the "correct" answer. The computations
+for this workshop will be fully turbulent. We are not necessarily testing
+how well we can match wind tunnel data (you will note the drag data is
+provided with only 2 significant digits). The statistical analysis will
+emphasize the comparisons within the computational results.
+<br>&nbsp;
+<br>&nbsp;
+<h2>
+Statistical Framework:</h2>
+The following link describes the statistical framework that will be used
+to compare the code results from the participants and includes a detailed
+example based on the results from a similar, but less extensive, study
+done in Europe. <a href="statistics/chapter6v0.html">Statistical Framework</a>
+<p>
+<hr>
+<center>
+<h2>
+Workshop Committee</h2></center>
+
+<center><table BORDER NOSAVE >
+<tr>
+<th ALIGN=CENTER>Participant</th>
+
+<th ALIGN=CENTER>Affiliation</th>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>Shreekant Agrawal</td>
+
+<td ALIGN=CENTER>The Boeing Company
+<br>Phantom Works</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>David W. Levy&nbsp;</td>
+
+<td ALIGN=CENTER>The Cessna Aircraft Company&nbsp;</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>John Vassberg&nbsp;</td>
+
+<td ALIGN=CENTER>The Boeing Company
+<br>Phantom Works</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>Tom Zickuhr&nbsp;</td>
+
+<td ALIGN=CENTER>The Cessna Aircraft Company&nbsp;</td>
+</tr>
+
+<tr NOSAVE>
+<td ALIGN=CENTER>Richard A. Wahls&nbsp;</td>
+
+<td ALIGN=CENTER NOSAVE>Configuration Aerodynamics Branch
+<br>NASA Langley Research Center&nbsp;</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>Michael J. Hemsch&nbsp;</td>
+
+<td ALIGN=CENTER>Research Facilities Branch
+<br>NASA Langley Research Center&nbsp;</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>Bastiaan Oskam&nbsp;</td>
+
+<td ALIGN=CENTER>National Aerospace Laboratory, NLR&nbsp;</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>Shahyar Pirzadeh&nbsp;</td>
+
+<td ALIGN=CENTER>Configuration Aerodynamics Branch
+<br>NASA Langley Research Center&nbsp;</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>Rick Matus&nbsp;</td>
+
+<td ALIGN=CENTER>Pointwise, Inc.&nbsp;</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER>Juergen Quest&nbsp;</td>
+
+<td ALIGN=CENTER>ETW GmbH&nbsp;</td>
+</tr>
+</table></center>
+
+<p>
+<hr>
+<center>
+<h1>
+For more information . . .</h1></center>
+
+<h2>
+Contact the work shop</h2>
+<b>Workshop email: </b><a href="mailto:dpw@cessna.textron.com">dpw@cessna.textron.com</a>
+<h2>
+Wing-body test case</h2>
+<b>Color graphic: </b><a href="pic/dpwfig1.jpg">dpwfig1.jpg</a>, 43KB
+<br>
+<hr>
+<center><img SRC="f18.gif" ALT="" height=48 width=445>
+<p><a href="http://www.aiaa.org/tc/apa/apatc.html">APA-TC Home</a> <a href="http://www.aiaa.org/">AIAA
+Home</a></center>
+
+</body>
+</html>

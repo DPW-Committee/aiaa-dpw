@@ -1,0 +1,720 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="MTEquationNumber" content="(1.1)">
+   <meta name="MTEquationSection" content="1">
+   <meta name="GENERATOR" content="Mozilla/4.61C-SGI [en] (X11; I; IRIX64 6.5 IP30) [Netscape]">
+   <title>6  Statistical Framework</title>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+</head>
+<body>
+<b><font size=+1>6 Statistical Framework</font></b>
+<p><b>6.1 Introduction</b>
+<p>For this report, we take the point of view that the scatter (dispersion)
+of the results computed by the participants for any given parameter at
+a given set of conditions represents the <i>reproducibility</i> of that
+outcome of the computational process just as if the computed result were
+obtained from a replicated measurement process. Reproducibility is defined
+for measurement as "closeness of the agreement between the results of measurements
+of the same measurand carried out under changed conditions of measurement".
+The "changed conditions of measurement" for this workshop are, of course,
+the different codes, solution methods, turbulence models, computing platforms,
+observers (people who carried out the computational process) and so on.
+One aim of the analysis is to determine if the replicated "measurements"
+appear to have been drawn at random from a single (virtual) population.
+If so, it is meaningful to talk about the parameters of the population,
+including the mean and the standard deviation. It is also then meaningful
+to talk about quantifiable predictability.
+<p>For this approach, no single outcome (computational realization) is
+considered the "right" answer or "best" result. To be specific, we consider
+the <i>collective</i> computational process to consist of all of the individual
+processes used and the dispersion of the results to be noise in that collective
+computational process. This viewpoint has been suggested previously by
+Youden of the former National Bureau of Standards for precision measurements
+of physical constants. It is also consistent with the frequentist interpretation
+of probability and with the new international standard for reporting measurement
+uncertainty.<sup>1</sup> For reporting purposes, the new standard rejects
+the categorization of errors into random and systematic in favor of two
+other classes: Those which are evaluated using conventional statistical
+methods (Type A) and those which are not (Type B). With our definition
+of a collective computational process, we are thus converting what we would
+normally think of as systematic errors to Type A. By doing so, we achieve
+the ability, across the CFD community, to make predictions with credible
+statements of reproducibility.
+<p>The statistical analysis method used in this report consists of three
+steps:
+<ol>
+<li>
+Display the individual outcomes in a pseudo-time series and use standard
+statistical methods to determine if they seem to be drawn from a single
+population.</li>
+
+<li>
+Estimate the population means and standard deviations using the sample
+averages and standard deviations respectively.</li>
+
+<li>
+Use conventional hypothesis tests to determine if the populations of outcomes
+from various types of methods are significantly different.</li>
+</ol>
+<b>6.2 Application to ECARP results as a whole</b>
+<p>In this subsection, the statistical details are illustrated using 15
+computational realizations reported by the European Computational Aerodynamics
+Research Project (ECARP).
+<p>The ECARP results to be analyzed here were obtained for a single condition:&nbsp;<img SRC="image26.gif" height=25 width=249>.
+The computed lift and drag coefficients are given in Table 6.1 together
+with the turbulence models used. The outcomes are indexed in the order
+that they appear in the three tables of reference 4 as follows: 1-6, mandatory
+results using the Baldwin-Lomax model; 7-9, extended algebraic, half-equation
+and one-equation models; 10-15, two-equation models.
+<br>&nbsp;
+<br>&nbsp;
+<center><table BORDER CELLPADDING=7 WIDTH="493" >
+<tr>
+<td VALIGN=TOP WIDTH="18%">
+<center><b><font size=+0>Index</font></b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center><b><font size=+0>Observer</font></b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%">
+<center><b><font size=+0>Turbulence</font></b>
+<br><b><font size=+0>Model</font></b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><b><font size=+0>Lift Coefficient</font></b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><b><font size=+0>Drag Coefficient</font></b></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>1</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>AS</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>Baldwin-Lomax</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.729</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0529</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>2</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>BAe</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>Baldwin-Lomax</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.703</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0386</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>3</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>CFD-N</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>Baldwin-Lomax</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.646</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0364</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>4</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>DA</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>Baldwin-Lomax</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.617</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0301</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>5</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>FFA</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>Baldwin-Lomax</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.678</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0514</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>6</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>VUB</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>Baldwin-Lomax</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.636</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0360</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>7</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center><font size=+0>AS</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%">
+<center><font size=+0>GR</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.666</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.0495</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>8</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center><font size=+0>DA</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%">
+<center><font size=+0>AVJW</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.601</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.0311</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>9</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center><font size=+0>AS</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%">
+<center><font size=+0>W</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.704</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.0500</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>10</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>AS</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>CP</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.666</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0465</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>11</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>Bae</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>C</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.676</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0361</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>12</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>Bae</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>KG</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.652</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0333</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>13</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>CFD-N</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>C</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.662</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0387</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>14</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>CFD-N</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>C-LSC</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.670</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0363</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>15</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%" BGCOLOR="#FFFFFF">
+<center><font size=+0>VUB</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="28%" BGCOLOR="#FFFFFF">
+<center><font size=+0>C</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.627</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%" BGCOLOR="#FFFFFF">
+<center><font size=+0>0.0350</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>Average</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="28%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.662</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.0401</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>Standard Deviation</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="28%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.0343</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.00773</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>Standard Deviation of the Mean</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="28%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.0089</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="18%">
+<center><font size=+0>0.00200</font></center>
+</td>
+</tr>
+</table></center>
+
+<br>&nbsp;
+<center>
+<p><b><font size=+0>Table 6.1 ECARP computational outcomes.<sup>4</sup></font></b></center>
+
+<p>The pseudo-time series for the lift and drag coefficient outcomes are
+given in Figures 6.1 and 6.2 respectively. The blue diamonds in both figures
+are the individual computational outcomes. The solid red lines are the
+estimated population means of the data in each series. The dashed red lines
+are limits obtained by adding&nbsp;<img SRC="image27.gif" height=18 width=32>
+to the means. If all of the data fall within the limits and seem to be
+randomly scattered about the means, then it is declared that the outcomes
+seem to be drawn from the same (collective) computational process with
+the estimated process means and standard deviations given in Table 6.1.
+The approach used here is equivalent to putting confidence intervals on
+each of the outcomes and determining if they all overlap. They will individually
+overlap, of course, if all of them overlap the mean. It should be noted
+that the analysis approach described here is somewhat similar to that proposed
+by Shewhart and by Eisenhart for true time series replicated measurement
+outcomes.
+<p><img SRC="image28.gif" height=245 width=405><img SRC="image29.gif" height=241 width=394>
+<center>
+<p><b><font size=+0>Figure 6.1 ECARP pseudo-time series for lift coefficient.</font></b>
+<br>&nbsp;
+<br>&nbsp;
+<p><b><font size=+0>Figure 6.2 ECARP pseudo-time series for drag coefficient.</font></b></center>
+
+<p>For the data of Table 6.1, the lift and drag outcomes do seem to be
+drawn from the same (collective) computational process. Hence, we must
+declare the computed lift to be 0.662 with a standard uncertainty of&nbsp;<img SRC="image30.gif" height=24 width=154>
+and the computed drag to be 0.0401 with a standard uncertainty of&nbsp;<img SRC="image31.gif" height=24 width=162>.
+For reporting purposes, usual practice is to multiply the standard uncertainty
+by a coverage factor of two which would give a confidence level of 95%
+for a normal distribution. The confidence intervals at 95% confidence for
+the means are shown in figures 6.1 and 6.2 by dashed yellow lines. The
+confidence intervals at 95% confidence to be used for each replication
+are&nbsp;<img SRC="image32.gif" height=18 width=92> for the lift coefficient
+and&nbsp;<img SRC="image33.gif" height=18 width=105> for the drag coefficient.
+In essence, we expect to find future outcomes lying between the dashed
+red lines.
+<p><b>6.3 Application to ECARP results divided into two groups</b>
+<p>The scatter and means for both coefficients seems to be smaller for
+the outcomes obtained using two-equation turbulence models. We will check
+whether such an observation is warranted statistically by dividing the
+15 outcomes into two groups: (1) outcomes 1-9 and (2) outcomes 10-15 and
+compare the resulting means and standard deviations using hypothesis testing.
+The population estimates are given in Table 6.2. The individual outcomes,
+averages and limits (95% confidence) are shown in Figures 6.3 and 6.4 with
+blue diamonds, solid red lines and dashed red lines respectively.
+<br>&nbsp;
+<table BORDER CELLPADDING=7 WIDTH="577" >
+<tr>
+<td VALIGN=TOP WIDTH="11%">
+<center><b><font size=+0>Index</font></b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="16%">
+<center><b><font size=+0>Degrees of Freedom</font></b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="15%">
+<center><b><font size=+0>Type</font></b></center>
+</td>
+
+<td VALIGN=TOP COLSPAN="2" WIDTH="28%">
+<center><b><font size=+0>Lift Coefficient</font></b></center>
+</td>
+
+<td VALIGN=TOP COLSPAN="2" WIDTH="30%">
+<center><b><font size=+0>Drag Coefficient</font></b></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="11%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="16%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="15%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="14%">
+<center><font size=+0>Average</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="15%">
+<center><font size=+0>Standard Deviation</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="16%">
+<center><font size=+0>Average</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="15%">
+<center><font size=+0>Standard Deviation</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="11%">
+<center><font size=+0>1-9</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="16%">
+<center><font size=+0>8</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="15%">
+<center><font size=+0>Not two-equation</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="14%">
+<center><font size=+0>0.664</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="15%">
+<center><font size=+0>0.0431</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="16%">
+<center><font size=+0>0.0418</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="15%">
+<center><font size=+0>0.00913</font></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="11%">
+<center><font size=+0>10-15</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="16%">
+<center><font size=+0>5</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="15%">
+<center><font size=+0>Two-equation</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="14%">
+<center><font size=+0>0.659</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="15%">
+<center><font size=+0>0.0176</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="16%">
+<center><font size=+0>0.0377</font></center>
+</td>
+
+<td VALIGN=TOP WIDTH="15%">
+<center><font size=+0>0.00468</font></center>
+</td>
+</tr>
+</table>
+
+<center>
+<p><img SRC="image34.gif" height=241 width=394><b><font size=+0>Table 6.2
+Division of ECARP results for hypothesis testing.</font></b>
+<p><b><font size=+0>Figure 6.3 ECARP lift coefficient results divided into
+two groups.</font></b></center>
+
+<p>A crude test of the statistical significance of the difference in the
+means is given by comparison of the confidence intervals for the means
+(yellow dashed lines). If the intervals overlap, the null hypothesis is
+satisfied, although not exactly at the confidence level used to compute
+the intervals. The confidence intervals of the means in both Figures 6.1
+and 6.2 overlap. Hence, we must declare, for this crude test, that our
+observations do not indicate that the means from the two types of solution
+methods are different.
+<center>
+<p><img SRC="image35.gif" height=248 width=416><b><font size=+0>Figure
+6.4 ECARP drag coefficient results divided into two groups.</font></b></center>
+
+<p>Standard hypothesis tests using the t and F statistics provide a more
+refined comparison at a chosen level of confidence<sup>7</sup>, albeit
+at the expense of having to assume that the observations are normally distributed.
+We will carry out the tests for the lift coefficient first. We begin by
+checking the null hypothesis for the population standard deviations. The
+F statistic for the observations is
+<center>
+<p><img SRC="image36.gif" height=48 width=180></center>
+
+<p>From a table of the percentage points of the F distribution, we compute
+the following values for 95% confidence with nine observations for the
+first group of computations and six for the second:
+<center>
+<p><img SRC="image37.gif" height=50 width=265></center>
+
+<p>We reject the null hypothesis if&nbsp;<img SRC="image38.gif" height=24 width=18>
+is greater than the first F value or less than the second F value. Since
+neither criterion is satisfied, we must declare that our observations do
+not indicate that the lift coefficient standard deviations from the two
+types of solution methods are different.
+<p>Because the null hypothesis for the standard deviations is not rejected,
+the next step is to pool the standard deviations for the two groups, weighting
+them by their degrees of freedom:
+<p><img SRC="image39.gif" height=116 width=213>
+<p>or
+<p><img SRC="image40.gif" height=25 width=81>
+<p>The t statistic is computed as follows:
+<p><img SRC="image41.gif" height=156 width=142>
+<p>The criterion for rejecting the null hypothesis is
+<p><img SRC="image42.gif" height=26 width=193>
+<p>Comparing the two values shows that the criterion is not satisfied.
+Hence, we must declare that our observations do not indicate that the lift
+coefficient means from the two types of solution methods are different.
+<p>We carry out the tests for the drag coefficient next. The F-statistic
+for the observations is
+<center>
+<p><img SRC="image43.gif" height=48 width=186></center>
+
+<p>The percentage points of the F distribution do not change from the lift
+case. Since neither criterion is satisfied, we must declare that our observations
+do not indicate that the drag coefficient standard deviations from the
+two types of solution methods are different.
+<p>Computing the pooled standard deviation gives:
+<p><img SRC="image44.gif" height=116 width=230>
+<p>or
+<p><img SRC="image45.gif" height=25 width=81>
+<p>The t statistic is:
+<p><img SRC="image46.gif" height=156 width=158>
+<p>The percentage points of the t distribution do not change for the drag
+case. Comparing the two values shows that the criterion for rejection of
+the null hypothesis is not satisfied. Hence, we must declare that our observations
+do not indicate that the drag coefficient means from the two types of solution
+methods are different.
+<p>We will apply the above method of analysis to selected outcomes from
+the collective computational process of this workshop in Section 8.
+<br>
+<hr>
+<center>
+<p>
+</body>
+</html>

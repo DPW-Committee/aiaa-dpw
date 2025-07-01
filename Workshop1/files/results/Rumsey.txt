@@ -1,0 +1,547 @@
+Date: 5/7/01 
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Christopher L. Rumsey 
+              Email: c.l.rumsey@larc.nasa.gov 
+              Phone: (757) 864-2165 
+            Address: NASA LaRC 
+            Address: MS 128 
+            Address: Hampton, VA 23681 
+            Address:  
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: CFL3D Version 6.0
+    Basic Algorithm: upwind finite-volume FDS 
+   Turbulence Model: EASM (k-omega)
+      Miscellaneous: Turb model described in AIAA 2000-4323 
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type:  
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SGI Origin 2000, 32 R10000 250Mhz processors, 4Mb level 2 cache 
+       # Processors: 4 + host 
+   Operating System: 6.5 6.5.11m 
+           Compiler: MIPSpro Compilers: Version 7.3.1.2m 
+       Run Time CPU:  
+Run Time Wall-Clock: 40 hours for 800 cycles typical (depends on machine load) 
+Memory Requirements: 2.17 gigabytes (double precision) 
+      Miscellaneous:  
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.345     0.500   0.02953   0.01764   0.01189   -0.1644
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.179   0.02088   0.00888   0.01200   -0.1711
+      0.75      -2.0     0.301   0.02295   0.01096   0.01199   -0.1706
+      0.75      -1.0     0.422   0.02642   0.01448   0.01194   -0.1680
+      0.75       0.0     0.542   0.03152   0.01967   0.01185   -0.1619
+      0.75       1.0     0.668   0.03992   0.02824   0.01168   -0.1559
+      0.75       2.0     0.771   0.05280   0.04138   0.01142   -0.1422
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+
+Date:  5/7/01
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Christopher L. Rumsey 
+              Email: c.l.rumsey@larc.nasa.gov 
+              Phone: (757) 864-2165 
+            Address: NASA LaRC 
+            Address: MS 128 
+            Address: Hampton, VA 23681 
+            Address:  
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: CFL3D Version 6.0
+    Basic Algorithm: upwind finite-volume FDS 
+   Turbulence Model: Spalart-Allmaras, version Ia 
+      Miscellaneous: Turb model described in La Recherche Aerospatiale 1, 1994
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type:  
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SGI Origin 2000, 32 R10000 250Mhz processors, 4Mb level 2 cache 
+       # Processors: 4 + host 
+   Operating System: 6.5 6.5.11m 
+           Compiler: MIPSpro Compilers: Version 7.3.1.2m 
+       Run Time CPU:  
+Run Time Wall-Clock: 28 hours for 800 cycles typical (depends on machine load) 
+Memory Requirements: 2.17 gigabytes (double precision) 
+      Miscellaneous:  
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.345     0.500   0.03145   0.01746   0.01399   -0.1656
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     0.176   0.02270   0.00857   0.01414   -0.1713
+      0.75      -2.0     0.299   0.02481   0.01069   0.01412   -0.1708
+      0.75      -1.0     0.420   0.02830   0.01424   0.01406   -0.1685
+      0.75       0.0     0.542   0.03346   0.01953   0.01393   -0.1633
+      0.75       1.0     0.663   0.04168   0.02802   0.01366   -0.1550
+      0.75       2.0     0.760   0.05417   0.04090   0.01327   -0.1385
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+
+Date:  5/7/01
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Christopher L. Rumsey 
+              Email: c.l.rumsey@larc.nasa.gov 
+              Phone: (757) 864-2165 
+            Address: NASA LaRC 
+            Address: MS 128 
+            Address: Hampton, VA 23681 
+            Address:  
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: CFL3D Version 6.0
+    Basic Algorithm: upwind finite-volume FDS 
+   Turbulence Model: Spalart-Allmaras with fv3 (unpublished)
+      Miscellaneous: This version of S-A is in many codes (e.g. INS3D, OVERFLOW)
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type:  
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SGI Origin 2000, 32 R10000 250Mhz processors, 4Mb level 2 cache 
+       # Processors: 4 + host 
+   Operating System: 6.5 6.5.11m 
+           Compiler: MIPSpro Compilers: Version 7.3.1.2m 
+       Run Time CPU:  
+Run Time Wall-Clock: 28 hours for 800 cycles typical (depends on machine load) 
+Memory Requirements: 2.17 gigabytes (double precision) 
+      Miscellaneous: Part of parametric study - all required cases not done 
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75     ?.???     0.50?   ?.?????   ?.?????   ?.?????    ?.????
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75       0.0     0.552   0.03332   0.01961   0.01371   -0.1687
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+
+Date:  5/7/01
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Christopher L. Rumsey 
+              Email: c.l.rumsey@larc.nasa.gov 
+              Phone: (757) 864-2165 
+            Address: NASA LaRC 
+            Address: MS 128 
+            Address: Hampton, VA 23681 
+            Address:  
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: CFL3D Version 6.0
+    Basic Algorithm: upwind finite-volume FDS 
+   Turbulence Model: Spalart-Allmaras, version Ia
+      Miscellaneous: Transition set to match "fully turb" (free) transition of EASM
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type:  
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SGI Origin 2000, 32 R10000 250Mhz processors, 4Mb level 2 cache 
+       # Processors: 4 + host 
+   Operating System: 6.5 6.5.11m 
+           Compiler: MIPSpro Compilers: Version 7.3.1.2m 
+       Run Time CPU:  
+Run Time Wall-Clock: 28 hours for 800 cycles typical (depends on machine load) 
+Memory Requirements: 2.17 gigabytes (double precision) 
+      Miscellaneous: Part of parametric study - all required cases not done 
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.356     0.500   0.03136   0.01741   0.01395   -0.1664
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -3.0     ?.???   ?.?????   ?.?????   ?.?????    ?.????
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+
+Date:  5/7/01
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Christopher L. Rumsey 
+              Email: c.l.rumsey@larc.nasa.gov 
+              Phone: (757) 864-2165 
+            Address: NASA LaRC 
+            Address: MS 128 
+            Address: Hampton, VA 23681 
+            Address:  
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: CFL3D Version 6.0
+    Basic Algorithm: upwind finite-volume FDS 
+   Turbulence Model: Menter's SST k-omega 
+      Miscellaneous: Turb model described in AIAA Journal 32(8), 1994
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block: X
+            Overset:  
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type:  
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SGI Origin 2000, 32 R10000 250Mhz processors, 4Mb level 2 cache 
+       # Processors: 4 + host 
+   Operating System: 6.5 6.5.11m 
+           Compiler: MIPSpro Compilers: Version 7.3.1.2m 
+       Run Time CPU:  
+Run Time Wall-Clock: 30 hours for 800 cycles typical (depends on machine load) 
+Memory Requirements: 2.17 gigabytes (double precision) 
+      Miscellaneous: Part of parametric study - all required cases not done 
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75    -0.345     0.500   0.02964   0.01746   0.01217   -0.1650
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -1.0     0.421   0.02651   0.01427   0.01223   -0.1682
+      0.75       0.0     0.542   0.03164   0.01952   0.01212   -0.1629
+      0.75       1.0     0.666   0.03997   0.02807   0.01190   -0.1559
+      0.75       2.0     0.759   0.05245   0.04089   0.01156   -0.1374
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+
+Date:  5/7/01
+
+
+PARTICIPANT INFORMATION
+-----------------------
+               Name: Christopher L. Rumsey 
+              Email: c.l.rumsey@larc.nasa.gov 
+              Phone: (757) 864-2165 
+            Address: NASA LaRC 
+            Address: MS 128 
+            Address: Hampton, VA 23681 
+            Address:  
+            Address:  
+            Address:  
+
+
+SOLVER INFORMATION
+--------------------
+        Method Name: CFL3D Version 6.0
+    Basic Algorithm: upwind finite-volume FDS 
+   Turbulence Model: Spalart-Allmaras version Ia 
+      Miscellaneous:  
+
+
+CASE 1 PROVIDED GRID USED
+Mark one line with an X
+--------------------
+        Multi-block:  
+            Overset: X
+  Unstructured node:  
+  Unstructured cell:  
+      Could not use:  
+
+
+GRID INFORMATION FOR CASES 2-4
+Leave blank if you used the Case 1 provided grid
+--------------------
+Grid-Generator Name:  
+          Grid Type:  
+              Zones:  
+        Field Nodes:  
+        Field Cells:  
+     Boundary Nodes:  
+     Boundary Faces:  
+   BL 1st-Cell Size:  
+ BL Max-Growth Rate:  
+           BL Cells:  
+      Miscellaneous:  
+
+
+SOLUTION INFORMATION
+--------------------
+  Computer Platform: SGI Origin 2000, 32 R10000 250Mhz processors, 4Mb level 2 cache 
+       # Processors: 3 + host 
+   Operating System: 6.5 6.5.11m 
+           Compiler: MIPSpro Compilers: Version 7.3.1.2m 
+       Run Time CPU:  
+Run Time Wall-Clock: 120 hours for 2200 cycles typical (depends on machine load)
+Memory Requirements: 2.54 gigabytes (double precision)
+      Miscellaneous: Part of parametric study - all required cases not done 
+
+
+
+CASE 1 DATA ON PROVIDED GRID (REQUIRED)
+---------------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75     ?.???     0.50?   ?.?????   ?.?????   ?.?????    ?.????
+
+
+CASE 2 DRAG POLAR DATA (REQUIRED)
+---------------------------------
+
+      MACH     ALPHA    CL_TOT    CD_TOT     CD_PR     CD_SF    CM_TOT
+      0.75      -1.0     0.418   0.02792   0.01402   0.01390   -0.1639
+
+
+NOTES:
+------
+* Information lines are 80 characters long.
+* Information blocks allow free-form miscellaneous information.
+* MACH   (F10.2) Mach Number.
+* ALPHA  (F10.3) Angle of Attack in Degrees.
+* CL_TOT (F10.3) Total Lift Coefficient.
+* CD_TOT (F10.5) Total Drag Coefficient.
+* CD_PR  (F10.5) Surface-Pressure Integrated Drag Coefficient.
+* CD_SF  (F10.5) Skin-Friction Integrated Drag Coefficient.
+* CM_TOT (F10.4) Total Moment Coefficient.
+

@@ -1,0 +1,144 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61C-SGI [en] (X11; I; IRIX64 6.5 IP30) [Netscape]">
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+</head>
+<body>
+
+<h1>
+Narrative for viewgraphs</h1>
+
+<h2>
+Chris Rumsey</h2>
+
+<p><br>Note:&nbsp; All slides not commented upon here; many of
+<br>the word slides are self-explanatory.
+<p>Issues Addressed
+<br>&nbsp; - We ran mostly with the 1-to-1 grid, but also
+<br>included some results using the overset grid.
+<br>&nbsp; - Our primary focus was parametric studies.
+<br>&nbsp; - We ran only M=0.75 cases.
+<p>Grid Convergence
+<br>&nbsp; - We performed a grid study using the given grid
+<br>(with every other point removed, then again), but
+<br>these coarser grids are probably too coarse to be in
+<br>the asymptotic region for 2nd order convergence.
+<br>&nbsp; - For purposes of workshop, it would have been
+<br>best to have been given a family of grids, including
+<br>one level finer than the current fine grid.
+<p>Effect of Grid on Surface Pressures
+<br>&nbsp; - Comparing 1-to-1 grid with overset grid results
+<br>at alpha=0:&nbsp; 1-to-1 grid smears shock more than
+<br>overset, especially near tip.&nbsp; Also, 1-to-1
+<br>underpredicts LE suction CPs over much of wing.
+<p>Grid Comparison
+<br>&nbsp; - 1-to-1 has much coarser streamwise spacing
+<br>(153 points around vs. 257 points around).
+<br>&nbsp; - 1-to-1 also is of generally poorer quality:
+<br>&nbsp;&nbsp;&nbsp;&nbsp; - too coarse near LE.
+<br>&nbsp;&nbsp;&nbsp;&nbsp; - non-smooth interfaces.
+<br>&nbsp;&nbsp;&nbsp;&nbsp; - grid not orthogonal to wing surface!!
+<p>Effect of Grid on Forces &amp; Moments (2 slides)
+<br>&nbsp; - In spite of differences in CPs for 1-to-1 vs.
+<br>overset, the forces and moments are fairly similar.
+<br>Quantitative comparisons will be given in a later
+<br>slide.
+<p>Efect of Turbulence Model on Surface Pressures
+<br>&nbsp; - All of the above was with SA (Spalart-Allmaras,
+<br>Version Ia).
+<br>&nbsp; - We now compare with SST (Menter's k-omega
+<br>shear-stress transport) and EASM (explicit
+<br>algebraic stress model, k-omega form).
+<br>&nbsp; - Biggest differences at alpha=2.
+<br>&nbsp; - There is separation at this condition, but in
+<br>spite of this, the 3 models yield very similar
+<br>results.&nbsp; But they're not identical - there are
+<br>small differences, for example, near TE.
+<p>Streamlines at Alpha=2 deg
+<br>&nbsp; - If look at surface streamlines, we see small
+<br>variations in the separation patterns.&nbsp; For
+<br>example, SA predicts the largest separation region
+<br>near TE, EASM the smallest.&nbsp; There is no way to
+<br>know which is "better" in this case.
+<p>Effect of Turbulence Model on Forces &amp; Moments
+<br>(2 slides)
+<br>&nbsp; - Very little difference noticeable,
+<br>qualitatively.
+<br>&nbsp; - Biggest difference occurs in friction drag.
+<br>&nbsp;&nbsp;&nbsp;&nbsp; - &lt; 20 count difference between models.
+<br>&nbsp;&nbsp;&nbsp;&nbsp; - SA has bigger friction drag than SST &amp;
+EASM.
+<br>&nbsp;&nbsp;&nbsp;&nbsp; - 3 counts on upper wing surface,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 counts on lower wing surface,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 counts on body.
+<br>&nbsp;&nbsp;&nbsp;&nbsp; - This difference may be smaller on finer
+grids,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; but because different models are
+calibrated
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for flat plate and there are some
+differences
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in the calibration, there will
+likely be
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; skin friction drag differences
+even on
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fine grids.
+<br>&nbsp; - Quantitative differences given later.
+<p>Actual "Fully Turbulent" Transition Locations for
+<br>Different Turbulence Models
+<br>&nbsp; - "Fully turbulent" is a misnomer!
+<br>&nbsp; - Contrary to popular belief, running a code
+<br>"fully turbulent" does NOT mean the flow is actually
+<br>fully turbulent.
+<br>&nbsp; - Turbulence models transition on their own,
+<br>a function of Re (unless you FORCE it with
+<br>something akin to Spalart's forcing term).
+<br>&nbsp; - For low-ish Re (1-10 million), the delay can
+<br>be significant.
+<br>&nbsp; - Here are upper surface transition locations
+<br>for the 3 turbulence models at alpha=0.&nbsp; They are
+<br>all fairly close to the LE, but they are not the
+<br>same:&nbsp; SA is furthest forward, and EASM is furthest
+<br>back.
+<p>Effect of Forcing SA Transition to Match "Natural"
+<br>Transition of EASM
+<br>&nbsp; - We tested the transition effect by forcing
+<br>SA to transition later, near the "natural"
+<br>transition location of EASM.
+<br>&nbsp; - The effect is very small.
+<br>&nbsp; - (Note: we did NOT compare the effect of
+<br>transition by setting to the experimental trip
+<br>location - we only did a a study showing the
+<br>effects due to differences in "natural"
+<br>fully turbulent trip locations.)
+<p>Effect of SA Version on Transition
+<br>&nbsp; - Particular VERSION of SA model has an effect
+<br>on variability, also!
+<br>&nbsp; - Often, people claim to run a particular model
+<br>(e.g., "SA"), but there are multiple versions
+<br>and one is often not sure which version is being
+<br>used.
+<br>&nbsp;&nbsp;&nbsp; - SA-Ia version is official version from
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recherche Aerospatial journal article.
+<br>&nbsp;&nbsp;&nbsp; - SA-fv3 version resulted from an e-mail
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from Spalart to code developers implementing
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; his model early in the model's development.
+<p>Effect of SA Version on Forces
+<br>&nbsp; - In spite of big variations in transition
+<br>location, effect on integrated forces and moments
+<br>is relatively small.
+<p>Summary of Effects at Alpha=0
+<br>&nbsp; - Quantitative comparisons for all the
+<br>parametric studies conducted are shown here,
+<br>at the angle of attack where most of the runs
+<br>were performed.
+<p>Comments on EASM
+<br>&nbsp; - Be cautioned that EASM is like many models:
+<br>there are a lot of versions out there, all with
+<br>the same or similar designation ("EASM").
+<br>&nbsp; - Current version is in k-omega form.&yuml;&yuml;&yuml;
+</body>
+</html>
