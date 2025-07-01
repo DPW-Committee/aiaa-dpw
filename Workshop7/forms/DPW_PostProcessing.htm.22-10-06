@@ -1,0 +1,476 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='tab-interval:.5in;font-size:11.0pt;font-family:"Calibri",sans-serif'>
+<div class=WordSection1>
+
+<h2>DPW-7 Data Submittal Forms and Postprocessing Information</h2>
+
+<div class=MsoNormal align=center style='text-align:center'>
+<span style='mso-no-proof:yes'>
+
+<hr size=0 width="100%" align=center>
+
+</span>
+</div>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Data Submissions, Errata, and Clarifications
+</h3>
+
+<p>
+DPW-7 is collecting data using a Tecplot-readable format with that template data
+forms provided below. Please complete as much of each form as possible, including
+the auxiliary data at the top of each form identifying the dataset. Forms are
+provided for solver metrics, force/moment data, side-of-body separation data,
+trailing edge separation data, and sectional cut data. Additionally, standard
+views of contours of the solutions are requested.
+Tecplot macros are provided
+that will automatically extract data on the surface at the required cut
+locations (see below for more details of cut locations), and generate contour
+plots and streamlines with specific views.
+
+<br><br>
+
+Tecplot has graciously agreed that all participants who do not have access to
+Tecplot may request a <b><i>free extended evaluation license of 360 for use in
+the AIAA Drag Prediction Workshop</i></b>. If you are interested, please
+email <a href="mailto:dpwaiaa@gmail.com">dpwaiaa@gmail.com</a>.
+
+<br><br>
+
+Please email Tecplot-readable Data Submittal Forms to DPW-7 at
+<a href="mailto:dpwaiaa@gmail.com">dpwaiaa@gmail.com</a>.
+</p>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Tecplot Macro Scripts
+</h3>
+
+<p>
+Tecplot Macro Scripts are provided for extracting wing section cuts and standard contour plots:
+</p>
+
+<ul type=disc style='tab-stops:list .5in;font-family:"Helvetica",sans-serif'>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.SectionalCutter_v7a.mcr">DPW-VII.SectionalCutter_v7a.mcr</a>
+     - wing section pressure cuts
+ </li>
+ <ul>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.SectionalCutter_v7a_pre2019.mcr">DPW-VII.SectionalCutter_v7a_pre2019.mcr</a>
+     - wing section pressure cuts (unsupported alternate for Tecplot versions before 2019R1)
+ </li>
+ </ul>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.Images_v7.mcr">DPW-VII.Images_v7.mcr</a>
+     - contour plots and streamlines
+ </li>
+</ul>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Data Forms
+</h3>
+
+<p>
+For Cases 1-6, please submit a single set of forms for a common solution family
+based on the same solver, turbulence model, grid type, etc.<br>
+A separate set of forms should be submitted for each solver, turbulence model,
+grid type, etc.<br>
+Case 4 results can be included in the forms that also apply to the most similar
+grid type. Otherwise Case 4 results can be given in a separate set of forms.
+</p>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Case 1 - CRM Wing-Body Grid Convergence Study:
+</h3>
+<h4 style='margin-left:.5in;font-family:"Helvetica",sans-serif'>
+Case 1a. Re = 20M (Required)<br>
+Case 1b. Re = 5 M (Optional)
+</h4>
+
+<ul type=disc style='tab-stops:list .5in;font-family:"Helvetica",sans-serif'>
+ <li style='tab-stops:list .5in'>
+     <a href="DPW_PostProcessing_files/DPW-VII.DataForm_Case1_GridMetrics_v7.dat">DPW-VII.DataForm_Case1_GridMetrics_v7.dat</a>
+     - grid metrics for grid convergence studies
+</li>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.DataForm_ForceMoment_v7.dat">DPW-VII.DataForm_ForceMoment_v7.dat</a>
+     - forces and moments (total, pressure skin friction, wing, fuselage) for Cases 1-6
+ </li>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.DataForm_Sectional_Lift_and_Moment_Alpha_v7.dat">DPW-VII.DataForm_Sectional_Lift_and_Moment_Alpha_v7.dat</a>
+     - sectional lift and moment at each section vs. angle of attack for Cases 1-6
+ </li>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.DataForm_Sectional_Lift_and_Moment_Span_v7.dat">DPW-VII.DataForm_Sectional_Lift_and_Moment_Span_v7.dat</a>
+     - sectional lift and moment at each section vs. span for Cases 1-6
+ </li>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.DataForm_SectionalCuts_v7.dat">DPW-VII.DataForm_SectionalCuts_v7.dat</a>
+     - sectional pressure and skin friction coefficients for Cases 1-6
+ </li>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.DataForm_TE_Separation_v7.dat">DPW-VII.DataForm_TE_Separation_v7.dat</a>
+     - trailing edge separation location for Cases 1-6
+ </li>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.DataForm_SOB_Separation_v7.dat">DPW-VII.DataForm_SOB_Separation_v7.dat</a>
+     - side-of-body separation location for Cases 1-6
+ </li>
+</ul>
+
+<p>
+Please update the GridID variable (DATASETAUXDATA GridId = "???") in
+the templates from &quot;CommonMB&quot;, &quot;CommonOverset&quot;, etc.
+using the nomenclature from the DPW7 provided grids website:
+<a href="https://dpw.larc.nasa.gov/DPW7">https://dpw.larc.nasa.gov/DPW7</a>
+
+<br><br>
+
+Please update the TurbulenceModel variable (DATASETAUXDATA TurbulenceModel = "???") in the template using the common
+turbulence model nomenclature from the Turbulence Modeling Resource web site:
+<a href="https://turbmodels.larc.nasa.gov">https://turbmodels.larc.nasa.gov</a>
+</p>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Case 2 - CRM Wing-Body Alpha Sweep:
+</h3>
+<h4 style='margin-left:.5in;font-family:"Helvetica",sans-serif'>
+Case 2a. Re = 20M (Required)<br>
+Case 2b. Re = 5M (Optional)
+</h4>
+
+<p>Please append Case 2 data to above files with Case 1 data</p>
+
+<ul type=disc style='tab-stops:list .5in;font-family:"Helvetica",sans-serif'>
+ <li style='tab-stops:list .5in'>DPW-VII.DataForm_ForceMoment_v7.dat</li>
+ <li>DPW-VII.DataForm_Sectional_Lift_and_Moment_Alpha_v7.dat</li>
+ <li>DPW-VII.DataForm_Sectional_Lift_and_Moment_Span_v7.dat</li>
+ <li>DPW-VII.DataForm_SectionalCuts_v7.dat</li>
+ <li>DPW-VII.DataForm_TE_Separation_v7.dat</li>
+ <li>DPW-VII.DataForm_SOB_Separation_v7.dat</li>
+</ul>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Case 3 - CRM Wing-Body Reynolds Number Sweep At Constant CL (Required)
+</h3>
+
+<p>Please append Case 3 data to above files with Case 1-2 data</p>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Case 4 - CRM Wing-Body Grid Adaptation -Alpha Sweep [Optional]:
+</h3>
+
+<p>Please append Case 4 data to above files with Case 1-3 data</p>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Case 5 - Beyond RANS [Optional]:
+</h3>
+
+<p>Please append Case 5 data to above files with Case 1-4 data</p>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Case 6 - CRM WB Coupled Aero-Structural Simulation [Optional]:
+</h3>
+
+<p>
+Please append Case 6 data to above files with Case 1-5 data.
+<br>
+Please also complete the Bending and Twist Data Form.
+</p>
+
+<ul type=disc style='tab-stops:list .5in;font-family:"Helvetica",sans-serif'>
+ <li style='tab-stops:list .5in'>DPW-VII.DataForm_ForceMoment_v7.dat</li>
+ <li>DPW-VII.DataForm_Sectional_Lift_and_Moment_Alpha_v7.dat</li>
+ <li>DPW-VII.DataForm_Sectional_Lift_and_Moment_Span_v7.dat</li>
+ <li>DPW-VII.DataForm_SectionalCuts_v7.dat</li>
+ <li>DPW-VII.DataForm_TE_Separation_v7.dat</li>
+ <li>DPW-VII.DataForm_SOB_Separation_v7.dat</li>
+ <li>
+     <a href="DPW_PostProcessing_files/DPW-VII.DataForm_Case6_BendingTwist_v7.dat">DPW-VII.DataForm_Case6_BendingTwist_v7.dat</a>
+     - calculated section twist and bending from Case 6 Coupled aero-structural simulation
+ </li>
+</ul>
+
+<br>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Wing Section Cut Locations
+</h3>
+
+<p align=center>
+<img border=0 width=793 height=598 src="DPW_PostProcessing_files/crm-wing-plan_v3.png" alt="Image of CRM wing section pressure cuts">
+</p>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Pressure Coefficient (Cp) and Skin Friction Coefficient (Cf) Contours and Surface Streamlines
+</h3>
+
+<p>
+A major set of desired inputs from the CFD are computed surface streamlines for
+comparison between CFD codes. This is particularly important for ascertaining
+the agreement/disagreement with regions of separation and other flow features
+of interest. Below are examples of surface streamline plots with contours of
+surface coefficient of pressure and skin friction coefficient.
+<br><br>
+Please see the section below for details about the committee provided Tecplot macro file
+for image generation to reduce work load and increase consistency across the participants.
+<br><br>
+</p>
+
+<p align=center>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/View1_Cp_Stream.png"><br>
+<br>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/View1_Cf.png"><br>
+View 1: Top view of fuselage/wing with Cp contours and streamlines (above)
+and Cf contours (below)<br>
+<i>Note that values listed in the header are made-up</i><br>
+</p>
+
+<p>
+In all cases for unsteady methods, mean streamlines and skin friction
+contours should be plotted.
+<br><br>
+In the pressure coefficient contour, the Tecplot color map "Small Rainbow".
+<br><br>
+It is given by:
+</p>
+
+<table border=1 cellspacing=1 cellpadding=0 width=0 style='width:4in;mso-cellspacing:.7pt;margin-left:50pt'>
+ <tr align=center style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:1.8pt'>
+  <td width=90 valign=top style='width:70pt;padding:.75pt .75pt .75pt .75pt'>LEVEL</td>
+  <td width=90 valign=top style='width:70pt;padding:.75pt .75pt .75pt .75pt'>R    </td>
+  <td width=90 valign=top style='width:70pt;padding:.75pt .75pt .75pt .75pt'>G    </td>
+  <td width=90 valign=top style='width:70pt;padding:.75pt .75pt .75pt .75pt'>B    </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:1'>
+  <td>0.00</td>  <td>0   </td>  <td>0   </td>  <td>255 </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:2'>
+  <td>0.25</td>  <td>0   </td>  <td>255 </td>  <td>255 </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:3'>
+  <td>0.50</td>  <td>0   </td>  <td>255 </td>  <td>0   </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:4'>
+  <td>0.75</td>  <td>255 </td>  <td>255 </td>  <td>0   </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td>1.00</td>  <td>255 </td>  <td>0   </td>  <td>0   </td>
+ </tr>
+</table>
+
+<p>
+with a recommended range (shown in the figure) of -1.20 to 0.50, with steps of 0.10.
+<br><br>
+In the skin friction contours, the Tecplot color map is provided as cfmap_tecplot.map
+(<a href="https://hiliftpw.larc.nasa.gov/Workshop4/cfmap_tecplot.map">https://hiliftpw.larc.nasa.gov/Workshop4/cfmap_tecplot.map</a>).
+<br><br>
+It is given by:
+</p>
+
+<table border=1 cellspacing=1 cellpadding=0 width=0 style='width:4in;mso-cellspacing:.7pt;margin-left:50pt'>
+ <tr align=center style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:1.8pt'>
+  <td width=90 valign=top style='width:70pt;padding:.75pt .75pt .75pt .75pt'>LEVEL</td>
+  <td width=90 valign=top style='width:70pt;padding:.75pt .75pt .75pt .75pt'>R    </td>
+  <td width=90 valign=top style='width:70pt;padding:.75pt .75pt .75pt .75pt'>G    </td>
+  <td width=90 valign=top style='width:70pt;padding:.75pt .75pt .75pt .75pt'>B    </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:1'>
+  <td>0.00</td>  <td>0   </td>  <td>0   </td>  <td>255 </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:2'>
+  <td>0.25</td>  <td>0   </td>  <td>191 </td>  <td>255 </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:3'>
+  <td>0.50</td>  <td>127 </td>  <td>255 </td>  <td>0   </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:4'>
+  <td>0.75</td>  <td>255 </td>  <td>0   </td>  <td>64  </td>
+ </tr>
+ <tr align=center style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td>1.00</td>  <td>255 </td>  <td>255 </td>  <td>255 </td>
+ </tr>
+</table>
+
+<p>
+with a recommended range (shown in the figure) of 0 to 0.005, with steps
+of 0.001. When plotting CFx, the recommended range is -0.002 to 0.005 with
+steps of 0.001.
+<br><br>
+The &quot;lighting&quot; has been turned off; which reduces the 3-dimensional
+appearance of the objects, but it improves the interpretability of the colors.
+If everyone removes lighting and follows the color scheme and range detailed
+here, then the resulting CFD plots should be reasonably easy to compare
+directly with one another.
+<br><br>
+For direct CFD comparisons with other CFD, some recommended views
+(including Tecplot nomenclature for orientation) are shown below, where
+the configuration is in full-scale inches with the forward most point
+on the fuselage at (92.5,0.0,198.0). Note that the axes are assumed to have
+the X-axis running from fuselage nose to tail, Y-axis running from symmetry
+plane to wing tip, and Z-axis running from fuselage keel to crown.
+<br><br>
+In Tecplot, the &quot;use perspective&quot; feature is not turned on for any views.
+<br><br>
+NOTE: Eight views are shown. Please provide as many as you are able.
+<br><br>
+</p>
+
+<p align=center>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/webpage_View1.png"><br>
+View 1: Top view of fuselage/wing<br>
+<br>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/webpage_View2.png"><br>
+View 2: Bottom view of fuselage/wing<br>
+<br>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/webpage_View3.png"><br>
+View 3: Fuselage side-of-body (remove wing from view)<br>
+<br>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/webpage_View4.png"><br>
+View 4: Top view of wing (remove fuselage from view)<br>
+<br>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/webpage_View5.png"><br>
+View 5: View of side-of-body near trailing edge of wing<br>
+<br>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/webpage_View6.png"><br>
+View 6: View of wing-tip region of wing<br>
+<br>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/webpage_View7.png"><br>
+View 7: Isometric view of fuselage/wing from the back<br>
+<br>
+<img border=0 width=624 height=554 src="DPW_PostProcessing_files/webpage_View8.png"><br>
+View 8: Isometric view of fuselage/wing from the front<br>
+</p>
+
+<h3 style='font-family:"Helvetica",sans-serif'>
+Committee provided Tecplot macro file for image generation
+</h3>
+
+<p>
+A Tecplot macro has been provided to generate all of the prescribed views of
+a loaded solution, define the prescribed color maps and levels for contours,
+and automatically generate streamtraces in the regions of interest.
+<br><br>
+The macro is intended to be run after a dataset has been read into Tecplot.
+The user should either load their dataset manually and then run the macro
+(Scripting --> Run Macro) or customize the macro file with the addition of a
+<span style='font-size:10.0pt;font-family:"Courier New"'>$!ReadDataSet</span>
+acro command appropriate for your dataset.
+<br><br>
+If the <span style='font-size:10.0pt;font-family:"Courier New"'>$!ReadDataSet</span>
+command has been added, the macro file can be run in batch mode at a
+terminal command prompt like this:<br>
+<span style='margin-left:.5in;font-size:10.0pt;font-family:"Courier New"'>
+tec360 <-mesa> -b -p DPW-VII.Images_v4.mcr
+</span>
+<br><br>
+The user is also required to populate some variables to define the case and condition:
+</p>
+
+<p style='margin-left:.5in;font-size:10.0pt;font-family:"Courier New"'>
+# CaseX - Case [Case1/Case2/Case3/Case4/Case5/Case6]<br>
+# XXX &nbsp; - First-author participant's last name (or organization)<br>
+# XxQ &nbsp; - Condition Q [LoQ/HiQ/NoQ]<br>
+# RxxM &nbsp;- Reynolds Number [05/20/30]<br>
+# Lx &nbsp;&nbsp; - Grid Level [L1/L2/L3/L4/L5/L6]<br>
+# Axxx &nbsp;- Angle of Attack [275/300/325/350/375/400/425]<br>
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (use C058 for Fixed CL=0.58 case)<br>
+#<br>
+# Grid/SolverVer/Method/TurbModel should be descriptive labels specific to your case<br>
+#<br>
+# Label for this solution
+$!VarSet |SolutionLabel| = 'CaseX_XXX_XxQ_RxxM_Lx_Axxx_Grid_SolverVer_Method_TurbModel'<br>
+<br><br><br>
+
+$!VarSet |OutputDirectoryPath| = '' # Images will be saved to this path<br>
+<span style='margin-left:3.0in'># NOTE: Use '' if Tecplot run from within desired directory<br></span>
+<br><br><br>
+
+$!VarSet |Q|     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = '??Qa???'                     # Aeroelastic shape [ie LoQa275/HiQa275]<br>
+$!VarSet |REYN|  &nbsp;&nbsp;&nbsp;                   = '??' &nbsp;&nbsp;&nbsp;&nbsp; # Reynolds number [05 or 20 or 30] in millions (based on reference chord)<br>
+$!VarSet |MACH|  &nbsp;&nbsp;&nbsp;                   = '0.85' &nbsp;&nbsp;           # Mach number<br>
+$!VarSet |ALPHA| &nbsp;&nbsp;                         = '0.???' &nbsp;                # Angle-of-Attack<br>
+$!VarSet |CL|    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       = '0.???' &nbsp;                # Lift Coefficient<br>
+$!VarSet |CD|    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       = '0.?????'                     # Drag Coefficient<br>
+$!VarSet |CMy|   &nbsp;&nbsp;&nbsp;&nbsp;             = '???' &nbsp;&nbsp;&nbsp;      # Pitching Moment Coefficient<br>
+</p>
+
+<p>
+The user must provide information identifying the variable number
+corresponding to the (X, Y, Z) coordinates, Cp, Cf, Cfx, and (U, V, W)
+velocity vector (or CF vector) for use in streamtraces:
+</p>
+
+<p style='margin-left:.5in;font-size:10.0pt;font-family:"Courier New"'>
+$!VarSet |Xvar| &nbsp;&nbsp;&nbsp; = 1 &nbsp;&nbsp;&nbsp; # Variable number of X coordinate<br>
+$!VarSet |Yvar| &nbsp;&nbsp;&nbsp; = 2 &nbsp;&nbsp;&nbsp; # Variable number of Y coordinate<br>
+$!VarSet |Zvar| &nbsp;&nbsp;&nbsp; = 3 &nbsp;&nbsp;&nbsp; # Variable number of Z coordinate<br>
+$!VarSet |CPvar| &nbsp;&nbsp;      = 4 &nbsp;&nbsp;&nbsp; # Variable number of Cp contours<br>
+$!VarSet |CFvar| &nbsp;&nbsp;      = 8 &nbsp;&nbsp;&nbsp; # Variable number of Cf contours<br>
+$!VarSet |CFXvar| &nbsp;           = 5 &nbsp;&nbsp;&nbsp; # Variable number of Cfx contours<br>
+$!VarSet |Uvar| &nbsp;&nbsp;&nbsp; = 5 &nbsp;&nbsp;&nbsp; # Variable number of streamtrace vector x-component (u-velocity)<br>
+$!VarSet |Vvar| &nbsp;&nbsp;&nbsp; = 6 &nbsp;&nbsp;&nbsp; # Variable number of streamtrace vector y-component (v-velocity)<br>
+$!VarSet |Wvar| &nbsp;&nbsp;&nbsp; = 7 &nbsp;&nbsp;&nbsp; # Variable number of streamtrace vector z-component (w-velocity)<br>
+</p>
+
+<p>
+<span>
+The user must define the fieldmaps that define the fuselage/body
+surface and the fieldmaps that define the wing surface:
+</span>
+</p>
+
+<p style='margin-left:.5in;font-size:10.0pt; font-family:"Courier New"'>
+$!VarSet |BodyMaps| = '1' &nbsp; # Fieldmaps of the body/fuselage dataset ('1-2','1,3,5-6',etc.)<br>
+$!VarSet |WingMaps| = '2' &nbsp; # Fieldmaps of the wing dataset ('1-2','1,3,5-6',etc.)
+</p>
+
+<p>
+Optionally, the macro will attempt to identify the correct Zones for the Body & Wing components
+based on the maximum Y_coordinate value of each Zone if the user leaves the inputs as:
+</p>
+<p style='margin-left:.5in;font-size:10.0pt; font-family:"Courier New"'>
+$!VarSet |BodyMaps| = '' &nbsp;&nbsp; # Fieldmaps of the body/fuselage dataset ('1-2','1,3,5-6',etc.)<br>
+$!VarSet |WingMaps| = '' &nbsp;&nbsp; # Fieldmaps of the wing dataset ('1-2','1,3,5-6',etc.)
+</p>
+
+
+<p>
+Note that the coordinate axes are assumed to have the X-axis running from fuselage
+nose to tail, Y-axis running from symmetry plane to wing tip, and Z-axis running
+from fuselage keel to crown. If the coordinates of your dataset need to be reversed,
+that can be accomplished by setting |Xrev|,|Yrev|,|Zrev| variables to 1 (from their
+default value of 0).
+<br><br>
+The coordinates of the input data will be scaled and translated automatically to
+align with a configuration in full-scale inches with the forward most point on
+the fuselage at (92.5,0.0,198.0).
+<br><br>
+Finally, the user may also need to define the Solution Time that should be active
+for the exported images.  If the macro produces blank images with only titles and
+legends and your data set includes data for more than one time step, you may need
+to identify a specific time to be used to make the plot.  Look for the slider bar
+in the Plot sidebar and identify the Solution Time to be used.
+</p>
+
+<p style='margin-left:0in;font-size:10.0pt;font-family:"Courier New"'>
+<span style='margin-left:.5in'>
+$!VarSet |PlotTime| = '' &nbsp; # Tecplot SolutionTime to export for time-accurate data sets
+</span>
+<br>
+<span style='margin-left:2.75in'>
+# NOTE: Leave |PlotTime| = '' if no solution time needs to be set
+</span>
+</p>
+
+<p>
+After the above customization and labelling has been completed, the user can run the
+macro, which will generate the requested images corresponding to the views above.
+</p>
+
+</div>
+
+</body>
+
+</html>

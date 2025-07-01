@@ -1,0 +1,144 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#   DPW-VII WING BENDING & TWIST DEFORMATION DATA SUBMITTAL FORM (Version 7 - Apr. 29, 2022)
+#
+#       Due 23 MAY 2022
+#
+#                XXX:   First-author participant's last name + specific identifier if submitting
+#                       multiple grid types, soln methods, turb models, etc.
+#                       EXAMPLES:  JonesG-CommonMB-SST-1
+#                                  JonesG-CommonOverset-SA-1
+#                                  JonesG-CommonOverset-SA-2
+#                                  JonesG-CommonHex-kw-1
+#                                  JonesG-CommonHybrid-ke-1
+#                                  JonesG-CommonPrism-SST-1
+#                                  JonesG-Custom-SA-1
+#                                  etc.
+#
+#       NOMENCLATURE:
+#                ETA:   Span fraction   = Y/BO2
+#               BEND:   Wing bending deformation       (X/C = 0.5) (deflection component in z-direction)
+#                       Bending is the vertical deflection component, i.e. Z_def - Z_undef. 
+#                       According to the definition used in the ETW SPT measuring system, 
+#                       bending deflections should be given wrt. the 50%-chord line, inches
+#              TWIST:   Wing twist deformation         (deflection component about y-axis)
+#                       Twist is the rotation component about the y-axis, 
+#                       i.e. the difference of local angle of attack between the 
+#                       aero-elasic equilibrium state and the baseline (design twist),
+#                       degrees - leading edge up is positive
+#              CHORD:   Local chord - distance from cut leading edge to trailing edge
+#
+#                  X:   X coordinate
+#                  Y:   Y coordinate
+#                  Z:   Z coordinate
+#                X/C:   Chord Fraction = (X - X_LE)/CHORD
+#
+#    CUT DEFINITIONS:   ETA    Y        X_LE      X_TE      CHORD
+#    WING SECTION  1:   0.110   127.30   997.960  1459.693  461.732
+#    WING SECTION  2:   0.200   231.41  1076.075  1476.889  400.814
+#    WING SECTION  3:   0.300   347.04  1164.163  1497.319  333.155
+#    WING SECTION  4:   0.400   462.67  1252.222  1529.519  277.297
+#    WING SECTION  5:   0.500   578.45  1340.385  1589.343  248.958
+#    WING SECTION  6:   0.600   694.08  1428.438  1649.094  220.657
+#    WING SECTION  7:   0.700   809.71  1516.491  1708.846  192.355
+#    WING SECTION  8:   0.800   925.34  1604.528  1768.582  164.054
+#    WING SECTION  9:   0.900  1041.12  1692.676  1828.396  135.721
+#    WING SECTION 10:   0.950  1098.86  1736.689  1858.264  121.575
+#    WING SECTION 11:   1.000  1156.75  1780.735  1888.153  107.418
+#
+#   REFERENCE VALUES:
+#                       Planform ref area, A         = 594720.00 inches^2
+#                       Mean aerodynamic chord, Cref =    275.80 inches
+#                       Full-span length, B          =   2313.50 inches
+#                       Semi-span length, BO2        =   1156.75 inches
+#                       x moment center              =   1325.90 inches
+#                       y moment center              =      0.00 inches
+#                       z moment center              =    177.95 inches
+#                       Aspect Ratio, AR             =      9.00
+#
+#    FLOW CONDITIONS:
+#                       Mach Number: 0.85
+#
+#   Cases 6a            Re = 20M (Required): M = 0.85; Re = 20 million, Reference temperature = -250 deg F.
+#                       Use Baseline LoQ AE CRM R30 grid/geometry.
+#
+#   Cases 6b            Re = 5M (Optional): M = 0.85, Re = 5 million, Reference temperature = 100 deg F. 
+#                       Use Baseline LoQ AE CRM R5 grids/geometry.
+#
+#
+#              NOTES:   1. All numerical data fields can be free-formatted.
+#                       2. Please use at least 4 decimal places for coordinate values
+#                       3. Please use at least 6 decimal places for coefficient values
+#                       4. Only include one grid type, grid size, soln method, turb model, etc per form.
+#                       5. Fill fields with value of -999 for data that are not available.
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#                   ALL ANGLES OF ATTACK IN ONE FILE FOR EACH CASE!!
+#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "XXX"
+VARIABLES = "ETA" "BEND" "TWIST"
+
+#---------------------------------------------------
+#   PARTICIPANT, GRID, AND SOLVER INFORMATION
+#---------------------------------------------------
+DATASETAUXDATA Name            = "Name of Participant"
+DATASETAUXDATA SubmissionDate  = "Date of Submission"
+DATASETAUXDATA SolverName      = "?"
+DATASETAUXDATA BasicAlgorithm  = "?"
+DATASETAUXDATA TurbulenceModel = "SA, SA-RC, SA-la, SST, SST-2003, Wilcox1998k-w, EARSMko2005, etc."
+DATASETAUXDATA Miscellaneous   = "???"
+DATASETAUXDATA GridId          = "CommonMB, CommonOverset, CommonHex, CommonHybrid, CommonPrism, Custom, etc."
+
+#-------------------------------------------------------------------------------
+#CASE 6: COUPLED AEROELASTIC STUDY (L3, MEDIUM BASELINE GRID)
+#  REQUIRED:  CL=0.58 
+#  OPTIONAL:  ADDITIONAL ANGLES ALPHA =  3.25, 3.50, 3.75, 4.00, 4.25
+#
+#  OPTIONAL:  SAME SET OF SOLUTIONS AT RE=5M (Case6b)
+#-------------------------------------------------------------------------------
+ZONE T="XXX - Case6: COUPLED AEROELASTIC BUFFET STUDY CL=XXX or ALPHA=XXX"
+AUXDATA CFDCASE         = "CASE6"
+AUXDATA ID              = "id - to be specified by the committee upon receipt"
+AUXDATA Name            = "Name of Participant"
+AUXDATA SolverName      = "?"
+AUXDATA TurbulenceModel = "SA, SA-RC, SA-la, SST, SST-2003, Wilcox1998k-w, EARSMko2005, etc."
+AUXDATA GridId          = "CommonMB, CommonOverset, CommonHex, CommonHybrid, CommonPrism, Custom, etc."
+AUXDATA ALPHA           = "?.????"
+AUXDATA CLTOTAL         = "0.????"
+            0.110  ?.????  ?.????
+            0.200  ?.????  ?.????
+            0.300  ?.????  ?.????
+            0.400  ?.????  ?.????
+            0.500  ?.????  ?.????
+            0.600  ?.????  ?.????
+            0.700  ?.????  ?.????
+            0.800  ?.????  ?.????
+            0.900  ?.????  ?.????
+            0.950  ?.????  ?.????
+            1.000  ?.????  ?.????
+
+ZONE T="XXX - Case6: COUPLED AEROELASTIC BUFFET STUDY CL=XXX or ALPHA=XXX"
+AUXDATA CFDCASE         = "CASE6"
+AUXDATA ID              = "id - to be specified by the committee upon receipt"
+AUXDATA Name            = "Name of Participant"
+AUXDATA SolverName      = "?"
+AUXDATA TurbulenceModel = "SA, SA-RC, SA-la, SST, SST-2003, Wilcox1998k-w, EARSMko2005, etc."
+AUXDATA GridId          = "CommonMB, CommonOverset, CommonHex, CommonHybrid, CommonPrism, Custom, etc."
+AUXDATA ALPHA           = "?.????"
+AUXDATA CLTOTAL         = "0.????"
+            0.110  ?.????  ?.????
+            0.200  ?.????  ?.????
+            0.300  ?.????  ?.????
+            0.400  ?.????  ?.????
+            0.500  ?.????  ?.????
+            0.600  ?.????  ?.????
+            0.700  ?.????  ?.????
+            0.800  ?.????  ?.????
+            0.900  ?.????  ?.????
+            0.950  ?.????  ?.????
+            1.000  ?.????  ?.????
+
+etc.

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <title>7th AIAA CFD Drag Prediction Workshop</title>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2 style="font-family: helvetica,arial,sans-serif;">DPW 7 Geometries</h2>
+
+<!--- comment out and don't show this link as it isn't working
+<hr style="font-family: helvetica,arial,sans-serif;">
+
+<br style="font-family: helvetica,arial,sans-serif;">
+<span style="font-family: helvetica,arial,sans-serif;">
+Reference for Common Research Model geometry:&nbsp; </span><a
+ style="font-family: helvetica,arial,sans-serif;"
+ href="../Workshop4/AIAA-2008-6919-Vassberg.pdf">AIAA
+2008-6919.pdf</a><span style="font-family: helvetica,arial,sans-serif;">,&nbsp;
+5 MB</span><br style="font-family: helvetica,arial,sans-serif;">
+//--->
+
+<h3 style="font-family: helvetica,arial,sans-serif;">
+<hr></h3>
+<h3 style="font-family: helvetica,arial,sans-serif;">CAD Models of
+Common Research Model <br>
+</h3>
+
+</p>
+<h3 style="font-family: helvetica,arial,sans-serif;">Version 1: 2 March 2021<br>
+</h3>
+
+</p>
+
+<ul style="font-family: helvetica,arial,sans-serif;">
+<li><span style="font-family: helvetica,arial,sans-serif;">
+Zip file of 8 angles-of-attack, in 3 units, at Low and High Q cases (IGES and CATIA)
+(1.38 GB):&nbsp; </span><a style="font-family: helvetica,arial,sans-serif;"
+ href="Geometry/2021-03-02_Version_01/DPW7geometries.zip">DPW7geometries.zip</a>
+</ul>
+</blockquote>
+
+<br>
+<h3 style="font-family: helvetica,arial,sans-serif;">Common Research Model Reference Conditions
+</h3>
+
+<br>
+<center>
+  <img alt="Reference Conditions for the Common Research Model"
+       src="Geometry/CRM Model Reference Locations and Constants_rev4-21_page1.jp2"
+       style="width: 1200px; ">
+  <img alt="Reference Conditions for the Common Research Model"
+       src="Geometry/CRM Model Reference Locations and Constants_rev4-21_page2.jp2"
+       style="width: 1200px; ">
+</center>
+
+<hr></h3>
+<div style="font-family: helvetica,arial,sans-serif;" class="Center"><b>NASA
+Official Responsible for Content</b></div>
+<p style="font-family: helvetica,arial,sans-serif;"><br>
+<a href="mailto:joseph.h.morrison@nasa.gov">Joseph H. Morrison</a>
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+<p style="font-family: helvetica,arial,sans-serif;" class="Center"><b>Last
+Updated</b>
+<br>
+13 April 2021<br>
+&nbsp;
+</p>
+
+<!--- comment out and don't show Langley feedback as the link only works for NASA access
+<p><a style="font-family: helvetica,arial,sans-serif;"
+ href="http://lms.larc.nasa.gov/lms_feedback.html">Feedback on
+Langley
+Products and Services</a><span
+ style="font-family: helvetica,arial,sans-serif;">
+</span><br>
+</p>
+//-->
+
+<hr>
+</body>
+</html>
