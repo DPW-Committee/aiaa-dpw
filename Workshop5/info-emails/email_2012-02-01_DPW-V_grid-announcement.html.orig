@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.36">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #214fae}
+    span.s1 {color: #7f7f7f}
+    span.s2 {text-decoration: underline}
+    span.s3 {color: #000000}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"><b>From: </b></span>DPW Committee &lt;aiaadpw@gmail.com&gt;</p>
+<p class="p1"><span class="s1"><b>Date: </b></span>February 1, 2012 9:28:14 AM EST</p>
+<p class="p1"><span class="s1"><b>Subject: </b></span><b>AIAA CFD Drag Prediction Workshps 2012: Grids are available</b></p>
+<p class="p2"><br></p>
+<p class="p1">Dear Interested DPW-5 Participants,</p>
+<p class="p2"><br></p>
+<p class="p1">the AIAA Drag Prediction Workshop committee would like to inform you that the 5th workshop will take place on 23rd and 24th June 2012 preceding the 30th AIAA Applied Aerodynamics Conference in New Orleans and that the grids for the mandatory cases are available now on the DPW-5 web site (links at the end).</p>
+<p class="p2"><br></p>
+<p class="p1">The following grids (revision 01) are available on 6 levels in different directories:</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="s2">1. Multiblock grids: Plot3d format:</span></p>
+<p class="p1">Level    Name     Label    Hexahedra    Delta Y+</p>
+<p class="p1">L1       Tiny          T           638,976     2.00</p>
+<p class="p1">L2       Coarse      C        2,156,544    1.33</p>
+<p class="p1">L3       Medium     M       5,111,808     1.00</p>
+<p class="p1">L4       Fine          F      17,252,352     0.67</p>
+<p class="p1">L5       ExtraFine  X      40,894,464     0.50</p>
+<p class="p1">L6       SuperFine S    138,018,816     0.33</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="s2">2. Overset grids:</span></p>
+<p class="p1">Level    Points</p>
+<p class="p1">L1    794241<span class="Apple-converted-space"> </span></p>
+<p class="p1">L2    2502513<span class="Apple-converted-space"> </span></p>
+<p class="p1">L3    5723873<span class="Apple-converted-space"> </span></p>
+<p class="p1">L4    18622785<span class="Apple-converted-space"> </span></p>
+<p class="p1">L5    43324833<span class="Apple-converted-space"> </span></p>
+<p class="p1">L6    143473761<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="s2">3. Unstructured grids (multi-block grids converted to hexes, prisms, and hybrid meshes, ugrid format):</span></p>
+<p class="p1">L1 to L4 are available. Due to ongoing tests the L5 and L6 will be available in the coming days. Please, check again the web/ftp site.</p>
+<p class="p2"><br></p>
+<p class="p1">Please, check the ReadMe files in the corresponding directories. Further details about the grids can be found in the AIAA paper 2011-2508 from John Vassberg.</p>
+<p class="p2"><br></p>
+<p class="p1">We have tested the grids but please let us know in case you detect any problem.</p>
+<p class="p2"><br></p>
+<p class="p1">In addition to the mandatory test cases using the common grids we would like to encourage you to generate and use your own current best practice grids too.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">We are kindly asking you for an informal email notification of your intention to participate at the workshop until the end of February.</p>
+<p class="p1">The official conference and workshop registration process has to be done later via the AIAA web site.</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">We are looking forward to discuss with you the results of all participants at the workshop.</p>
+<p class="p2"><br></p>
+<p class="p1">The DPW-5 Committee.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="s2">Links to DPW-5:</span></p>
+<p class="p3"><span class="s3">DPW-5 web site: <a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/"><span class="s2">http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/</span></a></span></p>
+<p class="p3"><span class="s3">DPW-5 grids: <a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop5/grids.html"><span class="s2">http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop5/grids.html</span></a></span></p>
+<p class="p2"><br></p>
+</body>
+</html>

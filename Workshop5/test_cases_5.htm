@@ -1,0 +1,828 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:css="http://macVmlSchemaUri" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name=Title content="AIAA CFD Drag Prediction Workshop">
+<meta name=Keywords content="">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 2008">
+<meta name=Originator content="Microsoft Word 2008">
+<link rel=File-List href="test_cases_5_files/filelist.xml">
+<link rel=Edit-Time-Data href="test_cases_5_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>AIAA CFD Drag Prediction Workshop</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>c33282</o:Author>
+  <o:Template>Normal.dotm</o:Template>
+  <o:LastAuthor>Joseph Morrison</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>71</o:TotalTime>
+  <o:Created>2011-12-10T17:37:00Z</o:Created>
+  <o:LastSaved>2011-12-10T17:37:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>446</o:Words>
+  <o:Characters>2545</o:Characters>
+  <o:Company>Textron</o:Company>
+  <o:Lines>21</o:Lines>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>3125</o:CharactersWithSpaces>
+  <o:Version>12.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+  <o:TargetScreenSize>800x600</o:TargetScreenSize>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:DisplayBackgroundShape/>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:UseNormalStyleForList/>
+   <w:DontUseIndentAsNumberingTabStop/>
+   <w:DontGrowAutofit/>
+   <w:FELineBreak11/>
+   <w:WW11IndentRules/>
+   <w:DontAutofitConstrainedTables/>
+   <w:AutofitLikeWW11/>
+   <w:HangulWidthLikeWW11/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="276">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Arial;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"Courier New";
+	panose-1:2 7 3 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 2 1 2 1 8 4 8 7 8;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 65536 0 -2147483648 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	margin-bottom:5.75pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Courier New";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+ /* Page Definitions */
+@page
+	{mso-footnote-separator:url(":test_cases_5_files:header.htm") fs;
+	mso-footnote-continuation-separator:url(":test_cases_5_files:header.htm") fcs;
+	mso-endnote-separator:url(":test_cases_5_files:header.htm") es;
+	mso-endnote-continuation-separator:url(":test_cases_5_files:header.htm") ecs;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.7in 1.25in .7in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-header:url(":test_cases_5_files:header.htm") h1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:29308571;
+	mso-list-template-ids:488913654;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";}
+@list l1
+	{mso-list-id:168066059;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1847450280 67698689 1933335570 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Helvetica;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Wingdings;}
+@list l2
+	{mso-list-id:240876035;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1847450280 67698689 1933335570 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Helvetica;}
+@list l2:level2
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Helvetica;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Wingdings;}
+@list l3
+	{mso-list-id:399324629;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1336368002 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:456066035;
+	mso-list-template-ids:-712865638;}
+@list l4:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5
+	{mso-list-id:598295021;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1847450280 67698689 1933335570 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Helvetica;}
+@list l5:level2
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Helvetica;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Wingdings;}
+@list l6
+	{mso-list-id:737048269;
+	mso-list-template-ids:-387171572;}
+@list l6:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7
+	{mso-list-id:843279349;
+	mso-list-template-ids:-712865638;}
+@list l7:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8
+	{mso-list-id:1038622396;
+	mso-list-template-ids:1888765614;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l9
+	{mso-list-id:1102993453;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-120434480 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l10
+	{mso-list-id:1638493512;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-120434480 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Helvetica;}
+@list l10:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l11
+	{mso-list-id:1717701785;
+	mso-list-template-ids:-186599944;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l12
+	{mso-list-id:1856767260;
+	mso-list-template-ids:-712865638;}
+@list l12:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13
+	{mso-list-id:1867519719;
+	mso-list-template-ids:-712865638;}
+@list l13:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><span
+style='font-size:20.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>AIAA
+CFD 5<sup>th</sup> Drag Prediction Workshop</span></p>
+
+<p align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><span
+style='font-size:16.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>June
+2012, New Orleans, LA<o:p></o:p></span></p>
+
+<p align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><span
+style='font-size:16.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'><o:p>&nbsp;</o:p></span></p>
+
+<p align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><span
+style='font-size:16.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>10
+December 2011<o:p></o:p></span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><span style='font-size:11.0pt;
+font-family:Helvetica;mso-bidi-font-family:Helvetica'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:Arial;mso-bidi-font-family:
+Arial'>Note:<span style="mso-spacerun: yes">&nbsp; </span>The Configuration
+Geometry, Test Cases, and Gridding Guidelines are current as of 10 December
+2011, but are subject to <span class=GramE>changes</span> as developments
+require.<span style="mso-spacerun: yes">&nbsp;&nbsp; </span>Please check the
+website periodically for updates <a
+href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/">http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/</a>,
+and/or register with <a href="mailto:aiaadpw@gmail.com">aiaadpw@gmail.com</a>
+to be notified directly.<o:p></o:p></span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><span style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<h3><u><span style='font-family:Helvetica;mso-bidi-font-family:Helvetica'>Test
+Cases: </span></u></h3>
+
+<h4 style='margin-bottom:0in;margin-bottom:.0001pt'><span style='font-family:
+Helvetica;mso-bidi-font-family:Helvetica'>Case 1 &#8211; NASA Common Research
+Model (CRM) Wing-Body Common Grid Study:</span></h4>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.5in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.5in;text-indent:-.25in;mso-list:l13 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:11.0pt;
+font-family:Helvetica;mso-fareast-font-family:Helvetica;mso-bidi-font-family:
+Helvetica'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Helvetica;mso-bidi-font-family:Helvetica'>Grid Convergence
+study</span></b><span style='font-family:Helvetica;mso-bidi-font-family:Helvetica'>
+at Mach = 0.85, C<sub>L </sub>= 0.500 (±0.001)</span><span style='font-size:
+11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.75in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.75in;text-indent:-.25in;mso-list:l10 level1 lfo14'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>Grid
+refinement series from the Common Grid Sequence consisting of at least four
+grid levels (Coarse, Medium, Fine, Extra-Fine Grids). Target grids should range
+from 3 to 50 million unknowns.</span><span style='font-size:11.0pt;font-family:
+Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.75in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.75in;text-indent:-.25in;mso-list:l10 level1 lfo14'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>Chord
+Reynolds Number <span class=SpellE>Rn</span> = 5x10<sup>6</sup> based on <span
+class=SpellE>c<sub>REF</sub></span><sub> </sub>= 275.80 in</span><span
+style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.75in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.75in;text-indent:-.25in;mso-list:l10 level1 lfo14'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica'>Reference Temperature = 100</span><span
+style='font-size:11.0pt;font-family:Symbol;mso-ascii-font-family:Helvetica;
+mso-hansi-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-char-type:
+symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+mso-symbol-font-family:Symbol'>°</span></span><span style='font-size:11.0pt;
+font-family:Helvetica;mso-bidi-font-family:Helvetica'>F</span><span
+style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.75in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.75in;text-indent:-.25in;mso-list:l10 level1 lfo14'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica'>Moment reference center is <span
+class=SpellE>x<sub>REF</sub></span><sub> </sub>= 1325.90 in, <span
+class=SpellE>z<sub>REF</sub></span><sub> </sub>= 177.95 in<o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.5in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.5in;text-indent:-.25in;mso-list:l13 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:11.0pt;
+font-family:Helvetica;mso-fareast-font-family:Helvetica;mso-bidi-font-family:
+Helvetica'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Helvetica;mso-bidi-font-family:Helvetica'>Optional Grid
+Convergence study using participant developed grids</span></b><span
+style='font-family:Helvetica;mso-bidi-font-family:Helvetica'>:</span><span
+style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:.75in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l5 level1 lfo12'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>All
+participants are encouraged to build their own grids using ‘best practice’
+techniques. IGES and CATIA models of the 1-g shape at the design point are
+available for grid construction. A family of grid sizes should be developed in
+the range described above suitable for Grid Convergence Study. All grids used
+for results presented at the workshop must be submitted to the DPW Organizing
+Committee to be made available to all interested parties. Results and grids
+will be published electronically on the DPW website.</span><span
+style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.25in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.25in'><span style='font-size:11.0pt;font-family:
+Helvetica'><o:p>&nbsp;</o:p></span></p>
+
+<h4 style='margin:0in;margin-bottom:.0001pt;tab-stops:center 3.0in'><span
+style='font-family:Helvetica;mso-bidi-font-family:Helvetica'>Case 2 &#8211; NASA
+Common Research Model (CRM) Wing-Body Buffet Study:</span></h4>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.75in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.75in;text-indent:-.25in;mso-list:l2 level1 lfo11'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>Mach
+= 0.85<o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.75in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.75in;text-indent:-.25in;mso-list:l2 level1 lfo11'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>Drag
+Polar for alpha = 2.50</span><span style='font-size:11.0pt;font-family:Symbol;
+mso-ascii-font-family:Helvetica;mso-hansi-font-family:Helvetica;mso-bidi-font-family:
+Helvetica;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>°</span></span><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>,
+2.75</span><span style='font-size:11.0pt;font-family:Symbol;mso-ascii-font-family:
+Helvetica;mso-hansi-font-family:Helvetica;mso-bidi-font-family:Helvetica;
+mso-char-type:symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Symbol'>°</span></span><span style='font-size:
+11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>, 3.00</span><span
+style='font-size:11.0pt;font-family:Symbol;mso-ascii-font-family:Helvetica;
+mso-hansi-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-char-type:
+symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+mso-symbol-font-family:Symbol'>°</span></span><span style='font-size:11.0pt;
+font-family:Helvetica;mso-bidi-font-family:Helvetica'>, 3.25</span><span
+style='font-size:11.0pt;font-family:Symbol;mso-ascii-font-family:Helvetica;
+mso-hansi-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-char-type:
+symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+mso-symbol-font-family:Symbol'>°</span></span><span style='font-size:11.0pt;
+font-family:Helvetica;mso-bidi-font-family:Helvetica'>, 3.50</span><span
+style='font-size:11.0pt;font-family:Symbol;mso-ascii-font-family:Helvetica;
+mso-hansi-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-char-type:
+symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+mso-symbol-font-family:Symbol'>°</span></span><span style='font-size:11.0pt;
+font-family:Helvetica;mso-bidi-font-family:Helvetica'>, 3.75</span><span
+style='font-size:11.0pt;font-family:Symbol;mso-ascii-font-family:Helvetica;
+mso-hansi-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-char-type:
+symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+mso-symbol-font-family:Symbol'>°</span></span><span style='font-size:11.0pt;
+font-family:Helvetica;mso-bidi-font-family:Helvetica'>, 4.00</span><span
+style='font-size:11.0pt;font-family:Symbol;mso-ascii-font-family:Helvetica;
+mso-hansi-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-char-type:
+symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+mso-symbol-font-family:Symbol'>°</span></span><span style='font-size:11.0pt;
+font-family:Helvetica;mso-bidi-font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.75in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.75in;text-indent:-.25in;mso-list:l2 level1 lfo11'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>Medium
+Grid used in Case 1 from the Common Grid Sequence or participant developed
+grids<o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.75in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.75in;text-indent:-.25in;mso-list:l2 level1 lfo11'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>Chord
+Reynolds Number <span class=SpellE>Rn</span> = 5x10<sup>6</sup> based on <span
+class=SpellE>c<sub>REF</sub></span><sub> </sub>= 275.80 in<o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.75in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.75in;text-indent:-.25in;mso-list:l2 level1 lfo11'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-fareast-font-family:Helvetica;
+mso-bidi-font-family:Helvetica'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica'>Reference Temperature = 100</span><span
+style='font-size:11.0pt;font-family:Symbol;mso-ascii-font-family:Helvetica;
+mso-hansi-font-family:Helvetica;mso-bidi-font-family:Helvetica;mso-char-type:
+symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+mso-symbol-font-family:Symbol'>°</span></span><span style='font-size:11.0pt;
+font-family:Helvetica;mso-bidi-font-family:Helvetica'>F<o:p></o:p></span></p>
+
+<h4 style='margin:0in;margin-bottom:.0001pt;tab-stops:270.85pt'><span
+style='font-family:Helvetica;mso-bidi-font-family:Helvetica'>Case 3 (Optional)
+&#8211; Turbulence Model Verification:</span></h4>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.5in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.5in'><span style='font-family:Helvetica;mso-bidi-font-family:
+Helvetica'>Details for the following three cases are listed on the TMBWG
+website: <a href="http://turbmodels.larc.nasa.gov/">http://turbmodels.larc.nasa.gov/</a><o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+.5in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:.5in'><span style='font-family:Helvetica;mso-bidi-font-family:
+Helvetica'>For each case use the three finest supplied grids.<o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+1.0in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:1.0in;text-indent:-.25in;mso-list:l13 level2 lfo1;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-family:Helvetica;
+mso-fareast-font-family:Helvetica;mso-bidi-font-family:Helvetica'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Helvetica;mso-bidi-font-family:
+Helvetica'><a href="http://turbmodels.larc.nasa.gov/flatplate.html">2D Zero
+Pressure Gradient Flat Plate</a>: M = 0.20; <span class=SpellE>Re<sub>L</sub></span>
+= 5 x10<sup>6</sup>; <span class=SpellE>T<sub>ref</sub></span> = 540 R<o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+1.0in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:1.0in;text-indent:-.25in;mso-list:l13 level2 lfo1;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-family:Helvetica;
+mso-fareast-font-family:Helvetica;mso-bidi-font-family:Helvetica'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Helvetica;mso-bidi-font-family:
+Helvetica'><a href="http://turbmodels.larc.nasa.gov/bump.html">2D Bump-in-channel</a>:
+M = 0.20; <span class=SpellE>Re<sub>L</sub></span> = 3 x 10<sup>6</sup>; <span
+class=SpellE>T<sub>ref</sub></span> = 540 R<o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+1.0in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:1.0in;text-indent:-.25in;mso-list:l13 level2 lfo1;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-family:Helvetica;
+mso-fareast-font-family:Helvetica;mso-bidi-font-family:Helvetica'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Helvetica;mso-bidi-font-family:
+Helvetica'><a href="http://turbmodels.larc.nasa.gov/naca0012_val.html">2D NACA
+0012 Airfoil</a>: M = 0.15; <span class=SpellE>Re<sub>C</sub></span> = 6 x 10<sup>6</sup>;
+<span class=SpellE>T<sub>ref</sub></span><sub> </sub>= 540 R</span><span
+style='font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+1.0in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:1.0in'><span style='font-family:Helvetica;mso-bidi-font-family:
+Helvetica'><br>
+</span><span style='font-family:Helvetica'><o:p></o:p></span></p>
+
+<div style='margin-top:3.0pt;margin-right:0in;margin-bottom:.1in;margin-left:
+1.0in;mso-para-margin-top:3.0pt;mso-para-margin-right:0in;mso-para-margin-bottom:
+.6gd;mso-para-margin-left:1.0in'><span style='font-family:Helvetica'>
+
+<hr size=2 width="98%" align=left>
+
+</span></div>
+
+
+<p><b style='mso-bidi-font-weight:normal'><u><span style='font-size:13.5pt;
+font-family:Helvetica;mso-bidi-font-family:Helvetica'>Notes:</span></u></b><b
+style='mso-bidi-font-weight:normal'><u><span style='font-family:Helvetica'><o:p></o:p></span></u></b></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo2;tab-stops:
+list .5in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:11.0pt;font-family:Helvetica;
+mso-bidi-font-family:Helvetica'>Common Research Model Reference Geometry:</span><span
+style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level2 lfo2;tab-stops:
+list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New";
+mso-bidi-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>S<sub>REF</sub>=
+594,720 in<sup>2</sup> (4130 ft<sup>2</sup>)</span><span style='font-size:11.0pt;
+font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level2 lfo2;tab-stops:
+list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New";
+mso-bidi-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>c<sub>REF</sub>=
+275.80 in</span><span style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level2 lfo2;tab-stops:
+list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New";
+mso-bidi-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>x<sub>REF</sub>=
+1325.90 in</span><span style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level2 lfo2;tab-stops:
+list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New";
+mso-bidi-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>z<sub>REF</sub>=
+177.95</span><span style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level2 lfo2;tab-stops:
+list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New";
+mso-bidi-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><i
+style='mso-bidi-font-style:normal'><span style='font-size:11.0pt;font-family:
+Helvetica;mso-bidi-font-family:Helvetica'>AR</span></i><span style='font-size:
+11.0pt;font-family:Helvetica;mso-bidi-font-family:Helvetica'>= 9.0</span><span
+style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo2;tab-stops:
+list .5in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:11.0pt;font-family:Helvetica'>Geometry
+Reference:<o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level2 lfo2;tab-stops:
+list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Courier New";mso-fareast-font-family:"Courier New";
+mso-bidi-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:11.0pt;font-family:Helvetica'>JC <span class=SpellE>Vassberg</span>,
+MA <span class=SpellE>DeHaan</span>, SM Rivers, and RA <span class=SpellE>Wahls</span>,
+“Development of a Common Research Model for Applied CFD Validation Studies,”
+AIAA Paper 2008-6919, AIAA Applied Aerodynamics Conference, Honolulu, HI, <span
+class=GramE>August,</span> 2008.<o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo2;tab-stops:
+list .5in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:11.0pt;font-family:Helvetica;
+mso-bidi-font-family:Helvetica'>Simulations are to be “free air”; no wind
+tunnel walls or model support systems are to be included.</span><span
+style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo2;tab-stops:
+list .5in'><![if !supportLists]><span style='font-size:10.0pt;mso-bidi-font-size:
+11.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:11.0pt;font-family:Helvetica;
+mso-bidi-font-family:Helvetica'>Boundary layer is to be fully turbulent for
+Case 1 and Case 2.</span><span style='font-size:11.0pt;font-family:Helvetica'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

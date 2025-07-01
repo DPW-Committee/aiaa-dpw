@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>DPW-5</title>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC" id="_fed_an_ua_tag"></script> 
+</head>
+<body>
+<h1 style="text-align: center; font-family: helvetica,arial,sans-serif;">5th AIAA CFD Drag Prediction Workshop</h1>
+<h3 style="text-align: center; font-family: helvetica,arial,sans-serif;">Sponsored by the Applied Aerodynamics TC</h3>
+<h3 style="text-align: center; font-family: helvetica,arial,sans-serif;">2-Day Workshop Preceding the 30th APA Conference</h3>
+<h3 style="text-align: center; font-family: helvetica,arial,sans-serif;">New Orleans, LA<br>
+23-24 June 2012</h3>
+<br>
+<div style="text-align: center;"><img alt="" src="DPW5_CRM_WindTunnelModel.png" style="width: 600px; "><br>
+</div>
+<br>
+<h3 style="font-family: helvetica,arial,sans-serif;">Objectives</h3>
+<ul style="font-family: helvetica,arial,sans-serif;">
+  <li>To build on the success of past AIAA Drag Prediction Workshops.</li>
+  <li>To assess the state-of-the-art computational methods as practical
+aerodynamic tools for aircraft force and moment prediction of industry
+relevant geometries.</li>
+  <li>To provide an impartial forum for evaluating the effectiveness of
+existing computer codes and modeling techniques using Navier-Stokes
+solvers.</li>
+  <li>To identify areas needing additional research and development.<br>
+  </li>
+</ul>
+<h3 style="font-family: helvetica,arial,sans-serif;">Focus</h3>
+<ul>
+  <li><span style="font-family: helvetica,arial,sans-serif;">The focus
+of this workshop will be to continue studies with the
+NASA Common Research Model (CRM) performed in DPW-IV.  </span></li>
+</ul>
+<span style="font-family: helvetica,arial,sans-serif;"></span>
+<h3><span style="font-family: helvetica,arial,sans-serif;">General
+Information</span></h3>
+<h3><span style="font-family: helvetica,arial,sans-serif;"></span></h3>
+<ul>
+  <li><span style="font-family: helvetica,arial,sans-serif;">This
+workshop is open to participants worldwide. Efforts will be made to
+ensure representation from all areas of industry, academia and
+government laboratories.</span></li>
+  <li><span style="font-family: helvetica,arial,sans-serif;">Participation
+in the drag studies is not required to attend the workshop. Everyone is
+welcome!</span></li>
+  <li><span style="font-family: helvetica,arial,sans-serif;">Open
+forums will be included in the workshop to discuss the solutions and
+modeling techniques.</span></li>
+  <li><span style="font-family: helvetica,arial,sans-serif;">Results
+will be made available after the workshop in a report and on the DPW
+website.</span></li>
+  <li><span style="font-family: helvetica,arial,sans-serif;">A nominal
+registration fee will be required for attendance.</span></li>
+  <li><span style="font-family: helvetica,arial,sans-serif;">AIAA
+membership is not required.</span></li>
+</ul>
+<span style="font-family: helvetica,arial,sans-serif;">
+</span>
+<h3><span style="font-family: helvetica,arial,sans-serif;">Notification of Updates</span></h3>
+<span style="font-family: helvetica,arial,sans-serif;">Send email to request
+notification of updates to the website, geometry and release of grids:
+<a href="mailto:aiaadpw@gmail.com">
+aiaadpw@gmail.com</a>
+<h3 style="font-family: helvetica,arial,sans-serif;">Dates</h3>
+<table style="text-align: left; height: 211px; width: 500px;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 200px; font-family: helvetica,arial,sans-serif;">Finalize Test Cases<br>
+      </td>
+      <td style="vertical-align: top; width: 250px; font-family: helvetica,arial,sans-serif;">4Q <br>
+      </td>
+      <td style="vertical-align: top; width: 50px; font-family: helvetica,arial,sans-serif;">2011<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Release of Standard Grids<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">4Q <br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">2011<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Notice of Intent Due<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">10 February<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">2012<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Acceptance Notification<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">24 February <br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">2012<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold; font-family: helvetica,arial,sans-serif;">Registration <br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold; font-family: helvetica,arial,sans-serif;">Handled through normal <a href="http://www.aiaa.org">AIAA</a> registration procedure <br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold; font-family: helvetica,arial,sans-serif;"> <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Data Submittal<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">21 May<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">2012<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Workshop<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">23-24 June<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">2012<br>
+      </td>
+    </tr>
+<!-- comment out and don't show data re-submittal
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Final Data Re-Submittal<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">20 September<br>
+      </td>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">2012<br>
+      </td>
+    </tr>
+//-->
+  </tbody>
+</table>
+<br>
+
+</p>
+Workshop presentations will not be official AIAA papers, however, several
+participants will be invited to support a special session on drag
+prediction to be held during the AIAA Aerospace Sciences Meeting,
+January 2013.<br>
+</span><br>
+
+<h3 style="font-family: helvetica,arial,sans-serif;">Organizing Committee</h3>
+<table style="text-align: left; width: 476px; height: 249px;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">John Vassberg<br>
+      </td>
+      <td style="width: 250px; text-align: center; vertical-align: middle; font-family: helvetica,arial,sans-serif;" rowspan="3" colspan="1"><br> The Boeing Company<br>
+      <br>
+      </td>
+    </tr>
+    <tr style="font-family: helvetica,arial,sans-serif;">
+      <td style="vertical-align: top;">Mori Mani<br>
+      </td>
+    </tr>
+    <tr style="font-family: helvetica,arial,sans-serif;">
+      <td style="vertical-align: top;">Ben Rider<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Ed Tinoco<br>
+      </td>
+      <td style="text-align: center; vertical-align: middle; font-family: helvetica,arial,sans-serif;">Retired <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Kelly Laflin<br>
+      </td>
+      <td style="text-align: center; vertical-align: middle; font-family: helvetica,arial,sans-serif;" rowspan="2" colspan="1">Cessna Aircraft Company<br>
+      </td>
+    </tr>
+    <tr style="font-family: helvetica,arial,sans-serif;">
+      <td style="vertical-align: top;">David Levy<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Rich Wahls<br>
+      </td>
+      <td style="text-align: center; vertical-align: middle; font-family: helvetica,arial,sans-serif;" rowspan="2" colspan="1">NASA Langley Research Center<br>
+      </td>
+    </tr>
+    <tr style="font-family: helvetica,arial,sans-serif;">
+      <td style="vertical-align: top;">Joe Morrison<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Dimitri Mavriplis<br>
+      </td>
+      <td style="text-align: center; vertical-align: middle; font-family: helvetica,arial,sans-serif;">University of Wyoming<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Olaf Brodersen <br>
+      </td>
+      <td style="text-align: center; vertical-align: middle; font-family: helvetica,arial,sans-serif;" rowspan="2" colspan="1">DLR<br>
+      </td>
+    </tr>
+    <tr style="font-family: helvetica,arial,sans-serif;">
+      <td style="vertical-align: top;">Simone Crippa<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Mitsuhiro Murayama<br>
+      </td>
+      <td style="text-align: center; vertical-align: middle; font-family: helvetica,arial,sans-serif;">JAXA <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</span><br>
+<h3><span style="font-family: helvetica,arial,sans-serif;"><a href="test_cases_5.htm">Test Cases </a></span></h3>
+Three series of computations are included:
+<ol>
+     <li> <strong>Common Grid Study: </strong>
+          A multi-block, O-O grid topology has been generated for the wing-body configuration.
+          Each cell edge has been divided in two up to eight times successively to develop a grid-refinement sequence.
+          The resulting cloud of points will be reformatted into overset and tet-based unstructured grids.
+          Within this series of eight grids, there will be a suitable grid refinement sequence
+          for most types of grids.
+          Additional computations are encouraged with user-developed grids (optional).
+          <div style="text-align: center;"><img alt="" src="DPW5_CRM_Multiblock_Grid.png" style="width: 300px; "><br>
+     </li>
+
+     <li> <strong>Buffet Study: </strong>
+          Alpha sweeps will be conducted at finely-spaced intervals through the zone where
+          wing separation is expected to begin.
+          Details of the exact CL-alpha combination for separation onset and patterns are to be reported.
+     </li>
+
+     <li> <strong>Turbulence Model Verification (Optional): </strong>
+          In conjunction with the Turbulence Model Benchmarking Working Group (TMBWG),
+          associated with the AIAA Fluid Dynamics Technical Committee,
+          we are including three cases to study implementation of turbulence models in a controlled study.
+          For more information on the TMBWG, see their website at:
+          <a href="http://turbmodels.larc.nasa.gov">turbmodels.larc.nasa.gov</a>.
+     </li>
+</ol>
+
+<!--  don't show the experimental data link
+<h3><span style="font-family: helvetica,arial,sans-serif;"><a href="wind_tunnel_data_4.html">Experimental Data </a></span></h3>
+//-->
+<br>
+<h3><a href="DPW5-geom.html"><span style="font-family: helvetica,arial,sans-serif;">Geometries</span></a></h3>
+<p>
+Geometry files were revised on November 7, 2008.
+Please ensure that you are using the revised geometry.
+</p>
+<h3><span style="font-family: helvetica,arial,sans-serif;">
+<a href="grids.html">Grids</a></span></h3>
+Description of the unified baseline grid for the Common Research Model:
+<a href="AIAA.2011-3508.pdf">AIAA Paper 2011-3508</a>
+</p>
+Any additional grids used to create submitted results must be provided to the DPW Committee.
+
+<b>
+<h3><span style="font-family: helvetica,arial,sans-serif;"> History of Information Emails to Participants
+<table style="text-align: left; width: 700px;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">Date Sent
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"> Subject
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">19 September 2011
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email_2011-09-19_DPW-V_broad_announcement.html"> DPW-V Broad Announcement </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">01 February 2012
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email_2012-02-01_DPW-V_grid-announcement.html"> AIAA CFD Drag Prediction Workshps 2012: Grids are available</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">19 March 2012
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email_2012-03-19_DPW-V_intent-model-issue.html"> AIAA CFD Drag Prediction Workshop 5 (DPW-5) </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">26 April 2012
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email_2012-04-26_DPW-V_data-forms.html"> DPW-5: Data submission, Data Forms</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">28 April 2012
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email_2012-04-28_DPW-V_data-deadline.html"> DPW-5: Data Submission Deadline</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">14 May 2012
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email_2012-05-14_DPW-V_data-submittal-form-release.html"> DPW-5: Data Submittal forms</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">20 May 2012
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email_2012-05-20_DPW-V_Information.html"> DPW-5: Some Information </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">23 May 2012
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email_2012-05-23_DPW-V_Submissions.html"> DPW-5: Data Submission </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">16 June 2012
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email_2012-06-16_DPW-V_Agenda.html"> DPW-5: Agenda, participants list </a>
+      </td>
+    </tr>
+
+<!-- comment out entries - none shown currently
+    <tr>
+      <td style="vertical-align: top; font-family: helvetica,arial,sans-serif;">November 10, 2008
+      </td>
+      <td style="text-align: left; vertical-align: middle; font-family: helvetica,arial,sans-serif;"><a href="info-emails/email-2008-11-10-Urgent-News-NASA-CRM-IGES.html"> DPW-4: Urgent News Regarding the NASA CRM IGES Definition </a>
+      </td>
+    </tr>
+//-->
+
+<! --- copy the tr through /tr and change the two td lines for each line --- >
+
+  </tbody>
+</table>
+
+</span></h3>
+
+<h3><span style="font-family: helvetica,arial,sans-serif;">
+<a href="forms/DataForm.html">Data Submittal Forms</a></span></h3>
+<!--  comment out data forms - need to create and link these
+<a href="forms/DPW-IV.CRM.DataForm_v3.txt">DPW-IV CRM Data Form (version 3)</a>
+<br>
+<a href="forms/DPW-IV.CRM.Case1.CpDataForm_v3.txt">DPW-IV CRM Case 1 CP Data Form (version 3)</a>
+<br><br>
+//-->
+<img alt="Image of pressure coefficient	at eta = 0.13 of Common Research Model" src="DPW5_CRM_Cp_eta_p13.png" style="position:relative; TOP:30px; LEFT:30px; width: 250px;"><br>
+<img alt="Image of pressure coefficient at eta = 0.20 of Common Research Model" src="DPW5_CRM_Cp_eta_p20.png" style="position:relative; TOP:-190px; LEFT:350px; width: 250px;"><br>
+<img alt="Image of polars for Common Research Model" src="clcmihall01.jpg" style="position:relative; TOP:-100px; LEFT:30px; width: 400px;"><br>
+<img alt="Image of surface pressure on wing and tail of Common Research Model" src="Cf_surf_Sol_SST_ih0_a4_wing_dpw5flyer_v2.jpg" style="position:relative; TOP:-340px; LEFT:470px; width: 300px;"><br>
+
+<h3><span style="font-family: helvetica,arial,sans-serif;">
+<!-- comment out the link for now
+     <a href="presentations/DPW5_Presentations.htm">Workshop Presentations</span></a>
+//-->
+     <a href="presentations/DPW5_Presentation_Files/14_DPW5 Summary-Draft_V7.pdf">DPW-5 Summary of Participant Data</span></a>
+     (pdf file of summary presentation from DPW-5)</h3>
+
+<!-- comment out the clause
+     (pdf files of presentations from DPW-5)</h3>
+//-->
+</h3>
+ <h3><span style="font-family: helvetica,arial,sans-serif;">
+     <a href="DPW5_Agenda-v5.pdf">Workshop Agenda</span></a></h3>
+<h3><a href="flyer-dpw5-trifold.pdf"><span style="font-family: helvetica,arial,sans-serif;">Flyer</span></a></h3>
+<h3><span style="font-family: helvetica,arial,sans-serif;">Participants List and Test Case Results</span></h3>
+<h3><a href="DPW-V_photos-23-24June2012-NewOrleans/photos.html"><span style="font-family: helvetica,arial,sans-serif;">Photos from DPW-V</span></a></h3>
+<hr><h3><span style="font-family: helvetica,arial,sans-serif;">Links</span></h3>
+<p><a href="../Workshop1/workshop1.html"><span style="font-family: helvetica,arial,sans-serif;">1st
+AIAA CFD Drag Prediction Workshop</span></a><br
+ style="font-family: helvetica,arial,sans-serif;">
+</p>
+<p style="font-family: helvetica,arial,sans-serif;"><a href="../Workshop2/workshop2.html">2nd
+AIAA CFD Drag Prediction Workshop</a></p>
+<p style="font-family: helvetica,arial,sans-serif;"><a href="../Workshop3/workshop3.html">3rd
+AIAA CFD Drag Prediction Workshop</a></p>
+<p style="font-family: helvetica,arial,sans-serif;"><a href="../Workshop4/workshop4.html">4th
+AIAA CFD Drag Prediction Workshop</a></p>
+<hr>
+<h3><span style="font-family: helvetica,arial,sans-serif;">Contact</span></h3>
+<span style="font-family: helvetica,arial,sans-serif;">Email:
+<a href="mailto:aiaadpw@gmail.com">
+aiaadpw@gmail.com</a>
+</span><br>
+<h4><span style="font-family: helvetica,arial,sans-serif;">FAQ</span></h4>
+<hr>
+<span style="font-family: helvetica,arial,sans-serif;"></span><br>
+<span style="font-family: helvetica,arial,sans-serif;"></span><br>
+<p style="text-align: center;"><a
+ href="http://www.larc.nasa.gov/cgi-bin/disclaimer.cgi?http://www.aiaa.org/tc/apa/apatc.html">APA-TC
+Home</a>&nbsp;&nbsp;&nbsp; <a href="http://www.aiaa.org/">AIAA Home</a></p>
+<p><br>
+<br>
+<br>
+</p>
+<hr>
+<p class="Center">
+<br>
+<p>For any questions, please contact the organizers at
+<a href="mailto:aiaadpw@gmail.com">
+aiaadpw@gmail.com</a>
+<br>
+<br>
+<b>NASA Official Responsible for Content</b> <br>
+<a href="mailto:joseph.h.morrison@nasa.gov">Joseph H. Morrison</a> <br>
+&nbsp; <br>
+&nbsp; </p>
+<p class="Center"><b>Last Updated</b> <br>
+10 June 2015<br>
+&nbsp; </p>
+</body>
+</html>

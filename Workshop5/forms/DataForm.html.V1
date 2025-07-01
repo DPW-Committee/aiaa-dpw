@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>Drag Prediction Workshop 5 - Data Submittal Forms & Postprocessing Info</title>
+</head>
+<body>
+<h1 style="text-align: center; font-family: helvetica,arial,sans-serif; color: blue">
+Data Submittal Forms and Postprocessing Information</h1>
+<h2 style="text-align: center; font-family: helvetica,arial,sans-serif;">
+AIAA CFD 5th Drag Prediction Workshop</h2>
+
+<br>&nbsp;
+<h3 style="font-family: helvetica,arial,sans-serif">
+DPW5 is collecting data using a Tecplot-readable format and template data forms are provided below.
+Please complete as much of the form as possible, including the auxiliary data at the top of each 
+form identifying the dataset.  
+One form is for detailed solution metrics, one form captures configuration force/moment data, 
+two forms capture side-of-body and trailing edge separation data, and another form is used 
+to submit the required sectional cuts.  
+A Tecplot macro is also provided that will automatically extract data on the surface at the 
+required cut locations (see below for more details).  
+The macro should work on custom generated user grids, but that has not been tested. 
+The rest of this page provides instructions on naming conventions for files to be submitted to 
+DPW5 and instructions on use of the forms and macros.
+</h3>
+
+<br>&nbsp;
+<h3 style="font-family: helvetica,arial,sans-serif">
+The following Tecplot-readable Data Submittal Forms are required for submittal to DPW5:
+<ul style="font-family: helvetica,arial,sans-serif;">
+  <li><a href="DPW-V.DataForm_SolverMetrics_v1.dat">DPW-V.DataForm_SolverMetrics_v1.dat</a> - for solver information
+  <li><a href="DPW-V.DataForm_ForceMoment_v1.plt">DPW-V.DataForm_ForceMoment_v1.plt</a> - for forces and moments
+  <li><a href="DPW-V.DataForm_SOBSeparation_v1.plt">DPW-V.DataForm_SOBSeparation_v1.plt</a> - for side of body separation
+  <li><a href="DPW-V.DataForm_TESeparation_v1.plt">DPW-V.DataForm_TESeparation_v1.plt</a> - for trailing edge separation
+  <li><a href="DPW-V.DataForm_SectionalCuts_v1.plt">DPW-V.DataForm_SectionalCuts_v1.plt</a> - for sectional cut data
+     <ul>
+       <li> Case 1 Fixed CL = 0.5, 4 required grid levels: 
+            <ul>
+            <li> Use file naming convention Author-GridId-Turb-NumId.SectionalCuts_L?.plt
+            <li> where "?" is replaced by the grid level for the four required grid levels (e.g. 2, 3, 4, 5)
+            </ul>
+       <li> Case 2 Grid Level 3, 7 Required Angles of Attack: 
+            <ul>
+            <li> Use file naming convention Author-GridId-Turb-NumId.SectionalCuts_A?.??.plt
+            <li> where "?.??" is replaced by the required angles of attack = (2.50, 2.75, 3.00, 3.25, 3.50, 3.75, 4.00)
+            </ul>
+     </ul>
+</ul>
+</h3>
+
+<h3 style="font-family: helvetica,arial,sans-serif">
+Replace "DPW-V.DataForm" in the form names with the following string "Author-GridID-Turb-NumID" where
+<ul style="font-family: helvetica,arial,sans-serif;">
+  <li> "Author" is the communicating author in <Last Name><First Name or Initial> format, e.g. "JonesG"
+  <li> "GridID" is a grid identifier. Use one of the following:
+       <ul>
+          <li> "CommonMB", "CommonOverset", "CommonHex", "CommonHybrid", "CommonPrism" for DPW supplied grids
+          <li> "Custom" for user supplied grids
+          <li><a href="DPW-V.DataForm_GridMetrics_v1.plt">DPW-V.DataForm_GridMetrics_v1.plt</a> - for grid information 
+              is required for user supplied grids. 
+              The reported first boundary layer cell height should be that associated with 
+              (near) the quarter chord of the wing MAC
+       </ul>
+  <li> "Turb" is a turbulence model identifier
+       <ul>
+           <li> "SA", "SA-RC", "SA-la", "SST", "SST-2003", "Wilcox1998k-w", "EARSMko2005", etc.
+           <li> Please follow the naming conventions established for each model at 
+                <a href="http://turbmodels.larc.nasa.gov/index.html">http://turbmodels.larc.nasa.gov/index.html</a>
+       </ul>
+
+  <li> "NumID" is an integer identifying multiple submissions from the same Author (except for turbulence model) 
+       <ul>
+            <li> For first submission, NumId=1
+            <li> For those changing flow solver input values/numerics (or even flow solvers) but the same Author, 
+                 GridId, & Turb, increment NumId by 1 for each additional submission
+
+       </ul>
+</ul>
+</h3>
+
+<h3 style="font-family: helvetica,arial,sans-serif">
+The following Tecplot-readable Data Submittal Forms are optional, but encouraged, for submittal to DPW5:
+<ul>
+  <li><a href="DPW-V.DataForm_SectionalCuts_v1.plt">DPW-V.DataForm_SectionalCuts_v1.plt</a> - 
+       optional section cut data for Case 1 additional grid levels (e.g. 1, 6) or participant supplied grids at Fixed CL = 0.50
+     <ul>
+       <li> Use file naming convention Author-GridId-Turb-NumId.SectionalCuts_L?.plt
+       <li> where "?" is replaced by grid level
+     </ul>
+  <li><a href="DPW-V.DataForm_Turbulence_v1.plt">DPW-V.DataForm_Turbulence_v1.plt</a> - 
+          for Case 3 Turbulence Model Verification
+     <ul>
+       <li> Use file naming convention Author-GridId-Turb-NumId.Turbulence.plt
+       <li> GridId = CommonStructured,CommonQuad,CommonTriangle,Custom
+     </ul>
+</ul>
+</h3>
+
+<h4 style="font-family: helvetica,arial,sans-serif">
+One set of forms covers one complete set of runs on a given sequence of grids
+for all required and optional Cases.  (If a participant runs more than one set of
+grids, more than one CFD code or methodology, 
+or more than one turbulence model, then
+one set of forms would be required for <i>each</i> grouping.)
+
+If participants analyzed additional alphas (for instance, to better define a force/moment curve), 
+they are encouraged to include them in the data submittal. 
+For example, if alpha = 3.60 deg was analyzed, the participant should add a line between alphas 3.50 deg and 3.75 deg.
+
+
+<h4 style="font-family: helvetica,arial,sans-serif">
+Note that the SectionalCuts Data Form requires that data be extracted from the wing surface 
+along specific constant y-plane cuts listed at the top of the SectionalCuts data form.  
+Some of these cuts correspond to locations for which experimental pressure tap data are available. See the diagram at:
+<p>
+    <a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop4/forms/crm-wing-horiz-plan_v3.pdf">http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop4/forms/crm-wing-horiz-plan_v3.pdf</a>
+<p>
+for a graphic of how/where to take the cuts (DPW5 does not make use of the CRM horizontal tail).
+
+<!--<br>&nbsp;
+<br>&nbsp;
+<h4 style="font-family: helvetica,arial,sans-serif">
+The DPW Committee reserves the right to modify these data submittal
+forms, and/or to ask for additional information, as deemed necessary prior
+to the workshop.-->
+
+<br>&nbsp;
+<br>&nbsp;
+<h3 style="font-family: helvetica,arial,sans-serif">
+Tecplot Macro Files for Surface Data Extraction
+</h3>
+<h4 style="font-family: helvetica,arial,sans-serif">
+For those participants with access to Tecplot, a macro file has been provided that 
+can be used to extract data on the surface at the required cuts. 
+Note that the SectionalCuts Data Form asks for data in the following order: 
+X, Y, Z, CP, CF, CFX, CFY, CFZ (where CF, CFX, CFY, and CFZ should be given the value -999 
+if they are not being provided). 
+Use this macro by performing the following steps for each solution which requires sectional cuts:
+
+<ol style="font-family: helvetica,arial,sans-serif;">
+<li> Load Wing Surface Zones into Tecplot (i.e. Remove Fuselage Zones)
+      <ol>
+      <li> Be sure that X, Y, and Z are in full scale inches
+      <li> The macro is for the half-plane geometry defined in the +Y direction, 
+           so if your geometry lies only in the -Y sector, flip your data using Data-CreateZone-Mirror-XZPlane
+      <li> If CP is not one of your solution variables, then use Tecplot to create it
+      </ol>
+<li> Assign LABEL variable in the macro file as the "XXX" identifier of the dataset
+<li> Assign FILE variable in the macro file to the filename (& path) to write out sectional cut data
+<li> Assign (X,Y,Z) variables in the macro file to the variable number in your dataset (typically 1,2,3)
+<li> Assign CP variable to the variable number in your dataset (typically 4)
+<li> Assign CF variable to the variable number in your dataset (if exists)
+      <ol>
+      <li> If you do not set the variable number, a variable will be automatically created as CF=-999
+      </ol>
+<li> Assign CFX,CFY,CFZ variables to the variable number in your dataset (if exists)
+      <ol>
+      <li> If you do not set the variable numbers, variables will be automatically created as CFX,CFY,CFZ=-999
+      </ol>
+<li> Run macro and verify output.  The macro will:
+      <ol>
+      <li> Create and rename 16 new zones of extracted data at the required cuts
+      <li> Output the required variables for the new 16 zones to the file name set by the macro variable, FILE
+      </ol>
+<li> Copy zone data from output file into data form (DPW-V.DataForm_SectionalCuts.plt)
+</ol>
+
+<h4 style="font-family: helvetica,arial,sans-serif">
+<a href="DPW-V.SectionalCutter_v1.mcr">DPW-V.SectionalCutter_v1.mcr</a><br>
+</h4>
+
+<h5 style="font-family: helvetica,arial,sans-serif">
+(These macros were created with Tecplot 360, 2009 Release 2)
+</h5>
+
+
+<br>
+<hr>
+<p class="Center">
+
+<p style="font-family: helvetica,arial,sans-serif;"><b>Page Curator and NASA Official Responsible for Content</b> <br>
+<a href="mailto:joseph.h.morrison@nasa.gov">Joseph H. Morrison</a> 
+&nbsp; </p>
+
+<p class="Center" style="font-family: helvetica,arial,sans-serif;"><b>Last Updated</b><br> 
+13 May 2012<br> </p>
+<p style="font-family: helvetica,arial,sans-serif;"><a href="http://www.larc.nasa.gov/privacy.html">Privacy Act Statement</a> </p>
+<!--<p style="font-family: helvetica,arial,sans-serif;"><a href="http://lms.larc.nasa.gov/lms_feedback.html">Feedback on
+Langley Products and Services</a> </p>-->
+<br>
+<br>
+</body>
+</html>
+
