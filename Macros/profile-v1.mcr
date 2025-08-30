@@ -94,7 +94,7 @@ $!VarSet |Zrev|      =  0    # Set to 1 only if Z-axis is running from fuselage 
 
 
 $!VarSet |Debugger|    =  0 # UNIX-based system commands
-$!VarSet |DebuggerPng| =  1 # Export pngs of cut locations (inside png/*)
+$!VarSet |DebuggerPng| =  0 # Export pngs of cut locations (inside png/*)
 
 $!SetStyleBase Factory
 $!GlobalPaper
