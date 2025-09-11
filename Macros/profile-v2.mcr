@@ -1,7 +1,7 @@
 #!MC 1410
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #
-#   DPW-8/AePW-4 BOUNDARY LAYER PROFILE EXTRACTOR (Version 1 - August 27, 2025)
+#   DPW-8/AePW-4 BOUNDARY LAYER PROFILE EXTRACTOR (Version 2 - September 11, 2025)
 #      To BE USED WITH:
 #          DPW8-AePW4_Profiles_v1.dat
 #
@@ -64,19 +64,19 @@ $!VarSet |DescriptorText| = 'ALPHA K.KK - GRID L' # Text prepended in the result
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #
-$!VarSet |Xvar|      =  X    # Variable number to use for X coordinate (running from fuselage nose to tail)
-$!VarSet |Yvar|      =  X    # Variable number to use for Y coordinate (running from symmetry plane to wing tip)
-$!VarSet |Zvar|      =  X    # Variable number to use for Z coordinate (running from fuselage keel to crown)
-$!VarSet |Mvar|      =  X    # Variable number to use for Mach number
-$!VarSet |CPvar|     =  X    # Variable number to use for Cp, if available; use '' if not available
+$!VarSet |Xvar|      =  1    # Variable number to use for X coordinate (running from fuselage nose to tail)
+$!VarSet |Yvar|      =  2    # Variable number to use for Y coordinate (running from symmetry plane to wing tip)
+$!VarSet |Zvar|      =  3    # Variable number to use for Z coordinate (running from fuselage keel to crown)
+$!VarSet |Mvar|      =  5    # Variable number to use for Mach number
+$!VarSet |CPvar|     =  4    # Variable number to use for Cp, if available; use '' if not available
 $!VarSet |MRMSvar|   =  ''   # Variable number to use for Mach number root mean square, if available; use '' if not available
 $!VarSet |CPRMSvar|  =  ''   # Variable number to use for Cp root mean square, if available; use '' if not available
 
 $!VarSet |IBlankvar| =  ''   # Variable number to use for blanking (for overset grids... do not surround the value with '')
 $!VarSet |IBlankval| =  ''   # Value           to use for blanking (for overset grids... probably 0... do not surround the value with '')
 
-$!VarSet |WingMaps|  = 'X'   # Zone numbers for the wing surface          ('1','1-2','1,3,5-6',etc.)
-$!VarSet |VolMaps|   = 'X'   # Zone numbers for the volume                ('1','1-2','1,3,5-6',etc.)
+$!VarSet |WingMaps|  = '6'   # Zone numbers for the wing surface          ('1','1-2','1,3,5-6',etc.)
+$!VarSet |VolMaps|   = '1'   # Zone numbers for the volume                ('1','1-2','1,3,5-6',etc.)
 $!VarSet |PlotTime|  = ''    # Note: Use |PlotTime| == '' if no solution time needs to be set.
 
 $!VarSet |Xrev|      =  0    # Set to 1 only if X-axis is running from fuselage tail to nose (negative drag direction)
@@ -92,9 +92,8 @@ $!VarSet |Zrev|      =  0    # Set to 1 only if Z-axis is running from fuselage 
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-$!VarSet |Debugger|    =  0 # UNIX-based system commands
-$!VarSet |DebuggerPng| =  0 # Export pngs of cut locations (inside png/*)
+$!VarSet |Debugger|    =  0 # Variety of status messages throughout the script
+$!VarSet |DebuggerPng| =  0 # Export pngs of cut locations (inside png/*)... make sure you make a directory called "png"
 
 $!SetStyleBase Factory
 $!GlobalPaper
@@ -158,7 +157,7 @@ $!View Fit
 #===================================================================
 $!VarSet |TotalZones|      =   |NUMZONES|
 $!VarSet |FirstProfile|    = ( |NUMZONES| + 1 )
-$!VarSet |FirstProfileAll| =   |NUMZONES|
+$!VarSet |FirstProfileAll| =   |FirstProfile|
 
 $!RenameDataSetVar
   Var = |Xvar|
@@ -233,7 +232,9 @@ $!EndIf
 # Calculate scaling based on grid coordinate ranges... put tip at y=1156.75, regardless of the underlying loft
 #-------------------------------------
 $!ActiveFieldMaps = [|WingMaps|]
-#$!Pause 'Xrange = (|MINX%.12f|,|MAXX%.12f|)\nYrange = (|MINY%.12f|,|MAXY%.12f|)\nZrange = (|MINZ%.12f|,|MAXZ%.12f|)'
+$!If |Debugger| == 1
+  $!Pause 'Xrange = (|MINX%.12f|,|MAXX%.12f|)\nYrange = (|MINY%.12f|,|MAXY%.12f|)\nZrange = (|MINZ%.12f|,|MAXZ%.12f|)'
+$!EndIf
 $!VarSet |Scale|  = (|MAXY%.12f|)
 
 $!AlterData
@@ -242,7 +243,9 @@ $!AlterData
   Equation = '{Y} = {Y} / |Scale| * 1156.75'
 $!AlterData
   Equation = '{Z} = {Z} / |Scale| * 1176.75'
-#$!Pause 'Xrange = (|MINX%.12f|,|MAXX%.12f|)\nYrange = (|MINY%.12f|,|MAXY%.12f|)\nZrange = (|MINZ%.12f|,|MAXZ%.12f|)'
+$!If |Debugger| == 1
+  $!Pause 'Xrange = (|MINX%.12f|,|MAXX%.12f|)\nYrange = (|MINY%.12f|,|MAXY%.12f|)\nZrange = (|MINZ%.12f|,|MAXZ%.12f|)'
+$!EndIf
 
 # Store for later processing and whatnot
 $!AlterData
@@ -254,7 +257,6 @@ $!VarSet |YOrigvar| = |NUMVARS|
 $!AlterData
   Equation = '{ZOrig} = {Z}'
 $!VarSet |ZOrigvar| = |NUMVARS|
-
 
 $!Blanking Value{Constraint 1 {Include = No }}
 $!Blanking Value{Constraint 2 {Include = No }}
@@ -286,17 +288,21 @@ $!VarSet |VolumeOrigvar| = |NUMVARS|
 #===================================================================
 $!MACROFUNCTION
   Name = "ProfileCutter"
-
+  
   $!VarSet |EtaStationFull| = ( |2|/1176.75 )
   $!VarSet |EtaStation| = ( floor(|EtaStationFull|*10000) / 10000 )
-
+  
   $!If |OPSYS| == 1
     # UNIX or UNIX-like
-    $!System "printf '\nEta %.4f...\n   Identifying key points...' |EtaStation|"
+    $!System "printf '\nEta %.4f...\n   Identifying key points...\n' |EtaStation|"
+  $!Else
+    $!If |Debugger| == 1
+      $!Pause 'Eta |EtaStation|... Identifying key points'
+    $!EndIf
   $!EndIf
   
   $!ActiveFieldMaps = [|WingMaps|]
-
+  
   # Extract surface slice to get the x/c mapping
   $!ExtractSliceToZones
     Origin {X = |1| Y = |2| Z = |3|}
@@ -313,12 +319,12 @@ $!MACROFUNCTION
   $!RenameDataSetZone
     Zone = |NUMZONES|
     Name = 'Surface - y=|1|'
-
+  
   $!FieldMap [1-|NUMZONES|]  Mesh{Show = No}
   $!FieldMap [  |NUMZONES|]  Mesh{Show = Yes Color = Black LineThickness = 0.4}
-
+  
   $!FieldLayers ShowMesh = Yes
-
+  
   $!ThreeDView PsiAngle = 0
   $!ThreeDView ThetaAngle = 0
   $!ThreeDView AlphaAngle = 0
@@ -334,9 +340,11 @@ $!MACROFUNCTION
       }
   $!View Fit
   $!RedrawAll
- #$!Pause 'Eta |EtaStation|'
-
-
+  $!If |Debugger| == 1
+    $!Pause 'Eta |EtaStation|'
+  $!EndIf
+  
+  
   #===================================================================
   # Shift surface cut to origin and scale to get the closest index
   #-------------------------------------
@@ -348,29 +356,31 @@ $!MACROFUNCTION
       Zone  = |SurfaceSliceZone|
       Var   = |Xvar|
       Index = |LOOP|
-
+    
     $!GetFieldValue |CurrY|
       Zone  = |SurfaceSliceZone|
       Var   = |Yvar|
       Index = |LOOP|
-
+    
     $!GetFieldValue |CurrZ|
       Zone  = |SurfaceSliceZone|
       Var   = |Zvar|
       Index = |LOOP|
-
+    
     # Seeking X2 (trailing edge)
     $!If |CurrX| > |X2|
       $!VarSet |I2| = |LOOP|
       $!VarSet |X2| = |CurrX|
       $!VarSet |Y2| = |CurrY|
       $!VarSet |Z2| = |CurrZ|
-        $!If |Debugger| == 1
-          $!System "printf 'X2...  %6i: (%.4f,  %.4f,  %.4f)\n' |LOOP| |CurrX| |CurrY| |CurrZ|"
+      $!If |Debugger| == 1
+        $!If |OPSYS| == 1
+          $!System "printf '     X2...  %6i: (%.4f,  %.4f,  %.4f)\n' |LOOP| |CurrX| |CurrY| |CurrZ|"
         $!EndIf
+      $!EndIf
     $!EndIf
   $!EndLoop # Find X2
-
+  
   # Now find X1 (leading edge)
   $!ActiveFieldMaps = [|SurfaceSliceZone|]
   $!VarSet |D1| = -999999
@@ -379,25 +389,27 @@ $!MACROFUNCTION
       Zone  = |SurfaceSliceZone|
       Var   = |Xvar|
       Index = |LOOP|
-
+    
     $!GetFieldValue |CurrY|
       Zone  = |SurfaceSliceZone|
       Var   = |Yvar|
       Index = |LOOP|
-
+    
     $!GetFieldValue |CurrZ|
       Zone  = |SurfaceSliceZone|
       Var   = |Zvar|
       Index = |LOOP|
-
+    
     # Distance from target
     $!VarSet |CurrDSquared| = ( (|X2|-|CurrX|)**2 + (|Y2|-|CurrY|)**2 + (|Z2|-|CurrZ|)**2 )
     $!VarSet |CurrD|  = ( sqrt(|CurrDSquared|) )
     
     $!If |Debugger| == 1
-      $!System "printf '  CurrD...  %.8f\n' |CurrD|"
+      $!If |OPSYS| == 1
+        $!System "printf '  CurrD...  %.8f\n' |CurrD|"
+      $!EndIf
     $!EndIf
-
+    
     $!If |CurrD| > |D1|
       $!VarSet |I1| = |LOOP|
       $!VarSet |X1| = |CurrX|
@@ -405,36 +417,40 @@ $!MACROFUNCTION
       $!VarSet |Z1| = |CurrZ|
       $!VarSet |D1| = |CurrD|
       $!If |Debugger| == 1
-        $!System "printf 'X1...  %6i: (%.4f,  %.4f,  %.4f)    %.1f\n' |LOOP| |CurrX| |CurrY| |CurrZ| |CurrD|"
+        $!If |OPSYS| == 1
+          $!System "printf '     X1...  %6i: (%.4f,  %.4f,  %.4f)    %.1f\n' |LOOP| |CurrX| |CurrY| |CurrZ| |CurrD|"
+        $!EndIf
       $!EndIf
     $!EndIf
   $!EndLoop # Find X1
   
   $!If |OPSYS| == 1
     # UNIX or UNIX-like
-    $!System "printf '   Success! Leading and trailing edge points found\n'"
-    $!System "printf '   Preparing and extracting volume slice...\n'"
+  $!Else
+    $!If |Debugger| == 1
+      $!Pause 'Leading and trailing edges found...'
+    $!EndIf
   $!EndIf
-
-  $!If |Debugger| == 1
-    $!System "printf 'Index %4i: (x1, y1, z1) (%.4f,  %.4f,  %.4f)\n' |I1| |X1| |Y1| |Z1|"
-    $!System "printf 'Index %4i: (x2, y2, z2) (%.4f,  %.4f,  %.4f)\n' |I2| |X2| |Y2| |Z2|"
+  
+  $!If |OPSYS| == 1
+    $!System "printf '     Index %4i: (x1, y1, z1) (%.4f,  %.4f,  %.4f)\n' |I1| |X1| |Y1| |Z1|"
+    $!System "printf '     Index %4i: (x2, y2, z2) (%.4f,  %.4f,  %.4f)\n' |I2| |X2| |Y2| |Z2|"
   $!EndIf
   
   # Shift LE to origin
   $!VarSet |DeltaX| = ( |X2| - |X1| )
   $!VarSet |DeltaY| = ( |Y2| - |Y1| )
   $!VarSet |DeltaZ| = ( |Z2| - |Z1| )
-
+  
   $!AlterData  [|SurfaceSliceZone|] Equation = '{X} = {X} - |X1|'
   $!AlterData  [|SurfaceSliceZone|] Equation = '{Y} = {Y} - |Y1|'
   $!AlterData  [|SurfaceSliceZone|] Equation = '{Z} = {Z} - |Z1|'
-
+  
   # Remove sectional twist
   $!VarSet |TangentValue| = ( |DeltaZ| / |DeltaX|  )
   $!VarSet |AlphaSecRad|  = ( atan(|TangentValue|) )
   $!VarSet |AlphaSecDeg|  = ( |AlphaSecRad| * 180 / 3.14159265 )
-
+  
   $!RotateData
     ZoneList =  [|SurfaceSliceZone|]
     Angle = |AlphaSecDeg|
@@ -447,20 +463,27 @@ $!MACROFUNCTION
     NormalX = 0
     NormalY = 1
     NormalZ = 0
-
+  
   $!ActiveFieldMaps = [|SurfaceSliceZone|]
   $!VarSet |X2New|  = ( |MAXX%.12f| )
-
+  
   $!VarSet |C| = ( |X2New|)
   $!AlterData  [|SurfaceSliceZone|] Equation = '{X} = {X} / |C|'
   $!AlterData  [|SurfaceSliceZone|] Equation = '{Y} = {Y} / |C|'
   $!AlterData  [|SurfaceSliceZone|] Equation = '{Z} = {Z} / |C|'
-
+  
   $!FieldMap [1-|NUMZONES|] Scatter{Show = No}
   $!FieldMap [|NUMZONES|]   Mesh   {Show = Yes}
   $!FieldLayers ShowMesh = Yes
-
-
+  $!If |OPSYS| == 1
+    $!System "printf '     Success! Surface slice extracted and manipulated!\n'"
+  $!Else
+    $!If |Debugger| == 1
+      $!Pause 'Surface slice extracted and manipulated'
+    $!EndIf
+  $!EndIf
+  
+  
   #===================================================================
   # Get coordinates and info at each target x/c value
   #-------------------------------------
@@ -470,8 +493,12 @@ $!MACROFUNCTION
   $!Else
     $!VarSet |NumXoCs| = |4|
   $!EndIf
-  $!If |Debugger| == 1
-    $!System "printf 'Number of x/cs: %i\n' |NumXoCs|"
+  $!If |OPSYS| == 1
+    $!System "printf '\n   Number of x/cs: %i\n' |NumXoCs|"
+  $!Else
+    $!If |Debugger| == 1
+      $!Pause 'Number of x/cs: |NumXoCs|'
+    $!EndIf
   $!EndIf
   
   $!VarSet |LOOPxoc|   = 0
@@ -486,14 +513,14 @@ $!MACROFUNCTION
     $!EndIf      
     
     $!If |OPSYS| == 1
-      # UNIX or UNIX-like
-      $!If |FirstTime| == 1
-        # Nothing
-      $!Else
-        $!System "printf '   x/c = %.4f\n' |XoCTarget|"
+      $!System "printf '   \n'"
+      $!System "printf '   x/c = %.4f\n' |XoCTarget|"
+      $!System "printf '     Searching for X3 and X4\n'"
+    $!Else
+      $!If |Debugger| == 1
+        $!Pause 'Searching for x/c= |XoCTarget|'
       $!EndIf
     $!EndIf
-   #$!Pause 'Searching for x/c= |XoCTarget|'
     
     # Find X3 (US) and X4 (LS)... store if it's the nearest to target x/c
     $!VarSet |DXoCus| =  999999
@@ -544,7 +571,9 @@ $!MACROFUNCTION
           $!VarSet |Z3|     = |CurrZ|
           $!VarSet |DXoCus| = |DeltaNow|
           $!If |Debugger| == 1
-            $!System "printf 'Upper x/c %.2f...  Distance of %.8f... Index %3i   (%.4f, %.4f, %.4f)\n' |XoCTarget| |DeltaNow| |I3| |X3| |Y3| |Z3|"
+            $!If |OPSYS| == 1
+              $!System "printf 'Upper x/c %.2f...  Distance of %.8f... Index %3i   (%.4f, %.4f, %.4f)\n' |XoCTarget| |DeltaNow| |I3| |X3| |Y3| |Z3|"
+            $!EndIf
           $!EndIf
         $!EndIf # Closer?
       $!EndIf # Upper Surface?
@@ -560,12 +589,14 @@ $!MACROFUNCTION
           $!VarSet |Z4|     = |CurrZ|
           $!VarSet |DXoCls| = |DeltaNow|
           $!If |Debugger| == 1
-            $!System "printf 'Lower x/c %.2f...  Distance of %.8f... Index %3i   (%.4f, %.4f, %.4f)\n' |XoCTarget| |DeltaNow| |I4| |X4| |Y4| |Z4|"
+            $!If |OPSYS| == 1
+              $!System "printf 'Lower x/c %.2f...  Distance of %.8f... Index %3i   (%.4f, %.4f, %.4f)\n' |XoCTarget| |DeltaNow| |I4| |X4| |Y4| |Z4|"
+            $!EndIf
           $!EndIf
         $!EndIf # Closer?
       $!EndIf # Lower surface?
     $!EndLoop # Checking each point index to get index of closest point on both US and LS
-
+    
     # Careful treatment of the leading edge
     $!If |XoCTarget| == 0
       $!If |X3| < |X4|
@@ -583,16 +614,16 @@ $!MACROFUNCTION
 
     $!VarSet |X3Nice| = ( floor(|X3|*10000) / 10000 )
     $!VarSet |X4Nice| = ( floor(|X4|*10000) / 10000 )
-
+    
     # Show airfoil profile with key points
     $!DrawGraphics False
-
+    
     $!CreateNewFrame XYPos { X = 1.0 Y = 6.25 } Width = 9 Height = 2.0
     $!FrameControl ActivateByNumber
       Frame = 2
     $!FrameLayout ShowHeader = No
     $!PlotType = XYLine
-
+    
     $!DeleteLineMaps
     $!CreateLineMap
     $!LineMap [1]  Name = 'Airfoil'
@@ -600,7 +631,7 @@ $!MACROFUNCTION
     $!LineMap [1]  Lines{LineThickness = 1.2}
     $!LineMap [1]  Symbols{Show = No Size = 2 FillMode = UseLineColor}
     $!XYLineAxis ViewportPosition{X1 = 10 X2 = 95 Y1 = 10 Y2 = 97 }
-
+    
     $!XYLineAxis XDetail 1 {RangeMin = -0.01 RangeMax = 1.01 Gridlines{Show = Yes} Title{ShowOnAxisLine = No} TickLabel{TextShape{SizeUnits = Point Height = 14}} Gridlines{LinePattern = Solid} Gridlines{PatternLength = 0.2} }
     $!XYLineAxis YDetail 1 {RangeMin = -0.09 RangeMax = 0.07 Gridlines{Show = Yes} Title{ShowOnAxisLine = No} TickLabel{TextShape{SizeUnits = Point Height = 14}} Gridlines{LinePattern = Solid} Gridlines{PatternLength = 0.2} }
 
@@ -762,7 +793,7 @@ $!MACROFUNCTION
       Box { BoxType = Filled }
       Anchor = Right
       Text = 'LS: |X4Nice|\n(|X4OrigNice|,  |Y4OrigNice|,  |Z4OrigNice|)\n(|X4|, |Y4|, |Z4|) at |I4|'
-
+    
     $!FrameControl ActivateByNumber
       Frame = 1
     
@@ -772,7 +803,6 @@ $!MACROFUNCTION
         IncludeData = Yes
         IncludePreview = No
     $!EndIf
-   #$!Pause 'Key points found'
 
 
     #===================================================================
@@ -781,6 +811,14 @@ $!MACROFUNCTION
     $!ActiveFieldMaps = [|VolMaps|]
     # Only run for the first x/c to save time
     $!If |FirstTime| == 1
+      $!If |OPSYS| == 1
+        $!System "printf '     Extracting volume\n'"
+      $!Else
+        $!If |Debugger| == 1
+          $!Pause 'Extracting volume'
+        $!EndIf
+      $!EndIf
+      
       # Set up space blanking so I don't pull out the entire volume... based on X1, X2, X3, and X4
       $!VarSet |XBlank1| = ( |X1Orig| - 0.25*|C| )
       $!VarSet |XBlank2| = ( |X2Orig| + 0.25*|C| )
@@ -809,7 +847,7 @@ $!MACROFUNCTION
           IncludeData = Yes
           IncludePreview = No
       $!EndIf
-
+      
       $!ExtractSliceToZones
         Origin {X = |1| Y = |2| Z = |3|}
         Normal {X = 0   Y = 1   Z = 0  }
@@ -825,11 +863,13 @@ $!MACROFUNCTION
         Name = 'Volume - y=|1|'
       $!VarSet |FirstTime| = 0
       
-      $!If |OPSYS| == 1
-        # UNIX or UNIX-like
-        $!If |4| < 1
+      $!If |4| < 1
+        $!If |OPSYS| == 1
+          $!System "printf '   \n\n'"
           $!System "printf '   x/c = %.4f\n' |XoCTarget|"
-        $!Else
+        $!EndIf
+      $!Else
+        $!If |OPSYS| == 1
           $!System "printf '   x/c = 0.0000\n'"
         $!EndIf
       $!EndIf
@@ -847,7 +887,7 @@ $!MACROFUNCTION
         $!SaveLayout  "step|LpkCounter|.lpk"
           IncludeData = Yes
           IncludePreview = No
-        $!EndIf
+      $!EndIf
     $!EndIf # Extract volume slice if the first x/c for this eta
     
     
@@ -868,16 +908,16 @@ $!MACROFUNCTION
     $!Blanking Value{Constraint 3 {Include = Yes VarA = 'X' Include = Yes RelOp = LessThan    ValueCutoff = |XBlank1|}}
     $!Blanking Value{Constraint 4 {Include = Yes VarA = 'X' Include = Yes RelOp = GreaterThan ValueCutoff = |XBlank2|}}
     
-    $!If |Debugger| == 1
-      $!System "printf 'Target: (%.4f,  %.4f,  %.4f) and normal (%.4f,  %.4f,  %.4f)\n' |X3Orig| |Y3Orig| |Z3Orig| |X3NormOrig| |Y3NormOrig| |Z3NormOrig|"
+    $!If |OPSYS| == 1
+      $!System "printf '     X3: (%.4f,  %.4f,  %.4f) and normal (%.4f,  %.4f,  %.4f)\n' |X3Orig| |Y3Orig| |Z3Orig| |X3NormOrig| |Y3NormOrig| |Z3NormOrig|"
     $!EndIf
-
+    
     # Rotate the vector 90 degrees around y to get the plane-normal vector...
     # So a plane with equation (a,b,c) turns into a normal of (c,b,-a)
     $!VarSet |XNormOut| = (      |Z3NormOrig| )
     $!VarSet |YNormOut| = (      |Y3NormOrig| ) # Not actually used, because I extract in the x-z plane
     $!VarSet |ZNormOut| = ( -1 * |X3NormOrig| )
-
+    
     $!SliceLayers Show = Yes
     $!SliceAttributes 1  SliceSource = SurfaceZones
     $!SliceAttributes 1  EdgeLayer{Show = Yes}
@@ -926,8 +966,8 @@ $!MACROFUNCTION
     $!Blanking Value{Constraint 1 {Include = Yes VarA = 'Z' Include = Yes RelOp = LessThan    ValueCutoff = |ZBlank1|}}
     $!Blanking Value{Constraint 2 {Include = Yes VarA = 'Z' Include = Yes RelOp = GreaterThan ValueCutoff = |ZBlank2|}}
 
-    $!If |Debugger| == 1
-      $!System "printf 'Target: (%.4f,  %.4f,  %.4f) and normal (%.4f,  %.4f,  %.4f)\n' |X4Orig| |Y4Orig| |Z4Orig| |X4NormOrig| |Y4NormOrig| |Z4NormOrig|"
+    $!If |OPSYS| == 1
+      $!System "printf '     X4: (%.4f,  %.4f,  %.4f) and normal (%.4f,  %.4f,  %.4f)\n' |X4Orig| |Y4Orig| |Z4Orig| |X4NormOrig| |Y4NormOrig| |Z4NormOrig|"
     $!EndIf
 
     # Rotate the surface-normal vector 90 degrees around y to get the plane-normal vector
@@ -1022,7 +1062,7 @@ $!MACROFUNCTION
     $!ExportSetup ExportFName = 'png/profiles-eta|EtaStation|-xoc|XoCTargetFull|.png'
     $!Export 
       ExportRegion = AllFrames
-
+    
     $!If |Debugger| == 1
       $!VarSet |LpkCounter| = ( |LpkCounter| + 1 )
       $!SaveLayout  "step|LpkCounter|.lpk"
@@ -1114,12 +1154,12 @@ $!FieldMap  [|WingMaps|]
     ConTourType = BothLinesAndFlood
     LineConTourGroup = 1
     FloodColoring = Group1
-    Color = CusTom2
+    Color = Custom2
     UseLightingEffect = Yes
     }
   Vector { Color = Black }
   Scatter { Color = Black }
-  Shade { Color = CusTom2 }
+  Shade { Color = Custom2 }
   EdgeLayer { Show = No Color = Black LineThickness = 0.1 }
   Points { PointsToPlot = SurfaceNodes }
   Surfaces { SurfacesToPlot = KPlanes IRange { Max = 1 } }
@@ -1243,6 +1283,8 @@ $!RunMacroFunction "ProfileCutter" (1771.927,1145.183, 261.823, 20)
 #-------------------------------------
 $!Blanking Value{Include = No}
 $!ActiveFieldMaps = [|WingMaps|,|FirstProfileAll|-|NUMZONES|]
+$!FieldMap [|WingMaps|] Shade{Show = Yes}
+$!FieldMap [|WingMaps|,|FirstProfileAll|-|NUMZONES|] Mesh{Show = Yes}
 
 $!ThreeDView
   PsiAngle = 60
@@ -1254,15 +1296,16 @@ $!View Fit
 $!WriteDataSet  "|ParticipantID|-|OutputFileName|"
   IncludeText = No
   IncludeGeom = No
-  IncludeCusTomLabels = No
+  IncludeCustomLabels = No
   IncludeDataShareLinkage = Yes
-  ZoneList =  [|FirstProfile| - |NUMZONES|]
+  ZoneList =  [|FirstProfileAll|-|NUMZONES|]
   VarList =  ['X','Y','Z','Mach','Mach_RMS','Volume','H','HoC']
   Binary = No
   UsePointFormat = Yes
   Precision = 12
   TecplotVersionToWrite = TecplotCurrent
  #VarList =  ['X','Y','Z','CP','Mach','CP_RMS','Mach_RMS','Volume','H','HoC']
+
 
 $!If |Debugger| == 1
   $!SaveLayout  "final.lpk"
