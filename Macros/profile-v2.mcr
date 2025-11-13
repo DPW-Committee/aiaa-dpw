@@ -50,7 +50,7 @@ $!DrawGraphics False
 #
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-$!VarSet |ParticipantID|  = '001.01'       # Participant ID for this data set
+$!VarSet |ParticipantID|  = 'XXX.XX'       # Participant ID for this data set
 $!VarSet |OutputFileName| = 'profiles.dat' # File name
 
 $!VarSet |DescriptorText| = 'ALPHA K.KK - GRID L' # Text prepended in the resulting zone names
@@ -64,20 +64,20 @@ $!VarSet |DescriptorText| = 'ALPHA K.KK - GRID L' # Text prepended in the result
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #
-$!VarSet |Xvar|      =  1    # Variable number to use for X coordinate (running from fuselage nose to tail)
-$!VarSet |Yvar|      =  2    # Variable number to use for Y coordinate (running from symmetry plane to wing tip)
-$!VarSet |Zvar|      =  3    # Variable number to use for Z coordinate (running from fuselage keel to crown)
-$!VarSet |Mvar|      =  5    # Variable number to use for Mach number
-$!VarSet |CPvar|     =  4    # Variable number to use for Cp, if available; use '' if not available
+$!VarSet |Xvar|      =  X    # Variable number to use for X coordinate (running from fuselage nose to tail)
+$!VarSet |Yvar|      =  X    # Variable number to use for Y coordinate (running from symmetry plane to wing tip)
+$!VarSet |Zvar|      =  X    # Variable number to use for Z coordinate (running from fuselage keel to crown)
+$!VarSet |Mvar|      =  X    # Variable number to use for Mach number
+$!VarSet |CPvar|     =  X    # Variable number to use for Cp, if available; use '' if not available
 $!VarSet |MRMSvar|   =  ''   # Variable number to use for Mach number root mean square, if available; use '' if not available
 $!VarSet |CPRMSvar|  =  ''   # Variable number to use for Cp root mean square, if available; use '' if not available
 
 $!VarSet |IBlankvar| =  ''   # Variable number to use for blanking (for overset grids... do not surround the value with '')
 $!VarSet |IBlankval| =  ''   # Value           to use for blanking (for overset grids... probably 0... do not surround the value with '')
 
-$!VarSet |WingMaps|  = '6'   # Zone numbers for the wing surface          ('1','1-2','1,3,5-6',etc.)
-$!VarSet |VolMaps|   = '1'   # Zone numbers for the volume                ('1','1-2','1,3,5-6',etc.)
-$!VarSet |PlotTime|  = ''    # Note: Use |PlotTime| == '' if no solution time needs to be set.
+$!VarSet |WingMaps|  =  ''   # Zone numbers for the wing surface          ('1','1-2','1,3,5-6',etc.)
+$!VarSet |VolMaps|   =  ''   # Zone numbers for the volume                ('1','1-2','1,3,5-6',etc.)
+$!VarSet |PlotTime|  =  ''   # Note: Use |PlotTime| == '' if no solution time needs to be set.
 
 $!VarSet |Xrev|      =  0    # Set to 1 only if X-axis is running from fuselage tail to nose (negative drag direction)
 $!VarSet |Yrev|      =  0    # Set to 1 only if Y-axis is running from wing tip to the symmetry plane
