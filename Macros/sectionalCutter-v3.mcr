@@ -16,8 +16,7 @@
 #                  8.   Assign BodyMaps variable to define which zones define the fuselage surface(s)
 #                  9.   Assign WingMaps variable to define which zones define the wing surface(s)
 #                 10.   Assign PlotTime variable (if multiple time steps are included in dataset) to define which solution time should be used
-#                 11.   Assemble sectional cutter data into data form
-#                       DPW8-AePW4_SectionalCuts_v5.dat
+#                 11.   Assemble sectional cutter data into data form DPW8-AePW4_SectionalCuts_v5.dat
 #
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 $!DRAWGRAPHICS FALSE
