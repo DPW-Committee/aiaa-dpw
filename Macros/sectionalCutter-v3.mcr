@@ -16,8 +16,7 @@
 #                  8.   Assign BodyMaps variable to define which zones define the fuselage surface(s)
 #                  9.   Assign WingMaps variable to define which zones define the wing surface(s)
 #                 10.   Assign PlotTime variable (if multiple time steps are included in dataset) to define which solution time should be used
-#                 11.   Select sectional cut stations under section titled "Create Sectional Cuts" on Line 395 --> do not change anything else
-#                 12.   Assemble sectional cutter data into data form
+#                 11.   Assemble sectional cutter data into data form
 #                       DPW8-AePW4_SectionalCuts_v5.dat
 #
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -394,9 +393,56 @@ $!VARSET |NUMZONES1|  += 1
 #===================================================================
 # Create Sectional Cuts
 #-------------------------------------
-# Cut locations to be updated.
-#                                      X    Y      Z    Xnorm  Ynorm  Znorm
-$!RUNMACROFUNCTION "SectionalCutter" ( 0.0, 11.50, 0.0, 0.000, 1.000, 0.000)
+# Cut locations to be updated... chord based on the jig shape
+
+#                                      X        Y        Z       Xnorm Ynorm Znorm
+# WING SECTION  1: ETA = 0.1050, CHORD=466.466
+$!RUNMACROFUNCTION "SectionalCutter" ( 993.728, 121.459, 176.053,0.000,1.000,0.000)
+
+# WING SECTION  2: ETA = 0.1150, CHORD=459.571
+$!RUNMACROFUNCTION "SectionalCutter" (1002.168, 133.026, 176.306,0.000,1.000,0.000)
+
+# WING SECTION  3: ETA = 0.1250, CHORD=452.687
+$!RUNMACROFUNCTION "SectionalCutter" (1010.656, 144.594, 176.539,0.000,1.000,0.000)
+
+# WING SECTION  4: ETA = 0.1306, CHORD=448.836
+$!RUNMACROFUNCTION "SectionalCutter" (1015.435, 151.074, 176.659,0.000,1.000,0.000)
+
+# WING SECTION  5: ETA = 0.2009, CHORD=400.743
+$!RUNMACROFUNCTION "SectionalCutter" (1076.873, 232.444, 177.509,0.000,1.000,0.000)
+
+# WING SECTION  6: ETA = 0.2828, CHORD=344.991
+$!RUNMACROFUNCTION "SectionalCutter" (1148.974, 327.074, 178.606,0.000,1.000,0.000)
+
+# WING SECTION  7: ETA = 0.3430, CHORD=304.101
+$!RUNMACROFUNCTION "SectionalCutter" (1202.038, 396.765, 180.222,0.000,1.000,0.000)
+
+# WING SECTION  8: ETA = 0.3700, CHORD=285.806
+$!RUNMACROFUNCTION "SectionalCutter" (1225.822, 427.998, 181.162,0.000,1.000,0.000)
+
+# WING SECTION  9: ETA = 0.3971, CHORD=278.111
+$!RUNMACROFUNCTION "SectionalCutter" (1249.711, 459.370, 182.250,0.000,1.000,0.000)
+
+# WING SECTION 10: ETA = 0.5024, CHORD=248.312
+$!RUNMACROFUNCTION "SectionalCutter" (1342.440, 581.148, 188.658,0.000,1.000,0.000)
+
+# WING SECTION 11: ETA = 0.6028, CHORD=219.904
+$!RUNMACROFUNCTION "SectionalCutter" (1430.914, 697.333, 198.060,0.000,1.000,0.000)
+
+# WING SECTION 12: ETA = 0.7268, CHORD=184.844
+$!RUNMACROFUNCTION "SectionalCutter" (1540.091, 840.704, 213.659,0.000,1.000,0.000)
+
+# WING SECTION 13: ETA = 0.8456, CHORD=151.235
+$!RUNMACROFUNCTION "SectionalCutter" (1644.738, 978.148, 233.317,0.000,1.000,0.000)
+
+# WING SECTION 14: ETA = 0.9500, CHORD=121.735
+$!RUNMACROFUNCTION "SectionalCutter" (1736.708,1098.926, 253.727,0.000,1.000,0.000)
+
+# WING SECTION 15: ETA = 0.9700, CHORD=116.095
+$!RUNMACROFUNCTION "SectionalCutter" (1754.313,1122.048, 257.777,0.000,1.000,0.000)
+
+# WING SECTION 16: ETA = 0.9900, CHORD=110.452
+$!RUNMACROFUNCTION "SectionalCutter" (1771.927,1145.183, 261.823,0.000,1.000,0.000)
 
 
 
