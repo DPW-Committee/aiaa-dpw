@@ -394,7 +394,7 @@ $!VARSET |NUMZONES1|  += 1
 #===================================================================
 # Create Sectional Cuts
 #-------------------------------------
-# If you are running a grid with multiple spanwise cells, take slices at span stations of eta = 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, and 0.9.
+# Cut locations to be updated.
 #                                      X    Y      Z    Xnorm  Ynorm  Znorm
 $!RUNMACROFUNCTION "SectionalCutter" ( 0.0, 11.50, 0.0, 0.000, 1.000, 0.000)
 
