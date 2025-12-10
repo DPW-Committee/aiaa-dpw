@@ -2,11 +2,7 @@
 #
 # DPW-8/AePW-4 UNSTEADY SURFACE POINT SUBMITTAL FORM (Version 5 - October 16, 2024)
 #
-# Provide unsteady signal at these locations. You will have one file per Kulite per simulation.
-#       eta=0.4997   x/c=0.3040
-#       eta=0.4997   x/c=0.7903
-#       eta=0.6004   x/c=0.3097
-#       eta=0.6004   x/c=0.7677
+# Provide unsteady signal at the eta and x/c locations specified by your working group leader. You will have one file per Kulite per simulation.
 #
 #
 # Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
