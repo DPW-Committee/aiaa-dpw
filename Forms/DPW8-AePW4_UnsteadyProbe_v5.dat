@@ -2,8 +2,11 @@
 #
 # DPW-8/AePW-4 UNSTEADY SURFACE POINT SUBMITTAL FORM (Version 5 - October 16, 2024)
 #
-# Provide spectral content at x/c=0.45 (Kulite 7)
-#
+# Provide unsteady signal at these locations. You will have one file per Kulite per simulation.
+#       eta=0.4997   x/c=0.3040
+#       eta=0.4997   x/c=0.7903
+#       eta=0.6004   x/c=0.3097
+#       eta=0.6004   x/c=0.7677
 #
 #
 # Data Set Title XXX.YY: Replace "XXX.YY" in the zone titles with the following information
