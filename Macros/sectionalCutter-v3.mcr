@@ -1,7 +1,7 @@
 #!MC 1410
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #
-#   DPW-8/AePW-4 SECTIONAL CUTTER (Version 2 - October 16, 2024)
+#   DPW-8/AePW-4 SECTIONAL CUTTER (Version 3 - November 18, 2024)
 #      TO BE USED WITH:
 #          DPW8-AePW4_SectionalCuts_v5.dat
 #
