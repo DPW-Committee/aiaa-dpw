@@ -76,7 +76,7 @@ DATASETAUXDATA GridId          = "Multiblock, Overset, Hex, Hybrid, Prism, Custo
 DATASETAUXDATA Notes           = "Any thing else you would like to add"
 
 
-ZONE T="XXX.YY - ALPHA ZZZ - GRID LEVEL N"
+ZONE T="XXX.YY - ETA ?.???? - XOC 0.???? - ALPHA ZZZ - GRID LEVEL N"
 AUXDATA GridLevel       = "1, 2, 3, 4, 5, or 6"
 AUXDATA Mach            = "?.????"
 AUXDATA Re              = "??"
