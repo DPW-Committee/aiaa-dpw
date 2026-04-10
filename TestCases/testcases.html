@@ -1,0 +1,1454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Cases</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding-top: 0px; /* Adjust this to match your typical header height */
+    }
+
+    header {
+        background: #003366;
+        color: white;
+        padding: 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    h1 {
+        text-align: center;
+        color: #1f497d;
+        padding-top: 0px;
+    }
+    
+    h2, h3 {
+        text-align: left;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    h2 {
+        font-size: 14pt;
+        font-weight: bold;
+        padding-bottom: 0px;
+    }
+
+    .h2-style-1 {
+        font-size: 20pt;
+        font-weight: bold;
+#       text-decoration: underline;
+    }
+
+    h3 {
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        justify-content: left;
+        background: #1F497D;
+        padding: 10px 0;
+    }
+
+    table {
+#       width: 100%;
+#       max-width: 600px;
+        border-collapse: collapse;
+        border: 2px solid black;
+    }
+
+    td, th {
+        text-align: center;
+        vertical-align: middle;
+        font-family: helvetica, arial, sans-serif;
+        border: 2px solid black;
+    }
+
+    .table-style-1 {
+        border-collapse: collapse; /* Collapse borders */
+        border: 0px solid black;
+        line-height: 1;
+#        width: 600px; /* Set table width */
+        margin-bottom: 10px; /* Space between tables */
+    }
+    .table-style-1 th, .table-style-1 td {
+        border: 0px solid black; /* Border for cells */
+        padding: 1px; /* Padding for cells */
+        text-align: center; /* Align text to the left */
+    }
+    /* Set specific widths for columns */
+    .table-style-1 .col1 { width: 16px; }
+    .table-style-1 .col6 { text-align: left;padding-left: 8px; }
+
+    .container {
+        display: flex; /* Use flexbox for layout */
+        align-items: flex-start; /* Align items at the start */
+        margin: 10px; /* Margin around the container */
+    }
+    .image {
+        flex: 1; /* Allow the image to take up space */
+        margin-right: 10px; /* Space between image and table */
+    }
+    .table-style-2 {
+        flex: 2; /* Allow the table to take up more space */
+    }
+    img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+    table-style-2 {
+        border-collapse: collapse; /* Collapse borders */
+        width: 100%; /* Full width of the container */
+    }
+    th-style-2, td-style-2 {
+        border: 1px solid black; /* Border for cells */
+        padding: 8px; /* Padding for cells */
+        text-align: left; /* Align text to the left */
+    }
+
+    nav a {
+        color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background: #0059b3;
+    }
+
+    .dropdown {
+        position: relative;
+        padding: 5px;
+        text-align: left;
+    }
+
+      .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%; /* Add extra space below the parent */
+          left: 5px; /* Align with the parent */
+          padding: 0; /* Optional: Reset padding */
+          margin: 0; /* Optional: Reset margin */
+          background: #0059b3;
+      }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        background: #0073e6;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* Responsive Design */
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            display: none; /* Hide menu by default */
+        }
+
+        nav.active {
+            display: flex; /* Show menu when active */
+        }
+
+        nav a {
+            text-align: left;
+            padding: 15px 0;
+            border-bottom: 1px solid #0059b3;
+        }
+
+        .hamburger {
+            display: block; /* Show hamburger on mobile */
+        }
+    }
+</style>
+</head>
+
+<body>
+<section id="home"></section>
+<header>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="menu">
+        <a href="../index.html">Home</a>
+        <a href="#Overview">Overview</a>
+        <a href="#Verification">Verification</a>
+        <a href="#TestCases">Test Cases</a>
+    </nav>
+</header>
+
+<h1 style="font-size: 28pt">DPW8 Test Cases</h1>
+
+<hr>
+<section id="Overview" style="scroll-margin-top: 45px"></section>
+<h1>Overview</h1>
+
+    <section>
+<!        <h2>
+            <details>
+            <summary class="h2-style-1" style="margin-left: 10px">
+                DPW8 Working Groups
+            </summary>
+            <table style="margin-left: 20px;">
+                <tr>
+                    <td style="width:  60px;">Scatter</td>
+                    <td style="width: 140px;">Wind Tunnel Env</td>
+                    <td style="width: 140px;">Static Deformation</td>
+                    <td style="width:  60px;">Buffet</td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>W</td>
+                    <td>D</td>
+                    <td>B</td>
+                </tr>
+            </table>
+            </details>
+
+            <details>
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Verification Activity
+            </summary>
+            <h3 style="margin-left: 20px;">
+                <details open>
+                <summary>
+                    Verification 1: ONERA OAT15a Airfoil
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px;">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong>B</strong></td>
+                        <td class="col6">ONERA OAT15a </td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>B</strong></td>
+                        <td class="col6">ONERA OAT15a (unsteady/extended AoA)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">ONERA OAT15A (the sequel)</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Verification 2: Joukowski Airfoil
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px;">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Joukowski Airfoil </td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Verification 3: DPW-III Wing Only: W1 & W2
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Grid Convergence (&alpha; = 0.50°)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (&alpha;=[-1°,0°,0.5°,1°,1.5°,2°,2.5°,3°])</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Verification 4: NASA CRM FEM Validation
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                <tr>
+                    <td class="col1"><strong>&bull;</strong></td>
+                    <td class="col1"><strong> </strong></td>
+                    <td class="col1"><strong> </strong></td>
+                    <td class="col1"><strong>D</strong></td>
+                    <td class="col1"><strong> </strong></td>
+                    <td class="col6">FEM Validation</td>
+                </tr>
+                </table>
+                </details>
+            </h3>
+            </details>
+
+            <details>
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Common Research Model Configurations
+            </summary>
+            <h3 style="margin-left: 20px;">
+                <details open>
+                <summary>
+                    Configuration A: JAXA CRM Wing/Body/Tail
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>B</strong></td>
+                        <td class="col6">Rigid Buffet (unsteady calculation)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>B</strong></td>
+                        <td class="col6">Elastic Buffet (unsteady FSI calculation)</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Configuration B: NASA CRM Wing/Body
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Grid Convergence (&alpha; = 2.50°)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Grid Convergence (C<sub>L</sub> = 0.50)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (Rigid pre-deformed geometry)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (Elastic FSI)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WB + Strut) (tare & interference)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WB + Tunnel) (wall interference)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WB + Strut + Tunnel) (test environment)</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Configuration C: NASA CRM Wing/Body/Tail
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WBT) (freeair)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WBT + Strut) (tare & interference)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WBT + Tunnel) (wall interference)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WBT + Strut + Tunnel) (test environment)</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Configuration D: NASA CRM Wing/Body/Pylon/Nacelle
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (Rigid pre-deformed geometry)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (Elastic FSI)</td>
+                    </tr>
+                </table>
+                </details>
+
+            </h3>
+            </details>
+<!        </h2>
+    </section>
+
+<hr>
+<section id="Verification" style="scroll-margin-top: 45px"></section>
+<h1>Verification Activity</h1>
+    <section>
+<!        <h2>
+        <details open id="Verification 1">
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Verification 1: ONERA OAT15A Airfoil (Required)
+            </summary>
+            <div class="container">
+                <div class="image">
+                    <img src="Figures/ONERA_OAT15A.png" alt="ONERA OAT15A Airfoil">
+                </div>
+                <div class="table-style-2">
+                      <table style="margin-left: 20px; font-size: 10pt">
+                        <tr>
+                            <th style="text-align: left;">Working Group</th>
+                            <th style="text-align: center;">Test Case</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Sources of Scatter</td>
+                            <td style="text-align: center;">1a & 1c</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Wind Tunnel Environment</td>
+                            <td style="text-align: center;">1a</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Static Deformation (AePW)</td>
+                            <td style="text-align: center;">1a</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Buffet (AePW)</td>
+                            <td style="text-align: center;">1a & 1b</td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+            <h2 style="margin-left: 20px;">
+            <details>
+                <summary>Objectives and Description</summary>
+                <h3 style="margin-left: 20px;">
+                <ul style="font-weight: normal">
+                    <li>Validation of steady CFD analysis grid convergence study and polar</li>
+                    <li>Users are encouraged to employ best practices</li>
+                    <li>Steady CFD (e.g., RANS)</li>
+                    <li>Multiple turbulence models can be submitted</li>
+                    <li>Grids</li>
+                    <ul>
+                        <li>Six-member grid family; four are required, six are desirable</li>
+                        <li>Use periodic boundary conditions for sidewall boundary conditions</li>
+                        <li>Encourage use of committee-supplied grids</li>
+                        <li>User-generated grids are acceptable (see guidelines)</li>
+                    </ul>
+                    <li>Flow Conditions</li>
+                    <ul>
+                        <li>Mach=0.73, Rec=3x10<sup>6</sup>, Tstatic=271.K (487.8 R)</li>
+                    </ul>
+                </ul>
+                </h3>
+            </details>
+            <details>
+                <summary>Test Cases</summary>
+                <h3 style="margin-left: 20px;">
+                  <details>
+                    <summary>
+                        V1a: Grid Convergence and Polar
+                    </summary>
+                    <ul style="font-weight: normal">
+                        <li>Settings:</li>
+                        <ul>
+                            <li>Flow Conditions: &alpha; = [1.36&deg;, 1.50°, 2.50°, 3.00°, 3.10°]</li>
+                            <li>Grid Levels: [1,2,3,4,5,6]</li>
+                        </ul>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary>
+                        V1b: Extended Polar (Unsteady) [Buffet WG Test Case 1b]
+                    </summary>
+                    <ul style="font-weight: normal">
+                        <li>Settings:</li>
+                        <ul>
+                            <li>Unsteady analysis</li>
+                            <li>Flow Conditions: &alpha; = [3.25°, 3.40°, 3.50°, 3.60°, 3.90°]</li>
+                            <li>Grid Levels: [1,2,3,4,5,6]</li>
+                        </ul>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary>
+                        V1c: Scatter Reduction Reprise [Scatter WG Test Case 1c]
+                    </summary>
+                    <ul style="font-weight: normal">
+                        <li>Additional Instructions for the <strong><em>Source of Scatter Working Group</em></strong>:</li>
+                        <ul>
+                            <li>Use updated grid families with common farfield (1000 chords away)</li>
+                            <li>French Vanilla SA-(neg) (All-terms)</li>
+                            <li>Sutherland's Law</li>
+                            <li>Adiabatic Wall (not isothermal)</li>
+                            <li>Converge residuals to machine precision (~1e-10)</li>
+                        </ul>
+                        <li>Additional Flow Conditions for the <strong><em>Source of Scatter Working Group</em></strong>:</li>
+                        <ul>
+                            <li>&gamma; = 1.4</li>
+                            <li>Pr = 0.72</li>
+                            <li>Pr<sub>T</sub> = 0.9</li>
+                            <li>farfield &Chi; = &nu;/&nu;<sup>~</sup> = 3</li>
+                        </ul>
+                    </ul>
+                  </details>
+                </h3>
+            </details>
+        </h2>
+        </details>
+
+        <details open id="Verification 2">
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Verification 2: Joukowski Airfoil
+            </summary>
+            <div class="container">
+                <div class="image">
+                    <img src="Figures/Joukowski.png" alt="Joukowski Airfoil">
+                </div>
+                <div class="table-style-2">
+                      <table style="margin-left: 20px; font-size: 10pt">
+                        <tr>
+                            <th style="text-align: left;">Working Group</th>
+                            <th style="text-align: center;">Test Case</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Sources of Scatter</td>
+                            <td style="text-align: center;">1b</td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+            <h2 style="margin-left: 20px;">
+                <details>
+                    <summary>Objectives and Description</summary>
+                    <h3 style="margin-left: 20px;">
+                    <ul style="font-weight: normal">
+                        <li>Validation of steady CFD analysis grid convergence study</li>
+                        <li>Build on work of the High-Fidelity CFD Verification Workshop RANS WG</li>
+                        <li>Settings</li>
+                        <ul>
+                            <li>Steady CFD (e.g., RANS)</li>
+                            <li>French Vanilla SA-(neg) (All-terms)</li>
+                            <li>Converge residuals to machine precision (~1e-10)</li>
+                            <li>Adiabatic Wall (not isothermal)</li>
+                            <li>Sutherland's Law</li>
+                        <li>Grids</li>
+                        <ul>
+                            <li>Use python script to generate grid family (recommend <strong><em>Classic</strong></em> family)</li>
+                            <li>Six-member grid family; four are required, six are desirable</li>
+                            <li>Use periodic boundary conditions for sidewall boundary conditions</li>
+                            <li>Encourage use of committee-supplied grids</li>
+                            <li>User-generated grids are acceptable (see guidelines)</li>
+                        </ul>
+                        <li>Grids</li>
+                        <ul>
+                            <li>Six-member grid family; four are required, six are desirable</li>
+                            <li>Use periodic boundary conditions for sidewall boundary conditions</li>
+                            <li>Encourage use of committee-supplied grids</li>
+                            <li>User-generated grids are acceptable (see guidelines)</li>
+                        </ul>
+                    </ul>
+                    </h3>
+                </details>
+                <details>
+                    <summary>Test Cases</summary>
+                    <h3 style="margin-left: 20px;">
+                      <details>
+                        <summary>
+                            V2: Grid Convergence Study [Scatter WG Test Case 1b]
+                        </summary>
+                        <ul style="font-weight: normal">
+                            <li>Settings:</li>
+                            <ul>
+                                <li>Flow Conditions:</li>
+                                    <ul>
+                                        <li>Mach=0.15, Re<sub>c</sub>=6x10<sup>6</sup>, Tstatic=520.0 R</li>
+                                        <li>&alpha; = 0.0&deg;</li>
+                                        <li>&gamma; = 1.4</li>
+                                        <li>Pr = 0.72</li>
+                                        <li>Pr<sub>T</sub> = 0.9</li>
+                                        <li>farfield &Chi; = &nu;/&nu;<sup>~</sup> = 3</li>
+                                    </ul>
+                                <li>Grid Levels: [1,2,3,4,5,6]</li>
+                            </ul>
+                        </ul>
+                      </details>
+                    </h3>
+                </details>
+            </h2>
+          </details>
+
+          <details open id="Verification 3">
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Verification 3: DPW-III Wing Increment: W1/W2</summary>
+            </summary>
+            <div class="container">
+                <div class="image">
+                    <img src="Figures/DPW3_W1_W2.png" alt="DPW3 Wing 1 & 2">
+                </div>
+                <div class="table-style-2">
+                      <table style="margin-left: 20px; font-size: 10pt">
+                        <tr>
+                            <th style="text-align: left;">Working Group</th>
+                            <th style="text-align: center;">Test Case</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Sources of Scatter</td>
+                            <td style="text-align: center;">1d & 1e</td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+            <h2 style="margin-left: 20px;">
+                <details>
+                    <summary>Objectives and Description</summary>
+                    <h3 style="margin-left: 20px;">
+                    <ul style="font-weight: normal">
+                        <li>Validation of steady CFD analysis grid convergence study</li>
+                        <li>Repeat of DPW III W1 & W2 (20 years later)</li>
+                        <li>Users are encouraged to employ best practices</li>
+                        <li>Settings:</li>
+                        <li>Grids:</li>
+                        <li>Reference Parameters:</li>
+                    </ul>
+                    </h3>
+                </details>
+                <details>
+                    <summary>Test Cases</summary>
+                    <h3 style="margin-left: 20px;">
+                        <details>
+                            <summary>
+                                V3a: Grid Convergence [Sources of Scatter WG Test Case: 1d]
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Flow Conditions:</li>
+                                <li>Grid Levels: [1,2,3,4,5,6]</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>
+                                V3b: Polar: [Sources of Scatter WG Test Case: 1e]
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Flow Conditions:</li>
+                                <li>Grid Level: 3 or 4</li>
+                            </ul>
+                        </details>
+                    </h3>
+                </details>
+            </h2>
+          </details>
+
+          <details open id="Verification 4">
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Verification 4: CRM FEM Validation
+            </summary>
+            <div class="container">
+                <div class="image">
+                    <img src="Figures/NASACRM_FEM.png" alt="NASA CRM Finite Element Model">
+                </div>
+                <div class="table-style-2">
+                    <table style="margin-left: 20px; font-size: 10pt">
+                        <tr>
+                            <th style="text-align: left;">Working Group</th>
+                            <th style="text-align: center;">Test Case</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Static Deformation (AePW)</td>
+                            <td style="text-align: center;">1b</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <h2 style="margin-left: 20px;">
+                <details> 
+                    <summary>Objectives and Description</summary>
+                    <h3 style="margin-left: 20px;">
+                    <ul style="font-weight: normal">
+                        <li>Validation of provided NASA CRM Finite Element Model</li>
+                    </ul>
+                    </h3>
+                </details>
+                <details>
+                    <summary>Test Cases</summary>
+                    <h3 style="margin-left: 20px;">
+                        <details>
+                            <summary>V4: CRM FEM Validation [Static Deformation WG Test Case 1b]</summary>
+                            <ul style="font-weight: normal">
+                                <li>Settings:</li>
+                            </ul>
+                        </details>
+                    </h3>
+                </details>
+            </h2>
+          </details>
+<!        </h2>
+    </section>
+
+<hr>
+<section id="TestCases" style="scroll-margin-top: 45px"></section>
+<h1>Study Configurations</h1>
+<!        <h2>
+    <section>
+        <details open id="Configuration A">
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Configuration A: JAXA CRM Wing/Body/Tail 
+            </summary>
+            <div class="container">
+                <div class="image">
+                    <img src="Figures/JAXA_CRM.png" alt="JAXA CRM in Tunnel">
+                </div>
+                <div class="table-style-2">
+                    <table style="margin-left: 20px; font-size: 10pt">
+                        <tr>
+                            <th style="text-align: left;">Working Group</th>
+                            <th style="text-align: center;">Test Case</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Buffet (AePW)</td>
+                            <td style="text-align: center;">2 & 3</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <h2 style="margin-left: 20px;">
+                <details>
+                    <summary>Objectives and Description</summary>
+                    <h3 style="margin-left: 20px;">
+                    <ul style="font-weight: normal">
+
+                        <li>Validation of unsteady CFD analysis of CRM Wing/Body/Tail(0)</li>
+                        <li>Users are encouraged to employ best practices</li>
+                        <li>Settings:</li>
+                        <ul>
+                            <li>Unsteady CFD</li>
+                            <li>Simulations executed at JAXA wind tunnel scale</li>
+                            <li>Multiple turbulence models can be submitted</li>
+                        </ul>
+                        <li>Flow Conditions:</li>
+                        <ul>
+                            <li>Mach=0.85</li>
+                        </ul>
+                        <li>Reference Units:</li>
+                        <ul>
+                        <table style="margin-left: 2px; font-size: 10pt">
+                            <tr style="font-size: 12pt">
+                                <td style="width: 140px;"></td>
+                                <td style="width: 160px;"><strong>Full Scale (inches)</strong></td>
+                                <td style="width: 160px;"><strong>Model Scale (<em>meters</em>)</strong></td>
+                                <td style="width: 160px;"><strong>Tunnel Coordinates (<em>meters</em>)</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">S<sub>REF</sub> (semispan)</td>
+                                <td>297360.00 sq.in</td>
+                                <td>0.179014 sq.m</td>
+                                <td>0.179014 sq.m</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">C<sub>REF</sub></td>
+                                <td>275.80 in</td>
+                                <td>0.15131 m</td>
+                                <td>0.15131 m</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Semispan</td>
+                                <td>1156.75 in</td>
+                                <td>1.26927 m</td>
+                                <td>1.26927 m</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Moment Center</td>
+                                <td>(1325.9,0.0,177.95)</td>
+                                <td>(0.72741,0.0,0.097627) m</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        </ul>
+                    </ul>
+                    </h3 style="margin-left: 20px;">
+                </details>
+                <details>
+                    <summary>Test Cases</summary>
+                    <h3 style="margin-left: 20px;">
+
+                        <details open id="Buffet: Test Case 2">
+                            <summary>
+                                Test Case 2: Unsteady CFD / Rigid Geometry
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Validation of unsteady CFD analysis of CRM Wing/Body/Tail(0)</li>
+                                <li>Geometry/Grids:</li>
+                                <ul>
+                                    <li>Committee supplied CAD for experimentally measured deformations</li>
+                                    <a style="margin-left: 20px;" href="https://cfdws.chofu.jaxa.jp/apc/dpw/geometry.html">https://cfdws.chofu.jaxa.jp/apc/dpw/geometry.html</a>
+                                    <li>Committee supplied URANS grids</li>
+                                    <a style="margin-left: 20px;" href="https://dpw.larc.nasa.gov/DPW8/Buffet/Test_Case_2">https://dpw.larc.nasa.gov/DPW8/Buffet/Test_Case_2</a>
+                                    <li>User-generated grids are acceptable (see guidelines)</li>
+                                    <li>Grid convergence study optional at &alpha; = 4.84&deg;</li>
+                                </ul>
+                                <li>Grid Levels: [1,2,3,4,5,6]</li>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>Mach=0.85, Re<sub>c</sub>=1.515x10<sup>6</sup>, Tstatic=121.7 F (323.0 K)</li>
+                                    <li>&alpha; = [1.22&deg;, 2.29&deg; 4.84&deg; 5.89&deg;]</li>
+                                </ul>
+                                <li>Experimental Data: </li>
+                                <ul>
+                                    <li>Forces and moments, time-averaged and rms Cp Sectional cuts, unsteady pressure sensor (Kulite) and PSD data</li>
+                                    <a style="margin-left: 20px;" href="https://cfdws.chofu.jaxa.jp/apc/dpw/upc.html">https://cfdws.chofu.jaxa.jp/apc/dpw/upc.html</a>
+                                </ul>
+                            </ul>
+                        </details>
+                        <details open id="Buffet: Test Case 3">
+                            <summary>Test Case 3: Unsteady CFD and Fluid/Structure Interaction</summary>
+                            <ul style="font-weight: normal">
+
+                                <li>Validation of unsteady CFD analysis of CRM Wing/Body/Tail(0) with dynamic wing fluid/structural interaction</li>
+                                <li>Geometry/Grids:</li>
+                                <ul>
+                                    <li>CFD/FEM start from unloaded (wind-off) geometry/grid</li>
+                                    <li>Full- and half-span stick FEMs available:</li>
+                                    <a style="margin-left: 20px;" href="https://cfdws.chofu.jaxa.jp/apc/dpw">https://cfdws.chofu.jaxa.jp/apc/dpw</a>
+                                    <li>Committee supplied URANS grids</li>
+                                    <a style="margin-left: 20px;" href="https://dpw.larc.nasa.gov/DPW8/Buffet/Test_Case_3">https://dpw.larc.nasa.gov/DPW8/Buffet/Test_Case_3</a>
+                                </ul>
+                                <li>Goals:</li>
+                                <ul>
+                                    <li>Resolve wing structural dynamics</li>
+                                    <li>Capture as much of the spectra as reasonably possible</li>
+                                </ul>
+                                <li>Grid Levels: [1,2,3,4,5,6]</li>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>Mach=0.85, Re<sub>c</sub>=2.27x10<sup>6</sup>, Tstatic=127.4 F (326.15 K)</li>
+                                    <li>P<sub>Total</sub> = 12.0 kPa (5.51 psi)</li>
+                                    <li>&alpha; = [3.05&deg; 3.61&deg; 4.70&deg;]</li>
+                                </ul>
+                                <li>Experimental Data: </li>
+                                <ul>
+                                    <li>Forces and moments, buffet coefficient intensity based on wing-root strain gauge, time-averaged/rms/PSD Cp sectional cuts from unsteady pressure sensors (Kulite),  time-averaged/rms/PSD unsteady Pressure Sensitive Paint</li>
+                                    <a style="margin-left: 20px;" href="https://cfdws.chofu.jaxa.jp/apc/dpw/upsp.html">https://cfdws.chofu.jaxa.jp/apc/dpw/upsp.html</a>
+                                </ul>
+                            </ul>
+                        </details>
+                    </h3>
+                </details>
+            </h2>
+        </details>
+
+        <details open id="Configuration B">
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Configuration B: NASA CRM Wing/Body 
+            </summary>
+            <div class="container">
+                <div class="image">
+                    <img src="Figures/NASA_CRM.jpg" alt="NASA CRM Shaded Surface">
+                </div>
+                <div class="table-style-2">
+                    <table style="margin-left: 20px; font-size: 10pt">
+                        <tr>
+                            <th style="text-align: left;">Working Group</th>
+                            <th style="text-align: center;">Test Case</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Sources of Scatter</td>
+                            <td style="text-align: center;">2a & 2b</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Wind Tunnel Environment</td>
+                            <td style="text-align: center;">2a & 2b & 2b(S)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Static Deformation (AePW)</td>
+                            <td style="text-align: center;">2a(E) & 2b(E)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <h2 style="margin-left: 20px;">
+                <details>
+                    <summary>Objectives and Description</summary>
+                    <h3 style="margin-left: 20px;">
+                    <ul style="font-weight: normal">
+                        <li>Validation of steady CFD analysis grid convergence study</li>
+                        <li>Users are encouraged to employ best practices</li>
+                        <li>Settings:</li>
+                        <ul>
+                            <li>Steady CFD (e.g., RANS)</li>
+                            <li>Multiple turbulence models can be submitted</li>
+                        </ul>
+                        <li>Geometry:</li>
+                        <ul>
+                            <li>Use the LoQ aero-elastic deflections measured in the ETW Wind Tunnel Test</li>
+                            <a style="margin-left: 20px;" href="https://commonresearchmodel.larc.nasa.gov/wp-content/uploads/sites/7/2025/07/DPW-7_WBT_IGES_in_low_q.zip">https://commonresearchmodel.larc.nasa.gov/wp-content/uploads/sites/7/2025/07/DPW-7_WBT_IGES_in_low_q.zip</a>
+                            <table style="margin-left: 2px; font-size: 10pt">
+                                <tr style="font-size: 12pt">
+                                    <td style="text-align: left;width: 80px;"><strong>Condition</strong></td>
+                                    <td style="text-align: left;width: 220px;"><strong>Geometry</strong></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">&alpha; = -1.50&deg;</td>
+                                    <td style="text-align: left;">Jig "as-built" CRM geometry</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">C<sub>L</sub> = 0.50</td>
+                                    <td style="text-align: left;">2.50-deg LoQ AE CRM geometry</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">&alpha; = 2.50&deg;</td>
+                                    <td style="text-align: left;">2.50-deg LoQ AE CRM geometry</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">&alpha; = 2.75&deg;</td>
+                                    <td style="text-align: left;">2.75-deg LoQ AE CRM geometry</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">... etc ...</td>
+                                    <td style="text-align: left;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">&alpha; = 4.00&deg;</td>
+                                <td style="text-align: left;">4.00-deg LoQ AE CRM geometry</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">&alpha; = 4.25&deg;</td>
+                                    <td style="text-align: left;">4.25-deg LoQ AE CRM geometry</td>
+                                </tr>
+                            </table>
+                        </ul>
+                        <li>Grids:</li>
+                        <ul>
+                            <li><a href="https://dpw.larc.nasa.gov/DPW8/Scatter/Test_Case_2">https://dpw.larc.nasa.gov/DPW8/Scatter/Test_Case_2</a></li>
+                            <li>Six-member grid family; four are required, six are desirable</li>
+                            <li>Encourage use of committee-supplied grids</li>
+                            <li>Encourage use of solution-adaptive grids</li>
+                            <li>User-generated grids are acceptable (see guidelines)</li>
+                        </ul>
+                        <li>Flow Conditions:</li>
+                        <ul>
+                            <li>Mach=0.85, Re<sub>c</sub>=5x10<sup>6</sup>, Tstatic=100 F (559.67 R, 310.928 K)</li>
+                        </ul>
+                        <li>Reference Units:</li>
+                        <ul>
+                        <table style="margin-left: 2px; font-size: 10pt">
+                            <tr style="font-size: 12pt">
+                                <td style="width: 140px;"></td>
+                                <td style="width: 160px;"><strong>Full Scale (inches)</strong></td>
+                                <td style="width: 160px;"><strong>Model Scale</strong></td>
+                                <td style="width: 160px;"><strong>Tunnel Coordinates</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">S<sub>REF</sub> (semispan)</td>
+                                <td>297360.00 sq.in</td>
+                                <td>216.77544 sq.in</td>
+                                <td>216.77544 sq.in</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">C<sub>REF</sub></td>
+                                <td>275.80 in</td>
+                                <td>7.51950 in</td>
+                                <td>7.51950 in</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Semispan</td>
+                                <td>1156.75 in</td>
+                                <td>31.23225 in</td>
+                                <td>31.23225 in</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Moment Center</td>
+                                <td>(1325.9,0.0,177.95)</td>
+                                <td>(35.7993,0.0,4.80465)</td>
+                                <td>(156.0,0.0,0.0)</td>
+                            </tr>
+                        </table>
+                        </ul>
+                        <li>Additional Instructions for the <strong><em>Source of Scatter Working Group</strong></em></li>
+                        <ul>
+                            <li>French Vanilla SA-(neg) (All-terms)</li>
+                            <li>Converge residuals to machine precision (~1e-10)</li>
+                            <li>Adiabatic Wall (not isothermal)</li>
+                            <li>Sutherland's Law</li>
+                            <li>&gamma; = 1.4</li>
+                            <li>Pr = 0.72</li>
+                            <li>Pr<sub>T</sub> = 0.9</li>
+                            <li>farfield &Chi; = &nu;/&nu;<sup>~</sup> = 3</li>
+                        </ul>
+                    </ul>
+                    </h3 style="margin-left: 20px;">
+                </details>
+                <details>
+                    <summary>Test Cases</summary>
+                    <h3 style="margin-left: 20px;">
+
+                        <details open id="Test Case 2a">
+                            <summary>
+                                Test Case 2a: Grid Convergence Study
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Grid Levels: [1,2,3,4,5,6]</li>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>&alpha; = 2.50&deg;</li>
+                                </ul>
+                            </ul>
+                        </details>
+                        <details open id="Test Case 2b">
+                            <summary>
+                                Test Case 2b: Angle-of-Attack Alpha Sweep
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Grid Level: 3 or 4</li>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>&alpha; = [-1.50&deg;, 2.50&deg;, 2.75&deg;, 3.00&deg;, 3.25&deg;, 3.50&deg;, 3.75&deg;, 4.00&deg;, 4.25&deg;]</li>
+                                    <li>C<sub>L</sub> = 0.50 +/- 0.0001</li>
+                                </ul>
+                            </ul>
+                        </details>
+                        <details open id="Test Case 2a(E)">
+                            <summary>
+                                Test Case 2a(E) (Elastic): Grid Convergence Study
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Fluid/Structure Interaction (FSI) of wind tunnel model aeroelastic deformation:</li>
+                                <ul>
+                                    <li>CFD/FEM initialized from Jig "as-built" geometry/grid</li>
+                                    <li>FEM (full & half span) and Beam model</li>
+                                    <a style="margin-left: 20px;" href="https://dpw.larc.nasa.gov/DPW8/Static_Deformation/Test_Case_2/FEM_Models">https://dpw.larc.nasa.gov/DPW8/Static_Deformation/Test_Case_2/FEM_Models</a>
+                                </ul>
+                                <li>Grid Levels: [1,2,3,4,5,6]</li>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>C<sub>L</sub> = 0.50 +/- 0.0001</li>
+                                    <li>Q<sub>&infin;</sub> = 1384 lb/sq.ft</li>
+                                </ul>
+                            </ul>
+                        </details>
+                        <details open id="Test Case 2b(E)">
+                            <summary>
+                                Test Case 2b(E) (Elastic): Alpha Sweep
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Fluid/Structure Interaction (FSI) of wind tunnel model aeroelastic deformation:</li>
+                                <ul>
+                                    <li>CFD/FEM initialized from Jig "as-built" geometry/grid</li>
+                                    <li>FEM (full & half span) and Beam model</li>
+                                    <a style="margin-left: 20px;" href="https://dpw.larc.nasa.gov/DPW8/Static_Deformation/Test_Case_2/FEM_Models">https://dpw.larc.nasa.gov/DPW8/Static_Deformation/Test_Case_2/FEM_Models</a>
+                                </ul>
+                                <li>Grid Level: 3 or 4</li>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>&alpha; = [-1.50&deg;, 2.50&deg;, 2.75&deg;, 3.00&deg;, 3.25&deg;, 3.50&deg;, 3.75&deg;, 4.00&deg;, 4.25&deg;]</li>
+                                </ul>
+                            </ul>
+                        </details>
+                        <details open id="Test Case 2b(S)">
+                            <summary>
+                                Test Case 2b(S) (with Upper Swept Strut): Alpha Sweep
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Wind Tunnel Mounting System Tare and Interference Study:</li>
+                                <ul>
+                                    <li>Add Upper Swept Strut (USS) geometry to Wing/Body</li>
+                                    <li>Extract forces on Wing/Body portion of geometry (USS is not on-balance)</li>
+                                </ul>
+                                <li>Geometry:</li>
+                                    <ul>
+                                        <li>Upper Swept Strut (USS)</li>
+                                        <a style="margin-left: 20px;" href="https://dpw.larc.nasa.gov/DPW8/Test_Environment/Test_Case_1/Geometry/Sting_No_Arc_Sector_Bulb_noRotation_2025_09_03.igs">https://dpw.larc.nasa.gov/DPW8/Test_Environment/Test_Case_1/Geometry/Sting_No_Arc_Sector_Bulb_noRotation_2025_09_03.igs</a>
+                                    </ul>
+                                <li>Grid Level: 3 or 4</li>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>&alpha; = [-1.50&deg;, 2.50&deg;, 2.75&deg;, 3.00&deg;, 3.25&deg;, 3.50&deg;, 3.75&deg;, 4.00&deg;, 4.25&deg;]</li>
+                                    <li>C<sub>L</sub> = 0.50 +/- 0.0001</li>
+                                </ul>
+                            </ul>
+                        </details>
+
+
+                    </h3>
+                </details>
+            </h2>
+        </details>
+
+        <details open id="Configuration C">
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Configuration C: NASA CRM Wing/Body/Tail 
+            </summary>
+            <div class="container">
+                <div class="image">
+                    <img src="Figures/CRM_w_Tail_in_Tunnel.png" alt="CRM + Tail in Tunnel">
+                </div>
+                <div class="table-style-2">
+                    <table style="margin-left: 20px; font-size: 10pt">
+                        <tr>
+                            <th style="text-align: left;">Working Group</th>
+                            <th style="text-align: center;">Test Case</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Wind Tunnel Environment</td>
+                            <td style="text-align: center;">3b & 3b(S)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <h2 style="margin-left: 20px;">
+                <details>
+                    <summary>Objectives and Description</summary>
+                    <h3 style="margin-left: 20px;">
+                    <ul style="font-weight: normal">
+                        <li>Validation of steady CFD analysis of CRM Wing/Body/Tail(0) with and without the Wind Tunnel Upper Swept Strut/Sting Mounting System</li>
+                        <li>Users are encouraged to employ best practices</li>
+                        <li>Settings:</li>
+                        <ul>
+                            <li>Steady CFD (e.g., RANS)</li>
+                            <li>Multiple turbulence models can be submitted</li>
+                        </ul>
+                        <li>Geometry:</li>
+                        <ul>
+                            <li>Use the LoQ aero-elastic deflections measured in the ETW Wind Tunnel Test</li>
+                            <li>Wing deformations same as Configuration A</li>
+                            <a style="margin-left: 20px;" href="https://commonresearchmodel.larc.nasa.gov/wp-content/uploads/sites/7/2025/07/DPW-7_WBT_IGES_in_low_q.zip">https://commonresearchmodel.larc.nasa.gov/wp-content/uploads/sites/7/2025/07/DPW-7_WBT_IGES_in_low_q.zip</a>
+                        </ul>
+                        <li>Grids:</li>
+                        <ul>
+                            <li>Encourage use of committee-supplied grids</li>
+                            <li>Encourage use of solution-adaptive grids</li>
+                            <li>User-generated grids are acceptable (see guidelines)</li>
+                        </ul>
+                        <li>Flow Conditions:</li>
+                        <ul>
+                            <li>Mach=0.85, Re<sub>c</sub>=5x10<sup>6</sup>, Tstatic=100 F (559.67 R, 310.928 K)</li>
+                        </ul>
+                        <li>Reference Units:</li>
+                        <ul>
+                        <table style="margin-left: 2px; font-size: 10pt">
+                            <tr style="font-size: 12pt">
+                                <td style="width: 140px;"></td>
+                                <td style="width: 160px;"><strong>Full Scale (inches)</strong></td>
+                                <td style="width: 160px;"><strong>Model Scale</strong></td>
+                                <td style="width: 160px;"><strong>Tunnel Coordinates</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">S<sub>REF</sub> (semispan)</td>
+                                <td>297360.00 sq.in</td>
+                                <td>216.77544 sq.in</td>
+                                <td>216.77544 sq.in</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">C<sub>REF</sub></td>
+                                <td>275.80 in</td>
+                                <td>7.51950 in</td>
+                                <td>7.51950 in</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Semispan</td>
+                                <td>1156.75 in</td>
+                                <td>31.23225 in</td>
+                                <td>31.23225 in</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Moment Center</td>
+                                <td>(1325.9,0.0,177.95)</td>
+                                <td>(35.7993,0.0,4.80465)</td>
+                                <td>(156.0,0.0,0.0)</td>
+                            </tr>
+                        </table>
+                        </ul>
+                    </ul>
+                    </h3 style="margin-left: 20px;">
+                </details>
+                <details>
+                    <summary>Test Cases</summary>
+                    <h3 style="margin-left: 20px;">
+                        <details open id="Test Case 3b">
+                            <summary>
+                                Test Case 3b: Angle-of-Attack Alpha Sweep
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>&alpha; = [-1.50&deg;, 2.50&deg;, 2.75&deg;, 3.00&deg;, 3.25&deg;, 3.50&deg;, 3.75&deg;, 4.00&deg;, 4.25&deg;]</li>
+                                    <li>C<sub>L</sub> = 0.50 +/- 0.0001</li>
+                                </ul>
+                            </ul>
+                        </details>
+                        <details open id="Test Case 3b(S)">
+                            <summary>
+                                Test Case 3b(S) (with Upper Swept Strut): Alpha Sweep
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Wind Tunnel Mounting System Tare and Interference Study:</li>
+                                <ul>
+                                    <li>Add Upper Swept Strut (USS) geometry to Wing/Body</li>
+                                    <li>Extract forces on Wing/Body/Tail portion of geometry (USS is not on-balance)</li>
+                                </ul>
+                                <li>Geometry:</li>
+                                    <ul>
+                                        <li>Upper Swept Strut (USS)</li>
+                                        <a style="margin-left: 20px;" href="https://dpw.larc.nasa.gov/DPW8/Test_Environment/Test_Case_1/Geometry/Sting_No_Arc_Sector_Bulb_noRotation_2025_09_03.igs">https://dpw.larc.nasa.gov/DPW8/Test_Environment/Test_Case_1/Geometry/Sting_No_Arc_Sector_Bulb_noRotation_2025_09_03.igs</a>
+                                    </ul>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>&alpha; = [-1.50&deg;, 2.50&deg;, 2.75&deg;, 3.00&deg;, 3.25&deg;, 3.50&deg;, 3.75&deg;, 4.00&deg;, 4.25&deg;]</li>
+                                    <li>C<sub>L</sub> = 0.50 +/- 0.0001</li>
+                                </ul>
+                            </ul>
+                        </details>
+
+                    </h3>
+                </details>
+            </h2>
+        </details>
+
+        <details open id="Configuration D">
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Configuration D: NASA CRM Wing/Body/Nacelle/Pylon 
+            </summary>
+            <div class="container">
+                <div class="image">
+                    <img src="Figures/CRM_w_NP_in_Tunnel.jpg" alt="CRM + Nacelle/Pylon in Tunnel">
+                </div>
+                <div class="table-style-2">
+                    <table style="margin-left: 20px; font-size: 10pt">
+                        <tr>
+                            <th style="text-align: left;">Working Group</th>
+                            <th style="text-align: center;">Test Case</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Static Deformation (AePW)</td>
+                            <td style="text-align: center;">3a (E) & 3b (E)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <h2 style="margin-left: 20px;">
+                <details>
+                    <summary>Objectives and Description</summary>
+                    <h3 style="margin-left: 20px;">
+                    <ul style="font-weight: normal">
+                        <li>Validation of steady CFD analysis grid convergence study</li>
+                        <li>Users are encouraged to employ best practices</li>
+                        <li>Settings:</li>
+                        <ul>
+                            <li>Steady CFD (e.g., RANS)</li>
+                            <li>Multiple turbulence models can be submitted</li>
+                        </ul>
+                        <li>Geometry:</li>
+                        <ul>
+                            <li>Use the LoQ aero-elastic deflections measured in the ETW Wind Tunnel Test</li>
+                            <li>Wing deformations same as Configuration A</li>
+                            <a style="margin-left: 20px;" href="https://commonresearchmodel.larc.nasa.gov/wp-content/uploads/sites/7/2025/07/DPW-7_WBT_IGES_in_low_q.zip">https://commonresearchmodel.larc.nasa.gov/wp-content/uploads/sites/7/2025/07/DPW-7_WBT_IGES_in_low_q.zip</a>
+                        </ul>
+                        <li>Grids:</li>
+                        <ul>
+                            <li>Encourage use of committee-supplied grids</li>
+                            <li>Encourage use of solution-adaptive grids</li>
+                            <li>User-generated grids are acceptable (see guidelines)</li>
+                        </ul>
+                        <li>Flow Conditions:</li>
+                        <ul>
+                            <li>Mach=0.85, Re<sub>c</sub>=5x10<sup>6</sup>, Tstatic=100 F (559.67 R, 310.928 K)</li>
+                        </ul>
+                        <li>Reference Units:</li>
+                        <ul>
+                        <table style="margin-left: 2px; font-size: 10pt">
+                            <tr style="font-size: 12pt">
+                                <td style="width: 140px;"></td>
+                                <td style="width: 160px;"><strong>Full Scale (inches)</strong></td>
+                                <td style="width: 160px;"><strong>Model Scale</strong></td>
+                                <td style="width: 160px;"><strong>Tunnel Coordinates</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">S<sub>REF</sub> (semispan)</td>
+                                <td>297360.00 sq.in</td>
+                                <td>216.77544 sq.in</td>
+                                <td>216.77544 sq.in</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">C<sub>REF</sub></td>
+                                <td>275.80 in</td>
+                                <td>7.51950 in</td>
+                                <td>7.51950 in</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Semispan</td>
+                                <td>1156.75 in</td>
+                                <td>31.23225 in</td>
+                                <td>31.23225 in</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Moment Center</td>
+                                <td>(1325.9,0.0,177.95)</td>
+                                <td>(35.7993,0.0,4.80465)</td>
+                                <td>(156.0,0.0,0.0)</td>
+                            </tr>
+                        </table>
+                        </ul>
+                    </ul>
+                    </h3 style="margin-left: 20px;">
+                </details>
+                <details>
+                    <summary>Test Cases</summary>
+                    <h3 style="margin-left: 20px;">
+                        <details open id="Test Case 4a(E)">
+                            <summary>
+                                Test Case 4a(E) (Elastic): Grid Convergence Study
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Fluid/Structure Interaction (FSI) of wind tunnel model aeroelastic deformation:</li>
+                                <ul>
+                                    <li>CFD/FEM initialized from Jig "as-built" geometry/grid</li>
+                                    <li>FEM (full & half span) and Beam model</li>
+                                    <a style="margin-left: 20px;" href="https://dpw.larc.nasa.gov/DPW8/Static_Deformation/Test_Case_2/FEM_Models">https://dpw.larc.nasa.gov/DPW8/Static_Deformation/Test_Case_2/FEM_Models</a>
+                                </ul>
+                                <li>Grid Levels: [1,2,3,4,5,6]</li>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>C<sub>L</sub> = 0.50 +/- 0.0001</li>
+                                    <li>Q<sub>&infin;</sub> = 1384 lb/sq.ft</li>
+                                </ul>
+                            </ul>
+                        </details>
+                        <details open id="Test Case 4b(E)">
+                            <summary>
+                                Test Case 4b(E) (Elastic): Alpha Sweep
+                            </summary>
+                            <ul style="font-weight: normal">
+                                <li>Fluid/Structure Interaction (FSI) of wind tunnel model aeroelastic deformation:</li>
+                                <ul>
+                                    <li>CFD/FEM initialized from Jig "as-built" geometry/grid</li>
+                                    <li>FEM (full & half span) and Beam model</li>
+                                    <a style="margin-left: 20px;" href="https://dpw.larc.nasa.gov/DPW8/Static_Deformation/Test_Case_2/FEM_Models">https://dpw.larc.nasa.gov/DPW8/Static_Deformation/Test_Case_2/FEM_Models</a>
+                                </ul>
+                                <li>Grid Level: 3 or 4</li>
+                                <li>Flow Conditions:</li>
+                                <ul>
+                                    <li>&alpha; = [-1.50&deg;, 2.50&deg;, 2.75&deg;, 3.00&deg;, 3.25&deg;, 3.50&deg;, 3.75&deg;, 4.00&deg;, 4.25&deg;]</li>
+                                    <li>Q<sub>&infin;</sub> = 1384 lb/sq.ft</li>
+                                </ul>
+                            </ul>
+                        </details>
+                    </h3>
+                </details>
+            </h2>
+        </details>
+
+<!        </h2>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 DPW8 Verifications and Configurations</p>
+    </footer>
+</body>
+</html>
