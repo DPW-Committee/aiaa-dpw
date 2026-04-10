@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Cases</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding-top: 0px; /* Adjust this to match your typical header height */
+    }
+
+    header {
+        background: #003366;
+        color: white;
+        padding: 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    h1 {
+        text-align: center;
+        color: #1f497d;
+        padding-top: 0px;
+    }
+    
+    h2, h3 {
+        text-align: left;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    h2 {
+        font-size: 14pt;
+        font-weight: bold;
+        padding-bottom: 0px;
+    }
+
+    .h2-style-1 {
+        font-size: 20pt;
+        font-weight: bold;
+#       text-decoration: underline;
+    }
+
+    h3 {
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        justify-content: left;
+        background: #1F497D;
+        padding: 10px 0;
+    }
+
+    table {
+#       width: 100%;
+#       max-width: 600px;
+        border-collapse: collapse;
+        border: 2px solid black;
+    }
+
+    td, th {
+        text-align: center;
+        vertical-align: middle;
+        font-family: helvetica, arial, sans-serif;
+        border: 2px solid black;
+    }
+
+    .table-style-1 {
+        border-collapse: collapse; /* Collapse borders */
+        border: 0px solid black;
+        line-height: 1;
+#        width: 600px; /* Set table width */
+        margin-bottom: 10px; /* Space between tables */
+    }
+    .table-style-1 th, .table-style-1 td {
+        border: 0px solid black; /* Border for cells */
+        padding: 1px; /* Padding for cells */
+        text-align: center; /* Align text to the left */
+    }
+    /* Set specific widths for columns */
+    .table-style-1 .col1 { width: 16px; }
+    .table-style-1 .col6 { text-align: left;padding-left: 8px; }
+
+    .container {
+        display: flex; /* Use flexbox for layout */
+        align-items: flex-start; /* Align items at the start */
+        margin: 10px; /* Margin around the container */
+    }
+    .image {
+        flex: 1; /* Allow the image to take up space */
+        margin-right: 10px; /* Space between image and table */
+    }
+    .table-style-2 {
+        flex: 2; /* Allow the table to take up more space */
+    }
+    img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+    table-style-2 {
+        border-collapse: collapse; /* Collapse borders */
+        width: 100%; /* Full width of the container */
+    }
+    th-style-2, td-style-2 {
+        border: 1px solid black; /* Border for cells */
+        padding: 8px; /* Padding for cells */
+        text-align: left; /* Align text to the left */
+    }
+
+    nav a {
+        color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background: #0059b3;
+    }
+
+    .dropdown {
+        position: relative;
+        padding: 5px;
+        text-align: left;
+    }
+
+      .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%; /* Add extra space below the parent */
+          left: 5px; /* Align with the parent */
+          padding: 0; /* Optional: Reset padding */
+          margin: 0; /* Optional: Reset margin */
+          background: #0059b3;
+      }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        background: #0073e6;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* Responsive Design */
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            display: none; /* Hide menu by default */
+        }
+
+        nav.active {
+            display: flex; /* Show menu when active */
+        }
+
+        nav a {
+            text-align: left;
+            padding: 15px 0;
+            border-bottom: 1px solid #0059b3;
+        }
+
+        .hamburger {
+            display: block; /* Show hamburger on mobile */
+        }
+    }
+</style>
+</head>
+
+<body>
+<section id="home"></section>
+<header>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="menu">
+        <a href="../index.html">Home</a>
+        <a href="../TestCases/testcases.html#Verification">Verification</a>
+        <a href="../TestCases/testcases.html#TestCases">Test Cases</a>
+        <a href="../TestCases/overview.html#Overview">Overview</a>
+    </nav>
+</header>
+
+<h1 style="font-size: 28pt">DPW8 Test Case Overview</h1>
+
+<hr>
+<section id="Overview" style="scroll-margin-top: 45px"></section>
+
+    <section>
+        <h2>
+            <details open>
+            <summary class="h2-style-1" style="margin-left: 10px">
+                DPW8 Working Groups
+            </summary>
+            <table style="margin-left: 20px;">
+                <tr>
+                    <td style="width:  60px;">Scatter</td>
+                    <td style="width: 140px;">Wind Tunnel Env</td>
+                    <td style="width: 140px;">Static Deformation</td>
+                    <td style="width:  60px;">Buffet</td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>W</td>
+                    <td>D</td>
+                    <td>B</td>
+                </tr>
+            </table>
+            </details>
+        </h2>
+
+        <h2>
+            <details open>
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Verification Activity
+            </summary>
+            <h3 style="margin-left: 20px;">
+                <details open>
+                <summary>
+                    Verification 1: ONERA OAT15a Airfoil
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px;">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong>B</strong></td>
+                        <td class="col6">ONERA OAT15a </td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>B</strong></td>
+                        <td class="col6">ONERA OAT15a (unsteady/extended AoA)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">ONERA OAT15A (the sequel)</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Verification 2: Joukowski Airfoil
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px;">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Joukowski Airfoil </td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Verification 3: DPW-III Wing Only: W1 & W2
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Grid Convergence (&alpha; = 0.50&deg;)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (&alpha;=[-1&deg;,0&deg;,0.5&deg;,1&deg;,1.5&deg;,2&deg;,2.5&deg;,3&deg;])</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Verification 4: NASA CRM FEM Validation
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                <tr>
+                    <td class="col1"><strong>&bull;</strong></td>
+                    <td class="col1"><strong> </strong></td>
+                    <td class="col1"><strong> </strong></td>
+                    <td class="col1"><strong>D</strong></td>
+                    <td class="col1"><strong> </strong></td>
+                    <td class="col6">FEM Validation</td>
+                </tr>
+                </table>
+                </details>
+            </h3>
+            </details>
+        </h2>
+
+        <h2>
+            <details open>
+            <summary class="h2-style-1" style="margin-left: 10px">
+                Common Research Model Configurations
+            </summary>
+            <h3 style="margin-left: 20px;">
+                <details open>
+                <summary>
+                    Configuration A: JAXA CRM Wing/Body/Tail
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>B</strong></td>
+                        <td class="col6">Rigid Buffet (unsteady calculation)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>B</strong></td>
+                        <td class="col6">Elastic Buffet (unsteady FSI calculation)</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Configuration B: NASA CRM Wing/Body
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Grid Convergence (&alpha; = 2.50&deg;)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Grid Convergence (C<sub>L</sub> = 0.50)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong>S</strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (Rigid pre-deformed geometry)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (Elastic FSI)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WB + Strut) (tare & interference)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WB + Tunnel) (wall interference)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WB + Strut + Tunnel) (test environment)</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Configuration C: NASA CRM Wing/Body/Tail
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WBT) (freeair)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WBT + Strut) (tare & interference)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WBT + Tunnel) (wall interference)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>W</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (WBT + Strut + Tunnel) (test environment)</td>
+                    </tr>
+                </table>
+                </details>
+
+                <details open>
+                <summary>
+                    Configuration D: NASA CRM Wing/Body/Pylon/Nacelle
+                </summary>
+                <table class="table-style-1" style="margin-left: 20px">
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (Rigid pre-deformed geometry)</td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><strong>&bull;</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col1"><strong>D</strong></td>
+                        <td class="col1"><strong> </strong></td>
+                        <td class="col6">Polar (Elastic FSI)</td>
+                    </tr>
+                </table>
+                </details>
+
+            </h3>
+            </details>
+        </h2>
+    </section>
