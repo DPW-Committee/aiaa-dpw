@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saturday: AePW-4 Agenda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #003366;
+      --mid-blue: #1F497D;
+      --accent: #4a9eff;
+      --accent-dim: #1a4a7a;
+      --bg: #f4f6fa;
+      --surface: #ffffff;
+      --border: #d0daea;
+      --text: #1a2535;
+      --muted: #5a6a80;
+      --break-bg: #eef3fa;
+      --break-text: #7a8fa8;
+      --tag-bg: #e3edf9;
+      --tag-text: #1F497D;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+        background: #003366;
+        color: white;
+        padding: 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav {
+        display: flex;
+        justify-content: left;
+        background: #1F497D;
+        padding: 10px 0;
+    }
+
+    nav a {
+        color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background: #0059b3;
+    }
+
+    .dropdown {
+        position: relative;
+        padding: 5px;
+        text-align: left;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 5px;
+        padding: 0;
+        margin: 0;
+        background: #0059b3;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        background: #0073e6;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            display: none;
+        }
+        nav.active {
+            display: flex;
+        }
+        nav a {
+            text-align: left;
+            padding: 15px 0;
+            border-bottom: 1px solid #0059b3;
+        }
+        .hamburger {
+            display: block;
+        }
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0a4a8a 60%, var(--mid-blue) 100%);
+      color: white;
+      padding: 48px 32px 36px;
+      text-align: center;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .page-hero h1 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(18px, 3vw, 28px);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .page-hero .subtitle {
+      font-size: 14px;
+      opacity: 0.75;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 36px 20px 60px;
+    }
+
+    /* Session card */
+    .session {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,30,80,0.06);
+      transition: box-shadow 0.2s;
+    }
+
+    .session:hover { box-shadow: 0 4px 18px rgba(0,30,80,0.10); }
+
+    .session-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      cursor: pointer;
+      background: var(--navy);
+      color: white;
+      user-select: none;
+      gap: 12px;
+    }
+
+    .session-header:hover { background: #004080; }
+
+    .session-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .session-time-badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 3px 9px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .session-title {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .session-subtitle {
+      font-size: 11px;
+      opacity: 0.65;
+      margin-top: 2px;
+      font-weight: 300;
+    }
+
+    .chevron {
+      font-size: 18px;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+
+    .session.open .chevron { transform: rotate(180deg); }
+
+    /* Talks table */
+    .session-body {
+      display: none;
+      padding: 0;
+    }
+
+    .session.open .session-body { display: block; }
+
+    .talks-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .day-header {
+      background: var(--navy);
+      color: white;
+      border-radius: 10px;
+      padding: 14px 20px;
+      margin-bottom: 18px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .day-header .day-sub {
+      font-size: 11px;
+      font-weight: 400;
+      opacity: 0.7;
+      margin-top: 3px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .talks-table thead tr {
+      background: var(--tag-bg);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .talks-table th {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--mid-blue);
+      padding: 9px 16px;
+      text-align: left;
+    }
+
+    .talks-table td {
+      padding: 11px 16px;
+      font-size: 13.5px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .talks-table tr:last-child td { border-bottom: none; }
+
+    .talks-table tr:hover td { background: #f7faff; }
+
+    /* Break / lunch rows */
+    .talks-table tr.break td {
+      background: var(--break-bg);
+      color: var(--break-text);
+      font-style: italic;
+      font-size: 12.5px;
+    }
+
+    .talks-table tr.break:hover td { background: var(--break-bg); }
+
+    .time-col {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--mid-blue);
+      white-space: nowrap;
+    }
+
+    .speaker-col { font-weight: 600; }
+
+    .grid-col {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11.5px;
+      color: #4a7ab5;
+      font-style: italic;
+    }
+
+    /* Opening block */
+    .opening-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,30,80,0.06);
+    }
+
+    .opening-block .session-header {
+      background: #1a3d6b;
+    }
+
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 10px;
+      margin-top: 28px;
+    }
+
+    .section-label:first-child { margin-top: 0; }
+
+    /* Closing discussion row */
+    .talks-table tr.discussion td {
+      background: #f0f7ff;
+      font-weight: 600;
+      color: var(--mid-blue);
+      font-size: 13px;
+    }
+
+    .talks-table tr.discussion:hover td { background: #e5f0ff; }
+  </style>
+</head>
+<body>
+
+<header>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="menu">
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+
+
+<div class="main">
+
+  <div class="day-header">
+    Day 1 &mdash; Saturday, June 6, 2026
+    <div class="day-sub">Aeroelastic Prediction Workshop Focused Working Groups</div>
+  </div>
+
+  <!-- Session 1 -->
+  <p class="section-label">Overview</p>
+  <div class="session" id="s1">
+    <div class="session-header" onclick="toggle('s1')">
+      <div class="session-left">
+        <span class="session-time-badge">9:00&ndash;9:30</span>
+        <div>
+          <div class="session-title">Opening Remarks, Agenda, Purpose, Test Cases</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Note</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">9:00&ndash;9:05</td>
+            <td class="speaker-col">Bret Stanford</td>
+            <td>NASA Langley</td>
+            <td>Welcome</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:05&ndash;9:25</td>
+            <td class="speaker-col">Bret Stanford</td>
+            <td>NASA Langley</td>
+            <td>AePW Introduction, Overview, and History</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:25&ndash;9:30</td>
+            <td class="speaker-col">Bret Stanford</td>
+            <td>NASA Langley</td>
+            <td>Agenda</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Session 1 -->
+  <p class="section-label">Session 1</p>
+  <div class="session" id="s2">
+    <div class="session-header" onclick="toggle('s2')">
+      <div class="session-left">
+        <span class="session-time-badge">9:30&ndash;10:15</span>
+        <div>
+          <div class="session-title">High Speed Working Group (HSWG) I</div>
+          <div class="session-subtitle">Session Chair: TBD</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Note</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">9:30&ndash;9:45</td>
+            <td class="speaker-col">Kirk Brouwer</td>
+            <td>AFRL</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:45&ndash;10:00</td>
+            <td class="speaker-col">Luisa Piccolo Serafim</td>
+            <td>Duke/Georgia Tech</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:00&ndash;10:15</td>
+            <td class="speaker-col">Bret Stanford</td>
+            <td>NASA Langley</td>
+            <td></td>
+          </tr>
+          <tr class="break">
+            <td class="time-col">10:15&ndash;10:30</td>
+            <td colspan="4">Break</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Session 2 -->
+  <p class="section-label">Session 2</p>
+  <div class="session" id="s3">
+    <div class="session-header" onclick="toggle('s3')">
+      <div class="session-left">
+        <span class="session-time-badge">10:30&ndash;11:45</span>
+        <div>
+          <div class="session-title">High Speed Working Group (HSWG) II</div>
+          <div class="session-subtitle">Session Chair: TBD</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Note</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">10:30&ndash;10:45</td>
+            <td class="speaker-col">Kirk Brouwer</td>
+            <td>AFRL</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:45&ndash;11:00</td>
+            <td class="speaker-col">Rodrigo Auza Guitierrez</td>
+            <td>Cadence</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">11:00&ndash;11:45</td>
+            <td class="speaker-col">Kirk Brouwer</td>
+            <td>AFRL</td>
+            <td>High Speed Working Group Summary and Discussion</td>
+          </tr>
+          <tr class="break">
+            <td class="time-col">11:45&ndash;1:15</td>
+            <td colspan="4">Lunch (on your own)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Session 3 -->
+  <p class="section-label">Session 3</p>
+  <div class="session" id="s4">
+    <div class="session-header" onclick="toggle('s4')">
+      <div class="session-left">
+        <span class="session-time-badge">1:15&ndash;2:45</span>
+        <div>
+          <div class="session-title">High Angle Working Group (HAWG) I</div>
+          <div class="session-subtitle">Session Chair: TBD</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Note</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">1:15&ndash;1:30</td>
+            <td class="speaker-col">Pawel Chwalowski</td>
+            <td>NASA Langley</td>
+            <td>High Angle Working Group Introduction</td>
+          </tr>
+          <tr>
+            <td class="time-col">1:30&ndash;1:45</td>
+            <td class="speaker-col">Ron Efrati</td>
+            <td>Technion</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">1:45&ndash;2:00</td>
+            <td class="speaker-col">Michael Candon</td>
+            <td>RMIT</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:00&ndash;2:15</td>
+            <td class="speaker-col">Marcello Righi</td>
+            <td>ZHAW/ETH Zurich</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:15&ndash;2:30</td>
+            <td class="speaker-col">Pawel Chwalowski</td>
+            <td>NASA Langley</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:30&ndash;2:45</td>
+            <td class="speaker-col">Marcel Sunano</td>
+            <td>Sao Paulo State University</td>
+            <td></td>
+          </tr>
+          <tr class="break">
+            <td class="time-col">2:45&ndash;3:00</td>
+            <td colspan="4">Break</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Session 4 -->
+  <p class="section-label">Session 4</p>
+  <div class="session" id="s5">
+    <div class="session-header" onclick="toggle('s5')">
+      <div class="session-left">
+        <span class="session-time-badge">3:00&ndash;4:00</span>
+        <div>
+          <div class="session-title">High Angle Working Group (HAWG) II</div>
+          <div class="session-subtitle">Session Chair: TBD</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Note</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">3:00&ndash;3:15</td>
+            <td class="speaker-col">Ryoya Kikuchi</td>
+            <td>Hokkaido University</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">3:15&ndash;3:30</td>
+            <td class="speaker-col">Hang Yu</td>
+            <td>Stanford</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">3:30&ndash;4:00</td>
+            <td class="speaker-col">Pawel Chwalowski / 
+Kevin Jacobson</td>
+            <td>NASA Langley</td>
+            <td>High Angle Working Group Summary and Discussion	</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Session 5 -->
+  <p class="section-label">Session 5</p>
+  <div class="session" id="s6">
+    <div class="session-header" onclick="toggle('s6')">
+      <div class="session-left">
+        <span class="session-time-badge">4:00&ndash;5:00</span>
+        <div>
+          <div class="session-title">Large Deformation Working Group and Future Direction</div>
+          <div class="session-subtitle">Session Chair: TBD</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Note</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">4:00&ndash;4:15</td>
+            <td class="speaker-col">Bret Stanford</td>
+            <td>NASA</td>
+            <td></td>
+          </tr>
+          <tr class="discussion">
+            <td class="time-col">4:15&ndash;5:00</td>
+            <td class="speaker-col">All Attendees</td>
+            <td>Open Discussion</td>
+            <td>AePW Future Directions</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggle(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('open');
+  }
+  // Open all sessions by default
+  ['s1','s2','s3','s4','s5','s6'].forEach(id => {
+    document.getElementById(id).classList.add('open');
+  });
+  // Hamburger menu toggle
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('active');
+  });
+</script>
+</body>
+</html>

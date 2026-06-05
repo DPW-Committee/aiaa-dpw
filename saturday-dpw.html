@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saturday: DPW-8 Agenda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #003366;
+      --mid-blue: #1F497D;
+      --accent: #4a9eff;
+      --accent-dim: #1a4a7a;
+      --bg: #f4f6fa;
+      --surface: #ffffff;
+      --border: #d0daea;
+      --text: #1a2535;
+      --muted: #5a6a80;
+      --break-bg: #eef3fa;
+      --break-text: #7a8fa8;
+      --tag-bg: #e3edf9;
+      --tag-text: #1F497D;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+        background: #003366;
+        color: white;
+        padding: 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav {
+        display: flex;
+        justify-content: left;
+        background: #1F497D;
+        padding: 10px 0;
+    }
+
+    nav a {
+        color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background: #0059b3;
+    }
+
+    .dropdown {
+        position: relative;
+        padding: 5px;
+        text-align: left;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 5px;
+        padding: 0;
+        margin: 0;
+        background: #0059b3;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        background: #0073e6;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            display: none;
+        }
+        nav.active {
+            display: flex;
+        }
+        nav a {
+            text-align: left;
+            padding: 15px 0;
+            border-bottom: 1px solid #0059b3;
+        }
+        .hamburger {
+            display: block;
+        }
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0a4a8a 60%, var(--mid-blue) 100%);
+      color: white;
+      padding: 48px 32px 36px;
+      text-align: center;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .page-hero h1 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(18px, 3vw, 28px);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .page-hero .subtitle {
+      font-size: 14px;
+      opacity: 0.75;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 36px 20px 60px;
+    }
+
+    /* Session card */
+    .session {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,30,80,0.06);
+      transition: box-shadow 0.2s;
+    }
+
+    .session:hover { box-shadow: 0 4px 18px rgba(0,30,80,0.10); }
+
+    .session-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      cursor: pointer;
+      background: var(--navy);
+      color: white;
+      user-select: none;
+      gap: 12px;
+    }
+
+    .session-header:hover { background: #004080; }
+
+    .session-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .session-time-badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 3px 9px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .session-title {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .session-subtitle {
+      font-size: 11px;
+      opacity: 0.65;
+      margin-top: 2px;
+      font-weight: 300;
+    }
+
+    .chevron {
+      font-size: 18px;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+
+    .session.open .chevron { transform: rotate(180deg); }
+
+    /* Talks table */
+    .session-body {
+      display: none;
+      padding: 0;
+    }
+
+    .session.open .session-body { display: block; }
+
+    .day-header {
+      background: var(--navy);
+      color: white;
+      border-radius: 10px;
+      padding: 14px 20px;
+      margin-bottom: 18px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .day-header .day-sub {
+      font-size: 11px;
+      font-weight: 400;
+      opacity: 0.7;
+      margin-top: 3px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .talks-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .talks-table thead tr {
+      background: var(--tag-bg);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .talks-table th {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--mid-blue);
+      padding: 9px 16px;
+      text-align: left;
+    }
+
+    .talks-table td {
+      padding: 11px 16px;
+      font-size: 13.5px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .talks-table tr:last-child td { border-bottom: none; }
+
+    .talks-table tr:hover td { background: #f7faff; }
+
+    /* Break / lunch rows */
+    .talks-table tr.break td {
+      background: var(--break-bg);
+      color: var(--break-text);
+      font-style: italic;
+      font-size: 12.5px;
+    }
+
+    .talks-table tr.break:hover td { background: var(--break-bg); }
+
+    .time-col {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--mid-blue);
+      white-space: nowrap;
+    }
+
+    .speaker-col { font-weight: 600; }
+
+    .grid-col {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11.5px;
+      color: #4a7ab5;
+      font-style: italic;
+    }
+
+    /* Opening block */
+    .opening-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,30,80,0.06);
+    }
+
+    .opening-block .session-header {
+      background: #1a3d6b;
+    }
+
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 10px;
+      margin-top: 28px;
+    }
+
+    .section-label:first-child { margin-top: 0; }
+
+    /* Closing discussion row */
+    .talks-table tr.discussion td {
+      background: #f0f7ff;
+      color: var(--mid-blue);
+      font-size: 13px;
+    }
+
+    .talks-table tr.discussion:hover td { background: #e5f0ff; }
+  </style>
+</head>
+<body>
+
+<header>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="menu">
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+
+
+<div class="main">
+
+  <div class="day-header">
+    Day 1 &mdash; Saturday, June 6, 2026
+    <div class="day-sub">Drag Prediction Workshop Focused Working Groups</div>
+  </div>
+
+  <!-- Session 1 -->
+  <p class="section-label">Session 1</p>
+  <div class="session" id="s1">
+    <div class="session-header" onclick="toggle('s1')">
+      <div class="session-left">
+        <span class="session-time-badge">9:00&ndash;10:15</span>
+        <div>
+          <div class="session-title">Opening Remarks and Grids</div>
+          <div class="session-subtitle">Session Chair: David Levy</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Code / Note</th>
+          <th>Grid</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">9:00&ndash;9:10</td>
+            <td class="speaker-col">Ben Rider / Brent Pomeroy</td>
+            <td>DPW Organizing Committee</td>
+            <td>Opening Remarks</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:10&ndash;9:25</td>
+            <td class="speaker-col">Ben Rider</td>
+            <td>Boeing</td>
+            <td>Test Cases: Sources of Scatter</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:25&ndash;9:35</td>
+            <td class="speaker-col">Claudio Pita / Sam Salehian</td>
+            <td>Cadence</td>
+            <td>Cadence Grids</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:35&ndash;9:45</td>
+            <td class="speaker-col">Andrew Wick / Rick Hooker (Presented by Ben Rider)</td>
+            <td>Helden Aerospace</td>
+            <td>HeldenMesh Grids</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:45&ndash;10:00</td>
+            <td class="speaker-col">Brent Pomeroy</td>
+            <td>NASA Langley (Emeritus)</td>
+            <td>25 Years of Grids: A Drag Prediction Workshop Retrospective</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:00&ndash;10:15</td>
+            <td class="speaker-col">Ben Rider</td>
+            <td>Boeing</td>
+            <td>OVERFLOW / FELight / GGNS</td>
+            <td class="grid-col">Structured / Unstructured</td>
+          </tr>
+          <tr class="break">
+            <td class="time-col">10:15&ndash;10:30</td>
+            <td colspan="4">Break</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Session 2 -->
+  <p class="section-label">Session 2</p>
+  <div class="session" id="s2">
+    <div class="session-header" onclick="toggle('s2')">
+      <div class="session-left">
+        <span class="session-time-badge">10:30&ndash;11:45</span>
+        <div>
+          <div class="session-title">Sources of Scatter Working Group I</div>
+          <div class="session-subtitle">Session Chair: Hadar Ben-Gida</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Code / Note</th>
+          <th>Grid</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">10:30&ndash;10:45</td>
+            <td class="speaker-col">Camille Fournis / Ilias Petropoulos</td>
+            <td>ONERA</td>
+            <td>elsA</td>
+            <td class="grid-col">Structured</td>
+          </tr>
+          <tr>
+            <td class="time-col">10:45&ndash;11:00</td>
+            <td class="speaker-col">Murilo Cunha Mestriner / Angelo Antonio Verri</td>
+            <td>Embraer</td>
+            <td>CFD++</td>
+            <td class="grid-col">Unstructured</td>
+          </tr>
+          <tr>
+            <td class="time-col">11:00&ndash;11:15</td>
+            <td class="speaker-col">Marshall Galbraith / Vaibhavi Addala / Young (Tony) Hyun Ryu</td>
+            <td>MIT</td>
+            <td>SANS</td>
+            <td class="grid-col">Adapted Unstructured</td>
+          </tr>
+          <tr>
+            <td class="time-col">11:15&ndash;11:30</td>
+            <td class="speaker-col">Mehmet Sahin / Ibrahim Asar</td>
+            <td>Istanbul Technical University</td>
+            <td>HEMLAB</td>
+            <td class="grid-col">Unstructured</td>
+          </tr>
+          <tr>
+            <td class="time-col">11:30&ndash;11:45</td>
+            <td class="speaker-col">Chris Toomer</td>
+            <td>University of the West of England</td>
+            <td>ANSYS-CFX, Fluent</td>
+            <td class="grid-col">Unstructured</td>
+          </tr>
+          <tr class="break">
+            <td class="time-col">11:45&ndash;1:15</td>
+            <td colspan="4">Lunch (on your own)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Session 3 -->
+  <p class="section-label">Session 3</p>
+  <div class="session" id="s3">
+    <div class="session-header" onclick="toggle('s3')">
+      <div class="session-left">
+        <span class="session-time-badge">1:15&ndash;3:00</span>
+        <div>
+          <div class="session-title">Sources of Scatter Working Group II</div>
+          <div class="session-subtitle">Session Chair: Melissa Rivers</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Code / Note</th>
+          <th>Grid</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">1:15&ndash;2:00</td>
+            <td class="speaker-col">Chris Toomer</td>
+            <td>University of the West of England</td>
+            <td>Source of Scatter Summary Presentation</td>
+            <td class="grid-col">Unstructured</td>
+          </tr>
+          <tr class="discussion">
+            <td class="time-col">2:00&ndash;2:15</td>
+            <td class="speaker-col">All Attendees</td>
+            <td></td>
+            <td>Open Discussion</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:15&ndash;2:45</td>
+            <td class="speaker-col">Ed Tinoco</td>
+            <td>DPW Organizing Committee</td>
+            <td>Retrospective: DPW Through the Years</td>
+            <td></td>
+          </tr>
+          <tr class="break">
+            <td class="time-col">2:45&ndash;3:00</td>
+            <td colspan="4">Break</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Session 4 -->
+  <p class="section-label">Session 4</p>
+  <div class="session" id="s4">
+    <div class="session-header" onclick="toggle('s4')">
+      <div class="session-left">
+        <span class="session-time-badge">3:00&ndash;4:45</span>
+        <div>
+          <div class="session-title">Wind Tunnel Test Environment Working Group</div>
+          <div class="session-subtitle">Session Chair: Marshall Galbraith</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <thead><tr>
+          <th style="width:120px">Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Code / Note</th>
+          <th>Grid</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">3:00&ndash;3:10</td>
+            <td class="speaker-col">Brent Pomeroy</td>
+            <td>NASA Langley (Emeritus)</td>
+            <td>NTF Geometry Summary</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">3:10&ndash;3:20</td>
+            <td class="speaker-col">Ben Rider</td>
+            <td>Boeing</td>
+            <td>Test Cases: Wind Tunnel Test Environment</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">3:20&ndash;3:35</td>
+            <td class="speaker-col">Jeff Housman</td>
+            <td>NASA Ames</td>
+            <td>LAVA</td>
+            <td class="grid-col">Structured Overset</td>
+          </tr>
+          <tr>
+            <td class="time-col">3:35&ndash;3:50</td>
+            <td class="speaker-col">Eduardo Molina / Angelo Antonio Verri</td>
+            <td>Embraer</td>
+            <td>Volcano ScaLES</td>
+            <td class="grid-col">WMLES</td>
+          </tr>
+          <tr>
+            <td class="time-col">3:50&ndash;4:05</td>
+            <td class="speaker-col">Ben Rider</td>
+            <td>Boeing</td>
+            <td>Key Questions: Scatter and Test Environment WGs</td>
+            <td></td>
+          </tr>
+          <tr class="discussion">
+            <td class="time-col">4:05&ndash;4:35</td>
+            <td class="speaker-col">All Attendees</td>
+            <td></td>
+            <td>Discussion</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="time-col">4:35&ndash;4:45</td>
+            <td class="speaker-col">DPW Organizing Committee</td>
+            <td></td>
+            <td>Closing of Day 1 &mdash; Review Day 2 Agenda</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggle(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('open');
+  }
+  // Open all sessions by default
+  ['s1','s2','s3','s4'].forEach(id => {
+    document.getElementById(id).classList.add('open');
+  });
+  // Hamburger menu toggle
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('active');
+  });
+</script>
+</body>
+</html>
