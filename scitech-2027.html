@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SciTech 2027: Seven Special Sessions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #003366;
+      --mid-blue: #1F497D;
+      --accent: #4a9eff;
+      --accent-dim: #1a4a7a;
+      --bg: #f4f6fa;
+      --surface: #ffffff;
+      --border: #d0daea;
+      --text: #1a2535;
+      --muted: #5a6a80;
+      --break-bg: #eef3fa;
+      --break-text: #7a8fa8;
+      --tag-bg: #e3edf9;
+      --tag-text: #1F497D;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+        background: #003366;
+        color: white;
+        padding: 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav {
+        display: flex;
+        justify-content: left;
+        background: #1F497D;
+        padding: 10px 0;
+    }
+
+    nav a {
+        color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background: #0059b3;
+    }
+
+    .dropdown {
+        position: relative;
+        padding: 5px;
+        text-align: left;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 5px;
+        padding: 0;
+        margin: 0;
+        background: #0059b3;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 5px;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+        background: #0073e6;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            display: none;
+        }
+        nav.active {
+            display: flex;
+        }
+        nav a {
+            text-align: left;
+            padding: 15px 0;
+            border-bottom: 1px solid #0059b3;
+        }
+        .hamburger {
+            display: block;
+        }
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0a4a8a 60%, var(--mid-blue) 100%);
+      color: white;
+      padding: 48px 32px 36px;
+      text-align: center;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .page-hero h1 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(18px, 3vw, 28px);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .page-hero .subtitle {
+      font-size: 14px;
+      opacity: 0.75;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 36px 20px 60px;
+    }
+
+    /* Session card */
+    .session {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,30,80,0.06);
+      transition: box-shadow 0.2s;
+    }
+
+    .session:hover { box-shadow: 0 4px 18px rgba(0,30,80,0.10); }
+
+    .session-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      cursor: pointer;
+      background: var(--navy);
+      color: white;
+      user-select: none;
+      gap: 12px;
+    }
+
+    .session-header:hover { background: #004080; }
+
+    .session-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .session-time-badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      font-weight: 400;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 3px 9px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .session-title {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .session-subtitle {
+      font-size: 11px;
+      opacity: 0.65;
+      margin-top: 2px;
+      font-weight: 300;
+    }
+
+    .chevron {
+      font-size: 18px;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+
+    .session.open .chevron { transform: rotate(180deg); }
+
+    /* Talks table */
+    .session-body {
+      display: none;
+      padding: 0;
+    }
+
+    .session.open .session-body { display: block; }
+
+    .talks-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .day-header {
+      background: var(--navy);
+      color: white;
+      border-radius: 10px;
+      padding: 14px 20px;
+      margin-bottom: 18px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .day-header .day-sub {
+      font-size: 11px;
+      font-weight: 400;
+      opacity: 0.7;
+      margin-top: 3px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .talks-table thead tr {
+      background: var(--tag-bg);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .talks-table th {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--mid-blue);
+      padding: 9px 16px;
+      text-align: left;
+    }
+
+    .talks-table td {
+      padding: 11px 16px;
+      font-size: 13.5px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .talks-table tr:last-child td { border-bottom: none; }
+
+    .talks-table tr:hover td { background: #f7faff; }
+
+    /* Break / lunch rows */
+    .talks-table tr.break td {
+      background: var(--break-bg);
+      color: var(--break-text);
+      font-style: italic;
+      font-size: 12.5px;
+    }
+
+    .talks-table tr.break:hover td { background: var(--break-bg); }
+
+    .time-col {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--mid-blue);
+      white-space: nowrap;
+    }
+
+    .speaker-col { font-weight: 600; }
+
+    .grid-col {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11.5px;
+      color: #4a7ab5;
+      font-style: italic;
+    }
+
+    /* Opening block */
+    .opening-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,30,80,0.06);
+    }
+
+    .opening-block .session-header {
+      background: #1a3d6b;
+    }
+
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 10px;
+      margin-top: 28px;
+    }
+
+    .section-label:first-child { margin-top: 0; }
+
+    /* Closing discussion row */
+    .talks-table tr.discussion td {
+      background: #f0f7ff;
+      font-weight: 600;
+      color: var(--mid-blue);
+      font-size: 13px;
+    }
+
+    .talks-table tr.discussion:hover td { background: #e5f0ff; }
+  </style>
+</head>
+<body>
+
+<header>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="menu">
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+
+
+<div class="main">
+
+  <div class="day-header">
+    SciTech 2027 &mdash; DPW-8/AePW-4 Special Sessions
+    <div class="day-sub">January 11-15, 2027</div>
+  </div>
+
+  <!-- Session 1 -->
+  <p class="section-label">Session 1</p>
+  <div class="session" id="s1">
+    <div class="session-header" onclick="toggle('s1')">
+      <div class="session-left">
+        <span class="session-time-badge">Monday<br>9:30&ndash;10:50<br>Manatee Spring II</span>
+        <div>
+          <div class="session-title">DPW-8/AePW-4: Overview and Grids</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <colgroup>
+          <col style="width:115px">
+          <col style="width:135px">
+          <col style="width:23%">
+          <col style="width:40%">
+          <col style="width:12%">
+          <col>
+        </colgroup>
+        <thead><tr>
+          <th>Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Title</th>
+          <th>Links</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">9:30&ndash;9:50</td>
+            <td class="speaker-col">Brent Pomeroy</td>
+            <td>NASA Langley (Emeritus Langley Associate)</td>
+            <td>Summary of the Eighth Drag Prediction and Fourth Aeroelastic Prediction Workshop</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:50&ndash;10:10</td>
+            <td class="speaker-col">Andrew Wick</td>
+            <td>Helden Aerospace</td>
+            <td>HeldenMesh Contributions to the 8th Drag Prediction / 4th Aeroelastic Prediction Workshops</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:10&ndash;10:30</td>
+            <td class="speaker-col">Claudio Pita</td>
+            <td>Cadence</td>
+            <td>DPW8: Automated Mesh Family Generation for Fixed-Grid RANS Simulations</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:30&ndash;10:50</td>
+            <td class="speaker-col">Brent Pomeroy</td>
+            <td>NASA Langley (Emeritus Langley Associate)</td>
+            <td>25 Years of DPW Grids: A Retrospective</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- Session 2 -->
+  <p class="section-label">Session 2</p>
+  <div class="session" id="s2">
+    <div class="session-header" onclick="toggle('s2')">
+      <div class="session-left">
+        <span class="session-time-badge">Monday<br>1:00&ndash;2:40<br>Manatee Spring II</span>
+        <div>
+          <div class="session-title">AePW-4: High-Angle Working Group</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <colgroup>
+          <col style="width:115px">
+          <col style="width:135px">
+          <col style="width:23%">
+          <col style="width:40%">
+          <col style="width:12%">
+          <col>
+        </colgroup>
+        <thead><tr>
+          <th>Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Title</th>
+          <th>Links</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">1:00&ndash;1:20</td>
+            <td class="speaker-col">Daniella Raveh</td>
+            <td>Technion - Israel Institute of Technology</td>
+            <td>Three- and Two-Dimensional Mapping of the BSCW Flutter Envelope</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">1:20&ndash;1:40</td>
+            <td class="speaker-col">Michael Candon</td>
+            <td>Royal Melbourne Institute of Technology</td>
+            <td>RMIT/ANSYS/Duke Contribution to the AePW-4 High-Angle Working Group</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">1:40&ndash;2:00</td>
+            <td class="speaker-col">Marcello Righi</td>
+            <td>ZHAW/ETH Zurich</td>
+            <td>Higher-Order Volterra Kernels Identification for the Test Cases of the High Angle Working Group in the Fourth Aeroelastic Prediction Workshop</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:00&ndash;2:40</td>
+            <td class="speaker-col">Pawel Chwalowski</td>
+            <td>NASA Langley</td>
+            <td>Summary Data From the High Angle Working Group at DPW-8/AePW-4</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- Session 3 -->
+  <p class="section-label">Session 3</p>
+  <div class="session" id="s3">
+    <div class="session-header" onclick="toggle('s3')">
+      <div class="session-left">
+        <span class="session-time-badge">Monday<br>3:30&ndash;5:10<br>Manatee Spring II</span>
+        <div>
+          <div class="session-title">AePW-4: Large Deflection and High Speed Working Groups</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <colgroup>
+          <col style="width:115px">
+          <col style="width:135px">
+          <col style="width:23%">
+          <col style="width:40%">
+          <col style="width:12%">
+          <col>
+        </colgroup>
+        <thead><tr>
+          <th>Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Title</th>
+          <th>Links</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">3:30&ndash;3:50</td>
+            <td class="speaker-col">Daniella Raveh</td>
+            <td>Technion - Israel Institute of Technology</td>
+            <td>Overview of Very Flexible Swept Pazy Wings Testing and Analysis</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">3:50&ndash;4:10</td>
+            <td class="speaker-col">Ben Preston</td>
+            <td>Imperial College London</td>
+            <td>Flutter and LCO Predictions for Very Flexible Swept Wings</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">4:10&ndash;4:30</td>
+            <td class="speaker-col">Rohit Deshmukh</td>
+            <td>University of Central Florida</td>
+            <td>Data-Enriched Models for Predicting Fluid-Structure Interaction Under Impinging Weak Shocks</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">4:30&ndash;5:10</td>
+            <td class="speaker-col">Kirk Brouwer</td>
+            <td>Air Force Research Lab</td>
+            <td>Summary Data From the High Speed Working Group at DPW-8/AePW-4</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- Session 4 -->
+  <p class="section-label">Session 4</p>
+  <div class="session" id="s4">
+    <div class="session-header" onclick="toggle('s4')">
+      <div class="session-left">
+        <span class="session-time-badge">Tuesday<br>9:30&ndash;11:30<br>Manatee Spring II</span>
+        <div>
+          <div class="session-title">DPW-8: Sources of Scatter and Test Environment Working Groups</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <colgroup>
+          <col style="width:115px">
+          <col style="width:135px">
+          <col style="width:23%">
+          <col style="width:40%">
+          <col style="width:12%">
+          <col>
+        </colgroup>
+        <thead><tr>
+          <th>Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Title</th>
+          <th>Links</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">9:30&ndash;9:50</td>
+            <td class="speaker-col">Vaibhavi Addala</td>
+            <td>Massachusetts Institute of Technology</td>
+            <td>Comparison of Adaptive Meshers and SA Turbulence Models on ONERA OAT15A Airfoil</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:50&ndash;10:10</td>
+            <td class="speaker-col">Murilo Metriner</td>
+            <td>Embraer</td>
+            <td>Embraer Contribution to DPW-8/AePW-4: Scatter WG Three-Dimensional Cases</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:10&ndash;10:30</td>
+            <td class="speaker-col">Ben Rider</td>
+            <td>Boeing Commercial Airplanes</td>
+            <td>Boeing Contributions to the Eighth Drag Prediction and Fourth Aeroelastic Prediction Workshop</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:30&ndash;10:50</td>
+            <td class="speaker-col">Brandon Lowe</td>
+            <td>Analytical Mechanics Associates / NASA Ames</td>
+            <td>Static Aeroelastic Predictions and Sting Effects of the CRM using LAVA</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:50&ndash;11:10</td>
+            <td class="speaker-col">Eduardo Molina</td>
+            <td>Embraer</td>
+            <td>Wall Model Large Eddy Simulations of Transonic Common Research Model in NTF Wind Tunnel</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">11:10&ndash;11:30</td>
+            <td class="speaker-col">Ben Rider</td>
+            <td>Boeing Commercial Airplanes</td>
+            <td>Summary of the Wind Tunnel Test Environment Working Group for the Eighth Drag Prediction Workshop</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- Session 5 -->
+  <p class="section-label">Session 5</p>
+  <div class="session" id="s5">
+    <div class="session-header" onclick="toggle('s5')">
+      <div class="session-left">
+        <span class="session-time-badge">Tuesday<br>1:00&ndash;3:00<br>Manatee Spring II</span>
+        <div>
+          <div class="session-title">DPW-8/AePW-4: Static Deformation & Buffet Working Groups 1</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <colgroup>
+          <col style="width:115px">
+          <col style="width:135px">
+          <col style="width:23%">
+          <col style="width:40%">
+          <col style="width:12%">
+          <col>
+        </colgroup>
+        <thead><tr>
+          <th>Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Title</th>
+          <th>Links</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">1:00&ndash;1:40</td>
+            <td class="speaker-col">Marshall Galbraith</td>
+            <td>Massachusetts Institute of Technology</td>
+            <td>Summary of the Sources of Scatter Working Group for the Eighth Drag Prediction Workshop</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">1:40&ndash;2:00</td>
+            <td class="speaker-col">Ben Rider</td>
+            <td>Boeing Commercial Airplanes</td>
+            <td>Summary of the Static Deformation Working Group for the Eighth Drag and Fourth Aeroelastic Prediction Workshop</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:00&ndash;2:20</td>
+            <td class="speaker-col">Joel St. Onge</td>
+            <td>Gulfstream</td>
+            <td>Transonic Buffet Determination for the ONERA OAT15A Airfoil</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:20&ndash;2:40</td>
+            <td class="speaker-col">Kevin Jacobson</td>
+            <td>NASA Langley</td>
+            <td>ONERA OAT15A Buffet Predictions with FUN3D</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:40&ndash;3:00</td>
+            <td class="speaker-col">Konrad Goc</td>
+            <td>Boeing Commercial Airplanes</td>
+            <td>Large Eddy Simulations of Transonic Buffet on the ONERA OAT15A Airfoil</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- Session 6 -->
+  <p class="section-label">Session 6</p>
+  <div class="session" id="s6">
+    <div class="session-header" onclick="toggle('s6')">
+      <div class="session-left">
+        <span class="session-time-badge">Tuesday<br>3:30&ndash;5:30<br>Manatee Spring II</span>
+        <div>
+          <div class="session-title">DPW-8/AePW-4: Buffet Working Group 2</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <colgroup>
+          <col style="width:115px">
+          <col style="width:135px">
+          <col style="width:23%">
+          <col style="width:40%">
+          <col style="width:12%">
+          <col>
+        </colgroup>
+        <thead><tr>
+          <th>Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Title</th>
+          <th>Links</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">3:30&ndash;3:50</td>
+            <td class="speaker-col">Jeff Housman</td>
+            <td>NASA Ames</td>
+            <td>Evaluation of a Stress-Corrected Large Eddy Simulation Method for Transonic Buffet Analysis of the NASA Common Research Model</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">3:50&ndash;4:10</td>
+            <td class="speaker-col">Tausif ("TJ") Jamal</td>
+            <td>NASA Langley</td>
+            <td>USM3D-ME Contributions to the Eighth Drag and Fourth Aeroelastic Prediction Workshop</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">4:10&ndash;4:30</td>
+            <td class="speaker-col">Rafael Vieira</td>
+            <td>Dassault Systèmes</td>
+            <td>Transonic Shock Buffet Lattice-Boltzmann Simulations Using PowerFLOW&reg; for the 8th Drag and 4th Aeroelastic Prediction Workshops</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">4:30&ndash;4:50</td>
+            <td class="speaker-col">Brett Bornhoft</td>
+            <td>Cadence</td>
+            <td>Wall-modeled Large-Eddy Simulation of Transonic Buffet on the JAXA CRM</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">4:50&ndash;5:10</td>
+            <td class="speaker-col">Andrea Sansica</td>
+            <td>JAXA</td>
+            <td>JAXA's Contribution to the 8th Drag Prediction Workshop using FaSTAR</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">5:10&ndash;5:30</td>
+            <td class="speaker-col">Eduardo Molina</td>
+            <td>Embraer</td>
+            <td>Immersed Boundary Wall-modeled Large Eddy simulations for Buffet Onset Prediction on Transonic Aircraft</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- Session 7 -->
+  <p class="section-label">Session 7</p>
+  <div class="session" id="s7">
+    <div class="session-header" onclick="toggle('s7')">
+      <div class="session-left">
+        <span class="session-time-badge">Thursday<br>9:30&ndash;11:30<br>Manatee Spring II</span>
+        <div>
+          <div class="session-title">DPW-8/AePW-4: Buffet Working Group 3</div>
+        </div>
+      </div>
+      <span class="chevron">&#8964;</span>
+    </div>
+    <div class="session-body">
+      <table class="talks-table">
+        <colgroup>
+          <col style="width:115px">
+          <col style="width:135px">
+          <col style="width:23%">
+          <col style="width:40%">
+          <col style="width:12%">
+          <col>
+        </colgroup>
+        <thead><tr>
+          <th>Time</th>
+          <th>Speaker</th>
+          <th>Institution</th>
+          <th>Title</th>
+          <th>Links</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="time-col">9:30&ndash;9:50</td>
+            <td class="speaker-col">Michael Candon</td>
+            <td>Massachusetts Institute of Technology</td>
+            <td>Royal Melbourne Institute of Technology</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">9:50&ndash;10:10</td>
+            <td class="speaker-col">Johan Jansson</td>
+            <td>KTH Royal Institute of Technology</td>
+            <td>First-principles fast Adaptive Euler FSI development and results in the Drag and Aeroelastic Prediction Workshop</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:10&ndash;10:30</td>
+            <td class="speaker-col">Steve Lamberson</td>
+            <td>Bowhead Total Enterprise Solutions / CREATE-AV</td>
+            <td>HPCMP CREATE&#8482;-AV Kestrel Simulations for the DPW-8/AePW-4 Buffet Working Group: Part II</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:30&ndash;10:50</td>
+            <td class="speaker-col">Paul Batten</td>
+            <td>Metacomp</td>
+            <td>CFD++ Computations of the DPW-8 Buffet Working Group Cases 1 and 3</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:50&ndash;11:30</td>
+            <td class="speaker-col">Brent Pomeroy</td>
+            <td>NASA Langley (Emeritus Langley Associate)</td>
+            <td>Summary Data From the Buffet Working Group at DPW-8/AePW-4</td>
+            <td><a href="presentations/scitech2027/filler.pdf">Slides</a><br><a href="https://arc.aiaa.org">Paper</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+<script>
+  const PAGE_KEY = 'sessionState_scitech';
+  const SESSION_IDS = ['s1','s2','s3','s4','s5','s6','s7'];
+
+  function toggle(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('open');
+    saveState();
+  }
+
+  function saveState() {
+    const state = {};
+    SESSION_IDS.forEach(id => {
+      state[id] = document.getElementById(id).classList.contains('open');
+    });
+    try { localStorage.setItem(PAGE_KEY, JSON.stringify(state)); } catch(e) {}
+  }
+
+  function restoreState() {
+    let state = null;
+    try { state = JSON.parse(localStorage.getItem(PAGE_KEY)); } catch(e) {}
+    SESSION_IDS.forEach(id => {
+      const open = state ? state[id] : true;
+      if (open) document.getElementById(id).classList.add('open');
+      else document.getElementById(id).classList.remove('open');
+    });
+  }
+
+  restoreState();
+
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('active');
+  });
+</script>
+</body>
+</html>
