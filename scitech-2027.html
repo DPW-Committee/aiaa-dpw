@@ -193,13 +193,13 @@
       font-weight: 400;
       background: var(--accent-dim);
       border: 1px solid var(--accent);
-      color: var(--accent);
+      /* Mixes the accent color with 40% white. Increase the percentage to make it even lighter */
+      color: color-mix(in srgb, var(--accent), white 50%); 
       padding: 3px 9px;
       border-radius: 4px;
       white-space: nowrap;
       flex-shrink: 0;
     }
-
     .session-title {
       font-size: 14px;
       font-weight: 600;
@@ -242,14 +242,14 @@
       border-radius: 10px;
       padding: 14px 20px;
       margin-bottom: 18px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 13px;
+      font-family: 'IBM Plex Sans', monospace;
+      font-size: 20px;
       font-weight: 600;
       letter-spacing: 0.04em;
     }
 
     .day-header .day-sub {
-      font-size: 11px;
+      font-size: 14px;
       font-weight: 400;
       opacity: 0.7;
       margin-top: 3px;
@@ -370,7 +370,7 @@
   <div class="session" id="s1">
     <div class="session-header" onclick="toggle('s1')">
       <div class="session-left">
-        <span class="session-time-badge">Monday<br>9:30&ndash;10:50<br>Manatee Spring II</span>
+        <span class="session-time-badge">Monday<br>9:30 &ndash; 10:50<br>Manatee Spring II</span>
         <div>
           <div class="session-title">DPW-8/AePW-4: Overview and Grids</div>
         </div>
@@ -434,7 +434,7 @@
   <div class="session" id="s2">
     <div class="session-header" onclick="toggle('s2')">
       <div class="session-left">
-        <span class="session-time-badge">Monday<br>1:00&ndash;2:40<br>Manatee Spring II</span>
+        <span class="session-time-badge">Monday<br>1:00 &ndash; 2:40<br>Manatee Spring II</span>
         <div>
           <div class="session-title">AePW-4: High-Angle Working Group</div>
         </div>
@@ -498,7 +498,7 @@
   <div class="session" id="s3">
     <div class="session-header" onclick="toggle('s3')">
       <div class="session-left">
-        <span class="session-time-badge">Monday<br>3:30&ndash;5:10<br>Manatee Spring II</span>
+        <span class="session-time-badge">Monday<br>3:30 &ndash; 5:10<br>Manatee Spring II</span>
         <div>
           <div class="session-title">AePW-4: Large Deflection and High Speed Working Groups</div>
         </div>
@@ -562,7 +562,7 @@
   <div class="session" id="s4">
     <div class="session-header" onclick="toggle('s4')">
       <div class="session-left">
-        <span class="session-time-badge">Tuesday<br>9:30&ndash;11:30<br>Manatee Spring II</span>
+        <span class="session-time-badge">Tuesday<br>9:30 &ndash; 11:30<br>Manatee Spring II</span>
         <div>
           <div class="session-title">DPW-8: Sources of Scatter and Test Environment Working Groups</div>
         </div>
@@ -640,7 +640,7 @@
   <div class="session" id="s5">
     <div class="session-header" onclick="toggle('s5')">
       <div class="session-left">
-        <span class="session-time-badge">Tuesday<br>1:00&ndash;3:00<br>Manatee Spring II</span>
+        <span class="session-time-badge">Tuesday<br>1:00 &ndash; 3:00<br>Manatee Spring II</span>
         <div>
           <div class="session-title">DPW-8/AePW-4: Static Deformation & Buffet Working Groups 1</div>
         </div>
@@ -711,7 +711,7 @@
   <div class="session" id="s6">
     <div class="session-header" onclick="toggle('s6')">
       <div class="session-left">
-        <span class="session-time-badge">Tuesday<br>3:30&ndash;5:30<br>Manatee Spring II</span>
+        <span class="session-time-badge">Tuesday<br>3:30 &ndash; 5:30<br>Manatee Spring II</span>
         <div>
           <div class="session-title">DPW-8/AePW-4: Buffet Working Group 2</div>
         </div>
@@ -789,7 +789,7 @@
   <div class="session" id="s7">
     <div class="session-header" onclick="toggle('s7')">
       <div class="session-left">
-        <span class="session-time-badge">Thursday<br>9:30&ndash;11:30<br>Manatee Spring II</span>
+        <span class="session-time-badge">Thursday<br>9:30 &ndash; 11:30<br>Manatee Spring II</span>
         <div>
           <div class="session-title">DPW-8/AePW-4: Buffet Working Group 3</div>
         </div>
